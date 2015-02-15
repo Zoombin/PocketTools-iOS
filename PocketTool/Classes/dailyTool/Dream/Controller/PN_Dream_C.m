@@ -55,7 +55,7 @@
     
        [self.tableView reloadData];
     } Failure:^(NSError *error) {
-        [MBProgressHUD showError:@"请求失败"];
+       // [MBProgressHUD showError:@"请求失败"];
     }];
 }
 #pragma mark - Table view data source

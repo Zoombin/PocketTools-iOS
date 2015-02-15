@@ -13,15 +13,23 @@
 #import "PN_Phone_C.h"
 #import "PN_Dream_C.h"
 #import "PN_Sizes_C.h"
+#import "MBProgressHUD+PN.h"
+#import "PN_Flash_C.h"
+#import "PN_Package_C.h"
+#import "PN_Finance_C.h"
+#import "PN_Calculator_C.h"
+#import "PN_Constrllation_C.h"
+#import "FHFastMailViewController.h"
 @interface PN_Root_C ()
 <
 PNTabBarDelegate
 >
 //日常工具数组
-@property (nonatomic,strong) NSArray *array1;
 @property (nonatomic,strong) UIScrollView *scroll;
 @property (nonatomic,strong) UIImageView *backImage;
 @property (nonatomic,strong) UIImage *BgImage;
+@property (nonatomic,strong) NSArray *array;
+@property (nonatomic,strong) NSArray *arr;
 @end
 
 @implementation PN_Root_C
@@ -41,8 +49,7 @@ PNTabBarDelegate
     self.BgImage = [UIImage imageNamed:@"bg2.jpg"];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"changebg" object:self.BgImage];
     
-    //初始化TabBar
-    [self setupTabBar];
+    
     
     //设置工具条
     self.scroll = [[UIScrollView alloc]initWithFrame:CGRectMake(0, mainH-(mainH*0.1)-(mainW*0.5), mainW, mainW*0.5)];
@@ -60,10 +67,35 @@ PNTabBarDelegate
     
     //尺码对照表
     PN_ToolButton_V *sizes = [[PN_ToolButton_V alloc]initWithTitle:@"尺码对照表" andImage:@"gr_tool_sizes" andTarget:self action:@selector(sizes)];
+    
+    //镜子
+    PN_ToolButton_V *mirror = [[PN_ToolButton_V alloc]initWithTitle:@"镜子" andImage:@"gr_tool_mirror" andTarget:self action:@selector(mirror)];
+    
+    //手电筒
+    PN_ToolButton_V *flash = [[PN_ToolButton_V alloc]initWithTitle:@"手电筒" andImage:@"gr_tool_flash" andTarget:self action:@selector(flash)];
+    
+    //快递查询
+    PN_ToolButton_V *package = [[PN_ToolButton_V alloc]initWithTitle:@"快递查询" andImage:@"gr_search_package" andTarget:self action:@selector(package)];
+    
+    //外汇汇率
+    PN_ToolButton_V *currency = [[PN_ToolButton_V alloc]initWithTitle:@"外汇汇率" andImage:@"gr_tool_currency" andTarget:self action:@selector(currency)];
+    
+    //科学计算器
+    PN_ToolButton_V *calculator = [[PN_ToolButton_V alloc]initWithTitle:@"科学计算器" andImage:@"gr_tool_calculator" andTarget:self action:@selector(calculator)];
+    
+    //星座运势
+    PN_ToolButton_V *zodaic = [[PN_ToolButton_V alloc]initWithTitle:@"星座运势" andImage:@"gr_tool_zodaic" andTarget:self action:@selector(zodaic)];
+    
     //日常工具数组
-    self.array1 = @[ruler,searchPhone,dream,sizes];
-    //设置按钮在scroll里的位置
-    [self setToolBtnframe];
+    NSArray *array1 = @[ruler,dream,sizes,flash,mirror,currency,calculator];
+    NSArray *array2 = @[searchPhone,package];
+    NSArray *array3 = @[zodaic];
+    NSArray *array4 = @[];
+    
+    self.arr = @[array1,array2,array3,array4];
+    //初始化TabBar
+    [self setupTabBar];
+    
 }
 
 //更换背景
@@ -71,16 +103,7 @@ PNTabBarDelegate
 {
     self.backImage.image = (UIImage *)Notification.object;
 }
-- (void)setToolBtnframe
-{
-    int count = (int)self.array1.count;
-    for (int i=0; i<count; i++) {
-       PN_ToolButton_V *btn = self.array1[i];
-        btn.frame = CGRectMake(i*btn.width, 0, btn.width, btn.height);
-        [self.scroll addSubview:btn];
-    }
-   
-}
+
 - (void)setupTabBar
 {
    PN_TabBar_V *tabbar = [[PN_TabBar_V alloc]initWithFrame:CGRectMake(0, mainH-(mainH*0.05), mainW, mainH*0.05)];
@@ -88,6 +111,8 @@ PNTabBarDelegate
     [self.view addSubview:tabbar];
     //设置代理
     tabbar.delegate = self;
+    //默认选中0
+    [self tabBar:tabbar didSelectButtonFrom:0 to:0];
 }
 //尺子
 - (void)ruler
@@ -110,25 +135,88 @@ PNTabBarDelegate
 {
    [self.navigationController pushViewController:[[PN_Sizes_C alloc]init] animated:NO];
 }
+//镜子
+- (void)mirror
+{
+    // UIImagePickerControllerCameraDeviceRear 后置摄像头
+    // UIImagePickerControllerCameraDeviceFront 前置摄像头
+    BOOL isCamera = [UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceFront];
+    if (!isCamera) {
+        
+        return ;
+    }
+    
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    
+    // 编辑模式
+    imagePicker.allowsEditing = YES;
+    
+    [self presentViewController:imagePicker animated:YES completion:^{
+    }];
+}
+//手电筒
+- (void)flash
+{
+    PN_Flash_C *Flash = [[PN_Flash_C alloc]init];
+    [self presentViewController:Flash animated:NO completion:nil];
+}
+//快递查询
+- (void)package
+{
+   [self.navigationController pushViewController:[[FHFastMailViewController alloc]init] animated:NO];
+}
+
+//外汇汇率
+- (void)currency
+{
+    [self.navigationController pushViewController:[[PN_Finance_C alloc]init] animated:NO];
+}
+//科学计算器
+- (void)calculator
+{
+    [self.navigationController pushViewController:[[PN_Calculator_C alloc]initWithNibName:@"PN_Calculator_C" bundle:nil] animated:NO];
+}
+//星座运势
+- (void)zodaic
+{
+   [self.navigationController pushViewController:[[PN_Constrllation_C alloc]init] animated:NO];
+}
 #pragma mark - TabBar的代理方法
 - (void)tabBar:(PN_TabBar_V *)tabBar didSelectButtonFrom:(NSInteger)from to:(NSInteger)to
 {
-  
+    self.array = self.arr[to];
+    //移除所有子控件
+    while (self.scroll.subviews.count>0)
+    {
+        [self.scroll.subviews.lastObject removeFromSuperview];
+    }
+    
+    //重设位置
+    //1，判断有几组数据
+   int group = (int)(self.array.count/8)+1;
+    //计数器
+    int count = 0;
+    //循环设置frame
+    for (int i=0; i<group; i++) {
+        for (int j=0; j<2; j++) {
+            for (int k=0; k<4; k++) {
+               PN_ToolButton_V *btn = self.array[count];
+                btn.frame = CGRectMake((k*btn.width)+(mainW*i),j*btn.height, btn.width, btn.height);
+                [self.scroll addSubview:btn];
+                if (count==self.array.count-1) {
+                    break;
+                }
+                count++;
+            }
+            if (count==self.array.count-1) {
+                break;
+            }
+        }
+        if (count==self.array.count-1) {
+            break;
+        }
+    }
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
