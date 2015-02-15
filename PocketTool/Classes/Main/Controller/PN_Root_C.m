@@ -20,11 +20,20 @@
 #import "PN_Calculator_C.h"
 #import "PN_Constrllation_C.h"
 #import "FHFastMailViewController.h"
+#import "PTTabBar.h"
+
 @interface PN_Root_C ()
 <
-PNTabBarDelegate
+PNTabBarDelegate,
+PTTabBarDelegate
 >
 //日常工具数组
+
+@property (nonatomic, readwrite) UIScrollView *bottomScrollView;
+@property (nonatomic, readwrite) UIScrollView *toolsScrollView;
+@property (nonatomic, readwrite) UIScrollView *servicesScrollView;
+@property (nonatomic, readwrite) UIScrollView *readScrollView;
+@property (nonatomic, readwrite) UIScrollView *mallScrollView;
 @property (nonatomic,strong) UIScrollView *scroll;
 @property (nonatomic,strong) UIImageView *backImage;
 @property (nonatomic,strong) UIImage *BgImage;
@@ -36,15 +45,62 @@ PNTabBarDelegate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	CGRect rect = CGRectZero;
+	rect.origin.y = self.view.bounds.size.height - [PTTabBar height];
+	rect.size.width = self.view.bounds.size.width;
+	rect.size.height = [PTTabBar height];
+	
+	PTTabBar *tabBar = [[PTTabBar alloc] initWithFrame:rect];
+	tabBar.delegate = self;
+	[self.view addSubview:tabBar];
+
+	CGFloat heightOfBottomScrollView = 110;
+	rect.origin.y = CGRectGetMinY(tabBar.frame) - heightOfBottomScrollView;
+	rect.size.height = heightOfBottomScrollView;
+	self.bottomScrollView = [[UIScrollView alloc] initWithFrame:rect];
+	self.bottomScrollView.backgroundColor = [UIColor redColor];
+	self.bottomScrollView.pagingEnabled = YES;
+	[self.view addSubview:self.bottomScrollView];
+	
+	rect.origin.y = 0;
+	self.toolsScrollView = [[UIScrollView alloc] initWithFrame:rect];
+	self.toolsScrollView.backgroundColor = [UIColor blueColor];
+	self.toolsScrollView.pagingEnabled = YES;
+	self.toolsScrollView.contentSize = CGSizeMake(self.toolsScrollView.bounds.size.width * 2, self.toolsScrollView.bounds.size.height);
+	[self.bottomScrollView addSubview:self.toolsScrollView];
+	
+	rect.origin.x = CGRectGetMaxX(self.toolsScrollView.frame);
+	self.servicesScrollView = [[UIScrollView alloc] initWithFrame:rect];
+	self.servicesScrollView.backgroundColor = [UIColor greenColor];
+	self.servicesScrollView.pagingEnabled = YES;
+	[self.bottomScrollView addSubview:self.servicesScrollView];
+	
+	rect.origin.x = CGRectGetMaxX(self.servicesScrollView.frame);
+	self.readScrollView = [[UIScrollView alloc] initWithFrame:rect];
+	self.readScrollView.backgroundColor = [UIColor grayColor];
+	self.readScrollView.pagingEnabled = YES;
+	[self.bottomScrollView addSubview:self.readScrollView];
+	
+	rect.origin.x = CGRectGetMaxX(self.readScrollView.frame);
+	self.mallScrollView = [[UIScrollView alloc] initWithFrame:rect];
+	self.mallScrollView.backgroundColor = [UIColor orangeColor];
+	self.mallScrollView.pagingEnabled = YES;
+	[self.bottomScrollView addSubview:self.mallScrollView];
+	
+	self.bottomScrollView.contentSize = CGSizeMake(self.bottomScrollView.bounds.size.width * 4, self.bottomScrollView.bounds.size.height);
+	
+
+	
     //绑定Juhe的ID
     [[JHOpenidSupplier shareSupplier] registerJuheAPIByOpenId:@"JH3d10c81c2da5d095c11b5537360a47ac"];
        /**
           //
           */
     //设置背景
-    self.backImage = [[UIImageView alloc]initWithFrame:self.view.frame];
+    self.backImage = [[UIImageView alloc] initWithFrame:self.view.frame];
     self.backImage.image = [UIImage imageNamed:@"bg2.jpg"];
-    [self.view addSubview:self.backImage];
+    //[self.view addSubview:self.backImage];
     
     self.BgImage = [UIImage imageNamed:@"bg2.jpg"];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"changebg" object:self.BgImage];
@@ -52,9 +108,9 @@ PNTabBarDelegate
     
     
     //设置工具条
-    self.scroll = [[UIScrollView alloc]initWithFrame:CGRectMake(0, mainH-(mainH*0.1)-(mainW*0.5), mainW, mainW*0.5)];
+    self.scroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, mainH-(mainH*0.1)-(mainW*0.5), mainW, mainW*0.5)];
     self.scroll.backgroundColor = [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:0.4f];
-    [self.view addSubview:self.scroll];
+    //[self.view addSubview:self.scroll];
     
     //尺子
    PN_ToolButton_V *ruler = [[PN_ToolButton_V alloc]initWithTitle:@"尺子" andImage:@"gr_tool_ruler" andTarget:self action:@selector(ruler)];
@@ -94,7 +150,7 @@ PNTabBarDelegate
     
     self.arr = @[array1,array2,array3,array4];
     //初始化TabBar
-    [self setupTabBar];
+    //[self setupTabBar];
     
 }
 
@@ -182,41 +238,50 @@ PNTabBarDelegate
 {
    [self.navigationController pushViewController:[[PN_Constrllation_C alloc]init] animated:NO];
 }
-#pragma mark - TabBar的代理方法
-- (void)tabBar:(PN_TabBar_V *)tabBar didSelectButtonFrom:(NSInteger)from to:(NSInteger)to
-{
-    self.array = self.arr[to];
-    //移除所有子控件
-    while (self.scroll.subviews.count>0)
-    {
-        [self.scroll.subviews.lastObject removeFromSuperview];
-    }
-    
-    //重设位置
-    //1，判断有几组数据
-   int group = (int)(self.array.count/8)+1;
-    //计数器
-    int count = 0;
-    //循环设置frame
-    for (int i=0; i<group; i++) {
-        for (int j=0; j<2; j++) {
-            for (int k=0; k<4; k++) {
-               PN_ToolButton_V *btn = self.array[count];
-                btn.frame = CGRectMake((k*btn.width)+(mainW*i),j*btn.height, btn.width, btn.height);
-                [self.scroll addSubview:btn];
-                if (count==self.array.count-1) {
-                    break;
-                }
-                count++;
-            }
-            if (count==self.array.count-1) {
-                break;
-            }
-        }
-        if (count==self.array.count-1) {
-            break;
-        }
-    }
+//#pragma mark - TabBar的代理方法
+//- (void)tabBar:(PN_TabBar_V *)tabBar didSelectButtonFrom:(NSInteger)from to:(NSInteger)to
+//{
+//    self.array = self.arr[to];
+//    //移除所有子控件
+//    while (self.scroll.subviews.count>0)
+//    {
+//        [self.scroll.subviews.lastObject removeFromSuperview];
+//    }
+//    
+//    //重设位置
+//    //1，判断有几组数据
+//   int group = (int)(self.array.count/8)+1;
+//    //计数器
+//    int count = 0;
+//    //循环设置frame
+//    for (int i=0; i<group; i++) {
+//        for (int j=0; j<2; j++) {
+//            for (int k=0; k<4; k++) {
+//               PN_ToolButton_V *btn = self.array[count];
+//                btn.frame = CGRectMake((k*btn.width)+(mainW*i),j*btn.height, btn.width, btn.height);
+//                [self.scroll addSubview:btn];
+//                if (count==self.array.count-1) {
+//                    break;
+//                }
+//                count++;
+//            }
+//            if (count==self.array.count-1) {
+//                break;
+//            }
+//        }
+//        if (count==self.array.count-1) {
+//            break;
+//        }
+//    }
+//}
+
+#pragma mark - PTTabBarDelegate
+
+- (void)ptTabBarSelectedAtIndex:(NSInteger)index {
+	NSLog(@"selected index: %@", @(index));
+	CGRect rect = _bottomScrollView.bounds;
+	rect.origin.x = _bottomScrollView.bounds.size.width * index;
+	[_bottomScrollView scrollRectToVisible:rect animated:NO];
 }
 
 @end
