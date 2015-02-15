@@ -78,7 +78,7 @@
 {
     [self.phonetext resignFirstResponder];
     if (self.phonetext.text.length != 11) {
-        [MBProgressHUD showError:@"您输入的手机号有误"];
+       // [MBProgressHUD showError:@"您输入的手机号有误"];
         return;
     }
     NSNumber *num = [NSNumber numberWithLongLong:[self.phonetext.text longLongValue]];
@@ -88,14 +88,14 @@
         if (![[responseObject valueForKey:@"reason"] isEqualToString:@"Empty"]) {
             self.Pmodel = [PN_Phone_M objectWithKeyValues:responseObject[@"result"]];
         }else{
-            [MBProgressHUD showError:@"找不到该号码"];
+        //    [MBProgressHUD showError:@"找不到该号码"];
             return ;
         }
         //创建信息
         [self createInfoView];
         
     } Failure:^(NSError *error) {
-        [MBProgressHUD showError:@"请求失败"];
+      //  [MBProgressHUD showError:@"请求失败"];
     }];
 }
 //展示返回信息
