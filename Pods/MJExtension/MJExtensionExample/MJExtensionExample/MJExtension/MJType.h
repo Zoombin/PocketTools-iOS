@@ -23,9 +23,7 @@
 @property (nonatomic, readonly, getter = isKVCDisabled) BOOL KVCDisabled;
 
 /**
- *  初始化一个类型对象
- *
- *  @param code 类型标识符
+ *  获得缓存的类型对象
  */
-- (instancetype)initWithCode:(NSString *)code;
++ (instancetype)cachedTypeWithCode:(NSString *)code;
 @end
