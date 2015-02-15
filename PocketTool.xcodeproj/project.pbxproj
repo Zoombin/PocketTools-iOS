@@ -49,7 +49,6 @@
 		AE31BCD91A8719650089E753 /* btn_tab3_select.png in Resources */ = {isa = PBXBuildFile; fileRef = AE31BCD11A8719650089E753 /* btn_tab3_select.png */; };
 		AE31BCDA1A8719650089E753 /* btn_tab4.png in Resources */ = {isa = PBXBuildFile; fileRef = AE31BCD21A8719650089E753 /* btn_tab4.png */; };
 		AE31BCDB1A8719650089E753 /* btn_tab4_select.png in Resources */ = {isa = PBXBuildFile; fileRef = AE31BCD31A8719650089E753 /* btn_tab4_select.png */; };
-		AE31BCDD1A8721AE0089E753 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE31BCDC1A8721AE0089E753 /* Images-2.xcassets */; };
 		AE31BCE41A8727940089E753 /* JuheApisSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE31BCE31A8727940089E753 /* JuheApisSDK.a */; };
 		AE31BCE61A8727C50089E753 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE31BCE51A8727C50089E753 /* CoreTelephony.framework */; };
 		AE31BCE81A8727CD0089E753 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE31BCE71A8727CD0089E753 /* AdSupport.framework */; };
@@ -404,7 +403,6 @@
 		AE31BCD11A8719650089E753 /* btn_tab3_select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_tab3_select.png; sourceTree = "<group>"; };
 		AE31BCD21A8719650089E753 /* btn_tab4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_tab4.png; sourceTree = "<group>"; };
 		AE31BCD31A8719650089E753 /* btn_tab4_select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_tab4_select.png; sourceTree = "<group>"; };
-		AE31BCDC1A8721AE0089E753 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		AE31BCE11A8727940089E753 /* JHAPISDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHAPISDK.h; sourceTree = "<group>"; };
 		AE31BCE21A8727940089E753 /* JHOpenidSupplier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHOpenidSupplier.h; sourceTree = "<group>"; };
 		AE31BCE31A8727940089E753 /* JuheApisSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = JuheApisSDK.a; sourceTree = "<group>"; };
@@ -836,7 +834,6 @@
 				AE31BC941A86F7090089E753 /* AppDelegate.h */,
 				AE31BC951A86F7090089E753 /* AppDelegate.mm */,
 				AE31BC9D1A86F7090089E753 /* Images.xcassets */,
-				AE31BCDC1A8721AE0089E753 /* Images-2.xcassets */,
 				AE31BC901A86F7090089E753 /* Supporting Files */,
 			);
 			path = PocketTool;
@@ -1735,7 +1732,6 @@
 				AE31BDBA1A8730B40089E753 /* gr_tool_calculator@3x.png in Resources */,
 				AE20E48F1A8DAF22009FCABF /* gr_dash_lightgrey@2x.png in Resources */,
 				AE3E24B11A885BE900BFB66D /* bg2.jpg in Resources */,
-				AE31BCDD1A8721AE0089E753 /* Images-2.xcassets in Resources */,
 				AE3E24B61A885BE900BFB66D /* bg6_sm.jpg in Resources */,
 				AE31BCDA1A8719650089E753 /* btn_tab4.png in Resources */,
 				AE31BE4C1A8730B40089E753 /* gr_tool_weather@2x.png in Resources */,
@@ -1946,9 +1942,9 @@
 			baseConfigurationReference = F52487BEB8B204E456DF2E56 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PocketTool/PrefixHeader.pch";
 				INFOPLIST_FILE = PocketTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1963,9 +1959,9 @@
 			baseConfigurationReference = 8E0BA484AB78925F76A38B2E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PocketTool/PrefixHeader.pch";
 				INFOPLIST_FILE = PocketTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
