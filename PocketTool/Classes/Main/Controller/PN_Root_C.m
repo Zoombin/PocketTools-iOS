@@ -39,8 +39,7 @@ PTTabBarDelegate
 @property (nonatomic,strong) UIScrollView *scroll;
 @property (nonatomic,strong) UIImageView *backImage;
 @property (nonatomic,strong) UIImage *BgImage;
-@property (nonatomic,strong) NSArray *array;
-@property (nonatomic,strong) NSArray *arr;
+
 @end
 
 @implementation PN_Root_C
@@ -98,37 +97,60 @@ PTTabBarDelegate
 	
 	
     //尺子
-   PN_ToolButton_V *ruler = [[PN_ToolButton_V alloc]initWithTitle:@"尺子" andImage:@"gr_tool_ruler" andTarget:self action:@selector(ruler)];
-    
+	PN_ToolButton_V *ruler = [[PN_ToolButton_V alloc]initWithTitle:@"尺子" andImage:@"gr_tool_ruler" andTarget:self action:@selector(launchTool:)];
+	ruler.targetClass = [PN_Ruler_C class];
+	ruler.isPresentDisplay = YES;
+
     //手机归属地
-    PN_ToolButton_V *searchPhone = [[PN_ToolButton_V alloc]initWithTitle:@"号码归属地" andImage:@"gr_search_phone" andTarget:self action:@selector(searchPhone)];
+	PN_ToolButton_V *searchPhone = [[PN_ToolButton_V alloc]initWithTitle:@"号码归属地" andImage:@"gr_search_phone" andTarget:self action:@selector(launchTool:)];
+	searchPhone.targetClass = [PN_Phone_C class];
+	
     
     //周公解梦
-    PN_ToolButton_V *dream = [[PN_ToolButton_V alloc]initWithTitle:@"周公解梦" andImage:@"gr_tool_dream" andTarget:self action:@selector(dream)];
+	PN_ToolButton_V *dream = [[PN_ToolButton_V alloc]initWithTitle:@"周公解梦" andImage:@"gr_tool_dream" andTarget:self action:@selector(launchTool:)];
+	dream.targetClass = [PN_Dream_C class];
     
     //尺码对照表
-    PN_ToolButton_V *sizes = [[PN_ToolButton_V alloc]initWithTitle:@"尺码对照表" andImage:@"gr_tool_sizes" andTarget:self action:@selector(sizes)];
+	PN_ToolButton_V *sizes = [[PN_ToolButton_V alloc]initWithTitle:@"尺码对照表" andImage:@"gr_tool_sizes" andTarget:self action:@selector(launchTool:)];
+	sizes.targetClass = [PN_Sizes_C class];
     
     //镜子
     PN_ToolButton_V *mirror = [[PN_ToolButton_V alloc]initWithTitle:@"镜子" andImage:@"gr_tool_mirror" andTarget:self action:@selector(mirror)];
     
     //手电筒
-    PN_ToolButton_V *flash = [[PN_ToolButton_V alloc]initWithTitle:@"手电筒" andImage:@"gr_tool_flash" andTarget:self action:@selector(flash)];
+	PN_ToolButton_V *flash = [[PN_ToolButton_V alloc]initWithTitle:@"手电筒" andImage:@"gr_tool_flash" andTarget:self action:@selector(launchTool:)];
+	flash.targetClass = [PN_Flash_C class];
+	flash.isPresentDisplay = YES;
     
     //快递查询
-    PN_ToolButton_V *package = [[PN_ToolButton_V alloc]initWithTitle:@"快递查询" andImage:@"gr_search_package" andTarget:self action:@selector(package)];
+	PN_ToolButton_V *package = [[PN_ToolButton_V alloc]initWithTitle:@"快递查询" andImage:@"gr_search_package" andTarget:self action:@selector(launchTool:)];
+	package.targetClass = [PN_Package_C class];
     
     //外汇汇率
-    PN_ToolButton_V *currency = [[PN_ToolButton_V alloc]initWithTitle:@"外汇汇率" andImage:@"gr_tool_currency" andTarget:self action:@selector(currency)];
+	PN_ToolButton_V *currency = [[PN_ToolButton_V alloc]initWithTitle:@"外汇汇率" andImage:@"gr_tool_currency" andTarget:self action:@selector(launchTool:)];
+	currency.targetClass = [PN_Finance_C class];
     
     //科学计算器
     PN_ToolButton_V *calculator = [[PN_ToolButton_V alloc]initWithTitle:@"科学计算器" andImage:@"gr_tool_calculator" andTarget:self action:@selector(calculator)];
     
     //星座运势
-    PN_ToolButton_V *zodaic = [[PN_ToolButton_V alloc]initWithTitle:@"星座运势" andImage:@"gr_tool_zodaic" andTarget:self action:@selector(zodaic)];
+	PN_ToolButton_V *zodaic = [[PN_ToolButton_V alloc]initWithTitle:@"星座运势" andImage:@"gr_tool_zodaic" andTarget:self action:@selector(launchTool:)];
+	zodaic.targetClass = [PN_Constrllation_C class];
 
 	_toolsScrollView.elements = @[ruler,dream,sizes,flash,mirror,currency,calculator,searchPhone,package];
 	_servicesScrollView.elements = @[zodaic];
+}
+
+- (void)launchTool:(PN_ToolButton_V *)button {
+	Class class = button.targetClass;
+	if (class) {
+		UIViewController *controller = [[class alloc] init];
+		if (button.isPresentDisplay) {
+			[self presentViewController:controller animated:YES completion:nil];
+		} else {
+			[self.navigationController pushViewController:controller animated:YES];
+		}
+	}
 }
 
 //更换背景
@@ -137,27 +159,6 @@ PTTabBarDelegate
     self.backImage.image = (UIImage *)Notification.object;
 }
 
-//尺子
-- (void)ruler
-{
-    PN_Ruler_C *ruler = [[PN_Ruler_C alloc]init];
-    [self presentViewController:ruler animated:NO completion:nil];
-}
-//手机归属地
-- (void)searchPhone
-{
-    [self.navigationController pushViewController:[[PN_Phone_C alloc]init] animated:NO];
-}
-//周公解梦
-- (void)dream
-{
-    [self.navigationController pushViewController:[[PN_Dream_C alloc]init] animated:NO];
-}
-//尺码对照
-- (void)sizes
-{
-   [self.navigationController pushViewController:[[PN_Sizes_C alloc]init] animated:NO];
-}
 //镜子
 - (void)mirror {
 	BOOL isCamera = [UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceFront];
@@ -175,41 +176,21 @@ PTTabBarDelegate
     [self presentViewController:imagePicker animated:YES completion:^{
     }];
 }
-//手电筒
-- (void)flash
-{
-    PN_Flash_C *Flash = [[PN_Flash_C alloc]init];
-    [self presentViewController:Flash animated:NO completion:nil];
-}
-//快递查询
-- (void)package
-{
-   [self.navigationController pushViewController:[[FHFastMailViewController alloc]init] animated:NO];
-}
 
-//外汇汇率
-- (void)currency
-{
-    [self.navigationController pushViewController:[[PN_Finance_C alloc]init] animated:NO];
-}
 //科学计算器
 - (void)calculator
 {
     [self.navigationController pushViewController:[[PN_Calculator_C alloc]initWithNibName:@"PN_Calculator_C" bundle:nil] animated:NO];
 }
-//星座运势
-- (void)zodaic
-{
-   [self.navigationController pushViewController:[[PN_Constrllation_C alloc]init] animated:NO];
-}
+
 
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
 	if (scrollView == _bottomScrollView) {
-		CGFloat pageWidth = scrollView.frame.size.width;
-		NSInteger page = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
-		[self ptTabBarSelectedAtIndex:page];
+		//CGFloat pageWidth = scrollView.frame.size.width;
+		//NSInteger page = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+		//[self ptTabBarSelectedAtIndex:page];
 	}
 }
 
@@ -220,7 +201,5 @@ PTTabBarDelegate
 	rect.origin.x = _bottomScrollView.bounds.size.width * index;
 	[_bottomScrollView scrollRectToVisible:rect animated:NO];
 }
-
-
 
 @end

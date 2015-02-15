@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface PN_ToolButton_V : UIButton
+
+@property (nonatomic, assign) Class targetClass;
+@property (nonatomic, assign) BOOL isPresentDisplay;
+
 - (id)initWithTitle:(NSString *)title andImage:(NSString *)image andTarget:(id)target action:(SEL)action;
 @end

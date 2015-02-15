@@ -8,7 +8,7 @@
 
 #import "PTScrollView.h"
 
-static NSInteger const numberPerLine = 4;
+static NSInteger const numberPerLine = 3;
 static NSInteger const numberOfLine = 2;
 static NSInteger const numberPerPage = numberPerLine * numberOfLine;
 
