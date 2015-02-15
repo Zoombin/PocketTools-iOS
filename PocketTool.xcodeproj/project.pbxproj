@@ -10,6 +10,7 @@
 		36412B87A40C39D2668A0C8A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1723E568964CB5A849B416BB /* libPods.a */; };
 		77EB62F41A906C8900CE9826 /* PTIndexView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77EB62F31A906C8900CE9826 /* PTIndexView.m */; };
 		77EB62F71A906D5400CE9826 /* PTTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 77EB62F61A906D5400CE9826 /* PTTabBar.m */; };
+		77EB62FD1A9087E400CE9826 /* PTScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77EB62FC1A9087E400CE9826 /* PTScrollView.m */; };
 		AE10B3C51A8B0B7400FF4ECA /* btn_flashlite_close.png in Resources */ = {isa = PBXBuildFile; fileRef = AE10B3C11A8B0B7400FF4ECA /* btn_flashlite_close.png */; };
 		AE10B3C61A8B0B7400FF4ECA /* btn_flashlite_close1.png in Resources */ = {isa = PBXBuildFile; fileRef = AE10B3C21A8B0B7400FF4ECA /* btn_flashlite_close1.png */; };
 		AE10B3C71A8B0B7400FF4ECA /* btn_flashlite_off.png in Resources */ = {isa = PBXBuildFile; fileRef = AE10B3C31A8B0B7400FF4ECA /* btn_flashlite_off.png */; };
@@ -345,6 +346,8 @@
 		77EB62F31A906C8900CE9826 /* PTIndexView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTIndexView.m; sourceTree = "<group>"; };
 		77EB62F51A906D5400CE9826 /* PTTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTTabBar.h; sourceTree = "<group>"; };
 		77EB62F61A906D5400CE9826 /* PTTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTTabBar.m; sourceTree = "<group>"; };
+		77EB62FB1A9087E400CE9826 /* PTScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTScrollView.h; sourceTree = "<group>"; };
+		77EB62FC1A9087E400CE9826 /* PTScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTScrollView.m; sourceTree = "<group>"; };
 		8E0BA484AB78925F76A38B2E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AE10B3C11A8B0B7400FF4ECA /* btn_flashlite_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_flashlite_close.png; sourceTree = "<group>"; };
 		AE10B3C21A8B0B7400FF4ECA /* btn_flashlite_close1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_flashlite_close1.png; sourceTree = "<group>"; };
@@ -919,6 +922,8 @@
 				77EB62F31A906C8900CE9826 /* PTIndexView.m */,
 				77EB62F51A906D5400CE9826 /* PTTabBar.h */,
 				77EB62F61A906D5400CE9826 /* PTTabBar.m */,
+				77EB62FB1A9087E400CE9826 /* PTScrollView.h */,
+				77EB62FC1A9087E400CE9826 /* PTScrollView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1835,6 +1840,7 @@
 				AE20E4881A8DAEEA009FCABF /* FHFatMailDetailController.m in Sources */,
 				AE10B3CB1A8B0BE500FF4ECA /* PN_Flash_C.m in Sources */,
 				77EB62F41A906C8900CE9826 /* PTIndexView.m in Sources */,
+				77EB62FD1A9087E400CE9826 /* PTScrollView.m in Sources */,
 				AE3E24E21A886AE700BFB66D /* PN_Dream_C.m in Sources */,
 				AE20E4871A8DAEEA009FCABF /* FHFastMailViewController.m in Sources */,
 				AE10B3FA1A8C71EB00FF4ECA /* PN_Constrllation_C.m in Sources */,

@@ -15,6 +15,7 @@
 @property (readwrite) PTIndexView *servicesView;
 @property (readwrite) PTIndexView *readView;
 @property (readwrite) PTIndexView *mallView;
+@property (readwrite) NSArray *views;
 
 @end
 
@@ -59,6 +60,8 @@
 		_mallView.color = [UIColor redColor];
 		_mallView.tag = 3;
 		[self addSubview:_mallView];
+		
+		_views = @[_toolsView, _servicesView, _readView, _mallView];
 		
 		UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
 		UITapGestureRecognizer *tap2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
