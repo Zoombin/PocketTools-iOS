@@ -1,22 +1,21 @@
 //
-//  MBProgressHUD+MJ.m
+//  MBProgressHUD+PN.m
+//  Pods
 //
-//  Created by mj on 13-4-18.
-//  Copyright (c) 2013年 itcast. All rights reserved.
+//  Created by Mac on 15-2-11.
+//
 //
 
-#import "MBProgressHUD+MJ.h"
+#import "MBProgressHUD+PN.h"
 
-@implementation MBProgressHUD (MJ)
+@implementation MBProgressHUD (PN)
 #pragma mark 显示信息
 + (void)show:(NSString *)text icon:(NSString *)icon view:(UIView *)view
 {
     if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
     // 快速显示一个提示信息
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    if (!IsIOS7) {
-        hud.transform = CGAffineTransformMakeRotation(90/180*M_PI);
-    }
+
     hud.labelText = text;
     // 设置图片
     hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"MBProgressHUD.bundle/%@", icon]]];
@@ -81,15 +80,13 @@
 + (void)showloadview
 {
     UIView *view=[[UIApplication sharedApplication].windows lastObject];
-   MBProgressHUD *HUD = [[MBProgressHUD alloc]initWithView:view];
+    MBProgressHUD *HUD = [[MBProgressHUD alloc]initWithView:view];
     
     [view addSubview:HUD];
-    if (!IsIOS7) {
-        HUD.transform = CGAffineTransformMakeRotation(90/180*M_PI);
-    }
+    
     HUD.labelText = @"";
-   
-     
+    
+    
     [HUD showAnimated:YES whileExecutingBlock:^{
         float progress = 0.0f;
         while (progress < 1.0f) {

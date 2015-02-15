@@ -1,13 +1,14 @@
 //
-//  MBProgressHUD+MJ.h
+//  MBProgressHUD+PN.h
+//  Pods
 //
-//  Created by mj on 13-4-18.
-//  Copyright (c) 2013年 itcast. All rights reserved.
+//  Created by Mac on 15-2-11.
+//
 //
 
 #import "MBProgressHUD.h"
 
-@interface MBProgressHUD (MJ)
+@interface MBProgressHUD (PN)
 + (void)showSuccess:(NSString *)success toView:(UIView *)view;
 + (void)showError:(NSString *)error toView:(UIView *)view;
 
