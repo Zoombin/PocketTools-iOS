@@ -30,7 +30,9 @@ PNTabBarDelegate
     [super viewDidLoad];
     //绑定Juhe的ID
     [[JHOpenidSupplier shareSupplier] registerJuheAPIByOpenId:@"JH3d10c81c2da5d095c11b5537360a47ac"];
-    
+       /**
+          //
+          */
     //设置背景
     self.backImage = [[UIImageView alloc]initWithFrame:self.view.frame];
     self.backImage.image = [UIImage imageNamed:@"bg2.jpg"];
