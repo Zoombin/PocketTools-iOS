@@ -84,4 +84,13 @@
 	}
 }
 
+- (void)selectedAtIndex:(NSInteger)index {
+	_toolsView.selected = NO;
+	_servicesView.selected = NO;
+	_readView.selected = NO;
+	_mallView.selected = NO;
+	
+	
+}
+
 @end

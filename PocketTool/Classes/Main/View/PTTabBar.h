@@ -18,6 +18,8 @@
 
 @property (nonatomic, weak) id <PTTabBarDelegate> delegate;
 
+- (void)selectedAtIndex:(NSInteger)index;
+
 + (CGFloat)height;
 
 @end

@@ -24,6 +24,7 @@
 
 @interface PN_Root_C ()
 <
+UIScrollViewDelegate,
 PNTabBarDelegate,
 PTTabBarDelegate
 >
@@ -52,6 +53,7 @@ PTTabBarDelegate
 	rect.size.height = [PTTabBar height];
 	
 	PTTabBar *tabBar = [[PTTabBar alloc] initWithFrame:rect];
+//	tabBar.
 	tabBar.delegate = self;
 	[self.view addSubview:tabBar];
 
@@ -61,6 +63,7 @@ PTTabBarDelegate
 	self.bottomScrollView = [[UIScrollView alloc] initWithFrame:rect];
 	self.bottomScrollView.backgroundColor = [UIColor redColor];
 	self.bottomScrollView.pagingEnabled = YES;
+	self.bottomScrollView.delegate = self;
 	[self.view addSubview:self.bottomScrollView];
 	
 	rect.origin.y = 0;
@@ -90,7 +93,6 @@ PTTabBarDelegate
 	
 	self.bottomScrollView.contentSize = CGSizeMake(self.bottomScrollView.bounds.size.width * 4, self.bottomScrollView.bounds.size.height);
 	
-
 	
     //绑定Juhe的ID
     [[JHOpenidSupplier shareSupplier] registerJuheAPIByOpenId:@"JH3d10c81c2da5d095c11b5537360a47ac"];
@@ -275,6 +277,16 @@ PTTabBarDelegate
 //    }
 //}
 
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+	if (scrollView == _bottomScrollView) {
+		CGFloat pageWidth = scrollView.frame.size.width;
+		NSInteger page = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+		[self ptTabBarSelectedAtIndex:page];
+	}
+}
+
 #pragma mark - PTTabBarDelegate
 
 - (void)ptTabBarSelectedAtIndex:(NSInteger)index {
@@ -283,5 +295,7 @@ PTTabBarDelegate
 	rect.origin.x = _bottomScrollView.bounds.size.width * index;
 	[_bottomScrollView scrollRectToVisible:rect animated:NO];
 }
+
+
 
 @end
