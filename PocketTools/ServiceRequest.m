@@ -40,7 +40,6 @@ static ServiceRequest *request;
 - (NSMutableDictionary *)getRequestParams {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"dtype"] = @"json";
-    params[@"key"] = APP_ID;
     return params;
 }
 
@@ -48,7 +47,22 @@ static ServiceRequest *request;
 - (void)appleInfo:(NSString *)appid withBlock:(void (^)(NSDictionary *result, NSError *error))block {
     NSMutableDictionary *params =  [self getRequestParams];
     params[@"sn"] = appid;
+    params[@"key"] = @"e2a4d76a04bc042a8b47045baf6c9873";
     NSString *requestUrl = [NSString stringWithFormat:@"%@/appleinfo/index", BASE_URL];
+    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        block(responseObject, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        block(nil, error);
+    }];
+}
+
+- (void)idCardSearch:(NSString *)uid
+           withBlocl:(void (^)(NSDictionary *result, NSError *error))block
+{
+    NSMutableDictionary *params =  [self getRequestParams];
+    params[@"cardno"] = uid;
+    params[@"key"] = @"51431019e527a0cd73e5daf157348e84";
+    NSString *requestUrl = [NSString stringWithFormat:@"%@/idcard/index", BASE_URL];
     [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         block(responseObject, nil);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

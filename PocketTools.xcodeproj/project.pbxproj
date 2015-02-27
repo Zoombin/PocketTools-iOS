@@ -18,6 +18,9 @@
 		58E8506D1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58E8506B1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.xib */; };
 		58E850711AA01AF90095DDC7 /* ServiceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E850701AA01AF90095DDC7 /* ServiceResult.m */; };
 		58E850741AA01BFC0095DDC7 /* AppleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E850731AA01BFC0095DDC7 /* AppleInfo.m */; };
+		58EACBAC1AA03EC0006D5226 /* IDCardInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EACBAB1AA03EC0006D5226 /* IDCardInfo.m */; };
+		58EACBB01AA03FB6006D5226 /* IDCardSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EACBAE1AA03FB6006D5226 /* IDCardSearchViewController.m */; };
+		58EACBB11AA03FB6006D5226 /* IDCardSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58EACBAF1AA03FB6006D5226 /* IDCardSearchViewController.xib */; };
 		71078482F10AF41A8AF80980 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 972A6AE0556F180352DA1B54 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +57,11 @@
 		58E850721AA01BFC0095DDC7 /* AppleInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleInfo.h; sourceTree = "<group>"; };
 		58E850731AA01BFC0095DDC7 /* AppleInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppleInfo.m; sourceTree = "<group>"; };
 		58EACBA91AA03935006D5226 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		58EACBAA1AA03EC0006D5226 /* IDCardInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDCardInfo.h; sourceTree = "<group>"; };
+		58EACBAB1AA03EC0006D5226 /* IDCardInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDCardInfo.m; sourceTree = "<group>"; };
+		58EACBAD1AA03FB6006D5226 /* IDCardSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDCardSearchViewController.h; sourceTree = "<group>"; };
+		58EACBAE1AA03FB6006D5226 /* IDCardSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDCardSearchViewController.m; sourceTree = "<group>"; };
+		58EACBAF1AA03FB6006D5226 /* IDCardSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDCardSearchViewController.xib; sourceTree = "<group>"; };
 		58F0E72B9B42457CCBECBA37 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		72246A8492C30BA8BF7446FE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		972A6AE0556F180352DA1B54 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +156,9 @@
 				58E850691AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.h */,
 				58E8506A1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.m */,
 				58E8506B1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.xib */,
+				58EACBAD1AA03FB6006D5226 /* IDCardSearchViewController.h */,
+				58EACBAE1AA03FB6006D5226 /* IDCardSearchViewController.m */,
+				58EACBAF1AA03FB6006D5226 /* IDCardSearchViewController.xib */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -175,6 +186,8 @@
 				58E850701AA01AF90095DDC7 /* ServiceResult.m */,
 				58E850721AA01BFC0095DDC7 /* AppleInfo.h */,
 				58E850731AA01BFC0095DDC7 /* AppleInfo.m */,
+				58EACBAA1AA03EC0006D5226 /* IDCardInfo.h */,
+				58EACBAB1AA03EC0006D5226 /* IDCardInfo.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -281,6 +294,7 @@
 				5817F12E1A9D7BDB00B3A0A1 /* Main.storyboard in Resources */,
 				58E8506D1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.xib in Resources */,
 				5817F1301A9D7BDB00B3A0A1 /* Images.xcassets in Resources */,
+				58EACBB11AA03FB6006D5226 /* IDCardSearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +347,9 @@
 			files = (
 				5817F12B1A9D7BDB00B3A0A1 /* MainViewController.m in Sources */,
 				58E850681AA012F10095DDC7 /* ServiceRequest.m in Sources */,
+				58EACBAC1AA03EC0006D5226 /* IDCardInfo.m in Sources */,
 				58E850741AA01BFC0095DDC7 /* AppleInfo.m in Sources */,
+				58EACBB01AA03FB6006D5226 /* IDCardSearchViewController.m in Sources */,
 				58E8506C1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.m in Sources */,
 				5817F1281A9D7BDB00B3A0A1 /* AppDelegate.m in Sources */,
 				58E850711AA01AF90095DDC7 /* ServiceResult.m in Sources */,

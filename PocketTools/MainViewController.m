@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "AppleDeviceIdSearchViewController.h"
+#import "IDCardSearchViewController.h"
 
 @interface MainViewController ()
 
@@ -97,7 +98,10 @@
 
 - (void)menuButtonClicked:(id)sender {
     NSLog(@"%ld", [sender tag]);
-    AppleDeviceIdSearchViewController *contrl = [AppleDeviceIdSearchViewController new];
+//    AppleDeviceIdSearchViewController *contrl = [AppleDeviceIdSearchViewController new];
+//    [self.navigationController pushViewController:contrl animated:YES];
+    
+    IDCardSearchViewController *contrl = [IDCardSearchViewController new];
     [self.navigationController pushViewController:contrl animated:YES];
 }
 
