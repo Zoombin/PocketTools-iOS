@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "AppleDeviceIdSearchViewController.h"
 
 @interface MainViewController ()
 
@@ -26,6 +27,16 @@
     [_menuScrollView setPagingEnabled:YES];
     [self initMenuButtons];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)removeAllButtons {
@@ -86,6 +97,8 @@
 
 - (void)menuButtonClicked:(id)sender {
     NSLog(@"%ld", [sender tag]);
+    AppleDeviceIdSearchViewController *contrl = [AppleDeviceIdSearchViewController new];
+    [self.navigationController pushViewController:contrl animated:YES];
 }
 
 - (IBAction)actionCotrolPage:(id)sender {
