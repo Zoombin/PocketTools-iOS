@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "AppleDeviceIdSearchViewController.h"
 #import "IDCardSearchViewController.h"
+#import "CalculatorViewController.h"
 
 @interface MainViewController ()
 
@@ -101,7 +102,10 @@
 //    AppleDeviceIdSearchViewController *contrl = [AppleDeviceIdSearchViewController new];
 //    [self.navigationController pushViewController:contrl animated:YES];
     
-    IDCardSearchViewController *contrl = [IDCardSearchViewController new];
+//    IDCardSearchViewController *contrl = [IDCardSearchViewController new];
+//    [self.navigationController pushViewController:contrl animated:YES];
+
+    CalculatorViewController *contrl = [CalculatorViewController new];
     [self.navigationController pushViewController:contrl animated:YES];
 }
 

@@ -13,6 +13,8 @@
 		5817F12E1A9D7BDB00B3A0A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5817F12C1A9D7BDB00B3A0A1 /* Main.storyboard */; };
 		5817F1301A9D7BDB00B3A0A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5817F12F1A9D7BDB00B3A0A1 /* Images.xcassets */; };
 		5817F13F1A9D7BDB00B3A0A1 /* PocketToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F13E1A9D7BDB00B3A0A1 /* PocketToolsTests.m */; };
+		5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589446981AA15A52004BEE7B /* CalculatorViewController.m */; };
+		5894469B1AA15A52004BEE7B /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 589446991AA15A52004BEE7B /* CalculatorViewController.xib */; };
 		58E850681AA012F10095DDC7 /* ServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E850671AA012F10095DDC7 /* ServiceRequest.m */; };
 		58E8506C1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E8506A1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.m */; };
 		58E8506D1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58E8506B1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.xib */; };
@@ -47,6 +49,9 @@
 		5817F1381A9D7BDB00B3A0A1 /* PocketToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5817F13D1A9D7BDB00B3A0A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5817F13E1A9D7BDB00B3A0A1 /* PocketToolsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PocketToolsTests.m; sourceTree = "<group>"; };
+		589446971AA15A52004BEE7B /* CalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
+		589446981AA15A52004BEE7B /* CalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
+		589446991AA15A52004BEE7B /* CalculatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
 		58E850661AA012F10095DDC7 /* ServiceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceRequest.h; sourceTree = "<group>"; };
 		58E850671AA012F10095DDC7 /* ServiceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceRequest.m; sourceTree = "<group>"; };
 		58E850691AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleDeviceIdSearchViewController.h; sourceTree = "<group>"; };
@@ -159,6 +164,9 @@
 				58EACBAD1AA03FB6006D5226 /* IDCardSearchViewController.h */,
 				58EACBAE1AA03FB6006D5226 /* IDCardSearchViewController.m */,
 				58EACBAF1AA03FB6006D5226 /* IDCardSearchViewController.xib */,
+				589446971AA15A52004BEE7B /* CalculatorViewController.h */,
+				589446981AA15A52004BEE7B /* CalculatorViewController.m */,
+				589446991AA15A52004BEE7B /* CalculatorViewController.xib */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -295,6 +303,7 @@
 				58E8506D1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.xib in Resources */,
 				5817F1301A9D7BDB00B3A0A1 /* Images.xcassets in Resources */,
 				58EACBB11AA03FB6006D5226 /* IDCardSearchViewController.xib in Resources */,
+				5894469B1AA15A52004BEE7B /* CalculatorViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +356,7 @@
 			files = (
 				5817F12B1A9D7BDB00B3A0A1 /* MainViewController.m in Sources */,
 				58E850681AA012F10095DDC7 /* ServiceRequest.m in Sources */,
+				5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */,
 				58EACBAC1AA03EC0006D5226 /* IDCardInfo.m in Sources */,
 				58E850741AA01BFC0095DDC7 /* AppleInfo.m in Sources */,
 				58EACBB01AA03FB6006D5226 /* IDCardSearchViewController.m in Sources */,
