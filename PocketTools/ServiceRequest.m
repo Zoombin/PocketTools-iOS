@@ -69,4 +69,18 @@ static ServiceRequest *request;
         block(nil, error);
     }];
 }
+
+//IP查询
+- (void)ipSearch:(NSString *)ip
+       withBlock:(void (^)(NSDictionary *result, NSError *error))block {
+    NSMutableDictionary *params =  [self getRequestParams];
+    params[@"ip"] = ip;
+    params[@"key"] = @"07710610d64e235e50b257308b2aea76";
+    NSString *requestUrl = [NSString stringWithFormat:@"%@/ip/ip2addr", BASE_URL];
+    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        block(responseObject, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        block(nil, error);
+    }];
+}
 @end

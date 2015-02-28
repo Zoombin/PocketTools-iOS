@@ -27,5 +27,10 @@
 
 //身份证查询
 - (void)idCardSearch:(NSString *)uid
-           withBlocl:(void (^)(NSDictionary *result, NSError *error))block;
+           withBlock:(void (^)(NSDictionary *result, NSError *error))block;
+
+//IP查询
+- (void)ipSearch:(NSString *)ip
+       withBlock:(void (^)(NSDictionary *result, NSError *error))block;
+
 @end
