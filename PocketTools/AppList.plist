@@ -6,7 +6,7 @@
 		<key>appName</key>
 		<string>新闻</string>
 		<key>controlName</key>
-		<string></string>
+		<string>NewsViewController</string>
 		<key>iconName</key>
 		<string>gr_tool_reader</string>
 	</dict>

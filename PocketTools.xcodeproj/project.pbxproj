@@ -19,6 +19,8 @@
 		588A3DEA1AA45A4E00EB1066 /* FlashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 588A3DE81AA45A4E00EB1066 /* FlashViewController.xib */; };
 		588A3DEE1AA45CAE00EB1066 /* RullerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A3DEC1AA45CAE00EB1066 /* RullerViewController.m */; };
 		588A3DEF1AA45CAE00EB1066 /* RullerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 588A3DED1AA45CAE00EB1066 /* RullerViewController.xib */; };
+		588A3DF31AA4609400EB1066 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A3DF11AA4609400EB1066 /* NewsViewController.m */; };
+		588A3DF41AA4609400EB1066 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 588A3DF21AA4609400EB1066 /* NewsViewController.xib */; };
 		588BDBE51AA1A088009347CE /* IPInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 588BDBE41AA1A088009347CE /* IPInfo.m */; };
 		5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589446981AA15A52004BEE7B /* CalculatorViewController.m */; };
 		5894469B1AA15A52004BEE7B /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 589446991AA15A52004BEE7B /* CalculatorViewController.xib */; };
@@ -63,6 +65,9 @@
 		588A3DEB1AA45CAE00EB1066 /* RullerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RullerViewController.h; sourceTree = "<group>"; };
 		588A3DEC1AA45CAE00EB1066 /* RullerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RullerViewController.m; sourceTree = "<group>"; };
 		588A3DED1AA45CAE00EB1066 /* RullerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RullerViewController.xib; sourceTree = "<group>"; };
+		588A3DF01AA4609400EB1066 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		588A3DF11AA4609400EB1066 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		588A3DF21AA4609400EB1066 /* NewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
 		588BDBE31AA1A088009347CE /* IPInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPInfo.h; sourceTree = "<group>"; };
 		588BDBE41AA1A088009347CE /* IPInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPInfo.m; sourceTree = "<group>"; };
 		589446971AA15A52004BEE7B /* CalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
@@ -184,6 +189,9 @@
 				588A3DEB1AA45CAE00EB1066 /* RullerViewController.h */,
 				588A3DEC1AA45CAE00EB1066 /* RullerViewController.m */,
 				588A3DED1AA45CAE00EB1066 /* RullerViewController.xib */,
+				588A3DF01AA4609400EB1066 /* NewsViewController.h */,
+				588A3DF11AA4609400EB1066 /* NewsViewController.m */,
+				588A3DF21AA4609400EB1066 /* NewsViewController.xib */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -323,6 +331,7 @@
 				5817F12E1A9D7BDB00B3A0A1 /* Main.storyboard in Resources */,
 				588A3DE51AA4428300EB1066 /* AppList.plist in Resources */,
 				58E8506D1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.xib in Resources */,
+				588A3DF41AA4609400EB1066 /* NewsViewController.xib in Resources */,
 				588A3DEF1AA45CAE00EB1066 /* RullerViewController.xib in Resources */,
 				588A3DEA1AA45A4E00EB1066 /* FlashViewController.xib in Resources */,
 				5817F1301A9D7BDB00B3A0A1 /* Images.xcassets in Resources */,
@@ -390,6 +399,7 @@
 				5817F1281A9D7BDB00B3A0A1 /* AppDelegate.m in Sources */,
 				58E850711AA01AF90095DDC7 /* ServiceResult.m in Sources */,
 				5817F1251A9D7BDB00B3A0A1 /* main.m in Sources */,
+				588A3DF31AA4609400EB1066 /* NewsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
