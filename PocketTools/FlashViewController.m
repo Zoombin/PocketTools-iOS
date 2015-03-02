@@ -9,6 +9,7 @@
 #import "FlashViewController.h"
 
 #define  mainH [UIScreen mainScreen].bounds.size.height
+#define  mainW [UIScreen mainScreen].bounds.size.width
 
 @implementation FlashViewController
 
@@ -27,8 +28,13 @@
         UIAlertView *alter = [[UIAlertView alloc]initWithTitle:@"提示" message:@"当前设备不支持手电筒功能" delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
         [alter show];
     }
+    [_button setFrame:CGRectMake((mainW / 2) - _button.frame.size.width / 2, _button.frame.origin.y, _button.frame.size.width, _button.frame.size.height)];
     //默认点击
     [self btnclick:nil];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [self turnOffLed:YES];
 }
 
 //手电开关切换按钮点击事件
