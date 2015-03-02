@@ -10,10 +10,7 @@
 
 @interface MainViewController : UIViewController
 
-@property (nonatomic, strong) IBOutlet UIScrollView *contentScrollView;
 @property (nonatomic, strong) IBOutlet UIScrollView *menuScrollView;
 @property (nonatomic, strong) IBOutlet UISegmentedControl *segmentedControl;
-@property (nonatomic, strong) IBOutlet UIPageControl *menuPageControl;
-- (IBAction)actionCotrolPage:(id)sender;
 @end
 

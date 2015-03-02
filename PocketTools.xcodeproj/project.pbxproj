@@ -13,8 +13,8 @@
 		5817F12E1A9D7BDB00B3A0A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5817F12C1A9D7BDB00B3A0A1 /* Main.storyboard */; };
 		5817F1301A9D7BDB00B3A0A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5817F12F1A9D7BDB00B3A0A1 /* Images.xcassets */; };
 		5817F13F1A9D7BDB00B3A0A1 /* PocketToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F13E1A9D7BDB00B3A0A1 /* PocketToolsTests.m */; };
-		588BDBE11AA19C16009347CE /* IPSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588BDBDF1AA19C16009347CE /* IPSearchViewController.m */; };
-		588BDBE21AA19C16009347CE /* IPSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 588BDBE01AA19C16009347CE /* IPSearchViewController.xib */; };
+		588A3DE31AA4312600EB1066 /* AppInfoEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A3DE21AA4312600EB1066 /* AppInfoEntity.m */; };
+		588A3DE51AA4428300EB1066 /* AppList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 588A3DE41AA4428300EB1066 /* AppList.plist */; };
 		588BDBE51AA1A088009347CE /* IPInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 588BDBE41AA1A088009347CE /* IPInfo.m */; };
 		5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589446981AA15A52004BEE7B /* CalculatorViewController.m */; };
 		5894469B1AA15A52004BEE7B /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 589446991AA15A52004BEE7B /* CalculatorViewController.xib */; };
@@ -24,8 +24,6 @@
 		58E850711AA01AF90095DDC7 /* ServiceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E850701AA01AF90095DDC7 /* ServiceResult.m */; };
 		58E850741AA01BFC0095DDC7 /* AppleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E850731AA01BFC0095DDC7 /* AppleInfo.m */; };
 		58EACBAC1AA03EC0006D5226 /* IDCardInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EACBAB1AA03EC0006D5226 /* IDCardInfo.m */; };
-		58EACBB01AA03FB6006D5226 /* IDCardSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EACBAE1AA03FB6006D5226 /* IDCardSearchViewController.m */; };
-		58EACBB11AA03FB6006D5226 /* IDCardSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58EACBAF1AA03FB6006D5226 /* IDCardSearchViewController.xib */; };
 		71078482F10AF41A8AF80980 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 972A6AE0556F180352DA1B54 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -52,9 +50,9 @@
 		5817F1381A9D7BDB00B3A0A1 /* PocketToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5817F13D1A9D7BDB00B3A0A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5817F13E1A9D7BDB00B3A0A1 /* PocketToolsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PocketToolsTests.m; sourceTree = "<group>"; };
-		588BDBDE1AA19C16009347CE /* IPSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPSearchViewController.h; sourceTree = "<group>"; };
-		588BDBDF1AA19C16009347CE /* IPSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPSearchViewController.m; sourceTree = "<group>"; };
-		588BDBE01AA19C16009347CE /* IPSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IPSearchViewController.xib; sourceTree = "<group>"; };
+		588A3DE11AA4312600EB1066 /* AppInfoEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoEntity.h; sourceTree = "<group>"; };
+		588A3DE21AA4312600EB1066 /* AppInfoEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoEntity.m; sourceTree = "<group>"; };
+		588A3DE41AA4428300EB1066 /* AppList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppList.plist; sourceTree = "<group>"; };
 		588BDBE31AA1A088009347CE /* IPInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPInfo.h; sourceTree = "<group>"; };
 		588BDBE41AA1A088009347CE /* IPInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPInfo.m; sourceTree = "<group>"; };
 		589446971AA15A52004BEE7B /* CalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
@@ -72,9 +70,6 @@
 		58EACBA91AA03935006D5226 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		58EACBAA1AA03EC0006D5226 /* IDCardInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDCardInfo.h; sourceTree = "<group>"; };
 		58EACBAB1AA03EC0006D5226 /* IDCardInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDCardInfo.m; sourceTree = "<group>"; };
-		58EACBAD1AA03FB6006D5226 /* IDCardSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDCardSearchViewController.h; sourceTree = "<group>"; };
-		58EACBAE1AA03FB6006D5226 /* IDCardSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDCardSearchViewController.m; sourceTree = "<group>"; };
-		58EACBAF1AA03FB6006D5226 /* IDCardSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDCardSearchViewController.xib; sourceTree = "<group>"; };
 		58F0E72B9B42457CCBECBA37 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		72246A8492C30BA8BF7446FE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		972A6AE0556F180352DA1B54 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +137,7 @@
 			children = (
 				5817F1231A9D7BDB00B3A0A1 /* Info.plist */,
 				5817F1241A9D7BDB00B3A0A1 /* main.m */,
+				588A3DE41AA4428300EB1066 /* AppList.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -169,15 +165,9 @@
 				58E850691AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.h */,
 				58E8506A1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.m */,
 				58E8506B1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.xib */,
-				58EACBAD1AA03FB6006D5226 /* IDCardSearchViewController.h */,
-				58EACBAE1AA03FB6006D5226 /* IDCardSearchViewController.m */,
-				58EACBAF1AA03FB6006D5226 /* IDCardSearchViewController.xib */,
 				589446971AA15A52004BEE7B /* CalculatorViewController.h */,
 				589446981AA15A52004BEE7B /* CalculatorViewController.m */,
 				589446991AA15A52004BEE7B /* CalculatorViewController.xib */,
-				588BDBDE1AA19C16009347CE /* IPSearchViewController.h */,
-				588BDBDF1AA19C16009347CE /* IPSearchViewController.m */,
-				588BDBE01AA19C16009347CE /* IPSearchViewController.xib */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -209,6 +199,8 @@
 				58EACBAB1AA03EC0006D5226 /* IDCardInfo.m */,
 				588BDBE31AA1A088009347CE /* IPInfo.h */,
 				588BDBE41AA1A088009347CE /* IPInfo.m */,
+				588A3DE11AA4312600EB1066 /* AppInfoEntity.h */,
+				588A3DE21AA4312600EB1066 /* AppInfoEntity.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -313,10 +305,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5817F12E1A9D7BDB00B3A0A1 /* Main.storyboard in Resources */,
-				588BDBE21AA19C16009347CE /* IPSearchViewController.xib in Resources */,
+				588A3DE51AA4428300EB1066 /* AppList.plist in Resources */,
 				58E8506D1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.xib in Resources */,
 				5817F1301A9D7BDB00B3A0A1 /* Images.xcassets in Resources */,
-				58EACBB11AA03FB6006D5226 /* IDCardSearchViewController.xib in Resources */,
 				5894469B1AA15A52004BEE7B /* CalculatorViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,11 +361,10 @@
 			files = (
 				5817F12B1A9D7BDB00B3A0A1 /* MainViewController.m in Sources */,
 				58E850681AA012F10095DDC7 /* ServiceRequest.m in Sources */,
+				588A3DE31AA4312600EB1066 /* AppInfoEntity.m in Sources */,
 				5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */,
 				58EACBAC1AA03EC0006D5226 /* IDCardInfo.m in Sources */,
 				58E850741AA01BFC0095DDC7 /* AppleInfo.m in Sources */,
-				588BDBE11AA19C16009347CE /* IPSearchViewController.m in Sources */,
-				58EACBB01AA03FB6006D5226 /* IDCardSearchViewController.m in Sources */,
 				58E8506C1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.m in Sources */,
 				588BDBE51AA1A088009347CE /* IPInfo.m in Sources */,
 				5817F1281A9D7BDB00B3A0A1 /* AppDelegate.m in Sources */,

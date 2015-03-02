@@ -7,29 +7,34 @@
 //
 
 #import "MainViewController.h"
-#import "AppleDeviceIdSearchViewController.h"
-#import "IDCardSearchViewController.h"
-#import "CalculatorViewController.h"
-#import "IPSearchViewController.h"
+#import "AppInfoEntity.h"
 
 @interface MainViewController ()
 
 @end
 
 @implementation MainViewController {
-    BOOL shouldPageToFirst;
-    BOOL shouldPageToEnd;
+    NSArray *allApps;
+    NSArray *currentApps;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    shouldPageToFirst = NO;
-    shouldPageToEnd = NO;
     [_segmentedControl addTarget:self action:@selector(initMenuButtons) forControlEvents:UIControlEventValueChanged];
     [_menuScrollView setScrollEnabled:YES];
     [_menuScrollView setPagingEnabled:YES];
+    
+    [self initAllApps];
     [self initMenuButtons];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)initAllApps {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"AppList" ofType:@"plist"];
+    NSArray *infoArray = [[NSArray alloc] initWithContentsOfFile:path];
+    if ([infoArray count] > 0) {
+        allApps = [AppInfoEntity initWithArray:infoArray];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -50,113 +55,94 @@
 
 - (void)initMenuButtons {
     [self removeAllButtons];
-    int buttonCount = 0;
     if (_segmentedControl.selectedSegmentIndex == 0) {
-        buttonCount = 12;
+        NSArray *apps = @[@"苹果序列号", @"老黄历" ,@"天气预报", @"镜子", @"秘密相册", @"话费充值", @"空气质量", @"周公解梦", @"科学计算器", @"汇率换算", @"大写换算", @"手电筒", @"尺码对照表", @"条码比价"];
+        currentApps = [self getAppsWithAppNames:apps];
+        [self setElements:currentApps];
     } else if (_segmentedControl.selectedSegmentIndex == 1) {
-        buttonCount = 15;
+        NSArray *apps = @[@"车辆违章", @"快递", @"火车订票", @"来电号码查询", @"电影", @"航班动态", @"彩票购买", @"加油站"];
+        currentApps = [self getAppsWithAppNames:apps];
+        [self setElements:currentApps];
     } else if (_segmentedControl.selectedSegmentIndex == 2) {
-        buttonCount = 21;
+        NSArray *apps = @[@"新闻", @"星座", @"POI", @"游戏充值", @"流量直充", @"停车场", @"聊天机器人", @"尺子"];
+        currentApps = [self getAppsWithAppNames:apps];
+        [self setElements:currentApps];
     }
-    float screenWidth = _menuScrollView.frame.size.width;
-    float buttonWidth = screenWidth / 5;
-    float buttonHeight = _menuScrollView.frame.size.height / 2;
-    int line = 1;
-    int page = 1;
-    if (buttonCount > 10) {
-        if (buttonCount % 10 == 0) {
-            page = buttonCount / 10;
-        } else {
-            page = buttonCount / 10 + 1;
+}
+
+- (NSArray *)getAppsWithAppNames:(NSArray *)names {
+    NSMutableArray *appsArray = [NSMutableArray array];
+    for (NSString *appName in names) {
+        for (int j = 0; j < allApps.count; j++) {
+            AppInfoEntity *entity = allApps[j];
+            if ([appName isEqualToString:entity.appName]) {
+                [appsArray addObject:entity];
+            }
         }
     }
-    [_menuScrollView setContentSize:CGSizeMake((screenWidth) * page, buttonHeight * 2)];
-    [_menuScrollView setContentOffset:CGPointMake(0, 0)];
-    [_menuPageControl setNumberOfPages:page];
-    _menuPageControl.currentPage = 0;					
-    int index = 0;
-    int currentPage = 1;
-    for (int i = 0; i < buttonCount; i++) {
+    return appsArray;
+}
+
+static NSInteger const numberPerLine = 4;
+- (void)setElements:(NSArray *)elements {
+    NSInteger numberOfLine = 1;
+    NSInteger count = [elements count];
+    if (count > 4) {
+        if ([elements count] % 4 == 0) {
+            numberOfLine = count / 4;
+        } else {
+            numberOfLine = count / 4 + 1;
+        }
+    } else {
+        numberOfLine = 1;
+    }
+    
+    CGRect rect = CGRectZero;
+    CGFloat width = _menuScrollView.bounds.size.width / 4;
+    CGFloat height = width;
+    rect.size.width = width;
+    rect.size.height = height;
+    for (int i = 0; i < count;) {
+        AppInfoEntity *entity = elements[i];
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [button setFrame:CGRectMake(buttonWidth * index + (currentPage - 1) * buttonWidth * 5, (line - 1) * buttonHeight, buttonWidth, buttonHeight)];
-        [button setTitle:@"按钮" forState:UIControlStateNormal];
-        [button setTag:i];
+        [button setImage:[UIImage imageNamed:entity.iconName] forState:UIControlStateNormal];
+        [button.layer setBorderColor:[UIColor whiteColor].CGColor];
         [button addTarget:self action:@selector(menuButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        [button setBackgroundColor:i % 2 == 0 ? [UIColor blueColor] : [UIColor redColor]];
-        [_menuScrollView addSubview:button];
+        [button setBackgroundColor:[UIColor colorWithRed:35/255.0 green:57/255.0 blue:70/255.0 alpha:1.0]];
+        [button.layer setBorderWidth:.5];
+        [button setTag:i];
+        button.frame = rect;
         
-        if ((i + 1) % 10 == 0) {
-            currentPage ++;
-            index = 0;
-            line = 1;
-        }else if ((i + 1) % 5 == 0 && (i + 1) % 10 != 0) {
-            index = 0;
-            line = 2;
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, button.frame.size.height - 25, button.frame.size.width, 15)];
+        label.text = entity.appName;
+        label.font = [UIFont systemFontOfSize:10];
+        label.textColor = [UIColor whiteColor];
+        label.textAlignment = NSTextAlignmentCenter;
+        [button addSubview:label];
+        
+        [_menuScrollView addSubview:button];
+        i++;
+        if (i % (numberPerLine * numberOfLine) == 0) {
+            rect.origin.x = _menuScrollView.bounds.size.width * (count / numberPerLine);
+            rect.origin.y = 0;
+        } else if (i % numberPerLine == 0) {
+            rect.origin.x = 0;
+            rect.origin.y = height * (i / 4);
         } else {
-            index ++;
+            rect.origin.x += width;
         }
     }
+    _menuScrollView.contentSize = CGSizeMake(_menuScrollView.bounds.size.width, height * (numberOfLine - 1));
 }
 
 - (void)menuButtonClicked:(id)sender {
     NSLog(@"%ld", [sender tag]);
-//    AppleDeviceIdSearchViewController *contrl = [AppleDeviceIdSearchViewController new];
-//    [self.navigationController pushViewController:contrl animated:YES];
-    
-//    IDCardSearchViewController *contrl = [IDCardSearchViewController new];
-//    [self.navigationController pushViewController:contrl animated:YES];
-
-//    CalculatorViewController *contrl = [CalculatorViewController new];
-//    [self.navigationController pushViewController:contrl animated:YES];
-    
-    IPSearchViewController *contrl = [IPSearchViewController new];
-    [self.navigationController pushViewController:contrl animated:YES];
-}
-
-- (IBAction)actionCotrolPage:(id)sender {
-    [_menuScrollView setContentOffset:CGPointMake(_menuPageControl.currentPage * _menuScrollView.frame.size.width, 0) animated:YES];
-}
-
-- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
-    NSLog(@"%f", _menuScrollView.contentOffset.x);
-    if(_menuScrollView.contentOffset.x > (_menuPageControl.numberOfPages - 1) * _menuScrollView.frame.size.width) {
-        NSLog(@"下一页");
-        if (_segmentedControl.selectedSegmentIndex == 2) {
-            NSLog(@"已经到最后一页了");
-            return;
-        }
-        _segmentedControl.selectedSegmentIndex ++;
-        shouldPageToFirst = YES;
-    } else if (_menuScrollView.contentOffset.x < 0) {
-        NSLog(@"上一页");
-        if (_segmentedControl.selectedSegmentIndex == 0) {
-            NSLog(@"已经到第一页了");
-            return;
-        }
-        _segmentedControl.selectedSegmentIndex --;
-        if (_segmentedControl.selectedSegmentIndex < 0) {
-            _segmentedControl.selectedSegmentIndex = 0;
-        }
-        shouldPageToEnd = YES;
-    }
-}
-
-// UIScrollView的代理方法
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
-{
-    if (shouldPageToFirst) {
-        shouldPageToFirst = NO;
-        [self initMenuButtons];
-        [_menuScrollView setContentOffset:CGPointMake(0, 0)];
-        return;
-    } else if (shouldPageToEnd) {
-        shouldPageToEnd = NO;
-        [self initMenuButtons];
-        [_menuScrollView setContentOffset:CGPointMake(_menuScrollView.frame.size.width * (_menuPageControl.numberOfPages - 1), 0)];
-        _menuPageControl.currentPage = _menuPageControl.numberOfPages - 1;
+    AppInfoEntity *entity = currentApps[[sender tag]];
+    if ([entity.controlName isEqualToString:@""]) {
         return;
     }
-    _menuPageControl.currentPage = _menuScrollView.contentOffset.x / _menuScrollView.frame.size.width;
+    id viewCtrl = [NSClassFromString(entity.controlName) new];
+    [self.navigationController pushViewController:viewCtrl animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
