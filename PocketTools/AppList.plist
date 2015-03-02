@@ -190,7 +190,7 @@
 		<key>appName</key>
 		<string>尺子</string>
 		<key>controlName</key>
-		<string></string>
+		<string>RullerViewController</string>
 		<key>iconName</key>
 		<string>gr_tool_ruler</string>
 	</dict>
@@ -246,7 +246,7 @@
 		<key>appName</key>
 		<string>手电筒</string>
 		<key>controlName</key>
-		<string></string>
+		<string>FlashViewController</string>
 		<key>iconName</key>
 		<string>gr_tool_flash</string>
 	</dict>

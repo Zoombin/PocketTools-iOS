@@ -15,6 +15,10 @@
 		5817F13F1A9D7BDB00B3A0A1 /* PocketToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F13E1A9D7BDB00B3A0A1 /* PocketToolsTests.m */; };
 		588A3DE31AA4312600EB1066 /* AppInfoEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A3DE21AA4312600EB1066 /* AppInfoEntity.m */; };
 		588A3DE51AA4428300EB1066 /* AppList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 588A3DE41AA4428300EB1066 /* AppList.plist */; };
+		588A3DE91AA45A4E00EB1066 /* FlashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A3DE71AA45A4E00EB1066 /* FlashViewController.m */; };
+		588A3DEA1AA45A4E00EB1066 /* FlashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 588A3DE81AA45A4E00EB1066 /* FlashViewController.xib */; };
+		588A3DEE1AA45CAE00EB1066 /* RullerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A3DEC1AA45CAE00EB1066 /* RullerViewController.m */; };
+		588A3DEF1AA45CAE00EB1066 /* RullerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 588A3DED1AA45CAE00EB1066 /* RullerViewController.xib */; };
 		588BDBE51AA1A088009347CE /* IPInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 588BDBE41AA1A088009347CE /* IPInfo.m */; };
 		5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589446981AA15A52004BEE7B /* CalculatorViewController.m */; };
 		5894469B1AA15A52004BEE7B /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 589446991AA15A52004BEE7B /* CalculatorViewController.xib */; };
@@ -53,6 +57,12 @@
 		588A3DE11AA4312600EB1066 /* AppInfoEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoEntity.h; sourceTree = "<group>"; };
 		588A3DE21AA4312600EB1066 /* AppInfoEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoEntity.m; sourceTree = "<group>"; };
 		588A3DE41AA4428300EB1066 /* AppList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppList.plist; sourceTree = "<group>"; };
+		588A3DE61AA45A4E00EB1066 /* FlashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashViewController.h; sourceTree = "<group>"; };
+		588A3DE71AA45A4E00EB1066 /* FlashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashViewController.m; sourceTree = "<group>"; };
+		588A3DE81AA45A4E00EB1066 /* FlashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlashViewController.xib; sourceTree = "<group>"; };
+		588A3DEB1AA45CAE00EB1066 /* RullerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RullerViewController.h; sourceTree = "<group>"; };
+		588A3DEC1AA45CAE00EB1066 /* RullerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RullerViewController.m; sourceTree = "<group>"; };
+		588A3DED1AA45CAE00EB1066 /* RullerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RullerViewController.xib; sourceTree = "<group>"; };
 		588BDBE31AA1A088009347CE /* IPInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPInfo.h; sourceTree = "<group>"; };
 		588BDBE41AA1A088009347CE /* IPInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPInfo.m; sourceTree = "<group>"; };
 		589446971AA15A52004BEE7B /* CalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
@@ -168,6 +178,12 @@
 				589446971AA15A52004BEE7B /* CalculatorViewController.h */,
 				589446981AA15A52004BEE7B /* CalculatorViewController.m */,
 				589446991AA15A52004BEE7B /* CalculatorViewController.xib */,
+				588A3DE61AA45A4E00EB1066 /* FlashViewController.h */,
+				588A3DE71AA45A4E00EB1066 /* FlashViewController.m */,
+				588A3DE81AA45A4E00EB1066 /* FlashViewController.xib */,
+				588A3DEB1AA45CAE00EB1066 /* RullerViewController.h */,
+				588A3DEC1AA45CAE00EB1066 /* RullerViewController.m */,
+				588A3DED1AA45CAE00EB1066 /* RullerViewController.xib */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -307,6 +323,8 @@
 				5817F12E1A9D7BDB00B3A0A1 /* Main.storyboard in Resources */,
 				588A3DE51AA4428300EB1066 /* AppList.plist in Resources */,
 				58E8506D1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.xib in Resources */,
+				588A3DEF1AA45CAE00EB1066 /* RullerViewController.xib in Resources */,
+				588A3DEA1AA45A4E00EB1066 /* FlashViewController.xib in Resources */,
 				5817F1301A9D7BDB00B3A0A1 /* Images.xcassets in Resources */,
 				5894469B1AA15A52004BEE7B /* CalculatorViewController.xib in Resources */,
 			);
@@ -360,10 +378,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5817F12B1A9D7BDB00B3A0A1 /* MainViewController.m in Sources */,
+				588A3DEE1AA45CAE00EB1066 /* RullerViewController.m in Sources */,
 				58E850681AA012F10095DDC7 /* ServiceRequest.m in Sources */,
 				588A3DE31AA4312600EB1066 /* AppInfoEntity.m in Sources */,
 				5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */,
 				58EACBAC1AA03EC0006D5226 /* IDCardInfo.m in Sources */,
+				588A3DE91AA45A4E00EB1066 /* FlashViewController.m in Sources */,
 				58E850741AA01BFC0095DDC7 /* AppleInfo.m in Sources */,
 				58E8506C1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.m in Sources */,
 				588BDBE51AA1A088009347CE /* IPInfo.m in Sources */,
