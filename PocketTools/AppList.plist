@@ -134,7 +134,7 @@
 		<key>appName</key>
 		<string>停车场</string>
 		<key>controlName</key>
-		<string></string>
+		<string>ParkViewController</string>
 		<key>iconName</key>
 		<string></string>
 	</dict>

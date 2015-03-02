@@ -21,6 +21,8 @@
 		588A3DEF1AA45CAE00EB1066 /* RullerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 588A3DED1AA45CAE00EB1066 /* RullerViewController.xib */; };
 		588A3DF31AA4609400EB1066 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A3DF11AA4609400EB1066 /* NewsViewController.m */; };
 		588A3DF41AA4609400EB1066 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 588A3DF21AA4609400EB1066 /* NewsViewController.xib */; };
+		588A3DF81AA462C200EB1066 /* ParkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A3DF61AA462C200EB1066 /* ParkViewController.m */; };
+		588A3DF91AA462C200EB1066 /* ParkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 588A3DF71AA462C200EB1066 /* ParkViewController.xib */; };
 		588BDBE51AA1A088009347CE /* IPInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 588BDBE41AA1A088009347CE /* IPInfo.m */; };
 		5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589446981AA15A52004BEE7B /* CalculatorViewController.m */; };
 		5894469B1AA15A52004BEE7B /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 589446991AA15A52004BEE7B /* CalculatorViewController.xib */; };
@@ -68,6 +70,9 @@
 		588A3DF01AA4609400EB1066 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		588A3DF11AA4609400EB1066 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		588A3DF21AA4609400EB1066 /* NewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
+		588A3DF51AA462C200EB1066 /* ParkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParkViewController.h; sourceTree = "<group>"; };
+		588A3DF61AA462C200EB1066 /* ParkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParkViewController.m; sourceTree = "<group>"; };
+		588A3DF71AA462C200EB1066 /* ParkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParkViewController.xib; sourceTree = "<group>"; };
 		588BDBE31AA1A088009347CE /* IPInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPInfo.h; sourceTree = "<group>"; };
 		588BDBE41AA1A088009347CE /* IPInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPInfo.m; sourceTree = "<group>"; };
 		589446971AA15A52004BEE7B /* CalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
@@ -192,6 +197,9 @@
 				588A3DF01AA4609400EB1066 /* NewsViewController.h */,
 				588A3DF11AA4609400EB1066 /* NewsViewController.m */,
 				588A3DF21AA4609400EB1066 /* NewsViewController.xib */,
+				588A3DF51AA462C200EB1066 /* ParkViewController.h */,
+				588A3DF61AA462C200EB1066 /* ParkViewController.m */,
+				588A3DF71AA462C200EB1066 /* ParkViewController.xib */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -328,6 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				588A3DF91AA462C200EB1066 /* ParkViewController.xib in Resources */,
 				5817F12E1A9D7BDB00B3A0A1 /* Main.storyboard in Resources */,
 				588A3DE51AA4428300EB1066 /* AppList.plist in Resources */,
 				58E8506D1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.xib in Resources */,
@@ -400,6 +409,7 @@
 				58E850711AA01AF90095DDC7 /* ServiceResult.m in Sources */,
 				5817F1251A9D7BDB00B3A0A1 /* main.m in Sources */,
 				588A3DF31AA4609400EB1066 /* NewsViewController.m in Sources */,
+				588A3DF81AA462C200EB1066 /* ParkViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
