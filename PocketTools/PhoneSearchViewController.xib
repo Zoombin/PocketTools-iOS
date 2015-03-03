@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppleDeviceIdSearchViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhoneSearchViewController">
             <connections>
-                <outlet property="contentTextView" destination="Yif-EU-t0i" id="3FO-77-vlk"/>
-                <outlet property="snTextField" destination="C3m-2k-12r" id="0wB-db-gPi"/>
+                <outlet property="contentTextView" destination="gCs-df-3aT" id="4DS-Kx-DQg"/>
+                <outlet property="phoneTextField" destination="GNV-My-ERY" id="Ak2-A1-ef0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,31 +17,28 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入苹果序列号" clearsOnBeginEditing="YES" minimumFontSize="17" id="C3m-2k-12r">
-                    <rect key="frame" x="11" y="80" width="299" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号码" clearsOnBeginEditing="YES" minimumFontSize="17" id="GNV-My-ERY">
+                    <rect key="frame" x="11" y="87" width="299" height="30"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="search"/>
                     <connections>
-                        <outlet property="delegate" destination="-1" id="368-KA-RQc"/>
+                        <outlet property="delegate" destination="-1" id="lO8-PK-y9n"/>
                     </connections>
                 </textField>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="序列号位置:通用->关于本机->序列号->点击粘贴" id="Yif-EU-t0i">
-                    <rect key="frame" x="11" y="134" width="299" height="276"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gCs-df-3aT">
+                    <rect key="frame" x="11" y="142" width="299" height="204"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="SOo-DK-OiR"/>
-                    </connections>
-                </textView>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <color key="backgroundColor" red="0.035294117647058823" green="0.16470588235294117" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.035294117649999998" green="0.1647058824" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-            <point key="canvasLocation" x="245" y="412"/>
+            <point key="canvasLocation" x="258" y="335"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

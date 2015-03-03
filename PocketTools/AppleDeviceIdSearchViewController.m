@@ -7,8 +7,6 @@
 //
 
 #import "AppleDeviceIdSearchViewController.h"
-#import "ServiceRequest.h"
-#import "ServiceResult.h"
 #import "AppleInfo.h"
 
 #define DEFAULT_STRING @"序列号位置:通用->关于本机->序列号->点击粘贴"
@@ -26,7 +24,10 @@
     if ([[ServiceRequest shared] getAppId]) {
         _snTextField.text = [[ServiceRequest shared] getAppId];
         [self loadAppleInfo];
+    } else {
+        [_snTextField becomeFirstResponder];
     }
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -63,7 +64,7 @@
 
 - (void)showContentWithAppleInfo:(AppleInfo *)appleInfo
 {
-    NSString *content = [NSString stringWithFormat:@"设备型号 %@\n设备序列号 %@\nIMEI号 %@\n激活状态 %@\n保修状态 %@\n保修到期 %@\n电话支持到期 %@\n电话支持状态 %@\n生产工厂 %@\n生产时间 %@ 至 %@", appleInfo.phoneModel, appleInfo.serialNumber , appleInfo.imeiNumber, appleInfo.active, appleInfo.warrantyStatus, appleInfo.warranty, appleInfo.teleSupport, appleInfo.teleSupportStatus, appleInfo.madeArea, appleInfo.startDate, appleInfo.endDate];
+    NSString *content = [NSString stringWithFormat:@"设备型号: %@\n\n设备序列号: %@\n\nIMEI号: %@\n\n激活状态: %@\n\n保修状态: %@\n\n保修到期: %@\n\n电话支持到期: %@\n\n电话支持状态: %@\n\n生产工厂: %@\n\n生产时间: %@ 至 %@", appleInfo.phoneModel, appleInfo.serialNumber , appleInfo.imeiNumber, appleInfo.active, appleInfo.warrantyStatus, appleInfo.warranty, appleInfo.teleSupport, appleInfo.teleSupportStatus, appleInfo.madeArea, appleInfo.startDate, appleInfo.endDate];
     _contentTextView.text = content;
 }
 

@@ -33,4 +33,8 @@
 - (void)ipSearch:(NSString *)ip
        withBlock:(void (^)(NSDictionary *result, NSError *error))block;
 
+//电话查询
+- (void)phoneSearch:(NSString *)phoneNum
+          withBlock:(void (^)(NSDictionary *result, NSError *error))block;
+
 @end

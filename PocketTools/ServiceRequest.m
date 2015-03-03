@@ -83,4 +83,18 @@ static ServiceRequest *request;
         block(nil, error);
     }];
 }
+
+//电话查询
+- (void)phoneSearch:(NSString *)phoneNum
+          withBlock:(void (^)(NSDictionary *result, NSError *error))block {
+    NSMutableDictionary *params =  [self getRequestParams];
+    params[@"phone"] = phoneNum;
+    params[@"key"] = @"b8b61acf82e1866e41a67c53e295f51b";
+    NSString *requestUrl = [NSString stringWithFormat:@"%@/mobile/get", BASE_URL];
+    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        block(responseObject, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        block(nil, error);
+    }];
+}
 @end

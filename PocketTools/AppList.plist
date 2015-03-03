@@ -38,7 +38,7 @@
 		<key>appName</key>
 		<string>来电号码查询</string>
 		<key>controlName</key>
-		<string></string>
+		<string>PhoneSearchViewController</string>
 		<key>iconName</key>
 		<string>gr_search_phone</string>
 	</dict>
