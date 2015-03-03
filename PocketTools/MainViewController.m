@@ -16,17 +16,70 @@
 @implementation MainViewController {
     NSArray *allApps;
     NSArray *currentApps;
+    NSMutableArray *bottomButtons;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [_segmentedControl addTarget:self action:@selector(initMenuButtons) forControlEvents:UIControlEventValueChanged];
+    bottomButtons = [NSMutableArray array];
+    
     [_menuScrollView setScrollEnabled:YES];
     [_menuScrollView setPagingEnabled:YES];
     
+    [self addBottomButtons];
+    [self bottomButtonClicked:bottomButtons[0]];
+    
     [self initAllApps];
-    [self initMenuButtons];
+    [self initMenuButtons:0];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)addBottomButtons {
+    int buttonCount = 3;
+    NSArray *buttonNames = @[@"日常工具", @"生活服务", @"阅读发现"];
+    NSArray *imageNames = @[@"btn_tab1", @"btn_tab2", @"btn_tab3"];
+    CGFloat buttonWidth = ([UIScreen mainScreen].bounds.size.width - 3) / 3;
+    CGFloat buttonHeight = ([UIScreen mainScreen].bounds.size.height - CGRectGetMaxY(_menuScrollView.frame));
+    for (int i = 0; i <buttonCount; i++) {
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [button setBackgroundColor:[UIColor whiteColor]];
+        [button addTarget:self action:@selector(bottomButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [button setTag:i];
+        [button setFrame:CGRectMake(i * (buttonWidth + 1), CGRectGetMaxY(_menuScrollView.frame), buttonWidth, buttonHeight)];
+        [button setBackgroundColor:[UIColor clearColor]];
+        [button setImage:[UIImage imageNamed:imageNames[i]] forState:UIControlStateNormal];
+       
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, button.frame.size.width, button.frame.size.height)];
+        [label setTextAlignment:NSTextAlignmentCenter];
+        [label setFont:[UIFont systemFontOfSize:14]];
+        [label setTag:i + 1000];
+        [label setText:buttonNames[i]];
+        [button addSubview:label];
+        
+        [self.view addSubview:button];
+        [bottomButtons addObject:button];
+    }
+}
+
+- (void)bottomButtonClicked:(id)sender {
+    [self allUnSelect];
+    UIButton *button = (UIButton *)sender;
+    [button setImageEdgeInsets:UIEdgeInsetsMake(25, 0, 0, 0)];
+    button.selected = YES;
+    
+    UILabel *label = (UILabel *)[button viewWithTag:[sender tag] + 1000];
+    [label setTextColor:[UIColor whiteColor]];
+    [self initMenuButtons:[sender tag]];
+    
+}
+
+- (void)allUnSelect {
+    for (UIButton *button in bottomButtons) {
+        [button setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+        button.selected = NO;
+        UILabel *label = (UILabel *)[button viewWithTag:[button tag] + 1000];
+        [label setTextColor:[UIColor blackColor]];
+    }
 }
 
 - (void)initAllApps {
@@ -53,17 +106,17 @@
     }
 }
 
-- (void)initMenuButtons {
+- (void)initMenuButtons:(NSInteger)index {
     [self removeAllButtons];
-    if (_segmentedControl.selectedSegmentIndex == 0) {
+    if (index == 0) {
         NSArray *apps = @[@"苹果序列号", @"老黄历" ,@"天气预报", @"镜子", @"秘密相册", @"话费充值", @"空气质量", @"周公解梦", @"科学计算器", @"汇率换算", @"单位换算", @"手电筒", @"尺码对照表", @"条码比价"];
         currentApps = [self getAppsWithAppNames:apps];
         [self setElements:currentApps];
-    } else if (_segmentedControl.selectedSegmentIndex == 1) {
+    } else if (index == 1) {
         NSArray *apps = @[@"车辆违章", @"快递", @"火车订票", @"来电号码查询", @"电影", @"航班动态", @"彩票购买", @"加油站"];
         currentApps = [self getAppsWithAppNames:apps];
         [self setElements:currentApps];
-    } else if (_segmentedControl.selectedSegmentIndex == 2) {
+    } else if (index == 2) {
         NSArray *apps = @[@"新闻", @"星座", @"POI", @"游戏充值", @"流量直充", @"停车场", @"聊天机器人", @"尺子"];
         currentApps = [self getAppsWithAppNames:apps];
         [self setElements:currentApps];

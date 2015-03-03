@@ -11,6 +11,5 @@
 @interface MainViewController : UIViewController
 
 @property (nonatomic, strong) IBOutlet UIScrollView *menuScrollView;
-@property (nonatomic, strong) IBOutlet UISegmentedControl *segmentedControl;
 @end
 
