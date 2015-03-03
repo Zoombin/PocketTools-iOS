@@ -17,6 +17,8 @@
 		5845D8561AA54A420007E4D8 /* PhoneSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5845D8541AA54A420007E4D8 /* PhoneSearchViewController.m */; };
 		5845D8571AA54A420007E4D8 /* PhoneSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5845D8551AA54A420007E4D8 /* PhoneSearchViewController.xib */; };
 		5845D85B1AA559A10007E4D8 /* CalculatorTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5845D85A1AA559A10007E4D8 /* CalculatorTools.m */; };
+		5845D85F1AA56ACB0007E4D8 /* SizesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5845D85D1AA56ACB0007E4D8 /* SizesViewController.m */; };
+		5845D8601AA56ACB0007E4D8 /* SizesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5845D85E1AA56ACB0007E4D8 /* SizesViewController.xib */; };
 		588A3DE31AA4312600EB1066 /* AppInfoEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A3DE21AA4312600EB1066 /* AppInfoEntity.m */; };
 		588A3DE51AA4428300EB1066 /* AppList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 588A3DE41AA4428300EB1066 /* AppList.plist */; };
 		588A3DE91AA45A4E00EB1066 /* FlashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A3DE71AA45A4E00EB1066 /* FlashViewController.m */; };
@@ -70,6 +72,9 @@
 		5845D8551AA54A420007E4D8 /* PhoneSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhoneSearchViewController.xib; sourceTree = "<group>"; };
 		5845D8591AA559A10007E4D8 /* CalculatorTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorTools.h; sourceTree = "<group>"; };
 		5845D85A1AA559A10007E4D8 /* CalculatorTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorTools.m; sourceTree = "<group>"; };
+		5845D85C1AA56ACB0007E4D8 /* SizesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SizesViewController.h; sourceTree = "<group>"; };
+		5845D85D1AA56ACB0007E4D8 /* SizesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SizesViewController.m; sourceTree = "<group>"; };
+		5845D85E1AA56ACB0007E4D8 /* SizesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SizesViewController.xib; sourceTree = "<group>"; };
 		588A3DE11AA4312600EB1066 /* AppInfoEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoEntity.h; sourceTree = "<group>"; };
 		588A3DE21AA4312600EB1066 /* AppInfoEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoEntity.m; sourceTree = "<group>"; };
 		588A3DE41AA4428300EB1066 /* AppList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppList.plist; sourceTree = "<group>"; };
@@ -226,6 +231,9 @@
 				5845D8531AA54A420007E4D8 /* PhoneSearchViewController.h */,
 				5845D8541AA54A420007E4D8 /* PhoneSearchViewController.m */,
 				5845D8551AA54A420007E4D8 /* PhoneSearchViewController.xib */,
+				5845D85C1AA56ACB0007E4D8 /* SizesViewController.h */,
+				5845D85D1AA56ACB0007E4D8 /* SizesViewController.m */,
+				5845D85E1AA56ACB0007E4D8 /* SizesViewController.xib */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -373,6 +381,7 @@
 				588A3DEF1AA45CAE00EB1066 /* RullerViewController.xib in Resources */,
 				588A3DEA1AA45A4E00EB1066 /* FlashViewController.xib in Resources */,
 				5817F1301A9D7BDB00B3A0A1 /* Images.xcassets in Resources */,
+				5845D8601AA56ACB0007E4D8 /* SizesViewController.xib in Resources */,
 				5894469B1AA15A52004BEE7B /* CalculatorViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +441,7 @@
 				58EACBAC1AA03EC0006D5226 /* IDCardInfo.m in Sources */,
 				588A3DE91AA45A4E00EB1066 /* FlashViewController.m in Sources */,
 				58E850741AA01BFC0095DDC7 /* AppleInfo.m in Sources */,
+				5845D85F1AA56ACB0007E4D8 /* SizesViewController.m in Sources */,
 				58E8506C1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.m in Sources */,
 				588BDBE51AA1A088009347CE /* IPInfo.m in Sources */,
 				5817F1281A9D7BDB00B3A0A1 /* AppDelegate.m in Sources */,

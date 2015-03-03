@@ -214,7 +214,7 @@
 		<key>appName</key>
 		<string>尺码对照表</string>
 		<key>controlName</key>
-		<string></string>
+		<string>SizesViewController</string>
 		<key>iconName</key>
 		<string>gr_tool_sizes</string>
 	</dict>
