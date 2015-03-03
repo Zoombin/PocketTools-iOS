@@ -228,8 +228,10 @@
             line ++;
         }
         UIButton *typeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [typeButton setBackgroundColor:[UIColor lightGrayColor]];
+        [typeButton setBackgroundColor:[UIColor colorWithRed:82/255.0 green:106/255.0 blue:120/255.0 alpha:1.0]];
         [typeButton setTitle:typesArray[i] forState:UIControlStateNormal];
+        [typeButton.layer setBorderColor:[UIColor colorWithRed:62/255.0 green:91/255.0 blue:107/255.0 alpha:1.0].CGColor];
+        [typeButton.layer setBorderWidth:.5];
         [self setTagWithBtn:typeButton];
         [typeButton addTarget:self action:@selector(tapAction:) forControlEvents:UIControlEventTouchUpInside];
         [typeButton setFrame:CGRectMake(index * caluculatorWidth, CGRectGetMaxY(_preLabel.frame) + ((line - 1) * caluculatorHeight), caluculatorWidth, caluculatorHeight)];
@@ -247,10 +249,12 @@
             line ++;
         }
         UIButton *typeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        [typeButton setBackgroundColor:[UIColor lightGrayColor]];
+        [typeButton setBackgroundColor:[UIColor colorWithRed:103/255.0 green:124/255.0 blue:136/255.0 alpha:1.0]];
         [typeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [typeButton setTitle:numsArray[i] forState:UIControlStateNormal];
         [self setTagWithBtn:typeButton];
+        [typeButton.layer setBorderColor:[UIColor colorWithRed:62/255.0 green:91/255.0 blue:107/255.0 alpha:1.0].CGColor];
+        [typeButton.layer setBorderWidth:.5];
         [typeButton addTarget:self action:@selector(tapAction:) forControlEvents:UIControlEventTouchUpInside];
         [typeButton setFrame:CGRectMake(index * numWidth, caluculatorHeight * 2 + CGRectGetMaxY(_preLabel.frame) + ((line - 1) * numHeight), numWidth, numHeight)];
         [self.view addSubview:typeButton];
