@@ -38,6 +38,7 @@
 - (void)loadAppleInfo {
     if ([_snTextField.text isEqualToString:@""]) {
         NSLog(@"请输入苹果码");
+        [self displayHUDTitle:nil message:@"请输入苹果码" duration:DELAY_TIMES];
         return;
     }
     [_snTextField resignFirstResponder];

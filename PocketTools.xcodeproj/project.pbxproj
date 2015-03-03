@@ -58,6 +58,7 @@
 		5817F1381A9D7BDB00B3A0A1 /* PocketToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5817F13D1A9D7BDB00B3A0A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5817F13E1A9D7BDB00B3A0A1 /* PocketToolsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PocketToolsTests.m; sourceTree = "<group>"; };
+		5845D84F1AA547F60007E4D8 /* PocketTools.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PocketTools.pch; sourceTree = "<group>"; };
 		588A3DE11AA4312600EB1066 /* AppInfoEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoEntity.h; sourceTree = "<group>"; };
 		588A3DE21AA4312600EB1066 /* AppInfoEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoEntity.m; sourceTree = "<group>"; };
 		588A3DE41AA4428300EB1066 /* AppList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppList.plist; sourceTree = "<group>"; };
@@ -158,6 +159,7 @@
 				5817F1231A9D7BDB00B3A0A1 /* Info.plist */,
 				5817F1241A9D7BDB00B3A0A1 /* main.m */,
 				588A3DE41AA4428300EB1066 /* AppList.plist */,
+				5845D84F1AA547F60007E4D8 /* PocketTools.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -526,6 +528,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = PocketTools/PocketTools.pch;
 				INFOPLIST_FILE = PocketTools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -543,6 +546,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = PocketTools/PocketTools.pch;
 				INFOPLIST_FILE = PocketTools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
