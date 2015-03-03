@@ -160,7 +160,7 @@
 		<key>controlName</key>
 		<string></string>
 		<key>iconName</key>
-		<string></string>
+		<string>gr_search_telebill</string>
 	</dict>
 	<dict>
 		<key>appName</key>
@@ -168,7 +168,7 @@
 		<key>controlName</key>
 		<string></string>
 		<key>iconName</key>
-		<string></string>
+		<string>gr_tool_games</string>
 	</dict>
 	<dict>
 		<key>appName</key>
@@ -216,11 +216,11 @@
 		<key>controlName</key>
 		<string></string>
 		<key>iconName</key>
-		<string></string>
+		<string>gr_tool_sizes</string>
 	</dict>
 	<dict>
 		<key>appName</key>
-		<string>大写换算</string>
+		<string>单位换算</string>
 		<key>controlName</key>
 		<string></string>
 		<key>iconName</key>

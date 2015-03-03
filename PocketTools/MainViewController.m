@@ -56,7 +56,7 @@
 - (void)initMenuButtons {
     [self removeAllButtons];
     if (_segmentedControl.selectedSegmentIndex == 0) {
-        NSArray *apps = @[@"苹果序列号", @"老黄历" ,@"天气预报", @"镜子", @"秘密相册", @"话费充值", @"空气质量", @"周公解梦", @"科学计算器", @"汇率换算", @"大写换算", @"手电筒", @"尺码对照表", @"条码比价"];
+        NSArray *apps = @[@"苹果序列号", @"老黄历" ,@"天气预报", @"镜子", @"秘密相册", @"话费充值", @"空气质量", @"周公解梦", @"科学计算器", @"汇率换算", @"单位换算", @"手电筒", @"尺码对照表", @"条码比价"];
         currentApps = [self getAppsWithAppNames:apps];
         [self setElements:currentApps];
     } else if (_segmentedControl.selectedSegmentIndex == 1) {
