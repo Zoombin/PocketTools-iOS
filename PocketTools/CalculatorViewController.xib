@@ -8,7 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculatorViewController">
             <connections>
                 <outlet property="preLabel" destination="aSn-2I-OrA" id="rL8-o6-PTd"/>
-                <outlet property="resultLabel" destination="PUa-Xy-CgX" id="HUs-L4-Jg2"/>
+                <outlet property="resultText" destination="PUa-Xy-CgX" id="2uo-Fn-bSb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
