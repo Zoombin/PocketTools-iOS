@@ -37,4 +37,8 @@
 - (void)phoneSearch:(NSString *)phoneNum
           withBlock:(void (^)(NSDictionary *result, NSError *error))block;
 
+//聊天机器人
+- (void)chatWithRobot:(NSString *)content
+            withBlock:(void (^)(NSDictionary *result, NSError *error))block;
+
 @end

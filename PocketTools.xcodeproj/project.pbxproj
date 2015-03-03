@@ -19,6 +19,10 @@
 		5845D85B1AA559A10007E4D8 /* CalculatorTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5845D85A1AA559A10007E4D8 /* CalculatorTools.m */; };
 		5845D85F1AA56ACB0007E4D8 /* SizesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5845D85D1AA56ACB0007E4D8 /* SizesViewController.m */; };
 		5845D8601AA56ACB0007E4D8 /* SizesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5845D85E1AA56ACB0007E4D8 /* SizesViewController.xib */; };
+		5847F41F1AA5994000A57896 /* TulingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5847F41D1AA5994000A57896 /* TulingViewController.m */; };
+		5847F4201AA5994000A57896 /* TulingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5847F41E1AA5994000A57896 /* TulingViewController.xib */; };
+		5847F4231AA59B0800A57896 /* RobotInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5847F4221AA59B0800A57896 /* RobotInfo.m */; };
+		5847F4271AA5A2BA00A57896 /* CCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5847F4261AA5A2BA00A57896 /* CCLocationManager.m */; };
 		588A3DE31AA4312600EB1066 /* AppInfoEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A3DE21AA4312600EB1066 /* AppInfoEntity.m */; };
 		588A3DE51AA4428300EB1066 /* AppList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 588A3DE41AA4428300EB1066 /* AppList.plist */; };
 		588A3DE91AA45A4E00EB1066 /* FlashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A3DE71AA45A4E00EB1066 /* FlashViewController.m */; };
@@ -75,6 +79,13 @@
 		5845D85C1AA56ACB0007E4D8 /* SizesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SizesViewController.h; sourceTree = "<group>"; };
 		5845D85D1AA56ACB0007E4D8 /* SizesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SizesViewController.m; sourceTree = "<group>"; };
 		5845D85E1AA56ACB0007E4D8 /* SizesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SizesViewController.xib; sourceTree = "<group>"; };
+		5847F41C1AA5994000A57896 /* TulingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TulingViewController.h; sourceTree = "<group>"; };
+		5847F41D1AA5994000A57896 /* TulingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TulingViewController.m; sourceTree = "<group>"; };
+		5847F41E1AA5994000A57896 /* TulingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TulingViewController.xib; sourceTree = "<group>"; };
+		5847F4211AA59B0800A57896 /* RobotInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RobotInfo.h; sourceTree = "<group>"; };
+		5847F4221AA59B0800A57896 /* RobotInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RobotInfo.m; sourceTree = "<group>"; };
+		5847F4251AA5A2BA00A57896 /* CCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLocationManager.h; sourceTree = "<group>"; };
+		5847F4261AA5A2BA00A57896 /* CCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLocationManager.m; sourceTree = "<group>"; };
 		588A3DE11AA4312600EB1066 /* AppInfoEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoEntity.h; sourceTree = "<group>"; };
 		588A3DE21AA4312600EB1066 /* AppInfoEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoEntity.m; sourceTree = "<group>"; };
 		588A3DE41AA4428300EB1066 /* AppList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppList.plist; sourceTree = "<group>"; };
@@ -201,10 +212,20 @@
 		5845D8581AA5597F0007E4D8 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				5847F4241AA5A2BA00A57896 /* CCLocation */,
 				5845D8591AA559A10007E4D8 /* CalculatorTools.h */,
 				5845D85A1AA559A10007E4D8 /* CalculatorTools.m */,
 			);
 			name = Tools;
+			sourceTree = "<group>";
+		};
+		5847F4241AA5A2BA00A57896 /* CCLocation */ = {
+			isa = PBXGroup;
+			children = (
+				5847F4251AA5A2BA00A57896 /* CCLocationManager.h */,
+				5847F4261AA5A2BA00A57896 /* CCLocationManager.m */,
+			);
+			path = CCLocation;
 			sourceTree = "<group>";
 		};
 		58E850541AA010980095DDC7 /* Tools */ = {
@@ -234,6 +255,9 @@
 				5845D85C1AA56ACB0007E4D8 /* SizesViewController.h */,
 				5845D85D1AA56ACB0007E4D8 /* SizesViewController.m */,
 				5845D85E1AA56ACB0007E4D8 /* SizesViewController.xib */,
+				5847F41C1AA5994000A57896 /* TulingViewController.h */,
+				5847F41D1AA5994000A57896 /* TulingViewController.m */,
+				5847F41E1AA5994000A57896 /* TulingViewController.xib */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -269,6 +293,8 @@
 				588A3DE21AA4312600EB1066 /* AppInfoEntity.m */,
 				5845D8501AA5499D0007E4D8 /* PhoneInfo.h */,
 				5845D8511AA5499D0007E4D8 /* PhoneInfo.m */,
+				5847F4211AA59B0800A57896 /* RobotInfo.h */,
+				5847F4221AA59B0800A57896 /* RobotInfo.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -375,6 +401,7 @@
 				588A3DF91AA462C200EB1066 /* ParkViewController.xib in Resources */,
 				5817F12E1A9D7BDB00B3A0A1 /* Main.storyboard in Resources */,
 				588A3DE51AA4428300EB1066 /* AppList.plist in Resources */,
+				5847F4201AA5994000A57896 /* TulingViewController.xib in Resources */,
 				5845D8571AA54A420007E4D8 /* PhoneSearchViewController.xib in Resources */,
 				58E8506D1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.xib in Resources */,
 				588A3DF41AA4609400EB1066 /* NewsViewController.xib in Resources */,
@@ -437,9 +464,11 @@
 				588A3DEE1AA45CAE00EB1066 /* RullerViewController.m in Sources */,
 				58E850681AA012F10095DDC7 /* ServiceRequest.m in Sources */,
 				588A3DE31AA4312600EB1066 /* AppInfoEntity.m in Sources */,
+				5847F4271AA5A2BA00A57896 /* CCLocationManager.m in Sources */,
 				5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */,
 				58EACBAC1AA03EC0006D5226 /* IDCardInfo.m in Sources */,
 				588A3DE91AA45A4E00EB1066 /* FlashViewController.m in Sources */,
+				5847F41F1AA5994000A57896 /* TulingViewController.m in Sources */,
 				58E850741AA01BFC0095DDC7 /* AppleInfo.m in Sources */,
 				5845D85F1AA56ACB0007E4D8 /* SizesViewController.m in Sources */,
 				58E8506C1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.m in Sources */,
@@ -448,6 +477,7 @@
 				58E850711AA01AF90095DDC7 /* ServiceResult.m in Sources */,
 				5845D8521AA5499D0007E4D8 /* PhoneInfo.m in Sources */,
 				5845D85B1AA559A10007E4D8 /* CalculatorTools.m in Sources */,
+				5847F4231AA59B0800A57896 /* RobotInfo.m in Sources */,
 				5817F1251A9D7BDB00B3A0A1 /* main.m in Sources */,
 				588A3DF31AA4609400EB1066 /* NewsViewController.m in Sources */,
 				5845D8561AA54A420007E4D8 /* PhoneSearchViewController.m in Sources */,

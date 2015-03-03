@@ -97,4 +97,19 @@ static ServiceRequest *request;
         block(nil, error);
     }];
 }
+
+//聊天机器人
+- (void)chatWithRobot:(NSString *)content
+            withBlock:(void (^)(NSDictionary *result, NSError *error))block {
+    NSMutableDictionary *params =  [self getRequestParams];
+    params[@"info"] = content;
+    params[@"key"] = @"39ded27a75232bba451702ab705faeea";
+    NSString *requestUrl = @"http://op.juhe.cn/robot/index";
+    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        block(responseObject, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        block(nil, error);
+    }];
+}
+
 @end

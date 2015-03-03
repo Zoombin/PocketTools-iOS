@@ -46,7 +46,7 @@
 		<key>appName</key>
 		<string>聊天机器人</string>
 		<key>controlName</key>
-		<string></string>
+		<string>TulingViewController</string>
 		<key>iconName</key>
 		<string></string>
 	</dict>
