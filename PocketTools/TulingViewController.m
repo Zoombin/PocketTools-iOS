@@ -61,12 +61,14 @@
 
 - (void)chatWithRobot:(NSString *)content {
     [[ServiceRequest shared] chatWithRobot:content withBlock:^(NSDictionary *result, NSError *error) {
-        ServiceResult *resultInfo= [[ServiceResult alloc] initWithAttributes:result];
-        if ([resultInfo.resultcode integerValue] == 0) {
-            RobotInfo *info = [[RobotInfo alloc] init];
-            info.text = resultInfo.result[@"text"];
-            [infoArray addObject:info];
-            [_tableView reloadData];
+        if (!error) {
+            ServiceResult *resultInfo= [[ServiceResult alloc] initWithAttributes:result];
+            if ([resultInfo.resultcode integerValue] == 0) {
+                RobotInfo *info = [[RobotInfo alloc] init];
+                info.text = resultInfo.result[@"text"];
+                [infoArray addObject:info];
+                [_tableView reloadData];
+            }
         }
     }];
 }

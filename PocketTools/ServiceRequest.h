@@ -13,6 +13,8 @@
 #define SUCCESS_CODE 200
 #define DEVICE_ID @"device_id"
 
+#define NETWORK_ERROR @"网络异常"
+
 @interface ServiceRequest : NSObject
 
 - (void)saveAppID:(NSString *)appId;
@@ -40,5 +42,8 @@
 //聊天机器人
 - (void)chatWithRobot:(NSString *)content
             withBlock:(void (^)(NSDictionary *result, NSError *error))block;
+
+//汇率换算
+- (void)exchangeList:(void (^)(NSDictionary *result, NSError *error))block;
 
 @end

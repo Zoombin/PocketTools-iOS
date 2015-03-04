@@ -112,4 +112,24 @@ static ServiceRequest *request;
     }];
 }
 
+//汇率计算
+- (void)exchangeList:(void (^)(NSDictionary *, NSError *))block {
+    NSMutableDictionary *params =  [self getRequestParams];
+    params[@"key"] = @"ecfbba891b63a81c297ec1afb690d5ad";
+    NSString *requestUrl = @"http://web.juhe.cn:8080/finance/exchange/rmbquot";
+    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        block(responseObject, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%ld", (long)operation.response.statusCode);
+        if (operation.response.statusCode == 200) {
+            NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:operation.responseData
+                                                                     options:NSJSONReadingMutableContainers
+                                                                       error:nil];
+            block(jsonDict, nil);
+            return;
+        }
+        block(nil, error);
+    }];
+}
+
 @end

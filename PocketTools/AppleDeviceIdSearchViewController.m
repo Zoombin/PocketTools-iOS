@@ -43,20 +43,24 @@
         return;
     }
     [_snTextField resignFirstResponder];
+    [self displayHUD:@"加载中..."];
     [[ServiceRequest shared] appleInfo:_snTextField.text withBlock:^(NSDictionary *result, NSError *error) {
         if (!error) {
             ServiceResult *resultInfo= [[ServiceResult alloc] initWithAttributes:result];
             if ([resultInfo.resultcode integerValue] == 200) {
                 NSLog(@"数据获取成功!");
+                [self hideHUD:YES];
                 AppleInfo *appleInfo = [[AppleInfo alloc] initWithAttributes:resultInfo.result];
                 [[ServiceRequest shared] saveAppID:_snTextField.text];
                 [self showContentWithAppleInfo:appleInfo];
             } else {
                 NSLog(@"数据获取失败");
+                [self displayHUDTitle:nil message:@"获取失败" duration:DELAY_TIMES];
                 _contentTextView.text = DEFAULT_STRING;
             }
         } else {
             NSLog(@"网络异常");
+            [self displayHUDTitle:nil message:NETWORK_ERROR duration:DELAY_TIMES];
             _contentTextView.text = DEFAULT_STRING;
         }
     }];

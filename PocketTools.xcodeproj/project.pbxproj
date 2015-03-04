@@ -23,6 +23,8 @@
 		5847F4201AA5994000A57896 /* TulingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5847F41E1AA5994000A57896 /* TulingViewController.xib */; };
 		5847F4231AA59B0800A57896 /* RobotInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5847F4221AA59B0800A57896 /* RobotInfo.m */; };
 		5847F4271AA5A2BA00A57896 /* CCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5847F4261AA5A2BA00A57896 /* CCLocationManager.m */; };
+		586C99F51AA6EDF100ACD2CF /* MoneyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 586C99F31AA6EDF100ACD2CF /* MoneyTableViewCell.m */; };
+		586C99F61AA6EDF100ACD2CF /* MoneyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586C99F41AA6EDF100ACD2CF /* MoneyTableViewCell.xib */; };
 		588A3DE31AA4312600EB1066 /* AppInfoEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A3DE21AA4312600EB1066 /* AppInfoEntity.m */; };
 		588A3DE51AA4428300EB1066 /* AppList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 588A3DE41AA4428300EB1066 /* AppList.plist */; };
 		588A3DE91AA45A4E00EB1066 /* FlashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A3DE71AA45A4E00EB1066 /* FlashViewController.m */; };
@@ -36,6 +38,11 @@
 		588BDBE51AA1A088009347CE /* IPInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 588BDBE41AA1A088009347CE /* IPInfo.m */; };
 		5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589446981AA15A52004BEE7B /* CalculatorViewController.m */; };
 		5894469B1AA15A52004BEE7B /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 589446991AA15A52004BEE7B /* CalculatorViewController.xib */; };
+		58BE59081AA6A60C001811D9 /* CarVioSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BE59061AA6A60C001811D9 /* CarVioSearchViewController.m */; };
+		58BE59091AA6A60C001811D9 /* CarVioSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58BE59071AA6A60C001811D9 /* CarVioSearchViewController.xib */; };
+		58BE590D1AA6ABCD001811D9 /* ExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BE590B1AA6ABCD001811D9 /* ExchangeViewController.m */; };
+		58BE590E1AA6ABCD001811D9 /* ExchangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58BE590C1AA6ABCD001811D9 /* ExchangeViewController.xib */; };
+		58BE59111AA6B75D001811D9 /* MoneyEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BE59101AA6B75D001811D9 /* MoneyEntity.m */; };
 		58E850681AA012F10095DDC7 /* ServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E850671AA012F10095DDC7 /* ServiceRequest.m */; };
 		58E8506C1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E8506A1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.m */; };
 		58E8506D1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58E8506B1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.xib */; };
@@ -86,6 +93,9 @@
 		5847F4221AA59B0800A57896 /* RobotInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RobotInfo.m; sourceTree = "<group>"; };
 		5847F4251AA5A2BA00A57896 /* CCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLocationManager.h; sourceTree = "<group>"; };
 		5847F4261AA5A2BA00A57896 /* CCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLocationManager.m; sourceTree = "<group>"; };
+		586C99F21AA6EDF100ACD2CF /* MoneyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyTableViewCell.h; sourceTree = "<group>"; };
+		586C99F31AA6EDF100ACD2CF /* MoneyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyTableViewCell.m; sourceTree = "<group>"; };
+		586C99F41AA6EDF100ACD2CF /* MoneyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoneyTableViewCell.xib; sourceTree = "<group>"; };
 		588A3DE11AA4312600EB1066 /* AppInfoEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoEntity.h; sourceTree = "<group>"; };
 		588A3DE21AA4312600EB1066 /* AppInfoEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoEntity.m; sourceTree = "<group>"; };
 		588A3DE41AA4428300EB1066 /* AppList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppList.plist; sourceTree = "<group>"; };
@@ -106,6 +116,14 @@
 		589446971AA15A52004BEE7B /* CalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
 		589446981AA15A52004BEE7B /* CalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
 		589446991AA15A52004BEE7B /* CalculatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
+		58BE59051AA6A60C001811D9 /* CarVioSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarVioSearchViewController.h; sourceTree = "<group>"; };
+		58BE59061AA6A60C001811D9 /* CarVioSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarVioSearchViewController.m; sourceTree = "<group>"; };
+		58BE59071AA6A60C001811D9 /* CarVioSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarVioSearchViewController.xib; sourceTree = "<group>"; };
+		58BE590A1AA6ABCD001811D9 /* ExchangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeViewController.h; sourceTree = "<group>"; };
+		58BE590B1AA6ABCD001811D9 /* ExchangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeViewController.m; sourceTree = "<group>"; };
+		58BE590C1AA6ABCD001811D9 /* ExchangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExchangeViewController.xib; sourceTree = "<group>"; };
+		58BE590F1AA6B75D001811D9 /* MoneyEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyEntity.h; sourceTree = "<group>"; };
+		58BE59101AA6B75D001811D9 /* MoneyEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyEntity.m; sourceTree = "<group>"; };
 		58E850661AA012F10095DDC7 /* ServiceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceRequest.h; sourceTree = "<group>"; };
 		58E850671AA012F10095DDC7 /* ServiceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceRequest.m; sourceTree = "<group>"; };
 		58E850691AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleDeviceIdSearchViewController.h; sourceTree = "<group>"; };
@@ -258,6 +276,15 @@
 				5847F41C1AA5994000A57896 /* TulingViewController.h */,
 				5847F41D1AA5994000A57896 /* TulingViewController.m */,
 				5847F41E1AA5994000A57896 /* TulingViewController.xib */,
+				58BE59051AA6A60C001811D9 /* CarVioSearchViewController.h */,
+				58BE59061AA6A60C001811D9 /* CarVioSearchViewController.m */,
+				58BE59071AA6A60C001811D9 /* CarVioSearchViewController.xib */,
+				58BE590A1AA6ABCD001811D9 /* ExchangeViewController.h */,
+				58BE590B1AA6ABCD001811D9 /* ExchangeViewController.m */,
+				58BE590C1AA6ABCD001811D9 /* ExchangeViewController.xib */,
+				586C99F21AA6EDF100ACD2CF /* MoneyTableViewCell.h */,
+				586C99F31AA6EDF100ACD2CF /* MoneyTableViewCell.m */,
+				586C99F41AA6EDF100ACD2CF /* MoneyTableViewCell.xib */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -295,6 +322,8 @@
 				5845D8511AA5499D0007E4D8 /* PhoneInfo.m */,
 				5847F4211AA59B0800A57896 /* RobotInfo.h */,
 				5847F4221AA59B0800A57896 /* RobotInfo.m */,
+				58BE590F1AA6B75D001811D9 /* MoneyEntity.h */,
+				58BE59101AA6B75D001811D9 /* MoneyEntity.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -399,9 +428,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				588A3DF91AA462C200EB1066 /* ParkViewController.xib in Resources */,
+				58BE59091AA6A60C001811D9 /* CarVioSearchViewController.xib in Resources */,
 				5817F12E1A9D7BDB00B3A0A1 /* Main.storyboard in Resources */,
 				588A3DE51AA4428300EB1066 /* AppList.plist in Resources */,
 				5847F4201AA5994000A57896 /* TulingViewController.xib in Resources */,
+				58BE590E1AA6ABCD001811D9 /* ExchangeViewController.xib in Resources */,
 				5845D8571AA54A420007E4D8 /* PhoneSearchViewController.xib in Resources */,
 				58E8506D1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.xib in Resources */,
 				588A3DF41AA4609400EB1066 /* NewsViewController.xib in Resources */,
@@ -410,6 +441,7 @@
 				5817F1301A9D7BDB00B3A0A1 /* Images.xcassets in Resources */,
 				5845D8601AA56ACB0007E4D8 /* SizesViewController.xib in Resources */,
 				5894469B1AA15A52004BEE7B /* CalculatorViewController.xib in Resources */,
+				586C99F61AA6EDF100ACD2CF /* MoneyTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,7 +494,9 @@
 			files = (
 				5817F12B1A9D7BDB00B3A0A1 /* MainViewController.m in Sources */,
 				588A3DEE1AA45CAE00EB1066 /* RullerViewController.m in Sources */,
+				58BE59111AA6B75D001811D9 /* MoneyEntity.m in Sources */,
 				58E850681AA012F10095DDC7 /* ServiceRequest.m in Sources */,
+				58BE59081AA6A60C001811D9 /* CarVioSearchViewController.m in Sources */,
 				588A3DE31AA4312600EB1066 /* AppInfoEntity.m in Sources */,
 				5847F4271AA5A2BA00A57896 /* CCLocationManager.m in Sources */,
 				5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */,
@@ -472,7 +506,9 @@
 				58E850741AA01BFC0095DDC7 /* AppleInfo.m in Sources */,
 				5845D85F1AA56ACB0007E4D8 /* SizesViewController.m in Sources */,
 				58E8506C1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.m in Sources */,
+				58BE590D1AA6ABCD001811D9 /* ExchangeViewController.m in Sources */,
 				588BDBE51AA1A088009347CE /* IPInfo.m in Sources */,
+				586C99F51AA6EDF100ACD2CF /* MoneyTableViewCell.m in Sources */,
 				5817F1281A9D7BDB00B3A0A1 /* AppDelegate.m in Sources */,
 				58E850711AA01AF90095DDC7 /* ServiceResult.m in Sources */,
 				5845D8521AA5499D0007E4D8 /* PhoneInfo.m in Sources */,

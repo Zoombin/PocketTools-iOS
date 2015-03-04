@@ -30,7 +30,7 @@
 		<key>appName</key>
 		<string>车辆违章</string>
 		<key>controlName</key>
-		<string></string>
+		<string>CarVioSearchViewController</string>
 		<key>iconName</key>
 		<string>gr_search_violation</string>
 	</dict>
@@ -230,7 +230,7 @@
 		<key>appName</key>
 		<string>汇率换算</string>
 		<key>controlName</key>
-		<string></string>
+		<string>ExchangeViewController</string>
 		<key>iconName</key>
 		<string>gr_tool_currency</string>
 	</dict>
