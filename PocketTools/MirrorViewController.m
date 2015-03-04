@@ -1,0 +1,64 @@
+//
+//  MirrorViewController.m
+//  PocketTools
+//
+//  Created by yc on 15-3-4.
+//  Copyright (c) 2015年 yc. All rights reserved.
+//
+
+#import "MirrorViewController.h"
+
+@interface MirrorViewController ()
+
+@end
+
+@implementation MirrorViewController {
+    UIImagePickerController *imagePicker;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.title = NSLocalizedString(@"镜子", nil);
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        NSLog(@"无摄像头");
+        return;
+    }
+    [self showCamera];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+}
+
+- (void)showCamera {
+     imagePicker = [[UIImagePickerController alloc] init];
+    [imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
+    [imagePicker setCameraDevice:UIImagePickerControllerCameraDeviceFront];
+    [imagePicker setAllowsEditing:YES];
+    imagePicker.delegate = self;
+    [self presentViewController:imagePicker animated:NO completion:nil];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    NSLog(@"取消");
+    [imagePicker dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:NO];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

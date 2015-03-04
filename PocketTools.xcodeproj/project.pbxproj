@@ -25,6 +25,8 @@
 		5847F4271AA5A2BA00A57896 /* CCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5847F4261AA5A2BA00A57896 /* CCLocationManager.m */; };
 		586C99F51AA6EDF100ACD2CF /* MoneyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 586C99F31AA6EDF100ACD2CF /* MoneyTableViewCell.m */; };
 		586C99F61AA6EDF100ACD2CF /* MoneyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586C99F41AA6EDF100ACD2CF /* MoneyTableViewCell.xib */; };
+		586C99FA1AA702F700ACD2CF /* MirrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 586C99F81AA702F700ACD2CF /* MirrorViewController.m */; };
+		586C99FB1AA702F700ACD2CF /* MirrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586C99F91AA702F700ACD2CF /* MirrorViewController.xib */; };
 		588A3DE31AA4312600EB1066 /* AppInfoEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A3DE21AA4312600EB1066 /* AppInfoEntity.m */; };
 		588A3DE51AA4428300EB1066 /* AppList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 588A3DE41AA4428300EB1066 /* AppList.plist */; };
 		588A3DE91AA45A4E00EB1066 /* FlashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A3DE71AA45A4E00EB1066 /* FlashViewController.m */; };
@@ -96,6 +98,9 @@
 		586C99F21AA6EDF100ACD2CF /* MoneyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyTableViewCell.h; sourceTree = "<group>"; };
 		586C99F31AA6EDF100ACD2CF /* MoneyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyTableViewCell.m; sourceTree = "<group>"; };
 		586C99F41AA6EDF100ACD2CF /* MoneyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoneyTableViewCell.xib; sourceTree = "<group>"; };
+		586C99F71AA702F700ACD2CF /* MirrorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MirrorViewController.h; sourceTree = "<group>"; };
+		586C99F81AA702F700ACD2CF /* MirrorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MirrorViewController.m; sourceTree = "<group>"; };
+		586C99F91AA702F700ACD2CF /* MirrorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MirrorViewController.xib; sourceTree = "<group>"; };
 		588A3DE11AA4312600EB1066 /* AppInfoEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoEntity.h; sourceTree = "<group>"; };
 		588A3DE21AA4312600EB1066 /* AppInfoEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoEntity.m; sourceTree = "<group>"; };
 		588A3DE41AA4428300EB1066 /* AppList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppList.plist; sourceTree = "<group>"; };
@@ -285,6 +290,9 @@
 				586C99F21AA6EDF100ACD2CF /* MoneyTableViewCell.h */,
 				586C99F31AA6EDF100ACD2CF /* MoneyTableViewCell.m */,
 				586C99F41AA6EDF100ACD2CF /* MoneyTableViewCell.xib */,
+				586C99F71AA702F700ACD2CF /* MirrorViewController.h */,
+				586C99F81AA702F700ACD2CF /* MirrorViewController.m */,
+				586C99F91AA702F700ACD2CF /* MirrorViewController.xib */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -430,6 +438,7 @@
 				588A3DF91AA462C200EB1066 /* ParkViewController.xib in Resources */,
 				58BE59091AA6A60C001811D9 /* CarVioSearchViewController.xib in Resources */,
 				5817F12E1A9D7BDB00B3A0A1 /* Main.storyboard in Resources */,
+				586C99FB1AA702F700ACD2CF /* MirrorViewController.xib in Resources */,
 				588A3DE51AA4428300EB1066 /* AppList.plist in Resources */,
 				5847F4201AA5994000A57896 /* TulingViewController.xib in Resources */,
 				58BE590E1AA6ABCD001811D9 /* ExchangeViewController.xib in Resources */,
@@ -510,6 +519,7 @@
 				588BDBE51AA1A088009347CE /* IPInfo.m in Sources */,
 				586C99F51AA6EDF100ACD2CF /* MoneyTableViewCell.m in Sources */,
 				5817F1281A9D7BDB00B3A0A1 /* AppDelegate.m in Sources */,
+				586C99FA1AA702F700ACD2CF /* MirrorViewController.m in Sources */,
 				58E850711AA01AF90095DDC7 /* ServiceResult.m in Sources */,
 				5845D8521AA5499D0007E4D8 /* PhoneInfo.m in Sources */,
 				5845D85B1AA559A10007E4D8 /* CalculatorTools.m in Sources */,

@@ -198,7 +198,7 @@
 		<key>appName</key>
 		<string>镜子</string>
 		<key>controlName</key>
-		<string></string>
+		<string>MirrorViewController</string>
 		<key>iconName</key>
 		<string>gr_tool_mirror</string>
 	</dict>
