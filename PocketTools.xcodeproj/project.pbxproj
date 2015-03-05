@@ -23,6 +23,13 @@
 		5847F4201AA5994000A57896 /* TulingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5847F41E1AA5994000A57896 /* TulingViewController.xib */; };
 		5847F4231AA59B0800A57896 /* RobotInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5847F4221AA59B0800A57896 /* RobotInfo.m */; };
 		5847F4271AA5A2BA00A57896 /* CCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5847F4261AA5A2BA00A57896 /* CCLocationManager.m */; };
+		585C82961AA7F7F800A98D16 /* ProvinceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 585C82951AA7F7F800A98D16 /* ProvinceInfo.m */; };
+		585C82991AA7F91F00A98D16 /* CityInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 585C82981AA7F91F00A98D16 /* CityInfo.m */; };
+		585C829C1AA802D500A98D16 /* CarType.m in Sources */ = {isa = PBXBuildFile; fileRef = 585C829B1AA802D500A98D16 /* CarType.m */; };
+		585C82A01AA8284D00A98D16 /* CarVioResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 585C829E1AA8284D00A98D16 /* CarVioResultViewController.m */; };
+		585C82A11AA8284D00A98D16 /* CarVioResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 585C829F1AA8284D00A98D16 /* CarVioResultViewController.xib */; };
+		585C82A41AA83C6100A98D16 /* WZInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 585C82A31AA83C6100A98D16 /* WZInfo.m */; };
+		585C82A71AA83CF000A98D16 /* WZDetailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 585C82A61AA83CF000A98D16 /* WZDetailInfo.m */; };
 		586C99F51AA6EDF100ACD2CF /* MoneyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 586C99F31AA6EDF100ACD2CF /* MoneyTableViewCell.m */; };
 		586C99F61AA6EDF100ACD2CF /* MoneyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586C99F41AA6EDF100ACD2CF /* MoneyTableViewCell.xib */; };
 		586C99FA1AA702F700ACD2CF /* MirrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 586C99F81AA702F700ACD2CF /* MirrorViewController.m */; };
@@ -51,6 +58,7 @@
 		58E850711AA01AF90095DDC7 /* ServiceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E850701AA01AF90095DDC7 /* ServiceResult.m */; };
 		58E850741AA01BFC0095DDC7 /* AppleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E850731AA01BFC0095DDC7 /* AppleInfo.m */; };
 		58EACBAC1AA03EC0006D5226 /* IDCardInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EACBAB1AA03EC0006D5226 /* IDCardInfo.m */; };
+		58EE96C21AA84BBF00E35B51 /* UserCarSearchInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EE96C11AA84BBF00E35B51 /* UserCarSearchInfo.m */; };
 		71078482F10AF41A8AF80980 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 972A6AE0556F180352DA1B54 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +103,19 @@
 		5847F4221AA59B0800A57896 /* RobotInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RobotInfo.m; sourceTree = "<group>"; };
 		5847F4251AA5A2BA00A57896 /* CCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLocationManager.h; sourceTree = "<group>"; };
 		5847F4261AA5A2BA00A57896 /* CCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLocationManager.m; sourceTree = "<group>"; };
+		585C82941AA7F7F800A98D16 /* ProvinceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvinceInfo.h; sourceTree = "<group>"; };
+		585C82951AA7F7F800A98D16 /* ProvinceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvinceInfo.m; sourceTree = "<group>"; };
+		585C82971AA7F91F00A98D16 /* CityInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityInfo.h; sourceTree = "<group>"; };
+		585C82981AA7F91F00A98D16 /* CityInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityInfo.m; sourceTree = "<group>"; };
+		585C829A1AA802D500A98D16 /* CarType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarType.h; sourceTree = "<group>"; };
+		585C829B1AA802D500A98D16 /* CarType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarType.m; sourceTree = "<group>"; };
+		585C829D1AA8284D00A98D16 /* CarVioResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarVioResultViewController.h; sourceTree = "<group>"; };
+		585C829E1AA8284D00A98D16 /* CarVioResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarVioResultViewController.m; sourceTree = "<group>"; };
+		585C829F1AA8284D00A98D16 /* CarVioResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarVioResultViewController.xib; sourceTree = "<group>"; };
+		585C82A21AA83C6100A98D16 /* WZInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZInfo.h; sourceTree = "<group>"; };
+		585C82A31AA83C6100A98D16 /* WZInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZInfo.m; sourceTree = "<group>"; };
+		585C82A51AA83CF000A98D16 /* WZDetailInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZDetailInfo.h; sourceTree = "<group>"; };
+		585C82A61AA83CF000A98D16 /* WZDetailInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZDetailInfo.m; sourceTree = "<group>"; };
 		586C99F21AA6EDF100ACD2CF /* MoneyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyTableViewCell.h; sourceTree = "<group>"; };
 		586C99F31AA6EDF100ACD2CF /* MoneyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyTableViewCell.m; sourceTree = "<group>"; };
 		586C99F41AA6EDF100ACD2CF /* MoneyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoneyTableViewCell.xib; sourceTree = "<group>"; };
@@ -141,6 +162,8 @@
 		58EACBA91AA03935006D5226 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		58EACBAA1AA03EC0006D5226 /* IDCardInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDCardInfo.h; sourceTree = "<group>"; };
 		58EACBAB1AA03EC0006D5226 /* IDCardInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDCardInfo.m; sourceTree = "<group>"; };
+		58EE96C01AA84BBF00E35B51 /* UserCarSearchInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCarSearchInfo.h; sourceTree = "<group>"; };
+		58EE96C11AA84BBF00E35B51 /* UserCarSearchInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCarSearchInfo.m; sourceTree = "<group>"; };
 		58F0E72B9B42457CCBECBA37 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		72246A8492C30BA8BF7446FE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		972A6AE0556F180352DA1B54 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -284,6 +307,9 @@
 				58BE59051AA6A60C001811D9 /* CarVioSearchViewController.h */,
 				58BE59061AA6A60C001811D9 /* CarVioSearchViewController.m */,
 				58BE59071AA6A60C001811D9 /* CarVioSearchViewController.xib */,
+				585C829D1AA8284D00A98D16 /* CarVioResultViewController.h */,
+				585C829E1AA8284D00A98D16 /* CarVioResultViewController.m */,
+				585C829F1AA8284D00A98D16 /* CarVioResultViewController.xib */,
 				58BE590A1AA6ABCD001811D9 /* ExchangeViewController.h */,
 				58BE590B1AA6ABCD001811D9 /* ExchangeViewController.m */,
 				58BE590C1AA6ABCD001811D9 /* ExchangeViewController.xib */,
@@ -332,6 +358,18 @@
 				5847F4221AA59B0800A57896 /* RobotInfo.m */,
 				58BE590F1AA6B75D001811D9 /* MoneyEntity.h */,
 				58BE59101AA6B75D001811D9 /* MoneyEntity.m */,
+				585C82941AA7F7F800A98D16 /* ProvinceInfo.h */,
+				585C82951AA7F7F800A98D16 /* ProvinceInfo.m */,
+				585C82971AA7F91F00A98D16 /* CityInfo.h */,
+				585C82981AA7F91F00A98D16 /* CityInfo.m */,
+				585C829A1AA802D500A98D16 /* CarType.h */,
+				585C829B1AA802D500A98D16 /* CarType.m */,
+				585C82A21AA83C6100A98D16 /* WZInfo.h */,
+				585C82A31AA83C6100A98D16 /* WZInfo.m */,
+				585C82A51AA83CF000A98D16 /* WZDetailInfo.h */,
+				585C82A61AA83CF000A98D16 /* WZDetailInfo.m */,
+				58EE96C01AA84BBF00E35B51 /* UserCarSearchInfo.h */,
+				58EE96C11AA84BBF00E35B51 /* UserCarSearchInfo.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -450,6 +488,7 @@
 				5817F1301A9D7BDB00B3A0A1 /* Images.xcassets in Resources */,
 				5845D8601AA56ACB0007E4D8 /* SizesViewController.xib in Resources */,
 				5894469B1AA15A52004BEE7B /* CalculatorViewController.xib in Resources */,
+				585C82A11AA8284D00A98D16 /* CarVioResultViewController.xib in Resources */,
 				586C99F61AA6EDF100ACD2CF /* MoneyTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,8 +540,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				585C82A41AA83C6100A98D16 /* WZInfo.m in Sources */,
 				5817F12B1A9D7BDB00B3A0A1 /* MainViewController.m in Sources */,
 				588A3DEE1AA45CAE00EB1066 /* RullerViewController.m in Sources */,
+				585C829C1AA802D500A98D16 /* CarType.m in Sources */,
 				58BE59111AA6B75D001811D9 /* MoneyEntity.m in Sources */,
 				58E850681AA012F10095DDC7 /* ServiceRequest.m in Sources */,
 				58BE59081AA6A60C001811D9 /* CarVioSearchViewController.m in Sources */,
@@ -514,6 +555,7 @@
 				5847F41F1AA5994000A57896 /* TulingViewController.m in Sources */,
 				58E850741AA01BFC0095DDC7 /* AppleInfo.m in Sources */,
 				5845D85F1AA56ACB0007E4D8 /* SizesViewController.m in Sources */,
+				58EE96C21AA84BBF00E35B51 /* UserCarSearchInfo.m in Sources */,
 				58E8506C1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.m in Sources */,
 				58BE590D1AA6ABCD001811D9 /* ExchangeViewController.m in Sources */,
 				588BDBE51AA1A088009347CE /* IPInfo.m in Sources */,
@@ -522,8 +564,12 @@
 				586C99FA1AA702F700ACD2CF /* MirrorViewController.m in Sources */,
 				58E850711AA01AF90095DDC7 /* ServiceResult.m in Sources */,
 				5845D8521AA5499D0007E4D8 /* PhoneInfo.m in Sources */,
+				585C82A01AA8284D00A98D16 /* CarVioResultViewController.m in Sources */,
 				5845D85B1AA559A10007E4D8 /* CalculatorTools.m in Sources */,
+				585C82991AA7F91F00A98D16 /* CityInfo.m in Sources */,
+				585C82A71AA83CF000A98D16 /* WZDetailInfo.m in Sources */,
 				5847F4231AA59B0800A57896 /* RobotInfo.m in Sources */,
+				585C82961AA7F7F800A98D16 /* ProvinceInfo.m in Sources */,
 				5817F1251A9D7BDB00B3A0A1 /* main.m in Sources */,
 				588A3DF31AA4609400EB1066 /* NewsViewController.m in Sources */,
 				5845D8561AA54A420007E4D8 /* PhoneSearchViewController.m in Sources */,

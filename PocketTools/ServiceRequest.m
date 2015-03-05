@@ -23,6 +23,28 @@ static ServiceRequest *request;
     return request;
 }
 
+- (void)saveUserSearch:(NSDictionary *)searchInfo {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSArray *historyArray = [userDefault objectForKey:SEARCH_HISTORY];
+    if (historyArray == nil) {
+        NSArray *newArray = @[searchInfo];
+        [userDefault setObject:newArray forKey:SEARCH_HISTORY];
+        [userDefault synchronize];
+    } else {
+        NSMutableArray *oldArray = [NSMutableArray arrayWithArray:historyArray];
+        [oldArray addObject:searchInfo];
+        [userDefault setObject:oldArray forKey:SEARCH_HISTORY];
+        [userDefault synchronize];
+    }
+   
+}
+
+- (NSArray *)getSearchHistory {
+     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+     NSArray *historyArray = [userDefault objectForKey:SEARCH_HISTORY];
+    return historyArray;
+}
+
 - (void)saveAppID:(NSString *)appId {
     if ([appId isEqualToString:@""]) {
         return;
@@ -128,6 +150,60 @@ static ServiceRequest *request;
             block(jsonDict, nil);
             return;
         }
+        block(nil, error);
+    }];
+}
+
+//获取支持的城市列表
+- (void)loadAllSupportCities:(void (^)(NSDictionary *result, NSError *error))block {
+    NSMutableDictionary *params =  [self getRequestParams];
+    params[@"key"] = @"e4ff4be7d2b4e89b3df1cbdd08fcb67e";
+    NSString *requestUrl = @"http://v.juhe.cn/wz/citys";
+    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        block(responseObject, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        block(nil, error);
+    }];
+}
+
+//获取车辆类型
+- (void)loadCarTypesList:(void (^)(NSDictionary *result, NSError *error))block {
+    NSMutableDictionary *params =  [self getRequestParams];
+    params[@"key"] = @"e4ff4be7d2b4e89b3df1cbdd08fcb67e";
+    NSString *requestUrl = @"http://v.juhe.cn/wz/hpzl";
+    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        block(responseObject, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        block(nil, error);
+    }];
+}
+
+//搜索违章
+- (void)searchWZ:(NSString *)cityName
+          carNum:(NSString *)cnum
+         carType:(NSString *)carType
+        carFrame:(NSString *)carFrameNum
+       engineNum:(NSString *)engineNum
+       registNum:(NSString *)registNum
+       withBlock:(void (^)(NSDictionary *result, NSError *error))block {
+    NSMutableDictionary *params =  [self getRequestParams];
+    params[@"city"] = cityName;
+    params[@"hphm"] = cnum;
+    params[@"hpzl"] = carType;
+    if (carFrameNum) {
+        params[@"classno"] = carFrameNum;
+    }
+    if (engineNum) {
+        params[@"engineno"] = engineNum;
+    }
+    if (registNum) {
+        
+    }
+    params[@"key"] = @"e4ff4be7d2b4e89b3df1cbdd08fcb67e";
+    NSString *requestUrl = @"http://v.juhe.cn/wz/query";
+    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        block(responseObject, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         block(nil, error);
     }];
 }
