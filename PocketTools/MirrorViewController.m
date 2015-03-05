@@ -40,6 +40,23 @@
     [self presentViewController:imagePicker animated:NO completion:nil];
 }
 
+- (void)imagePickerController: (UIImagePickerController *)picker didFinishPickingMediaWithInfo: (NSDictionary *)info
+{
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    NSString *msg = nil;
+    if(error != NULL) {
+        msg = @"保存图片失败";
+    }else {
+        msg = @"保存图片成功";
+    }
+    [self displayHUDTitle:nil message:msg duration:DELAY_TIMES];
+}
+
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     NSLog(@"取消");
     [imagePicker dismissViewControllerAnimated:YES completion:nil];
