@@ -12,6 +12,11 @@
 		1872F3AC1AAAD36E007F60BD /* PostInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1872F3AB1AAAD36E007F60BD /* PostInfo.m */; };
 		1872F3B01AAAD41A007F60BD /* PackageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1872F3AE1AAAD41A007F60BD /* PackageDetailViewController.m */; };
 		1872F3B11AAAD41A007F60BD /* PackageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1872F3AF1AAAD41A007F60BD /* PackageDetailViewController.xib */; };
+		1872F3B51AAAE1DC007F60BD /* DreamListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1872F3B31AAAE1DC007F60BD /* DreamListViewController.m */; };
+		1872F3B61AAAE1DC007F60BD /* DreamListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1872F3B41AAAE1DC007F60BD /* DreamListViewController.xib */; };
+		1872F3B91AAAE40E007F60BD /* DreamType.m in Sources */ = {isa = PBXBuildFile; fileRef = 1872F3B81AAAE40E007F60BD /* DreamType.m */; };
+		1872F3BD1AAAE71C007F60BD /* DreamTypeSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1872F3BB1AAAE71C007F60BD /* DreamTypeSecondViewController.m */; };
+		1872F3BE1AAAE71C007F60BD /* DreamTypeSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1872F3BC1AAAE71C007F60BD /* DreamTypeSecondViewController.xib */; };
 		5817F1251A9D7BDB00B3A0A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F1241A9D7BDB00B3A0A1 /* main.m */; };
 		5817F1281A9D7BDB00B3A0A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F1271A9D7BDB00B3A0A1 /* AppDelegate.m */; };
 		5817F12B1A9D7BDB00B3A0A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F12A1A9D7BDB00B3A0A1 /* MainViewController.m */; };
@@ -86,6 +91,14 @@
 		1872F3AD1AAAD41A007F60BD /* PackageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageDetailViewController.h; sourceTree = "<group>"; };
 		1872F3AE1AAAD41A007F60BD /* PackageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageDetailViewController.m; sourceTree = "<group>"; };
 		1872F3AF1AAAD41A007F60BD /* PackageDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PackageDetailViewController.xib; sourceTree = "<group>"; };
+		1872F3B21AAAE1DC007F60BD /* DreamListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DreamListViewController.h; sourceTree = "<group>"; };
+		1872F3B31AAAE1DC007F60BD /* DreamListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DreamListViewController.m; sourceTree = "<group>"; };
+		1872F3B41AAAE1DC007F60BD /* DreamListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DreamListViewController.xib; sourceTree = "<group>"; };
+		1872F3B71AAAE40E007F60BD /* DreamType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DreamType.h; sourceTree = "<group>"; };
+		1872F3B81AAAE40E007F60BD /* DreamType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DreamType.m; sourceTree = "<group>"; };
+		1872F3BA1AAAE71C007F60BD /* DreamTypeSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DreamTypeSecondViewController.h; sourceTree = "<group>"; };
+		1872F3BB1AAAE71C007F60BD /* DreamTypeSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DreamTypeSecondViewController.m; sourceTree = "<group>"; };
+		1872F3BC1AAAE71C007F60BD /* DreamTypeSecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DreamTypeSecondViewController.xib; sourceTree = "<group>"; };
 		5817F11F1A9D7BDB00B3A0A1 /* PocketTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5817F1231A9D7BDB00B3A0A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5817F1241A9D7BDB00B3A0A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -338,6 +351,12 @@
 				1872F3AD1AAAD41A007F60BD /* PackageDetailViewController.h */,
 				1872F3AE1AAAD41A007F60BD /* PackageDetailViewController.m */,
 				1872F3AF1AAAD41A007F60BD /* PackageDetailViewController.xib */,
+				1872F3B21AAAE1DC007F60BD /* DreamListViewController.h */,
+				1872F3B31AAAE1DC007F60BD /* DreamListViewController.m */,
+				1872F3B41AAAE1DC007F60BD /* DreamListViewController.xib */,
+				1872F3BA1AAAE71C007F60BD /* DreamTypeSecondViewController.h */,
+				1872F3BB1AAAE71C007F60BD /* DreamTypeSecondViewController.m */,
+				1872F3BC1AAAE71C007F60BD /* DreamTypeSecondViewController.xib */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -391,6 +410,8 @@
 				58EE96C11AA84BBF00E35B51 /* UserCarSearchInfo.m */,
 				1872F3AA1AAAD36E007F60BD /* PostInfo.h */,
 				1872F3AB1AAAD36E007F60BD /* PostInfo.m */,
+				1872F3B71AAAE40E007F60BD /* DreamType.h */,
+				1872F3B81AAAE40E007F60BD /* DreamType.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -506,8 +527,10 @@
 				5845D8571AA54A420007E4D8 /* PhoneSearchViewController.xib in Resources */,
 				58E8506D1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.xib in Resources */,
 				588A3DF41AA4609400EB1066 /* NewsViewController.xib in Resources */,
+				1872F3B61AAAE1DC007F60BD /* DreamListViewController.xib in Resources */,
 				588A3DEF1AA45CAE00EB1066 /* RullerViewController.xib in Resources */,
 				588A3DEA1AA45A4E00EB1066 /* FlashViewController.xib in Resources */,
+				1872F3BE1AAAE71C007F60BD /* DreamTypeSecondViewController.xib in Resources */,
 				5817F1301A9D7BDB00B3A0A1 /* Images.xcassets in Resources */,
 				5845D8601AA56ACB0007E4D8 /* SizesViewController.xib in Resources */,
 				5894469B1AA15A52004BEE7B /* CalculatorViewController.xib in Resources */,
@@ -571,12 +594,15 @@
 				58E850681AA012F10095DDC7 /* ServiceRequest.m in Sources */,
 				58BE59081AA6A60C001811D9 /* CarVioSearchViewController.m in Sources */,
 				1872F3A81AAAA9AA007F60BD /* PackageSearchViewController.m in Sources */,
+				1872F3B91AAAE40E007F60BD /* DreamType.m in Sources */,
 				588A3DE31AA4312600EB1066 /* AppInfoEntity.m in Sources */,
 				1872F3B01AAAD41A007F60BD /* PackageDetailViewController.m in Sources */,
+				1872F3B51AAAE1DC007F60BD /* DreamListViewController.m in Sources */,
 				5847F4271AA5A2BA00A57896 /* CCLocationManager.m in Sources */,
 				5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */,
 				1872F3AC1AAAD36E007F60BD /* PostInfo.m in Sources */,
 				58EACBAC1AA03EC0006D5226 /* IDCardInfo.m in Sources */,
+				1872F3BD1AAAE71C007F60BD /* DreamTypeSecondViewController.m in Sources */,
 				588A3DE91AA45A4E00EB1066 /* FlashViewController.m in Sources */,
 				5847F41F1AA5994000A57896 /* TulingViewController.m in Sources */,
 				58E850741AA01BFC0095DDC7 /* AppleInfo.m in Sources */,

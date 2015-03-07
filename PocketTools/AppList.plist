@@ -78,7 +78,7 @@
 		<key>appName</key>
 		<string>周公解梦</string>
 		<key>controlName</key>
-		<string></string>
+		<string>DreamListViewController</string>
 		<key>iconName</key>
 		<string>gr_tool_dream</string>
 	</dict>

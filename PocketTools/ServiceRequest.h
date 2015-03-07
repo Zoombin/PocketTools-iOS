@@ -73,4 +73,13 @@
 - (void)postmanSearch:(NSString *)postman
               postnum:(NSString *)postnum
             withBlock:(void (^)(NSDictionary *result, NSError *error))block;
+
+//梦的种类
+- (void)dreamTypeList:(NSString *)fid
+            withBlock:(void (^)(NSDictionary *result, NSError *error))block;
+
+//搜索梦
+- (void)searchDreamByKey:(NSString *)kword
+               withBlock:(void (^)(NSDictionary *result, NSError *error))block;
+
 @end
