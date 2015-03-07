@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1872F3A81AAAA9AA007F60BD /* PackageSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1872F3A61AAAA9AA007F60BD /* PackageSearchViewController.m */; };
+		1872F3A91AAAA9AA007F60BD /* PackageSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1872F3A71AAAA9AA007F60BD /* PackageSearchViewController.xib */; };
+		1872F3AC1AAAD36E007F60BD /* PostInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1872F3AB1AAAD36E007F60BD /* PostInfo.m */; };
+		1872F3B01AAAD41A007F60BD /* PackageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1872F3AE1AAAD41A007F60BD /* PackageDetailViewController.m */; };
+		1872F3B11AAAD41A007F60BD /* PackageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1872F3AF1AAAD41A007F60BD /* PackageDetailViewController.xib */; };
 		5817F1251A9D7BDB00B3A0A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F1241A9D7BDB00B3A0A1 /* main.m */; };
 		5817F1281A9D7BDB00B3A0A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F1271A9D7BDB00B3A0A1 /* AppDelegate.m */; };
 		5817F12B1A9D7BDB00B3A0A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F12A1A9D7BDB00B3A0A1 /* MainViewController.m */; };
@@ -73,6 +78,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1872F3A51AAAA9AA007F60BD /* PackageSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageSearchViewController.h; sourceTree = "<group>"; };
+		1872F3A61AAAA9AA007F60BD /* PackageSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageSearchViewController.m; sourceTree = "<group>"; };
+		1872F3A71AAAA9AA007F60BD /* PackageSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PackageSearchViewController.xib; sourceTree = "<group>"; };
+		1872F3AA1AAAD36E007F60BD /* PostInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostInfo.h; sourceTree = "<group>"; };
+		1872F3AB1AAAD36E007F60BD /* PostInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostInfo.m; sourceTree = "<group>"; };
+		1872F3AD1AAAD41A007F60BD /* PackageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageDetailViewController.h; sourceTree = "<group>"; };
+		1872F3AE1AAAD41A007F60BD /* PackageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageDetailViewController.m; sourceTree = "<group>"; };
+		1872F3AF1AAAD41A007F60BD /* PackageDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PackageDetailViewController.xib; sourceTree = "<group>"; };
 		5817F11F1A9D7BDB00B3A0A1 /* PocketTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5817F1231A9D7BDB00B3A0A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5817F1241A9D7BDB00B3A0A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -319,6 +332,12 @@
 				586C99F71AA702F700ACD2CF /* MirrorViewController.h */,
 				586C99F81AA702F700ACD2CF /* MirrorViewController.m */,
 				586C99F91AA702F700ACD2CF /* MirrorViewController.xib */,
+				1872F3A51AAAA9AA007F60BD /* PackageSearchViewController.h */,
+				1872F3A61AAAA9AA007F60BD /* PackageSearchViewController.m */,
+				1872F3A71AAAA9AA007F60BD /* PackageSearchViewController.xib */,
+				1872F3AD1AAAD41A007F60BD /* PackageDetailViewController.h */,
+				1872F3AE1AAAD41A007F60BD /* PackageDetailViewController.m */,
+				1872F3AF1AAAD41A007F60BD /* PackageDetailViewController.xib */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -370,6 +389,8 @@
 				585C82A61AA83CF000A98D16 /* WZDetailInfo.m */,
 				58EE96C01AA84BBF00E35B51 /* UserCarSearchInfo.h */,
 				58EE96C11AA84BBF00E35B51 /* UserCarSearchInfo.m */,
+				1872F3AA1AAAD36E007F60BD /* PostInfo.h */,
+				1872F3AB1AAAD36E007F60BD /* PostInfo.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -476,8 +497,10 @@
 				588A3DF91AA462C200EB1066 /* ParkViewController.xib in Resources */,
 				58BE59091AA6A60C001811D9 /* CarVioSearchViewController.xib in Resources */,
 				5817F12E1A9D7BDB00B3A0A1 /* Main.storyboard in Resources */,
+				1872F3B11AAAD41A007F60BD /* PackageDetailViewController.xib in Resources */,
 				586C99FB1AA702F700ACD2CF /* MirrorViewController.xib in Resources */,
 				588A3DE51AA4428300EB1066 /* AppList.plist in Resources */,
+				1872F3A91AAAA9AA007F60BD /* PackageSearchViewController.xib in Resources */,
 				5847F4201AA5994000A57896 /* TulingViewController.xib in Resources */,
 				58BE590E1AA6ABCD001811D9 /* ExchangeViewController.xib in Resources */,
 				5845D8571AA54A420007E4D8 /* PhoneSearchViewController.xib in Resources */,
@@ -547,9 +570,12 @@
 				58BE59111AA6B75D001811D9 /* MoneyEntity.m in Sources */,
 				58E850681AA012F10095DDC7 /* ServiceRequest.m in Sources */,
 				58BE59081AA6A60C001811D9 /* CarVioSearchViewController.m in Sources */,
+				1872F3A81AAAA9AA007F60BD /* PackageSearchViewController.m in Sources */,
 				588A3DE31AA4312600EB1066 /* AppInfoEntity.m in Sources */,
+				1872F3B01AAAD41A007F60BD /* PackageDetailViewController.m in Sources */,
 				5847F4271AA5A2BA00A57896 /* CCLocationManager.m in Sources */,
 				5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */,
+				1872F3AC1AAAD36E007F60BD /* PostInfo.m in Sources */,
 				58EACBAC1AA03EC0006D5226 /* IDCardInfo.m in Sources */,
 				588A3DE91AA45A4E00EB1066 /* FlashViewController.m in Sources */,
 				5847F41F1AA5994000A57896 /* TulingViewController.m in Sources */,

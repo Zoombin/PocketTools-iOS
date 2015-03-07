@@ -113,7 +113,8 @@
         currentApps = [self getAppsWithAppNames:apps];
         [self setElements:currentApps];
     } else if (index == 1) {
-        NSArray *apps = @[@"车辆违章", @"快递", @"火车订票", @"来电号码查询", @"电影", @"航班动态", @"彩票购买", @"加油站"];
+        NSArray *apps = @[@"车辆违章", @"快递", @"火车订票", @"来电号码查询", @"电影", @"航班动态", @"加油站"];
+//        @"彩票购买",
         currentApps = [self getAppsWithAppNames:apps];
         [self setElements:currentApps];
     } else if (index == 2) {

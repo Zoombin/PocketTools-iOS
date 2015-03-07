@@ -110,7 +110,7 @@
 		<key>appName</key>
 		<string>快递</string>
 		<key>controlName</key>
-		<string></string>
+		<string>PackageSearchViewController</string>
 		<key>iconName</key>
 		<string>gr_search_package</string>
 	</dict>

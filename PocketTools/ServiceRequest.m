@@ -36,12 +36,32 @@ static ServiceRequest *request;
         [userDefault setObject:oldArray forKey:SEARCH_HISTORY];
         [userDefault synchronize];
     }
-   
 }
 
 - (NSArray *)getSearchHistory {
      NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-     NSArray *historyArray = [userDefault objectForKey:SEARCH_HISTORY];
+     NSArray *historyArray = [userDefault objectForKey:POSTMAN_HISTORY];
+    return historyArray;
+}
+
+- (void)savePostManSearch:(NSDictionary *)searchInfo {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSArray *historyArray = [userDefault objectForKey:POSTMAN_HISTORY];
+    if (historyArray == nil) {
+        NSArray *newArray = @[searchInfo];
+        [userDefault setObject:newArray forKey:POSTMAN_HISTORY];
+        [userDefault synchronize];
+    } else {
+        NSMutableArray *oldArray = [NSMutableArray arrayWithArray:historyArray];
+        [oldArray addObject:searchInfo];
+        [userDefault setObject:oldArray forKey:POSTMAN_HISTORY];
+        [userDefault synchronize];
+    }
+}
+
+- (NSArray *)getPostManSearch {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSArray *historyArray = [userDefault objectForKey:POSTMAN_HISTORY];
     return historyArray;
 }
 
@@ -201,6 +221,22 @@ static ServiceRequest *request;
     }
     params[@"key"] = @"e4ff4be7d2b4e89b3df1cbdd08fcb67e";
     NSString *requestUrl = @"http://v.juhe.cn/wz/query";
+    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        block(responseObject, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        block(nil, error);
+    }];
+}
+
+//快递查询
+- (void)postmanSearch:(NSString *)postman
+              postnum:(NSString *)postnum
+            withBlock:(void (^)(NSDictionary *result, NSError *error))block {
+    NSMutableDictionary *params =  [self getRequestParams];
+    params[@"key"] = @"9b5b7b0a8edf2102283955ffba0f29fe";
+    params[@"com"] = postman;
+    params[@"no"] = postnum;
+    NSString *requestUrl = @"http://v.juhe.cn/exp/index";
     [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         block(responseObject, nil);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

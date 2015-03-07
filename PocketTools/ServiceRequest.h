@@ -14,6 +14,7 @@
 #define SUCCESS_CODE 200
 #define DEVICE_ID @"device_id"
 #define SEARCH_HISTORY @"search_history"
+#define POSTMAN_HISTORY @"postman_history"
 
 #define NETWORK_ERROR @"网络异常"
 
@@ -22,6 +23,9 @@
 - (void)saveAppID:(NSString *)appId;
 - (void)saveUserSearch:(NSDictionary *)searchInfo;
 - (NSArray *)getSearchHistory;
+
+- (void)savePostManSearch:(NSDictionary *)searchInfo;
+- (NSArray *)getPostManSearch;
 
 - (NSString *)getAppId;
 
@@ -64,4 +68,9 @@
        engineNum:(NSString *)engineNum
        registNum:(NSString *)registNum
        withBlock:(void (^)(NSDictionary *result, NSError *error))block;
+
+//快递查询
+- (void)postmanSearch:(NSString *)postman
+              postnum:(NSString *)postnum
+            withBlock:(void (^)(NSDictionary *result, NSError *error))block;
 @end
