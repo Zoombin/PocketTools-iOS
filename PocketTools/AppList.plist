@@ -86,7 +86,7 @@
 		<key>appName</key>
 		<string>秘密相册</string>
 		<key>controlName</key>
-		<string></string>
+		<string>PhotoPasswordViewController</string>
 		<key>iconName</key>
 		<string>gr_tool_secretphoto</string>
 	</dict>
@@ -166,7 +166,7 @@
 		<key>appName</key>
 		<string>游戏充值</string>
 		<key>controlName</key>
-		<string></string>
+		<string>GamePayViewController</string>
 		<key>iconName</key>
 		<string>gr_tool_games</string>
 	</dict>
@@ -182,7 +182,7 @@
 		<key>appName</key>
 		<string>流量直充</string>
 		<key>controlName</key>
-		<string></string>
+		<string>LLPayViewController</string>
 		<key>iconName</key>
 		<string></string>
 	</dict>

@@ -17,6 +17,13 @@
 		1872F3B91AAAE40E007F60BD /* DreamType.m in Sources */ = {isa = PBXBuildFile; fileRef = 1872F3B81AAAE40E007F60BD /* DreamType.m */; };
 		1872F3BD1AAAE71C007F60BD /* DreamTypeSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1872F3BB1AAAE71C007F60BD /* DreamTypeSecondViewController.m */; };
 		1872F3BE1AAAE71C007F60BD /* DreamTypeSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1872F3BC1AAAE71C007F60BD /* DreamTypeSecondViewController.xib */; };
+		1872F3C21AAAFA16007F60BD /* PhotoPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1872F3C01AAAFA16007F60BD /* PhotoPasswordViewController.m */; };
+		1872F3C31AAAFA16007F60BD /* PhotoPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1872F3C11AAAFA16007F60BD /* PhotoPasswordViewController.xib */; };
+		1872F3C71AAAFD83007F60BD /* TouchIDPass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1872F3C61AAAFD83007F60BD /* TouchIDPass.m */; };
+		18E4FC011AADF415001E021E /* GamePayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4FBFF1AADF415001E021E /* GamePayViewController.m */; };
+		18E4FC021AADF415001E021E /* GamePayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E4FC001AADF415001E021E /* GamePayViewController.xib */; };
+		18E4FC061AADF48E001E021E /* LLPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4FC041AADF48E001E021E /* LLPayViewController.m */; };
+		18E4FC071AADF48E001E021E /* LLPayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E4FC051AADF48E001E021E /* LLPayViewController.xib */; };
 		5817F1251A9D7BDB00B3A0A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F1241A9D7BDB00B3A0A1 /* main.m */; };
 		5817F1281A9D7BDB00B3A0A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F1271A9D7BDB00B3A0A1 /* AppDelegate.m */; };
 		5817F12B1A9D7BDB00B3A0A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F12A1A9D7BDB00B3A0A1 /* MainViewController.m */; };
@@ -99,6 +106,17 @@
 		1872F3BA1AAAE71C007F60BD /* DreamTypeSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DreamTypeSecondViewController.h; sourceTree = "<group>"; };
 		1872F3BB1AAAE71C007F60BD /* DreamTypeSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DreamTypeSecondViewController.m; sourceTree = "<group>"; };
 		1872F3BC1AAAE71C007F60BD /* DreamTypeSecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DreamTypeSecondViewController.xib; sourceTree = "<group>"; };
+		1872F3BF1AAAFA16007F60BD /* PhotoPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPasswordViewController.h; sourceTree = "<group>"; };
+		1872F3C01AAAFA16007F60BD /* PhotoPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPasswordViewController.m; sourceTree = "<group>"; };
+		1872F3C11AAAFA16007F60BD /* PhotoPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoPasswordViewController.xib; sourceTree = "<group>"; };
+		1872F3C51AAAFD83007F60BD /* TouchIDPass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchIDPass.h; sourceTree = "<group>"; };
+		1872F3C61AAAFD83007F60BD /* TouchIDPass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchIDPass.m; sourceTree = "<group>"; };
+		18E4FBFE1AADF415001E021E /* GamePayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePayViewController.h; sourceTree = "<group>"; };
+		18E4FBFF1AADF415001E021E /* GamePayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePayViewController.m; sourceTree = "<group>"; };
+		18E4FC001AADF415001E021E /* GamePayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GamePayViewController.xib; sourceTree = "<group>"; };
+		18E4FC031AADF48E001E021E /* LLPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLPayViewController.h; sourceTree = "<group>"; };
+		18E4FC041AADF48E001E021E /* LLPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLPayViewController.m; sourceTree = "<group>"; };
+		18E4FC051AADF48E001E021E /* LLPayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LLPayViewController.xib; sourceTree = "<group>"; };
 		5817F11F1A9D7BDB00B3A0A1 /* PocketTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5817F1231A9D7BDB00B3A0A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5817F1241A9D7BDB00B3A0A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -214,6 +232,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1872F3C41AAAFD58007F60BD /* TouchID */ = {
+			isa = PBXGroup;
+			children = (
+				1872F3C51AAAFD83007F60BD /* TouchIDPass.h */,
+				1872F3C61AAAFD83007F60BD /* TouchIDPass.m */,
+			);
+			name = TouchID;
+			sourceTree = "<group>";
+		};
 		5817F1161A9D7BDB00B3A0A1 = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +311,7 @@
 		5845D8581AA5597F0007E4D8 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				1872F3C41AAAFD58007F60BD /* TouchID */,
 				5847F4241AA5A2BA00A57896 /* CCLocation */,
 				5845D8591AA559A10007E4D8 /* CalculatorTools.h */,
 				5845D85A1AA559A10007E4D8 /* CalculatorTools.m */,
@@ -357,6 +385,15 @@
 				1872F3BA1AAAE71C007F60BD /* DreamTypeSecondViewController.h */,
 				1872F3BB1AAAE71C007F60BD /* DreamTypeSecondViewController.m */,
 				1872F3BC1AAAE71C007F60BD /* DreamTypeSecondViewController.xib */,
+				1872F3BF1AAAFA16007F60BD /* PhotoPasswordViewController.h */,
+				1872F3C01AAAFA16007F60BD /* PhotoPasswordViewController.m */,
+				1872F3C11AAAFA16007F60BD /* PhotoPasswordViewController.xib */,
+				18E4FBFE1AADF415001E021E /* GamePayViewController.h */,
+				18E4FBFF1AADF415001E021E /* GamePayViewController.m */,
+				18E4FC001AADF415001E021E /* GamePayViewController.xib */,
+				18E4FC031AADF48E001E021E /* LLPayViewController.h */,
+				18E4FC041AADF48E001E021E /* LLPayViewController.m */,
+				18E4FC051AADF48E001E021E /* LLPayViewController.xib */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -516,7 +553,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				588A3DF91AA462C200EB1066 /* ParkViewController.xib in Resources */,
+				18E4FC021AADF415001E021E /* GamePayViewController.xib in Resources */,
 				58BE59091AA6A60C001811D9 /* CarVioSearchViewController.xib in Resources */,
+				1872F3C31AAAFA16007F60BD /* PhotoPasswordViewController.xib in Resources */,
 				5817F12E1A9D7BDB00B3A0A1 /* Main.storyboard in Resources */,
 				1872F3B11AAAD41A007F60BD /* PackageDetailViewController.xib in Resources */,
 				586C99FB1AA702F700ACD2CF /* MirrorViewController.xib in Resources */,
@@ -530,6 +569,7 @@
 				1872F3B61AAAE1DC007F60BD /* DreamListViewController.xib in Resources */,
 				588A3DEF1AA45CAE00EB1066 /* RullerViewController.xib in Resources */,
 				588A3DEA1AA45A4E00EB1066 /* FlashViewController.xib in Resources */,
+				18E4FC071AADF48E001E021E /* LLPayViewController.xib in Resources */,
 				1872F3BE1AAAE71C007F60BD /* DreamTypeSecondViewController.xib in Resources */,
 				5817F1301A9D7BDB00B3A0A1 /* Images.xcassets in Resources */,
 				5845D8601AA56ACB0007E4D8 /* SizesViewController.xib in Resources */,
@@ -586,6 +626,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1872F3C21AAAFA16007F60BD /* PhotoPasswordViewController.m in Sources */,
 				585C82A41AA83C6100A98D16 /* WZInfo.m in Sources */,
 				5817F12B1A9D7BDB00B3A0A1 /* MainViewController.m in Sources */,
 				588A3DEE1AA45CAE00EB1066 /* RullerViewController.m in Sources */,
@@ -600,6 +641,7 @@
 				1872F3B51AAAE1DC007F60BD /* DreamListViewController.m in Sources */,
 				5847F4271AA5A2BA00A57896 /* CCLocationManager.m in Sources */,
 				5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */,
+				1872F3C71AAAFD83007F60BD /* TouchIDPass.m in Sources */,
 				1872F3AC1AAAD36E007F60BD /* PostInfo.m in Sources */,
 				58EACBAC1AA03EC0006D5226 /* IDCardInfo.m in Sources */,
 				1872F3BD1AAAE71C007F60BD /* DreamTypeSecondViewController.m in Sources */,
@@ -611,6 +653,7 @@
 				58E8506C1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.m in Sources */,
 				58BE590D1AA6ABCD001811D9 /* ExchangeViewController.m in Sources */,
 				588BDBE51AA1A088009347CE /* IPInfo.m in Sources */,
+				18E4FC011AADF415001E021E /* GamePayViewController.m in Sources */,
 				586C99F51AA6EDF100ACD2CF /* MoneyTableViewCell.m in Sources */,
 				5817F1281A9D7BDB00B3A0A1 /* AppDelegate.m in Sources */,
 				586C99FA1AA702F700ACD2CF /* MirrorViewController.m in Sources */,
@@ -620,6 +663,7 @@
 				5845D85B1AA559A10007E4D8 /* CalculatorTools.m in Sources */,
 				585C82991AA7F91F00A98D16 /* CityInfo.m in Sources */,
 				585C82A71AA83CF000A98D16 /* WZDetailInfo.m in Sources */,
+				18E4FC061AADF48E001E021E /* LLPayViewController.m in Sources */,
 				5847F4231AA59B0800A57896 /* RobotInfo.m in Sources */,
 				585C82961AA7F7F800A98D16 /* ProvinceInfo.m in Sources */,
 				5817F1251A9D7BDB00B3A0A1 /* main.m in Sources */,
