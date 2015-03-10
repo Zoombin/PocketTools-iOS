@@ -35,7 +35,7 @@
      imagePicker = [[UIImagePickerController alloc] init];
     [imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
     [imagePicker setCameraDevice:UIImagePickerControllerCameraDeviceFront];
-    [imagePicker setAllowsEditing:YES];
+    [imagePicker setAllowsEditing:NO];
     imagePicker.delegate = self;
     [self presentViewController:imagePicker animated:NO completion:nil];
 }

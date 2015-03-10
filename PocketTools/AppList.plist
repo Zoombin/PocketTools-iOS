@@ -142,7 +142,7 @@
 		<key>appName</key>
 		<string>POI</string>
 		<key>controlName</key>
-		<string></string>
+		<string>gr_search_stores</string>
 		<key>iconName</key>
 		<string></string>
 	</dict>
