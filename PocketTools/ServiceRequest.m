@@ -44,6 +44,18 @@ static ServiceRequest *request;
     return historyArray;
 }
 
+- (void)savePassword:(NSString *)hasSet {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    [userDefault setObject:hasSet forKey:PHOTO_PASSWORD];
+    [userDefault synchronize];
+}
+
+- (NSString *)getPassword
+{
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    return [userDefault objectForKey:PHOTO_PASSWORD];
+}
+
 - (void)savePostManSearch:(NSDictionary *)searchInfo {
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     NSArray *historyArray = [userDefault objectForKey:POSTMAN_HISTORY];
@@ -78,6 +90,43 @@ static ServiceRequest *request;
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     return [userDefault objectForKey:DEVICE_ID];
 }
+
+//----------相册-------------
+- (void)savePhotoName:(NSString *)photoName {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSArray *historyArray = [userDefault objectForKey:PHOTO_LIST];
+    if (historyArray == nil) {
+        NSArray *newArray = @[photoName];
+        [userDefault setObject:newArray forKey:PHOTO_LIST];
+        [userDefault synchronize];
+    } else {
+        NSMutableArray *oldArray = [NSMutableArray arrayWithArray:historyArray];
+        [oldArray addObject:photoName];
+        [userDefault setObject:oldArray forKey:PHOTO_LIST];
+        [userDefault synchronize];
+    }
+}
+- (void)removePhotoName:(NSString *)photoName {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSArray *historyArray = [userDefault objectForKey:PHOTO_LIST];
+    if (historyArray == nil) {
+        return;
+    } else {
+        NSMutableArray *oldArray = [NSMutableArray arrayWithArray:historyArray];
+        if ([oldArray containsObject:photoName]) {
+            [oldArray removeObject:photoName];
+        }
+        [userDefault setObject:oldArray forKey:PHOTO_LIST];
+        [userDefault synchronize];
+    }
+
+}
+- (NSArray *)getPhotoList {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSArray *photoList = [userDefault objectForKey:PHOTO_LIST];
+    return photoList;
+}
+//----------相册-------------
 
 - (NSMutableDictionary *)getRequestParams {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];

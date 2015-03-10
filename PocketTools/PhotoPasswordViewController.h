@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TouchIDPass.h"
 
-@interface PhotoPasswordViewController : UIViewController <TouchIDPassDelegate>
+@interface PhotoPasswordViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
+@property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, weak) IBOutlet UIView *bottomView;
 @end

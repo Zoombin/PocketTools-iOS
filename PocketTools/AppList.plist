@@ -158,7 +158,7 @@
 		<key>appName</key>
 		<string>话费充值</string>
 		<key>controlName</key>
-		<string></string>
+		<string>PhonePayViewController</string>
 		<key>iconName</key>
 		<string>gr_search_telebill</string>
 	</dict>
@@ -174,7 +174,7 @@
 		<key>appName</key>
 		<string>彩票购买</string>
 		<key>controlName</key>
-		<string></string>
+		<string>TicketsViewController</string>
 		<key>iconName</key>
 		<string>gr_search_lotto</string>
 	</dict>

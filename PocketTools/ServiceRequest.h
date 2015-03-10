@@ -15,7 +15,8 @@
 #define DEVICE_ID @"device_id"
 #define SEARCH_HISTORY @"search_history"
 #define POSTMAN_HISTORY @"postman_history"
-
+#define PHOTO_PASSWORD @"photo_password"
+#define PHOTO_LIST @"photo_list"
 #define NETWORK_ERROR @"网络异常"
 
 @interface ServiceRequest : NSObject
@@ -24,10 +25,17 @@
 - (void)saveUserSearch:(NSDictionary *)searchInfo;
 - (NSArray *)getSearchHistory;
 
+- (void)savePassword:(NSString *)hasSet;
+- (NSString *)getPassword;
+
 - (void)savePostManSearch:(NSDictionary *)searchInfo;
 - (NSArray *)getPostManSearch;
 
 - (NSString *)getAppId;
+
+- (void)savePhotoName:(NSString *)photoName;
+- (void)removePhotoName:(NSString *)photoName;
+- (NSArray *)getPhotoList;
 
 + (instancetype)shared;
 
