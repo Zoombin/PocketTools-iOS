@@ -321,4 +321,28 @@ static ServiceRequest *request;
     }];
 }
 
+- (void)goodsSearchWithNum:(NSString *)num
+                 withBlock:(void (^)(NSDictionary *result, NSError *error))block {
+    NSMutableDictionary *params =  [self getRequestParams];
+    params[@"appkey"] = @"aceec7d212876cc985b310d694725f78";
+    params[@"pkg"] = @"com.koudai";
+    params[@"barcode"] = num;
+    params[@"cityid"] = @"1";
+    NSString *requestUrl = @"http://api.juheapi.com/jhbar/bar";
+    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        block(responseObject, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%ld", (long)operation.response.statusCode);
+        if (operation.response.statusCode == 200) {
+            NSLog(@"%@", [[NSString alloc] initWithData:operation.responseData encoding:NSUTF8StringEncoding]);
+            NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:operation.responseData
+                                                                     options:NSJSONReadingMutableContainers
+                                                                       error:nil];
+            block(jsonDict, nil);
+            return;
+        }
+        block(nil, error);
+    }];
+}
+
 @end

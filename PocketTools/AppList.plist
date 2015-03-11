@@ -150,7 +150,7 @@
 		<key>appName</key>
 		<string>条码比价</string>
 		<key>controlName</key>
-		<string></string>
+		<string>ScanViewController</string>
 		<key>iconName</key>
 		<string>gr_tool_qr</string>
 	</dict>

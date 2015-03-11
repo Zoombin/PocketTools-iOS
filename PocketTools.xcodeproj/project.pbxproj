@@ -75,6 +75,10 @@
 		588BDBE51AA1A088009347CE /* IPInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 588BDBE41AA1A088009347CE /* IPInfo.m */; };
 		5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589446981AA15A52004BEE7B /* CalculatorViewController.m */; };
 		5894469B1AA15A52004BEE7B /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 589446991AA15A52004BEE7B /* CalculatorViewController.xib */; };
+		58AD9C891AB01B6900EF2619 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AD9C871AB01B6900EF2619 /* ScanViewController.m */; };
+		58AD9C8A1AB01B6900EF2619 /* ScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58AD9C881AB01B6900EF2619 /* ScanViewController.xib */; };
+		58AD9C8D1AB0378E00EF2619 /* GoodsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AD9C8C1AB0378E00EF2619 /* GoodsInfo.m */; };
+		58AD9C901AB03D2D00EF2619 /* ShopInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AD9C8F1AB03D2D00EF2619 /* ShopInfo.m */; };
 		58BE59081AA6A60C001811D9 /* CarVioSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BE59061AA6A60C001811D9 /* CarVioSearchViewController.m */; };
 		58BE59091AA6A60C001811D9 /* CarVioSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58BE59071AA6A60C001811D9 /* CarVioSearchViewController.xib */; };
 		58BE590D1AA6ABCD001811D9 /* ExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BE590B1AA6ABCD001811D9 /* ExchangeViewController.m */; };
@@ -216,6 +220,13 @@
 		589446971AA15A52004BEE7B /* CalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
 		589446981AA15A52004BEE7B /* CalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
 		589446991AA15A52004BEE7B /* CalculatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
+		58AD9C861AB01B6900EF2619 /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
+		58AD9C871AB01B6900EF2619 /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
+		58AD9C881AB01B6900EF2619 /* ScanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScanViewController.xib; sourceTree = "<group>"; };
+		58AD9C8B1AB0378E00EF2619 /* GoodsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsInfo.h; sourceTree = "<group>"; };
+		58AD9C8C1AB0378E00EF2619 /* GoodsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsInfo.m; sourceTree = "<group>"; };
+		58AD9C8E1AB03D2D00EF2619 /* ShopInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopInfo.h; sourceTree = "<group>"; };
+		58AD9C8F1AB03D2D00EF2619 /* ShopInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopInfo.m; sourceTree = "<group>"; };
 		58BE59051AA6A60C001811D9 /* CarVioSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarVioSearchViewController.h; sourceTree = "<group>"; };
 		58BE59061AA6A60C001811D9 /* CarVioSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarVioSearchViewController.m; sourceTree = "<group>"; };
 		58BE59071AA6A60C001811D9 /* CarVioSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarVioSearchViewController.xib; sourceTree = "<group>"; };
@@ -442,6 +453,9 @@
 				583C91171AAE8EE700F1D756 /* PhonePayViewController.h */,
 				583C91181AAE8EE700F1D756 /* PhonePayViewController.m */,
 				583C91191AAE8EE700F1D756 /* PhonePayViewController.xib */,
+				58AD9C861AB01B6900EF2619 /* ScanViewController.h */,
+				58AD9C871AB01B6900EF2619 /* ScanViewController.m */,
+				58AD9C881AB01B6900EF2619 /* ScanViewController.xib */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -498,6 +512,10 @@
 				1872F3AB1AAAD36E007F60BD /* PostInfo.m */,
 				1872F3B71AAAE40E007F60BD /* DreamType.h */,
 				1872F3B81AAAE40E007F60BD /* DreamType.m */,
+				58AD9C8B1AB0378E00EF2619 /* GoodsInfo.h */,
+				58AD9C8C1AB0378E00EF2619 /* GoodsInfo.m */,
+				58AD9C8E1AB03D2D00EF2619 /* ShopInfo.h */,
+				58AD9C8F1AB03D2D00EF2619 /* ShopInfo.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -620,6 +638,7 @@
 				1872F3B61AAAE1DC007F60BD /* DreamListViewController.xib in Resources */,
 				588A3DEF1AA45CAE00EB1066 /* RullerViewController.xib in Resources */,
 				588A3DEA1AA45A4E00EB1066 /* FlashViewController.xib in Resources */,
+				58AD9C8A1AB01B6900EF2619 /* ScanViewController.xib in Resources */,
 				18E4FC071AADF48E001E021E /* LLPayViewController.xib in Resources */,
 				1872F3BE1AAAE71C007F60BD /* DreamTypeSecondViewController.xib in Resources */,
 				5817F1301A9D7BDB00B3A0A1 /* Images.xcassets in Resources */,
@@ -701,6 +720,7 @@
 				1872F3AC1AAAD36E007F60BD /* PostInfo.m in Sources */,
 				58EACBAC1AA03EC0006D5226 /* IDCardInfo.m in Sources */,
 				1872F3BD1AAAE71C007F60BD /* DreamTypeSecondViewController.m in Sources */,
+				58AD9C901AB03D2D00EF2619 /* ShopInfo.m in Sources */,
 				588A3DE91AA45A4E00EB1066 /* FlashViewController.m in Sources */,
 				5847F41F1AA5994000A57896 /* TulingViewController.m in Sources */,
 				58E850741AA01BFC0095DDC7 /* AppleInfo.m in Sources */,
@@ -712,6 +732,7 @@
 				18E4FC011AADF415001E021E /* GamePayViewController.m in Sources */,
 				583C912A1AAE989600F1D756 /* DMPasscode.m in Sources */,
 				586C99F51AA6EDF100ACD2CF /* MoneyTableViewCell.m in Sources */,
+				58AD9C8D1AB0378E00EF2619 /* GoodsInfo.m in Sources */,
 				5817F1281A9D7BDB00B3A0A1 /* AppDelegate.m in Sources */,
 				586C99FA1AA702F700ACD2CF /* MirrorViewController.m in Sources */,
 				58E850711AA01AF90095DDC7 /* ServiceResult.m in Sources */,
@@ -720,6 +741,7 @@
 				5845D85B1AA559A10007E4D8 /* CalculatorTools.m in Sources */,
 				585C82991AA7F91F00A98D16 /* CityInfo.m in Sources */,
 				585C82A71AA83CF000A98D16 /* WZDetailInfo.m in Sources */,
+				58AD9C891AB01B6900EF2619 /* ScanViewController.m in Sources */,
 				18E4FC061AADF48E001E021E /* LLPayViewController.m in Sources */,
 				583C91351AAEEAAA00F1D756 /* ImageScanViewController.m in Sources */,
 				5847F4231AA59B0800A57896 /* RobotInfo.m in Sources */,

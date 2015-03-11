@@ -89,5 +89,8 @@
 //搜索梦
 - (void)searchDreamByKey:(NSString *)kword
                withBlock:(void (^)(NSDictionary *result, NSError *error))block;
+//条码查询
+- (void)goodsSearchWithNum:(NSString *)num
+                 withBlock:(void (^)(NSDictionary *result, NSError *error))block;
 
 @end
