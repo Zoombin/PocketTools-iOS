@@ -345,4 +345,30 @@ static ServiceRequest *request;
     }];
 }
 
+//最新票房
+- (void)newestMovieRank:(NSString *)area
+              withBlock:(void (^)(NSDictionary *result, NSError *error))block {
+    NSMutableDictionary *params =  [self getRequestParams];
+    params[@"key"] = @"77ec98fa45a52fc1385c29c80e841f9b";
+    params[@"area"] = area;
+    NSString *requestUrl = @"http://v.juhe.cn/boxoffice/rank";
+    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        block(responseObject, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        block(nil, error);
+    }];
+}
+
+//网票票房
+- (void)netBuyMoiveWithBlock:(void (^)(NSDictionary *result, NSError *error))block {
+    NSMutableDictionary *params =  [self getRequestParams];
+    params[@"key"] = @"77ec98fa45a52fc1385c29c80e841f9b";
+    NSString *requestUrl = @"http://v.juhe.cn/boxoffice/wp";
+    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        block(responseObject, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        block(nil, error);
+    }];
+}
+
 @end

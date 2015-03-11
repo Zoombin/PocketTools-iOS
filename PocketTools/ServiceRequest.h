@@ -93,4 +93,11 @@
 - (void)goodsSearchWithNum:(NSString *)num
                  withBlock:(void (^)(NSDictionary *result, NSError *error))block;
 
+//最新票房
+- (void)newestMovieRank:(NSString *)area
+              withBlock:(void (^)(NSDictionary *result, NSError *error))block;
+
+//网票票房
+- (void)netBuyMoiveWithBlock:(void (^)(NSDictionary *result, NSError *error))block;
+
 @end

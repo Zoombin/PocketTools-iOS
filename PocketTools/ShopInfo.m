@@ -22,7 +22,7 @@
     NSMutableArray *shops = [NSMutableArray array];
     for (int i = 0; i < [array count]; i++) {
         ShopInfo *info = [[ShopInfo alloc] initWithAttributes:array[i]];
-        [shops addObject:shops];
+        [shops addObject:info];
     }
     return shops;
 }

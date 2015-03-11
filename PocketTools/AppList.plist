@@ -118,7 +118,7 @@
 		<key>appName</key>
 		<string>电影</string>
 		<key>controlName</key>
-		<string></string>
+		<string>MoiveViewController</string>
 		<key>iconName</key>
 		<string>gr_search_movie</string>
 	</dict>

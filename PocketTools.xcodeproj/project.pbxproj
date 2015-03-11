@@ -23,6 +23,9 @@
 		18E4FC021AADF415001E021E /* GamePayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E4FC001AADF415001E021E /* GamePayViewController.xib */; };
 		18E4FC061AADF48E001E021E /* LLPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4FC041AADF48E001E021E /* LLPayViewController.m */; };
 		18E4FC071AADF48E001E021E /* LLPayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E4FC051AADF48E001E021E /* LLPayViewController.xib */; };
+		18E4FC0B1AB09AEE001E021E /* MoiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4FC091AB09AEE001E021E /* MoiveViewController.m */; };
+		18E4FC0C1AB09AEE001E021E /* MoiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E4FC0A1AB09AEE001E021E /* MoiveViewController.xib */; };
+		18E4FC0F1AB09B91001E021E /* MovieInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4FC0E1AB09B91001E021E /* MovieInfo.m */; };
 		5817F1251A9D7BDB00B3A0A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F1241A9D7BDB00B3A0A1 /* main.m */; };
 		5817F1281A9D7BDB00B3A0A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F1271A9D7BDB00B3A0A1 /* AppDelegate.m */; };
 		5817F12B1A9D7BDB00B3A0A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F12A1A9D7BDB00B3A0A1 /* MainViewController.m */; };
@@ -130,6 +133,11 @@
 		18E4FC031AADF48E001E021E /* LLPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLPayViewController.h; sourceTree = "<group>"; };
 		18E4FC041AADF48E001E021E /* LLPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLPayViewController.m; sourceTree = "<group>"; };
 		18E4FC051AADF48E001E021E /* LLPayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LLPayViewController.xib; sourceTree = "<group>"; };
+		18E4FC081AB09AEE001E021E /* MoiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoiveViewController.h; sourceTree = "<group>"; };
+		18E4FC091AB09AEE001E021E /* MoiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoiveViewController.m; sourceTree = "<group>"; };
+		18E4FC0A1AB09AEE001E021E /* MoiveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoiveViewController.xib; sourceTree = "<group>"; };
+		18E4FC0D1AB09B91001E021E /* MovieInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieInfo.h; sourceTree = "<group>"; };
+		18E4FC0E1AB09B91001E021E /* MovieInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieInfo.m; sourceTree = "<group>"; };
 		5817F11F1A9D7BDB00B3A0A1 /* PocketTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5817F1231A9D7BDB00B3A0A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5817F1241A9D7BDB00B3A0A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -456,6 +464,9 @@
 				58AD9C861AB01B6900EF2619 /* ScanViewController.h */,
 				58AD9C871AB01B6900EF2619 /* ScanViewController.m */,
 				58AD9C881AB01B6900EF2619 /* ScanViewController.xib */,
+				18E4FC081AB09AEE001E021E /* MoiveViewController.h */,
+				18E4FC091AB09AEE001E021E /* MoiveViewController.m */,
+				18E4FC0A1AB09AEE001E021E /* MoiveViewController.xib */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -516,6 +527,8 @@
 				58AD9C8C1AB0378E00EF2619 /* GoodsInfo.m */,
 				58AD9C8E1AB03D2D00EF2619 /* ShopInfo.h */,
 				58AD9C8F1AB03D2D00EF2619 /* ShopInfo.m */,
+				18E4FC0D1AB09B91001E021E /* MovieInfo.h */,
+				18E4FC0E1AB09B91001E021E /* MovieInfo.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -633,6 +646,7 @@
 				58BE590E1AA6ABCD001811D9 /* ExchangeViewController.xib in Resources */,
 				583C911B1AAE8EE700F1D756 /* PhonePayViewController.xib in Resources */,
 				5845D8571AA54A420007E4D8 /* PhoneSearchViewController.xib in Resources */,
+				18E4FC0C1AB09AEE001E021E /* MoiveViewController.xib in Resources */,
 				58E8506D1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.xib in Resources */,
 				588A3DF41AA4609400EB1066 /* NewsViewController.xib in Resources */,
 				1872F3B61AAAE1DC007F60BD /* DreamListViewController.xib in Resources */,
@@ -704,6 +718,7 @@
 				5817F12B1A9D7BDB00B3A0A1 /* MainViewController.m in Sources */,
 				588A3DEE1AA45CAE00EB1066 /* RullerViewController.m in Sources */,
 				585C829C1AA802D500A98D16 /* CarType.m in Sources */,
+				18E4FC0B1AB09AEE001E021E /* MoiveViewController.m in Sources */,
 				583C912B1AAE989600F1D756 /* DMPasscodeConfig.m in Sources */,
 				58BE59111AA6B75D001811D9 /* MoneyEntity.m in Sources */,
 				583C912C1AAE989600F1D756 /* DMPasscodeInternalField.m in Sources */,
@@ -752,6 +767,7 @@
 				588A3DF31AA4609400EB1066 /* NewsViewController.m in Sources */,
 				5845D8561AA54A420007E4D8 /* PhoneSearchViewController.m in Sources */,
 				588A3DF81AA462C200EB1066 /* ParkViewController.m in Sources */,
+				18E4FC0F1AB09B91001E021E /* MovieInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
