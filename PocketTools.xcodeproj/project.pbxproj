@@ -54,6 +54,11 @@
 		5847F4201AA5994000A57896 /* TulingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5847F41E1AA5994000A57896 /* TulingViewController.xib */; };
 		5847F4231AA59B0800A57896 /* RobotInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5847F4221AA59B0800A57896 /* RobotInfo.m */; };
 		5847F4271AA5A2BA00A57896 /* CCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5847F4261AA5A2BA00A57896 /* CCLocationManager.m */; };
+		5858BD991AB127280000F07C /* OilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5858BD971AB127280000F07C /* OilViewController.m */; };
+		5858BD9A1AB127280000F07C /* OilViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5858BD981AB127280000F07C /* OilViewController.xib */; };
+		5858BD9D1AB12E070000F07C /* OilInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5858BD9C1AB12E070000F07C /* OilInfo.m */; };
+		5858BDA11AB130DB0000F07C /* OilCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5858BD9F1AB130DB0000F07C /* OilCell.m */; };
+		5858BDA21AB130DB0000F07C /* OilCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5858BDA01AB130DB0000F07C /* OilCell.xib */; };
 		585C82961AA7F7F800A98D16 /* ProvinceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 585C82951AA7F7F800A98D16 /* ProvinceInfo.m */; };
 		585C82991AA7F91F00A98D16 /* CityInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 585C82981AA7F91F00A98D16 /* CityInfo.m */; };
 		585C829C1AA802D500A98D16 /* CarType.m in Sources */ = {isa = PBXBuildFile; fileRef = 585C829B1AA802D500A98D16 /* CarType.m */; };
@@ -189,6 +194,14 @@
 		5847F4221AA59B0800A57896 /* RobotInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RobotInfo.m; sourceTree = "<group>"; };
 		5847F4251AA5A2BA00A57896 /* CCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLocationManager.h; sourceTree = "<group>"; };
 		5847F4261AA5A2BA00A57896 /* CCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLocationManager.m; sourceTree = "<group>"; };
+		5858BD961AB127280000F07C /* OilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OilViewController.h; sourceTree = "<group>"; };
+		5858BD971AB127280000F07C /* OilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OilViewController.m; sourceTree = "<group>"; };
+		5858BD981AB127280000F07C /* OilViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OilViewController.xib; sourceTree = "<group>"; };
+		5858BD9B1AB12E070000F07C /* OilInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OilInfo.h; sourceTree = "<group>"; };
+		5858BD9C1AB12E070000F07C /* OilInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OilInfo.m; sourceTree = "<group>"; };
+		5858BD9E1AB130DB0000F07C /* OilCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OilCell.h; sourceTree = "<group>"; };
+		5858BD9F1AB130DB0000F07C /* OilCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OilCell.m; sourceTree = "<group>"; };
+		5858BDA01AB130DB0000F07C /* OilCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OilCell.xib; sourceTree = "<group>"; };
 		585C82941AA7F7F800A98D16 /* ProvinceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvinceInfo.h; sourceTree = "<group>"; };
 		585C82951AA7F7F800A98D16 /* ProvinceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvinceInfo.m; sourceTree = "<group>"; };
 		585C82971AA7F91F00A98D16 /* CityInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityInfo.h; sourceTree = "<group>"; };
@@ -467,6 +480,12 @@
 				18E4FC081AB09AEE001E021E /* MoiveViewController.h */,
 				18E4FC091AB09AEE001E021E /* MoiveViewController.m */,
 				18E4FC0A1AB09AEE001E021E /* MoiveViewController.xib */,
+				5858BD961AB127280000F07C /* OilViewController.h */,
+				5858BD971AB127280000F07C /* OilViewController.m */,
+				5858BD981AB127280000F07C /* OilViewController.xib */,
+				5858BD9E1AB130DB0000F07C /* OilCell.h */,
+				5858BD9F1AB130DB0000F07C /* OilCell.m */,
+				5858BDA01AB130DB0000F07C /* OilCell.xib */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -529,6 +548,8 @@
 				58AD9C8F1AB03D2D00EF2619 /* ShopInfo.m */,
 				18E4FC0D1AB09B91001E021E /* MovieInfo.h */,
 				18E4FC0E1AB09B91001E021E /* MovieInfo.m */,
+				5858BD9B1AB12E070000F07C /* OilInfo.h */,
+				5858BD9C1AB12E070000F07C /* OilInfo.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -637,6 +658,7 @@
 				58BE59091AA6A60C001811D9 /* CarVioSearchViewController.xib in Resources */,
 				1872F3C31AAAFA16007F60BD /* PhotoPasswordViewController.xib in Resources */,
 				5817F12E1A9D7BDB00B3A0A1 /* Main.storyboard in Resources */,
+				5858BD9A1AB127280000F07C /* OilViewController.xib in Resources */,
 				1872F3B11AAAD41A007F60BD /* PackageDetailViewController.xib in Resources */,
 				583C91161AAE8E3C00F1D756 /* TicketsViewController.xib in Resources */,
 				586C99FB1AA702F700ACD2CF /* MirrorViewController.xib in Resources */,
@@ -655,6 +677,7 @@
 				58AD9C8A1AB01B6900EF2619 /* ScanViewController.xib in Resources */,
 				18E4FC071AADF48E001E021E /* LLPayViewController.xib in Resources */,
 				1872F3BE1AAAE71C007F60BD /* DreamTypeSecondViewController.xib in Resources */,
+				5858BDA21AB130DB0000F07C /* OilCell.xib in Resources */,
 				5817F1301A9D7BDB00B3A0A1 /* Images.xcassets in Resources */,
 				5845D8601AA56ACB0007E4D8 /* SizesViewController.xib in Resources */,
 				5894469B1AA15A52004BEE7B /* CalculatorViewController.xib in Resources */,
@@ -723,6 +746,7 @@
 				58BE59111AA6B75D001811D9 /* MoneyEntity.m in Sources */,
 				583C912C1AAE989600F1D756 /* DMPasscodeInternalField.m in Sources */,
 				58E850681AA012F10095DDC7 /* ServiceRequest.m in Sources */,
+				5858BD9D1AB12E070000F07C /* OilInfo.m in Sources */,
 				583C912E1AAE989600F1D756 /* DMPasscodeInternalViewController.m in Sources */,
 				58BE59081AA6A60C001811D9 /* CarVioSearchViewController.m in Sources */,
 				1872F3A81AAAA9AA007F60BD /* PackageSearchViewController.m in Sources */,
@@ -732,6 +756,7 @@
 				1872F3B51AAAE1DC007F60BD /* DreamListViewController.m in Sources */,
 				5847F4271AA5A2BA00A57896 /* CCLocationManager.m in Sources */,
 				5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */,
+				5858BD991AB127280000F07C /* OilViewController.m in Sources */,
 				1872F3AC1AAAD36E007F60BD /* PostInfo.m in Sources */,
 				58EACBAC1AA03EC0006D5226 /* IDCardInfo.m in Sources */,
 				1872F3BD1AAAE71C007F60BD /* DreamTypeSecondViewController.m in Sources */,
@@ -765,6 +790,7 @@
 				583C91151AAE8E3C00F1D756 /* TicketsViewController.m in Sources */,
 				583C91291AAE989600F1D756 /* DMKeychain.m in Sources */,
 				588A3DF31AA4609400EB1066 /* NewsViewController.m in Sources */,
+				5858BDA11AB130DB0000F07C /* OilCell.m in Sources */,
 				5845D8561AA54A420007E4D8 /* PhoneSearchViewController.m in Sources */,
 				588A3DF81AA462C200EB1066 /* ParkViewController.m in Sources */,
 				18E4FC0F1AB09B91001E021E /* MovieInfo.m in Sources */,

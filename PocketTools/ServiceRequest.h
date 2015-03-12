@@ -100,4 +100,9 @@
 //网票票房
 - (void)netBuyMoiveWithBlock:(void (^)(NSDictionary *result, NSError *error))block;
 
+//附近油价
+- (void)nearByOilPrice:(NSNumber *)lon
+                   lat:(NSNumber *)lat
+             withBlock:(void (^)(NSDictionary *result, NSError *error))block;
+
 @end

@@ -371,4 +371,21 @@ static ServiceRequest *request;
     }];
 }
 
+//附近油价
+- (void)nearByOilPrice:(NSNumber *)lon
+                   lat:(NSNumber *)lat
+             withBlock:(void (^)(NSDictionary *result, NSError *error))block {
+    NSMutableDictionary *params =  [self getRequestParams];
+    params[@"key"] = @"d6733f4e3f60dbd00de2cfb6feb6e28d";
+    params[@"lon"] = lon;
+    params[@"lat"] = lat;
+    NSString *requestUrl = @"http://apis.juhe.cn/oil/local";
+    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        block(responseObject, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        block(nil, error);
+    }];
+}
+
+
 @end

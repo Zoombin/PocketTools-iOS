@@ -102,7 +102,7 @@
 		<key>appName</key>
 		<string>加油站</string>
 		<key>controlName</key>
-		<string></string>
+		<string>OilViewController</string>
 		<key>iconName</key>
 		<string>gr_search_gas</string>
 	</dict>
