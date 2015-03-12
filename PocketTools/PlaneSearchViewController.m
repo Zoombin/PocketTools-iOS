@@ -32,6 +32,7 @@
         return;
     }
     [self displayHUD:@"加载中..."];
+    [_startTextField resignFirstResponder];
     [planesArray removeAllObjects];
     [_tableView reloadData];
     [[ServiceRequest shared] planceSearch:_startTextField.text endCity:_endTextField.text withBlock:^(NSDictionary *result, NSError *error) {
