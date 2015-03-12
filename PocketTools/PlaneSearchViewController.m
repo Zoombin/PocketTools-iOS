@@ -7,6 +7,8 @@
 //
 
 #import "PlaneSearchViewController.h"
+#import "PlaneInfo.h"
+#import "PlaneCell.h"
 
 @interface PlaneSearchViewController ()
 
@@ -21,19 +23,33 @@
     self.title = NSLocalizedString(@"航班动态", nil);
     planesArray = [NSMutableArray array];
     [_tableView setTableHeaderView:_headerView];
-    _startTextField.text = @"上海";
-    _endTextField.text = @"北京";
     // Do any additional setup after loading the view from its nib.
 }
 
 - (IBAction)sureButtonClicked:(id)sender {
-    if ([_startTextField.text length] == 0 && [_endTextField.text length] == 0) {
+    if ([_startTextField.text length] == 0 || [_endTextField.text length] == 0) {
         [self displayHUDTitle:nil message:@"起点或终点不能为空!" duration:DELAY_TIMES];
         return;
     }
+    [self displayHUD:@"加载中..."];
+    [planesArray removeAllObjects];
+    [_tableView reloadData];
     [[ServiceRequest shared] planceSearch:_startTextField.text endCity:_endTextField.text withBlock:^(NSDictionary *result, NSError *error) {
         if (!error) {
-            NSLog(@"%@", result);
+            ServiceResult *resultInfo= [[ServiceResult alloc] initWithAttributes:result];
+            if ([resultInfo.error_code integerValue] == 0) {
+                [self hideHUD:YES];
+                NSLog(@"%@", resultInfo.result);
+                NSArray *array = (NSArray *)resultInfo.result;
+                if ([array isKindOfClass:[NSArray class]]) {
+                    [planesArray addObjectsFromArray:[PlaneInfo initWithArray:array]];
+                    [_tableView reloadData];
+                }
+            } else {
+                [self displayHUDTitle:nil message:resultInfo.reason duration:DELAY_TIMES];
+            }
+        } else {
+            [self displayHUDTitle:nil message:NETWORK_ERROR duration:DELAY_TIMES];
         }
     }];
 }
@@ -48,17 +64,25 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44;
+    return 90;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"UITableViewCell";
     
-    UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    PlaneCell *cell = (PlaneCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        NSArray *nibs = [[NSBundle mainBundle]loadNibNamed:@"PlaneCell" owner:nil options:nil];
+        cell = [nibs lastObject];
         cell.backgroundColor = [UIColor clearColor];
     }
+    PlaneInfo *plane = planesArray[indexPath.row];
+    cell.airLineLabel.text = plane.Airline;
+    cell.fightNumLabel.text = plane.FlightNum;
+    cell.depLabel.text = plane.DepCity;
+    cell.depTimeLabel.text = plane.DepTime;
+    cell.arrLabel.text = plane.ArrCity;
+    cell.arrTimeLabel.text = plane.ArrTime;
     return cell;
 }
 
