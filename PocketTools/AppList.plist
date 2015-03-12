@@ -70,7 +70,7 @@
 		<key>appName</key>
 		<string>老黄历</string>
 		<key>controlName</key>
-		<string></string>
+		<string>CalendarViewController</string>
 		<key>iconName</key>
 		<string>gr_tool_cal</string>
 	</dict>
