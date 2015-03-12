@@ -9,6 +9,7 @@
 #import "DreamListViewController.h"
 #import "DreamTypeSecondViewController.h"
 #import "DreamType.h"
+#import "DreamSearchViewController.h"
 
 @interface DreamListViewController ()
 
@@ -29,6 +30,21 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self search];
+    return YES;
+}
+
+- (void)search {
+    if ([_searchTextField.text length] == 0) {
+        [self displayHUDTitle:nil message:@"请输入内容" duration:DELAY_TIMES];
+        return;
+    }
+    DreamSearchViewController *viewCtrl = [DreamSearchViewController new];
+    viewCtrl.keyWord = _searchTextField.text;
+    [self.navigationController pushViewController:viewCtrl animated:YES];
 }
 
 - (void)loadTypeList {
@@ -74,11 +90,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    DreamType *type = resultArray[indexPath.row];
-    DreamTypeSecondViewController *viewCtrl = [DreamTypeSecondViewController new];
-    viewCtrl.name = type.name;
-    viewCtrl.title = type.name;
-    [self.navigationController pushViewController:viewCtrl animated:YES];
+//    DreamType *type = resultArray[indexPath.row];
+//    DreamTypeSecondViewController *viewCtrl = [DreamTypeSecondViewController new];
+//    viewCtrl.name = type.name;
+//    viewCtrl.title = type.name;
+//    [self.navigationController pushViewController:viewCtrl animated:YES];
 }
 
 @end

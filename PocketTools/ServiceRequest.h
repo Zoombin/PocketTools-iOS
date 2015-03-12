@@ -86,6 +86,10 @@
 - (void)dreamTypeList:(NSString *)fid
             withBlock:(void (^)(NSDictionary *result, NSError *error))block;
 
+//梦详情
+- (void)dreamDetail:(NSString *)did
+          withBlock:(void (^)(NSDictionary *result, NSError *error))block;
+
 //搜索梦
 - (void)searchDreamByKey:(NSString *)kword
                withBlock:(void (^)(NSDictionary *result, NSError *error))block;

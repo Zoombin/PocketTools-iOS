@@ -32,6 +32,7 @@
 		5817F12E1A9D7BDB00B3A0A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5817F12C1A9D7BDB00B3A0A1 /* Main.storyboard */; };
 		5817F1301A9D7BDB00B3A0A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5817F12F1A9D7BDB00B3A0A1 /* Images.xcassets */; };
 		5817F13F1A9D7BDB00B3A0A1 /* PocketToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F13E1A9D7BDB00B3A0A1 /* PocketToolsTests.m */; };
+		582BD5551AB14815008A9B54 /* DreamInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 582BD5541AB14815008A9B54 /* DreamInfo.m */; };
 		583C91151AAE8E3C00F1D756 /* TicketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583C91131AAE8E3C00F1D756 /* TicketsViewController.m */; };
 		583C91161AAE8E3C00F1D756 /* TicketsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 583C91141AAE8E3C00F1D756 /* TicketsViewController.xib */; };
 		583C911A1AAE8EE700F1D756 /* PhonePayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583C91181AAE8EE700F1D756 /* PhonePayViewController.m */; };
@@ -59,6 +60,10 @@
 		5858BD9D1AB12E070000F07C /* OilInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5858BD9C1AB12E070000F07C /* OilInfo.m */; };
 		5858BDA11AB130DB0000F07C /* OilCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5858BD9F1AB130DB0000F07C /* OilCell.m */; };
 		5858BDA21AB130DB0000F07C /* OilCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5858BDA01AB130DB0000F07C /* OilCell.xib */; };
+		5858BDA61AB142040000F07C /* DreamSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5858BDA41AB142040000F07C /* DreamSearchViewController.m */; };
+		5858BDA71AB142040000F07C /* DreamSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5858BDA51AB142040000F07C /* DreamSearchViewController.xib */; };
+		5858BDAB1AB1422B0000F07C /* DreamDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5858BDA91AB1422B0000F07C /* DreamDetailViewController.m */; };
+		5858BDAC1AB1422B0000F07C /* DreamDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5858BDAA1AB1422B0000F07C /* DreamDetailViewController.xib */; };
 		585C82961AA7F7F800A98D16 /* ProvinceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 585C82951AA7F7F800A98D16 /* ProvinceInfo.m */; };
 		585C82991AA7F91F00A98D16 /* CityInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 585C82981AA7F91F00A98D16 /* CityInfo.m */; };
 		585C829C1AA802D500A98D16 /* CarType.m in Sources */ = {isa = PBXBuildFile; fileRef = 585C829B1AA802D500A98D16 /* CarType.m */; };
@@ -155,6 +160,8 @@
 		5817F1381A9D7BDB00B3A0A1 /* PocketToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5817F13D1A9D7BDB00B3A0A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5817F13E1A9D7BDB00B3A0A1 /* PocketToolsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PocketToolsTests.m; sourceTree = "<group>"; };
+		582BD5531AB14815008A9B54 /* DreamInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DreamInfo.h; sourceTree = "<group>"; };
+		582BD5541AB14815008A9B54 /* DreamInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DreamInfo.m; sourceTree = "<group>"; };
 		583C91121AAE8E3C00F1D756 /* TicketsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketsViewController.h; sourceTree = "<group>"; };
 		583C91131AAE8E3C00F1D756 /* TicketsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketsViewController.m; sourceTree = "<group>"; };
 		583C91141AAE8E3C00F1D756 /* TicketsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TicketsViewController.xib; sourceTree = "<group>"; };
@@ -202,6 +209,12 @@
 		5858BD9E1AB130DB0000F07C /* OilCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OilCell.h; sourceTree = "<group>"; };
 		5858BD9F1AB130DB0000F07C /* OilCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OilCell.m; sourceTree = "<group>"; };
 		5858BDA01AB130DB0000F07C /* OilCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OilCell.xib; sourceTree = "<group>"; };
+		5858BDA31AB142040000F07C /* DreamSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DreamSearchViewController.h; sourceTree = "<group>"; };
+		5858BDA41AB142040000F07C /* DreamSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DreamSearchViewController.m; sourceTree = "<group>"; };
+		5858BDA51AB142040000F07C /* DreamSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DreamSearchViewController.xib; sourceTree = "<group>"; };
+		5858BDA81AB1422B0000F07C /* DreamDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DreamDetailViewController.h; sourceTree = "<group>"; };
+		5858BDA91AB1422B0000F07C /* DreamDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DreamDetailViewController.m; sourceTree = "<group>"; };
+		5858BDAA1AB1422B0000F07C /* DreamDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DreamDetailViewController.xib; sourceTree = "<group>"; };
 		585C82941AA7F7F800A98D16 /* ProvinceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvinceInfo.h; sourceTree = "<group>"; };
 		585C82951AA7F7F800A98D16 /* ProvinceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvinceInfo.m; sourceTree = "<group>"; };
 		585C82971AA7F91F00A98D16 /* CityInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityInfo.h; sourceTree = "<group>"; };
@@ -459,6 +472,12 @@
 				1872F3BA1AAAE71C007F60BD /* DreamTypeSecondViewController.h */,
 				1872F3BB1AAAE71C007F60BD /* DreamTypeSecondViewController.m */,
 				1872F3BC1AAAE71C007F60BD /* DreamTypeSecondViewController.xib */,
+				5858BDA31AB142040000F07C /* DreamSearchViewController.h */,
+				5858BDA41AB142040000F07C /* DreamSearchViewController.m */,
+				5858BDA51AB142040000F07C /* DreamSearchViewController.xib */,
+				5858BDA81AB1422B0000F07C /* DreamDetailViewController.h */,
+				5858BDA91AB1422B0000F07C /* DreamDetailViewController.m */,
+				5858BDAA1AB1422B0000F07C /* DreamDetailViewController.xib */,
 				1872F3BF1AAAFA16007F60BD /* PhotoPasswordViewController.h */,
 				1872F3C01AAAFA16007F60BD /* PhotoPasswordViewController.m */,
 				1872F3C11AAAFA16007F60BD /* PhotoPasswordViewController.xib */,
@@ -550,6 +569,8 @@
 				18E4FC0E1AB09B91001E021E /* MovieInfo.m */,
 				5858BD9B1AB12E070000F07C /* OilInfo.h */,
 				5858BD9C1AB12E070000F07C /* OilInfo.m */,
+				582BD5531AB14815008A9B54 /* DreamInfo.h */,
+				582BD5541AB14815008A9B54 /* DreamInfo.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -662,9 +683,11 @@
 				1872F3B11AAAD41A007F60BD /* PackageDetailViewController.xib in Resources */,
 				583C91161AAE8E3C00F1D756 /* TicketsViewController.xib in Resources */,
 				586C99FB1AA702F700ACD2CF /* MirrorViewController.xib in Resources */,
+				5858BDAC1AB1422B0000F07C /* DreamDetailViewController.xib in Resources */,
 				588A3DE51AA4428300EB1066 /* AppList.plist in Resources */,
 				1872F3A91AAAA9AA007F60BD /* PackageSearchViewController.xib in Resources */,
 				5847F4201AA5994000A57896 /* TulingViewController.xib in Resources */,
+				5858BDA71AB142040000F07C /* DreamSearchViewController.xib in Resources */,
 				58BE590E1AA6ABCD001811D9 /* ExchangeViewController.xib in Resources */,
 				583C911B1AAE8EE700F1D756 /* PhonePayViewController.xib in Resources */,
 				5845D8571AA54A420007E4D8 /* PhoneSearchViewController.xib in Resources */,
@@ -748,6 +771,7 @@
 				58E850681AA012F10095DDC7 /* ServiceRequest.m in Sources */,
 				5858BD9D1AB12E070000F07C /* OilInfo.m in Sources */,
 				583C912E1AAE989600F1D756 /* DMPasscodeInternalViewController.m in Sources */,
+				582BD5551AB14815008A9B54 /* DreamInfo.m in Sources */,
 				58BE59081AA6A60C001811D9 /* CarVioSearchViewController.m in Sources */,
 				1872F3A81AAAA9AA007F60BD /* PackageSearchViewController.m in Sources */,
 				1872F3B91AAAE40E007F60BD /* DreamType.m in Sources */,
@@ -759,10 +783,12 @@
 				5858BD991AB127280000F07C /* OilViewController.m in Sources */,
 				1872F3AC1AAAD36E007F60BD /* PostInfo.m in Sources */,
 				58EACBAC1AA03EC0006D5226 /* IDCardInfo.m in Sources */,
+				5858BDAB1AB1422B0000F07C /* DreamDetailViewController.m in Sources */,
 				1872F3BD1AAAE71C007F60BD /* DreamTypeSecondViewController.m in Sources */,
 				58AD9C901AB03D2D00EF2619 /* ShopInfo.m in Sources */,
 				588A3DE91AA45A4E00EB1066 /* FlashViewController.m in Sources */,
 				5847F41F1AA5994000A57896 /* TulingViewController.m in Sources */,
+				5858BDA61AB142040000F07C /* DreamSearchViewController.m in Sources */,
 				58E850741AA01BFC0095DDC7 /* AppleInfo.m in Sources */,
 				5845D85F1AA56ACB0007E4D8 /* SizesViewController.m in Sources */,
 				58EE96C21AA84BBF00E35B51 /* UserCarSearchInfo.m in Sources */,

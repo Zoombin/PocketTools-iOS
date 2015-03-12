@@ -308,11 +308,25 @@ static ServiceRequest *request;
     }];
 }
 
+- (void)dreamDetail:(NSString *)did
+          withBlock:(void (^)(NSDictionary *result, NSError *error))block {
+    NSMutableDictionary *params =  [self getRequestParams];
+    params[@"key"] = @"e10ef3445ac25e570094dcf48bece26a";
+    params[@"id"] = did;
+    NSString *requestUrl = @"http://v.juhe.cn/dream/queryid";
+    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        block(responseObject, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        block(nil, error);
+    }];
+}
+
 - (void)searchDreamByKey:(NSString *)kword
                withBlock:(void (^)(NSDictionary *result, NSError *error))block {
     NSMutableDictionary *params =  [self getRequestParams];
     params[@"key"] = @"e10ef3445ac25e570094dcf48bece26a";
     params[@"q"] = [kword stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    params[@"full"] = @(1);
     NSString *requestUrl = @"http://v.juhe.cn/dream/query";
     [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         block(responseObject, nil);
