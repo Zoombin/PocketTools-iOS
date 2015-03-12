@@ -15,48 +15,16 @@
 
 @implementation TulingViewController {
     NSMutableArray *infoArray;
-    CLLocationManager *locationmanager;
-    CLLocationCoordinate2D lastCoordinate;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    locationmanager = [[CLLocationManager alloc] init];
-    [locationmanager requestAlwaysAuthorization];        //NSLocationAlwaysUsageDescription
-    [locationmanager requestWhenInUseAuthorization];     //NSLocationWhenInUseDescription
-    locationmanager.delegate = self;
     
     infoArray = [NSMutableArray array];
     self.title = NSLocalizedString(@"聊天机器人", nil);
     // Do any additional setup after loading the view from its nib.
     [self chatWithRobot:@"你好"];
     infoArray = [NSMutableArray array];
-    [self getLat];
-}
-
-- (void)getLat
-{
-    [self startLocation];
-}
-
-- (void)startLocation
-{
-    if([CLLocationManager locationServicesEnabled] && [CLLocationManager authorizationStatus] != kCLAuthorizationStatusDenied) {
-        locationmanager.distanceFilter = 100;
-        [locationmanager startUpdatingLocation];
-    }
-    else{
-        UIAlertView *alvertView=[[UIAlertView alloc]initWithTitle:@"提示" message:@"需要开启定位服务,请到设置->隐私,打开定位服务" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
-        [alvertView show];
-        
-    }
-}
-
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
-{
-    lastCoordinate = CLLocationCoordinate2DMake(newLocation.coordinate.latitude ,newLocation.coordinate.longitude);
-    [manager stopUpdatingLocation];
-    
 }
 
 - (void)chatWithRobot:(NSString *)content {

@@ -7,6 +7,8 @@
 //
 
 #import "ServiceRequest.h"
+#import "JHAPISDK.h"
+#import "JHOpenidSupplier.h"
 
 @implementation ServiceRequest
 
@@ -18,6 +20,7 @@ static ServiceRequest *request;
 + (instancetype)shared {
     if (!request) {
         request = [[ServiceRequest alloc] init];
+        [[JHOpenidSupplier shareSupplier] registerJuheAPIByOpenId:@"JH3d10c81c2da5d095c11b5537360a47ac"];
         manager = [AFHTTPRequestOperationManager manager];
     }
     return request;
@@ -138,39 +141,11 @@ static ServiceRequest *request;
 - (void)appleInfo:(NSString *)appid withBlock:(void (^)(NSDictionary *result, NSError *error))block {
     NSMutableDictionary *params =  [self getRequestParams];
     params[@"sn"] = appid;
-    params[@"key"] = @"e2a4d76a04bc042a8b47045baf6c9873";
-    NSString *requestUrl = [NSString stringWithFormat:@"%@/appleinfo/index", BASE_URL];
-    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    NSString *requestUrl = @"http://apis.juhe.cn/appleinfo/index";
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:requestUrl APIID:@"37" Parameters:params Method:@"GET" Success:^(id responseObject) {
         block(responseObject, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        block(nil, error);
-    }];
-}
-
-- (void)idCardSearch:(NSString *)uid
-           withBlocl:(void (^)(NSDictionary *result, NSError *error))block
-{
-    NSMutableDictionary *params =  [self getRequestParams];
-    params[@"cardno"] = uid;
-    params[@"key"] = @"51431019e527a0cd73e5daf157348e84";
-    NSString *requestUrl = [NSString stringWithFormat:@"%@/idcard/index", BASE_URL];
-    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        block(responseObject, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        block(nil, error);
-    }];
-}
-
-//IP查询
-- (void)ipSearch:(NSString *)ip
-       withBlock:(void (^)(NSDictionary *result, NSError *error))block {
-    NSMutableDictionary *params =  [self getRequestParams];
-    params[@"ip"] = ip;
-    params[@"key"] = @"07710610d64e235e50b257308b2aea76";
-    NSString *requestUrl = [NSString stringWithFormat:@"%@/ip/ip2addr", BASE_URL];
-    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        block(responseObject, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } Failure:^(NSError *error) {
         block(nil, error);
     }];
 }
@@ -180,11 +155,11 @@ static ServiceRequest *request;
           withBlock:(void (^)(NSDictionary *result, NSError *error))block {
     NSMutableDictionary *params =  [self getRequestParams];
     params[@"phone"] = phoneNum;
-    params[@"key"] = @"b8b61acf82e1866e41a67c53e295f51b";
-    NSString *requestUrl = [NSString stringWithFormat:@"%@/mobile/get", BASE_URL];
-    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    NSString *requestUrl = @"http://apis.juhe.cn/mobile/get";
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:requestUrl APIID:@"11" Parameters:params Method:@"GET" Success:^(id responseObject) {
         block(responseObject, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } Failure:^(NSError *error) {
         block(nil, error);
     }];
 }
@@ -194,11 +169,11 @@ static ServiceRequest *request;
             withBlock:(void (^)(NSDictionary *result, NSError *error))block {
     NSMutableDictionary *params =  [self getRequestParams];
     params[@"info"] = content;
-    params[@"key"] = @"39ded27a75232bba451702ab705faeea";
     NSString *requestUrl = @"http://op.juhe.cn/robot/index";
-    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:requestUrl APIID:@"112" Parameters:params Method:@"GET" Success:^(id responseObject) {
         block(responseObject, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } Failure:^(NSError *error) {
         block(nil, error);
     }];
 }
@@ -206,19 +181,11 @@ static ServiceRequest *request;
 //汇率计算
 - (void)exchangeList:(void (^)(NSDictionary *, NSError *))block {
     NSMutableDictionary *params =  [self getRequestParams];
-    params[@"key"] = @"ecfbba891b63a81c297ec1afb690d5ad";
     NSString *requestUrl = @"http://web.juhe.cn:8080/finance/exchange/rmbquot";
-    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:requestUrl APIID:@"23" Parameters:params Method:@"GET" Success:^(id responseObject) {
         block(responseObject, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"%ld", (long)operation.response.statusCode);
-        if (operation.response.statusCode == 200) {
-            NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:operation.responseData
-                                                                     options:NSJSONReadingMutableContainers
-                                                                       error:nil];
-            block(jsonDict, nil);
-            return;
-        }
+    } Failure:^(NSError *error) {
         block(nil, error);
     }];
 }
@@ -226,11 +193,11 @@ static ServiceRequest *request;
 //获取支持的城市列表
 - (void)loadAllSupportCities:(void (^)(NSDictionary *result, NSError *error))block {
     NSMutableDictionary *params =  [self getRequestParams];
-    params[@"key"] = @"e4ff4be7d2b4e89b3df1cbdd08fcb67e";
     NSString *requestUrl = @"http://v.juhe.cn/wz/citys";
-    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:requestUrl APIID:@"36" Parameters:params Method:@"GET" Success:^(id responseObject) {
         block(responseObject, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } Failure:^(NSError *error) {
         block(nil, error);
     }];
 }
@@ -238,11 +205,11 @@ static ServiceRequest *request;
 //获取车辆类型
 - (void)loadCarTypesList:(void (^)(NSDictionary *result, NSError *error))block {
     NSMutableDictionary *params =  [self getRequestParams];
-    params[@"key"] = @"e4ff4be7d2b4e89b3df1cbdd08fcb67e";
     NSString *requestUrl = @"http://v.juhe.cn/wz/hpzl";
-    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:requestUrl APIID:@"36" Parameters:params Method:@"GET" Success:^(id responseObject) {
         block(responseObject, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } Failure:^(NSError *error) {
         block(nil, error);
     }];
 }
@@ -268,11 +235,11 @@ static ServiceRequest *request;
     if (registNum) {
         
     }
-    params[@"key"] = @"e4ff4be7d2b4e89b3df1cbdd08fcb67e";
     NSString *requestUrl = @"http://v.juhe.cn/wz/query";
-    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:requestUrl APIID:@"36" Parameters:params Method:@"GET" Success:^(id responseObject) {
         block(responseObject, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } Failure:^(NSError *error) {
         block(nil, error);
     }];
 }
@@ -282,13 +249,13 @@ static ServiceRequest *request;
               postnum:(NSString *)postnum
             withBlock:(void (^)(NSDictionary *result, NSError *error))block {
     NSMutableDictionary *params =  [self getRequestParams];
-    params[@"key"] = @"9b5b7b0a8edf2102283955ffba0f29fe";
     params[@"com"] = postman;
     params[@"no"] = postnum;
     NSString *requestUrl = @"http://v.juhe.cn/exp/index";
-    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:requestUrl APIID:@"43" Parameters:params Method:@"GET" Success:^(id responseObject) {
         block(responseObject, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } Failure:^(NSError *error) {
         block(nil, error);
     }];
 }
@@ -296,14 +263,14 @@ static ServiceRequest *request;
 - (void)dreamTypeList:(NSString *)fid
             withBlock:(void (^)(NSDictionary *result, NSError *error))block {
     NSMutableDictionary *params =  [self getRequestParams];
-    params[@"key"] = @"e10ef3445ac25e570094dcf48bece26a";
     if (fid) {
         params[@"fid"] = fid;
     }
     NSString *requestUrl = @"http://v.juhe.cn/dream/category";
-    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:requestUrl APIID:@"64" Parameters:params Method:@"GET" Success:^(id responseObject) {
         block(responseObject, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } Failure:^(NSError *error) {
         block(nil, error);
     }];
 }
@@ -311,12 +278,12 @@ static ServiceRequest *request;
 - (void)dreamDetail:(NSString *)did
           withBlock:(void (^)(NSDictionary *result, NSError *error))block {
     NSMutableDictionary *params =  [self getRequestParams];
-    params[@"key"] = @"e10ef3445ac25e570094dcf48bece26a";
     params[@"id"] = did;
     NSString *requestUrl = @"http://v.juhe.cn/dream/queryid";
-    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:requestUrl APIID:@"64" Parameters:params Method:@"GET" Success:^(id responseObject) {
         block(responseObject, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } Failure:^(NSError *error) {
         block(nil, error);
     }];
 }
@@ -324,13 +291,13 @@ static ServiceRequest *request;
 - (void)searchDreamByKey:(NSString *)kword
                withBlock:(void (^)(NSDictionary *result, NSError *error))block {
     NSMutableDictionary *params =  [self getRequestParams];
-    params[@"key"] = @"e10ef3445ac25e570094dcf48bece26a";
     params[@"q"] = [kword stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     params[@"full"] = @(1);
     NSString *requestUrl = @"http://v.juhe.cn/dream/query";
-    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:requestUrl APIID:@"64" Parameters:params Method:@"GET" Success:^(id responseObject) {
         block(responseObject, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } Failure:^(NSError *error) {
         block(nil, error);
     }];
 }
@@ -338,23 +305,14 @@ static ServiceRequest *request;
 - (void)goodsSearchWithNum:(NSString *)num
                  withBlock:(void (^)(NSDictionary *result, NSError *error))block {
     NSMutableDictionary *params =  [self getRequestParams];
-    params[@"appkey"] = @"aceec7d212876cc985b310d694725f78";
     params[@"pkg"] = @"com.koudai";
     params[@"barcode"] = num;
     params[@"cityid"] = @"1";
     NSString *requestUrl = @"http://api.juheapi.com/jhbar/bar";
-    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:requestUrl APIID:@"52" Parameters:params Method:@"GET" Success:^(id responseObject) {
         block(responseObject, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"%ld", (long)operation.response.statusCode);
-        if (operation.response.statusCode == 200) {
-            NSLog(@"%@", [[NSString alloc] initWithData:operation.responseData encoding:NSUTF8StringEncoding]);
-            NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:operation.responseData
-                                                                     options:NSJSONReadingMutableContainers
-                                                                       error:nil];
-            block(jsonDict, nil);
-            return;
-        }
+    } Failure:^(NSError *error) {
         block(nil, error);
     }];
 }
@@ -363,12 +321,12 @@ static ServiceRequest *request;
 - (void)newestMovieRank:(NSString *)area
               withBlock:(void (^)(NSDictionary *result, NSError *error))block {
     NSMutableDictionary *params =  [self getRequestParams];
-    params[@"key"] = @"77ec98fa45a52fc1385c29c80e841f9b";
     params[@"area"] = area;
     NSString *requestUrl = @"http://v.juhe.cn/boxoffice/rank";
-    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:requestUrl APIID:@"44" Parameters:params Method:@"GET" Success:^(id responseObject) {
         block(responseObject, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } Failure:^(NSError *error) {
         block(nil, error);
     }];
 }
@@ -376,11 +334,11 @@ static ServiceRequest *request;
 //网票票房
 - (void)netBuyMoiveWithBlock:(void (^)(NSDictionary *result, NSError *error))block {
     NSMutableDictionary *params =  [self getRequestParams];
-    params[@"key"] = @"77ec98fa45a52fc1385c29c80e841f9b";
     NSString *requestUrl = @"http://v.juhe.cn/boxoffice/wp";
-    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:requestUrl APIID:@"44" Parameters:params Method:@"GET" Success:^(id responseObject) {
         block(responseObject, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } Failure:^(NSError *error) {
         block(nil, error);
     }];
 }
@@ -390,13 +348,29 @@ static ServiceRequest *request;
                    lat:(NSNumber *)lat
              withBlock:(void (^)(NSDictionary *result, NSError *error))block {
     NSMutableDictionary *params =  [self getRequestParams];
-    params[@"key"] = @"d6733f4e3f60dbd00de2cfb6feb6e28d";
     params[@"lon"] = lon;
     params[@"lat"] = lat;
     NSString *requestUrl = @"http://apis.juhe.cn/oil/local";
-    [manager GET:requestUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:requestUrl APIID:@"7" Parameters:params Method:@"GET" Success:^(id responseObject) {
         block(responseObject, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } Failure:^(NSError *error) {
+        block(nil, error);
+    }];
+}
+
+//航线查询
+- (void)planceSearch:(NSString *)startCity
+             endCity:(NSString *)endCity
+           withBlock:(void (^)(NSDictionary *result, NSError *error))block {
+    NSMutableDictionary *params =  [self getRequestParams];
+    params[@"start"] = startCity;
+    params[@"end"] = endCity;
+    NSString *requestUrl = @"http://apis.juhe.cn/plan/bc";
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:requestUrl APIID:@"20" Parameters:params Method:@"GET" Success:^(id responseObject) {
+        block(responseObject, nil);
+    } Failure:^(NSError *error) {
         block(nil, error);
     }];
 }

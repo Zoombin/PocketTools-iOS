@@ -43,14 +43,6 @@
 - (void)appleInfo:(NSString *)appid
         withBlock:(void (^)(NSDictionary *result, NSError *error))block;
 
-//身份证查询
-- (void)idCardSearch:(NSString *)uid
-           withBlock:(void (^)(NSDictionary *result, NSError *error))block;
-
-//IP查询
-- (void)ipSearch:(NSString *)ip
-       withBlock:(void (^)(NSDictionary *result, NSError *error))block;
-
 //电话查询
 - (void)phoneSearch:(NSString *)phoneNum
           withBlock:(void (^)(NSDictionary *result, NSError *error))block;
@@ -109,4 +101,8 @@
                    lat:(NSNumber *)lat
              withBlock:(void (^)(NSDictionary *result, NSError *error))block;
 
+//航线查询
+- (void)planceSearch:(NSString *)startCity
+             endCity:(NSString *)endCity
+           withBlock:(void (^)(NSDictionary *result, NSError *error))block;
 @end

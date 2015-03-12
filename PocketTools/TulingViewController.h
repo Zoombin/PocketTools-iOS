@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CCLocationManager.h"
 
-@interface TulingViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, CLLocationManagerDelegate>
+@interface TulingViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet UITextField *textField;

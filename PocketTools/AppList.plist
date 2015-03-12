@@ -126,7 +126,7 @@
 		<key>appName</key>
 		<string>航班动态</string>
 		<key>controlName</key>
-		<string></string>
+		<string>PlaneSearchViewController</string>
 		<key>iconName</key>
 		<string>gr_tool_flightinfo</string>
 	</dict>
