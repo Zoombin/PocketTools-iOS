@@ -94,7 +94,7 @@
 		<key>appName</key>
 		<string>火车订票</string>
 		<key>controlName</key>
-		<string></string>
+		<string>TrainViewController</string>
 		<key>iconName</key>
 		<string>gr_search_train</string>
 	</dict>
@@ -222,7 +222,7 @@
 		<key>appName</key>
 		<string>单位换算</string>
 		<key>controlName</key>
-		<string></string>
+		<string>UnitViewController</string>
 		<key>iconName</key>
 		<string>gr_tool_conversion</string>
 	</dict>
