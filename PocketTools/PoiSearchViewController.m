@@ -44,7 +44,9 @@
     _locationManager.delegate = self;
     _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     _locationManager.distanceFilter = 10;
-    [_locationManager requestAlwaysAuthorization];//添加这句
+    if( ([[[UIDevice currentDevice] systemVersion] doubleValue] >= 8.0)) {
+        [_locationManager requestAlwaysAuthorization];//添加这句
+    }
     [_locationManager startUpdatingLocation];
     // Do any additional setup after loading the view from its nib.
 }

@@ -105,4 +105,9 @@
 - (void)planceSearch:(NSString *)startCity
              endCity:(NSString *)endCity
            withBlock:(void (^)(NSDictionary *result, NSError *error))block;
+
+//老黄历  //2014-5-31
+- (void)laohuangli:(NSString *)date
+         withBlock:(void (^)(NSDictionary *result, NSError *error))block;
+
 @end

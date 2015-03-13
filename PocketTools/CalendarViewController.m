@@ -7,19 +7,16 @@
 //
 
 #import "CalendarViewController.h"
-
 #import "JBCalendarLogic.h"
-
 #import "JBUnitView.h"
 #import "JBUnitGridView.h"
-
 #import "CalandarTitleView.h"
+#import "CalandarInfo.h"
 
 
 @interface CalendarViewController () <JBUnitGridViewDelegate, JBUnitGridViewDataSource, JBUnitViewDelegate, JBUnitViewDataSource>
 
 @property (nonatomic, retain) JBUnitView *unitView;
-@property (nonatomic, retain) UITableView *tableView;
 
 - (void)selectorForButton;
 
@@ -31,7 +28,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.view.backgroundColor = [UIColor whiteColor];
+
     }
     
     return self;
@@ -41,44 +38,16 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    _scrollView.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width - _scrollView.frame.size.width) / 2, _scrollView.frame.origin.y, _scrollView.frame.size.width, _scrollView.frame.size.height);
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"今天" style:UIBarButtonItemStylePlain target:self action:@selector(selectorForButton)];
     
     [self.view setUserInteractionEnabled:YES];
+    self.unitView = [[JBUnitView alloc] initWithFrame:_scrollView.bounds UnitType:UnitTypeMonth SelectedDate:[NSDate date] AlignmentRule:JBAlignmentRuleTop Delegate:self DataSource:self];
+    [_scrollView addSubview:self.unitView];
     
-//    //  Example 1.1:
-    self.unitView = [[JBUnitView alloc] initWithFrame:self.view.bounds UnitType:UnitTypeMonth SelectedDate:[NSDate date] AlignmentRule:JBAlignmentRuleTop Delegate:self DataSource:self];
-    [self.view addSubview:self.unitView];
-//
-//    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0f, self.unitView.bounds.size.height, self.view.bounds.size.width, self.view.bounds.size.height - self.unitView.bounds.size.height) style:UITableViewStylePlain];
-//    [self.view addSubview:self.tableView];
-    
-    
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    button.frame = CGRectMake(0.0f, 400.0f, 50.0f, 50.0f);
-    [button setTitle:@"Today" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(selectorForButton) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
-    
-    //  Example 1.2:
-    //    self.unitView = [[JBUnitView alloc] initWithFrame:self.view.bounds UnitType:UnitTypeWeek SelectedDate:[NSDate date] AlignmentRule:JBAlignmentRuleTop Delegate:self DataSource:self];
-    //    [self.view addSubview:self.unitView];
-    //
-    //    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0f, self.unitView.bounds.size.height, self.view.bounds.size.width, self.view.bounds.size.height - self.unitView.bounds.size.height) style:UITableViewStylePlain];
-    //    [self.view addSubview:self.tableView];
-    
-    
-    //  Example 2.1:
-    //    JBUnitGridView *gridView = [[JBUnitGridView alloc] initWithFrame:self.view.bounds UnitType:UnitTypeMonth];
-    //    gridView.delegate = self;
-    //    gridView.dataSource = self;
-    //    [self.view addSubview:gridView];
-    //    [gridView setSelectedDate:[JBCalendarDate dateFromNSDate:[NSDate date]]];
-    
-    //  Example 2.2
-//        JBUnitGridView *gridView = [[JBUnitGridView alloc] initWithFrame:self.view.bounds UnitType:UnitTypeWeek];
-//        gridView.delegate = self;
-//        gridView.dataSource = self;
-//        [self.view addSubview:gridView];
-//        [gridView setSelectedDate:[JBCalendarDate dateFromNSDate:[NSDate date]]];
+     _contentView.frame = CGRectMake(0.0f, self.unitView.frame.size.height + 5, _scrollView.frame.size.width, _contentView.frame.size.height);
+      _scrollView.contentSize  = CGSizeMake(_scrollView.frame.size.width, CGRectGetMaxY(_contentView.frame));
 }
 
 - (void)didReceiveMemoryWarning
@@ -232,7 +201,8 @@
  **************************************************************/
 - (void)unitView:(JBUnitView *)unitView UpdatingFrameTo:(CGRect)newFrame
 {
-    self.tableView.frame = CGRectMake(0.0f, newFrame.size.height, self.view.bounds.size.width, self.view.bounds.size.height - newFrame.size.height);
+    _contentView.frame = CGRectMake(0.0f, newFrame.size.height + 5, _scrollView.frame.size.width, _contentView.frame.size.height);
+    _scrollView.contentSize  = CGSizeMake(_scrollView.frame.size.width, CGRectGetMaxY(_contentView.frame));
 }
 
 /**************************************************************
@@ -281,7 +251,13 @@
  **************************************************************/
 - (void)unitView:(JBUnitView *)unitView SelectedDate:(NSDate *)date
 {
-    //NSLog(@"selected date:%@", date);
+    NSLog(@"selected date:%@", date);
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"Asia/Shanghai"]];
+    NSString *dateString = [formatter stringFromDate:date];
+    self.title = dateString;
+    [self getCalandarInfo:dateString];
 }
 
 /**************************************************************
@@ -308,5 +284,27 @@
 - (void)unitView:(JBUnitView *)unitView EventsInCalendarDate:(JBCalendarDate *)calendarDate WithCompletedBlock:(void (^)(NSArray *events))completedBlock
 {
     completedBlock(nil);
+}
+
+- (void)getCalandarInfo:(NSString *)date {
+    [self displayHUD:@"加载中..."];
+    [[ServiceRequest shared] laohuangli:date withBlock:^(NSDictionary *result, NSError *error) {
+        if (!error) {
+            ServiceResult *resultInfo= [[ServiceResult alloc] initWithAttributes:result];
+            if ([resultInfo.error_code integerValue] == 0) {
+                [self hideHUD:YES];
+                CalandarInfo *info = [[CalandarInfo alloc] initWithAttributes:resultInfo.result];
+                [self showInfo:info];
+            } else {
+                [self displayHUDTitle:nil message:resultInfo.reason duration:DELAY_TIMES];
+            }
+        } else {
+            [self displayHUDTitle:nil message:NETWORK_ERROR duration:DELAY_TIMES];
+        }
+    }];
+}
+
+- (void)showInfo:(CalandarInfo *)info {
+    _contentView.text = [NSString stringWithFormat:@"阳历:%@\n五行:%@\n冲煞:%@\n百忌:%@\n吉神:%@\n凶神:%@\n宜:%@\n忌:%@", info.yinli, info.wuxing, info.chongsha, info.baiji, info.jishen, info.xiongshen, info.yi, info.ji];
 }
 @end

@@ -375,5 +375,18 @@ static ServiceRequest *request;
     }];
 }
 
+//老黄历
+- (void)laohuangli:(NSString *)date
+         withBlock:(void (^)(NSDictionary *result, NSError *error))block {
+    NSMutableDictionary *params =  [self getRequestParams];
+    params[@"date"] = date;
+    NSString *requestUrl = @"http://v.juhe.cn/laohuangli/d";
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:requestUrl APIID:@"65" Parameters:params Method:@"GET" Success:^(id responseObject) {
+        block(responseObject, nil);
+    } Failure:^(NSError *error) {
+        block(nil, error);
+    }];
+}
 
 @end

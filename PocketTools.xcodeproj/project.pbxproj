@@ -63,6 +63,8 @@
 		582BD5C01AB18945008A9B54 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 582BD5BA1AB18945008A9B54 /* mapapi.bundle */; };
 		582BD5C11AB18945008A9B54 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 582BD5BB1AB18945008A9B54 /* readme.txt */; };
 		582BD5C51AB189F6008A9B54 /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 582BD5C41AB189F6008A9B54 /* libbaidumapapi.a */; };
+		582CC91A1AB277430074C3B6 /* CalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 582CC9191AB277430074C3B6 /* CalendarViewController.xib */; };
+		582CC91D1AB2B4A90074C3B6 /* CalandarInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 582CC91C1AB2B4A90074C3B6 /* CalandarInfo.m */; };
 		583C91151AAE8E3C00F1D756 /* TicketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583C91131AAE8E3C00F1D756 /* TicketsViewController.m */; };
 		583C91161AAE8E3C00F1D756 /* TicketsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 583C91141AAE8E3C00F1D756 /* TicketsViewController.xib */; };
 		583C911A1AAE8EE700F1D756 /* PhonePayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583C91181AAE8EE700F1D756 /* PhonePayViewController.m */; };
@@ -305,6 +307,9 @@
 		582BD5BA1AB18945008A9B54 /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mapapi.bundle; sourceTree = "<group>"; };
 		582BD5BB1AB18945008A9B54 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		582BD5C41AB189F6008A9B54 /* libbaidumapapi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbaidumapapi.a; sourceTree = "<group>"; };
+		582CC9191AB277430074C3B6 /* CalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarViewController.xib; sourceTree = "<group>"; };
+		582CC91B1AB2B4A90074C3B6 /* CalandarInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalandarInfo.h; sourceTree = "<group>"; };
+		582CC91C1AB2B4A90074C3B6 /* CalandarInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalandarInfo.m; sourceTree = "<group>"; };
 		583C91121AAE8E3C00F1D756 /* TicketsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketsViewController.h; sourceTree = "<group>"; };
 		583C91131AAE8E3C00F1D756 /* TicketsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketsViewController.m; sourceTree = "<group>"; };
 		583C91141AAE8E3C00F1D756 /* TicketsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TicketsViewController.xib; sourceTree = "<group>"; };
@@ -726,6 +731,7 @@
 			children = (
 				18E4FC131AB1D567001E021E /* CalendarViewController.h */,
 				18E4FC141AB1D567001E021E /* CalendarViewController.m */,
+				582CC9191AB277430074C3B6 /* CalendarViewController.xib */,
 				583C91321AAEEAAA00F1D756 /* ImageScanViewController.h */,
 				583C91331AAEEAAA00F1D756 /* ImageScanViewController.m */,
 				583C91341AAEEAAA00F1D756 /* ImageScanViewController.xib */,
@@ -898,6 +904,8 @@
 				582BD5541AB14815008A9B54 /* DreamInfo.m */,
 				582BD55B1AB163D9008A9B54 /* PlaneInfo.h */,
 				582BD55C1AB163D9008A9B54 /* PlaneInfo.m */,
+				582CC91B1AB2B4A90074C3B6 /* CalandarInfo.h */,
+				582CC91C1AB2B4A90074C3B6 /* CalandarInfo.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -1041,6 +1049,7 @@
 				5817F1301A9D7BDB00B3A0A1 /* Images.xcassets in Resources */,
 				5845D8601AA56ACB0007E4D8 /* SizesViewController.xib in Resources */,
 				5894469B1AA15A52004BEE7B /* CalculatorViewController.xib in Resources */,
+				582CC91A1AB277430074C3B6 /* CalendarViewController.xib in Resources */,
 				583C91361AAEEAAA00F1D756 /* ImageScanViewController.xib in Resources */,
 				585C82A11AA8284D00A98D16 /* CarVioResultViewController.xib in Resources */,
 				586C99F61AA6EDF100ACD2CF /* MoneyTableViewCell.xib in Resources */,
@@ -1118,6 +1127,7 @@
 				18E4FC3F1AB1D57E001E021E /* NSDate+Calendar.m in Sources */,
 				1872F3B51AAAE1DC007F60BD /* DreamListViewController.m in Sources */,
 				5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */,
+				582CC91D1AB2B4A90074C3B6 /* CalandarInfo.m in Sources */,
 				5858BD991AB127280000F07C /* OilViewController.m in Sources */,
 				1872F3AC1AAAD36E007F60BD /* PostInfo.m in Sources */,
 				58EACBAC1AA03EC0006D5226 /* IDCardInfo.m in Sources */,

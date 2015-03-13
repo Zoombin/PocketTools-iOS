@@ -113,7 +113,7 @@
         self.previousUnitGridView.delegate = self;
         self.previousUnitGridView.dataSource = self;
         
-        self.selectedUnitGridView = [[JBUnitGridView alloc] initWithFrame:CGRectMake(0.0f, 44.0f, self.bounds.size.width, self.bounds.size.height) UnitType:unitType];
+        self.selectedUnitGridView = [[JBUnitGridView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.bounds.size.width, self.bounds.size.height) UnitType:unitType];
         self.selectedUnitGridView.delegate = self;
         self.selectedUnitGridView.dataSource = self;
         self.selectedUnitGridView.selectedDate = [JBCalendarDate dateFromNSDate:self.selectedDate];

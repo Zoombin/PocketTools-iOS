@@ -10,4 +10,6 @@
 
 @interface CalendarViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, weak) IBOutlet UITextView *contentView;
 @end
