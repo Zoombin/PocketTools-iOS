@@ -12,4 +12,5 @@
 
 @property (nonatomic, strong) NSString *text;
 @property (nonatomic, strong) NSString *code;
+@property (nonatomic, assign) BOOL isLeft;
 @end

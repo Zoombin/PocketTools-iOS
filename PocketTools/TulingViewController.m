@@ -8,6 +8,8 @@
 
 #import "TulingViewController.h"
 #import "RobotInfo.h"
+#import "LeftContactCell.h"
+#import "RightContactCell.h"
 
 @interface TulingViewController ()
 
@@ -28,12 +30,14 @@
 }
 
 - (void)chatWithRobot:(NSString *)content {
+    _textField.text = @"";
     [[ServiceRequest shared] chatWithRobot:content withBlock:^(NSDictionary *result, NSError *error) {
         if (!error) {
             ServiceResult *resultInfo= [[ServiceResult alloc] initWithAttributes:result];
             if ([resultInfo.resultcode integerValue] == 0) {
                 RobotInfo *info = [[RobotInfo alloc] init];
                 info.text = resultInfo.result[@"text"];
+                info.isLeft = YES;
                 [infoArray addObject:info];
                 [_tableView reloadData];
             }
@@ -49,6 +53,7 @@
     }
     RobotInfo *info = [[RobotInfo alloc] init];
     info.text = _textField.text;
+    info.isLeft = NO;
     [infoArray addObject:info];
     [_tableView reloadData];
     
@@ -65,19 +70,55 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44;
+    UITableViewCell *cell = (UITableViewCell *)[self tableView:tableView cellForRowAtIndexPath:indexPath];
+    RobotInfo *info = infoArray[indexPath.row];
+    if (info.isLeft) {
+        LeftContactCell *leftCell = (LeftContactCell *)cell;
+        return [leftCell getHeight];
+    } else {
+        RightContactCell *rightCell = (RightContactCell *)cell;
+        return [rightCell getHeight];
+    }
+    return 80;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"UITableViewCell";
-    
-    UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
     RobotInfo *info = infoArray[indexPath.row];
-    cell.textLabel.text = info.text;
-    return cell;
+    if (info.isLeft) {
+        LeftContactCell *cell = (LeftContactCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            NSArray *nibs = [[NSBundle mainBundle]loadNibNamed:@"LeftContactCell" owner:nil options:nil];
+            cell = [nibs lastObject];
+            cell.backgroundColor = [UIColor clearColor];
+        }
+        cell.contentLabel.text = info.text;
+        cell.contentLabel.numberOfLines = 0;
+        cell.contentLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        [cell.contentLabel sizeToFit];
+        
+        [cell.backgroundImage setFrame:CGRectMake(cell.backgroundImage.frame.origin.x, cell.backgroundImage.frame.origin.y, cell.backgroundImage.frame.size.width, CGRectGetMaxY(cell.contentLabel.frame) + 10)];
+        
+        [cell.headerImage setFrame:CGRectMake(cell.headerImage.frame.origin.x, CGRectGetMaxY(cell.backgroundImage.frame) - cell.headerImage.frame.size.height + 15, cell.headerImage.frame.size.width, cell.headerImage.frame.size.height)];
+        return cell;
+    } else {
+        RightContactCell *cell = (RightContactCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            NSArray *nibs = [[NSBundle mainBundle]loadNibNamed:@"RightContactCell" owner:nil options:nil];
+            cell = [nibs lastObject];
+            cell.backgroundColor = [UIColor clearColor];
+        }
+        cell.contentLabel.text = info.text;
+        cell.contentLabel.numberOfLines = 0;
+        cell.contentLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        [cell.contentLabel sizeToFit];
+
+        [cell.backgroundImage setFrame:CGRectMake(cell.backgroundImage.frame.origin.x, cell.backgroundImage.frame.origin.y, cell.backgroundImage.frame.size.width, CGRectGetMaxY(cell.contentLabel.frame) + 10)];
+        
+        [cell.headerImage setFrame:CGRectMake(cell.headerImage.frame.origin.x, CGRectGetMaxY(cell.backgroundImage.frame) - cell.headerImage.frame.size.height + 15, cell.headerImage.frame.size.width, cell.headerImage.frame.size.height)];
+        return cell;
+    }
+    return nil;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
