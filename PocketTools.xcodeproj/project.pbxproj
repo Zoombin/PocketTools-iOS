@@ -19,6 +19,8 @@
 		1823AAE31AB62AAD00C09D5C /* PMCitySelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1823AAE11AB62AAD00C09D5C /* PMCitySelectViewController.m */; };
 		1823AAE41AB62AAD00C09D5C /* PMCitySelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1823AAE21AB62AAD00C09D5C /* PMCitySelectViewController.xib */; };
 		1823AAE71AB62C9400C09D5C /* AirInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1823AAE61AB62C9400C09D5C /* AirInfo.m */; };
+		1823AAEB1AB6480500C09D5C /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1823AAE91AB6480500C09D5C /* WeatherViewController.m */; };
+		1823AAEC1AB6480500C09D5C /* WeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1823AAEA1AB6480500C09D5C /* WeatherViewController.xib */; };
 		1872F3A81AAAA9AA007F60BD /* PackageSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1872F3A61AAAA9AA007F60BD /* PackageSearchViewController.m */; };
 		1872F3A91AAAA9AA007F60BD /* PackageSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1872F3A71AAAA9AA007F60BD /* PackageSearchViewController.xib */; };
 		1872F3AC1AAAD36E007F60BD /* PostInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1872F3AB1AAAD36E007F60BD /* PostInfo.m */; };
@@ -190,6 +192,9 @@
 		1823AAE21AB62AAD00C09D5C /* PMCitySelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMCitySelectViewController.xib; sourceTree = "<group>"; };
 		1823AAE51AB62C9400C09D5C /* AirInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirInfo.h; sourceTree = "<group>"; };
 		1823AAE61AB62C9400C09D5C /* AirInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirInfo.m; sourceTree = "<group>"; };
+		1823AAE81AB6480500C09D5C /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
+		1823AAE91AB6480500C09D5C /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
+		1823AAEA1AB6480500C09D5C /* WeatherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherViewController.xib; sourceTree = "<group>"; };
 		1872F3A51AAAA9AA007F60BD /* PackageSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageSearchViewController.h; sourceTree = "<group>"; };
 		1872F3A61AAAA9AA007F60BD /* PackageSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageSearchViewController.m; sourceTree = "<group>"; };
 		1872F3A71AAAA9AA007F60BD /* PackageSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PackageSearchViewController.xib; sourceTree = "<group>"; };
@@ -912,6 +917,9 @@
 				1823AAE01AB62AAD00C09D5C /* PMCitySelectViewController.h */,
 				1823AAE11AB62AAD00C09D5C /* PMCitySelectViewController.m */,
 				1823AAE21AB62AAD00C09D5C /* PMCitySelectViewController.xib */,
+				1823AAE81AB6480500C09D5C /* WeatherViewController.h */,
+				1823AAE91AB6480500C09D5C /* WeatherViewController.m */,
+				1823AAEA1AB6480500C09D5C /* WeatherViewController.xib */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -1136,6 +1144,7 @@
 				588A3DEA1AA45A4E00EB1066 /* FlashViewController.xib in Resources */,
 				58AD9C8A1AB01B6900EF2619 /* ScanViewController.xib in Resources */,
 				18E4FC071AADF48E001E021E /* LLPayViewController.xib in Resources */,
+				1823AAEC1AB6480500C09D5C /* WeatherViewController.xib in Resources */,
 				582CC9311AB2D9AC0074C3B6 /* TrainViewController.xib in Resources */,
 				1872F3BE1AAAE71C007F60BD /* DreamTypeSecondViewController.xib in Resources */,
 				5858BDA21AB130DB0000F07C /* OilCell.xib in Resources */,
@@ -1288,6 +1297,7 @@
 				1823AAE31AB62AAD00C09D5C /* PMCitySelectViewController.m in Sources */,
 				588A3DF31AA4609400EB1066 /* NewsViewController.m in Sources */,
 				582BD5741AB18239008A9B54 /* PlaneCell.m in Sources */,
+				1823AAEB1AB6480500C09D5C /* WeatherViewController.m in Sources */,
 				18E4FC3E1AB1D57E001E021E /* LunarCalendar.m in Sources */,
 				582BD5591AB161A7008A9B54 /* PlaneSearchViewController.m in Sources */,
 				5858BDA11AB130DB0000F07C /* OilCell.m in Sources */,

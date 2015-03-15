@@ -22,6 +22,32 @@
     self.title = NSLocalizedString(@"PM2.5", nil);
     locationArray = [NSMutableArray array];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"城市" style:UIBarButtonItemStylePlain target:self action:@selector(getCityList)];
+    self.locationManager = [[CLLocationManager alloc]init];
+    _locationManager.delegate = self;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    _locationManager.distanceFilter = 10;
+    if( ([[[UIDevice currentDevice] systemVersion] doubleValue] >= 8.0)) {
+        [_locationManager requestAlwaysAuthorization];//添加这句
+    }
+    [_locationManager startUpdatingLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation {
+    //获取所在地城市名
+    CLGeocoder *geocoder=[[CLGeocoder alloc]init];
+    [geocoder reverseGeocodeLocation:newLocation completionHandler:^(NSArray *placemarks,NSError *error)
+     {
+         for(CLPlacemark *placemark in placemarks)
+         {
+             NSString *cityName = [[placemark.addressDictionary objectForKey:@"City"] substringToIndex:2];
+             self.title = cityName;
+             [self searchPMByCity:cityName];
+             [self searchAirByCity:cityName];
+         }
+     }];
+    [self.locationManager stopUpdatingLocation];
 }
 
 - (void)searchPMByCity:(NSString *)cityName {

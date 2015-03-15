@@ -22,7 +22,7 @@
 		<key>appName</key>
 		<string>天气预报</string>
 		<key>controlName</key>
-		<string></string>
+		<string>WeatherViewController</string>
 		<key>iconName</key>
 		<string>gr_tool_weather</string>
 	</dict>
