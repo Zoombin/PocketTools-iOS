@@ -120,5 +120,12 @@
                  trainType:(NSString *)type
                  withBlock:(void (^)(NSDictionary *result, NSError *error))block;
 
+//获取PM城市列表
+- (void)loadPMCityListWithBlock:(void (^)(NSDictionary *result, NSError *error))block;
 
+- (void)searchPM25ByCity:(NSString *)city
+               WithBlock:(void (^)(NSDictionary *result, NSError *error))block;
+//搜索空气
+- (void)searchAirByCity:(NSString *)city
+              withBlock:(void (^)(NSDictionary *result, NSError *error))block;
 @end

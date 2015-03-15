@@ -14,7 +14,7 @@
 		<key>appName</key>
 		<string>空气质量</string>
 		<key>controlName</key>
-		<string></string>
+		<string>PMViewController</string>
 		<key>iconName</key>
 		<string>gr_tool_pm25</string>
 	</dict>
