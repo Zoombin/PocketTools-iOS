@@ -110,4 +110,15 @@
 - (void)laohuangli:(NSString *)date
          withBlock:(void (^)(NSDictionary *result, NSError *error))block;
 
+//车次查询
+- (void)trainTimesSearch:(NSString *)trainName
+               withBlock:(void (^)(NSDictionary *result, NSError *error))block;
+
+//根据起点终点查询
+- (void)searchTrainByStart:(NSString *)start
+                       end:(NSString *)end
+                 trainType:(NSString *)type
+                 withBlock:(void (^)(NSDictionary *result, NSError *error))block;
+
+
 @end

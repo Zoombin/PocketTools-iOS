@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1823AACA1AB614A000C09D5C /* TrainInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1823AAC91AB614A000C09D5C /* TrainInfo.m */; };
+		1823AACD1AB615F900C09D5C /* StationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1823AACC1AB615F900C09D5C /* StationInfo.m */; };
+		1823AAD11AB618B100C09D5C /* TrainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1823AACF1AB618B100C09D5C /* TrainCell.m */; };
+		1823AAD21AB618B100C09D5C /* TrainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1823AAD01AB618B100C09D5C /* TrainCell.xib */; };
+		1823AAD61AB61C2300C09D5C /* StationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1823AAD41AB61C2300C09D5C /* StationCell.m */; };
+		1823AAD71AB61C2300C09D5C /* StationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1823AAD51AB61C2300C09D5C /* StationCell.xib */; };
+		1823AADA1AB621EE00C09D5C /* STSInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1823AAD91AB621EE00C09D5C /* STSInfo.m */; };
 		1872F3A81AAAA9AA007F60BD /* PackageSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1872F3A61AAAA9AA007F60BD /* PackageSearchViewController.m */; };
 		1872F3A91AAAA9AA007F60BD /* PackageSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1872F3A71AAAA9AA007F60BD /* PackageSearchViewController.xib */; };
 		1872F3AC1AAAD36E007F60BD /* PostInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1872F3AB1AAAD36E007F60BD /* PostInfo.m */; };
@@ -158,6 +165,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1823AAC81AB614A000C09D5C /* TrainInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainInfo.h; sourceTree = "<group>"; };
+		1823AAC91AB614A000C09D5C /* TrainInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainInfo.m; sourceTree = "<group>"; };
+		1823AACB1AB615F900C09D5C /* StationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationInfo.h; sourceTree = "<group>"; };
+		1823AACC1AB615F900C09D5C /* StationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationInfo.m; sourceTree = "<group>"; };
+		1823AACE1AB618B100C09D5C /* TrainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainCell.h; sourceTree = "<group>"; };
+		1823AACF1AB618B100C09D5C /* TrainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainCell.m; sourceTree = "<group>"; };
+		1823AAD01AB618B100C09D5C /* TrainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrainCell.xib; sourceTree = "<group>"; };
+		1823AAD31AB61C2300C09D5C /* StationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationCell.h; sourceTree = "<group>"; };
+		1823AAD41AB61C2300C09D5C /* StationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationCell.m; sourceTree = "<group>"; };
+		1823AAD51AB61C2300C09D5C /* StationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StationCell.xib; sourceTree = "<group>"; };
+		1823AAD81AB621EE00C09D5C /* STSInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSInfo.h; sourceTree = "<group>"; };
+		1823AAD91AB621EE00C09D5C /* STSInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSInfo.m; sourceTree = "<group>"; };
 		1872F3A51AAAA9AA007F60BD /* PackageSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageSearchViewController.h; sourceTree = "<group>"; };
 		1872F3A61AAAA9AA007F60BD /* PackageSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageSearchViewController.m; sourceTree = "<group>"; };
 		1872F3A71AAAA9AA007F60BD /* PackageSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PackageSearchViewController.xib; sourceTree = "<group>"; };
@@ -868,6 +887,12 @@
 				582CC9321AB2DA4C0074C3B6 /* UnitViewController.h */,
 				582CC9331AB2DA4C0074C3B6 /* UnitViewController.m */,
 				582CC9341AB2DA4C0074C3B6 /* UnitViewController.xib */,
+				1823AACE1AB618B100C09D5C /* TrainCell.h */,
+				1823AACF1AB618B100C09D5C /* TrainCell.m */,
+				1823AAD01AB618B100C09D5C /* TrainCell.xib */,
+				1823AAD31AB61C2300C09D5C /* StationCell.h */,
+				1823AAD41AB61C2300C09D5C /* StationCell.m */,
+				1823AAD51AB61C2300C09D5C /* StationCell.xib */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -943,6 +968,12 @@
 				582CC91C1AB2B4A90074C3B6 /* CalandarInfo.m */,
 				582CC9371AB2DD2C0074C3B6 /* UnitInfo.h */,
 				582CC9381AB2DD2C0074C3B6 /* UnitInfo.m */,
+				1823AAC81AB614A000C09D5C /* TrainInfo.h */,
+				1823AAC91AB614A000C09D5C /* TrainInfo.m */,
+				1823AACB1AB615F900C09D5C /* StationInfo.h */,
+				1823AACC1AB615F900C09D5C /* StationInfo.m */,
+				1823AAD81AB621EE00C09D5C /* STSInfo.h */,
+				1823AAD91AB621EE00C09D5C /* STSInfo.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -1060,6 +1091,7 @@
 				5817F12E1A9D7BDB00B3A0A1 /* Main.storyboard in Resources */,
 				5858BD9A1AB127280000F07C /* OilViewController.xib in Resources */,
 				582BD5C01AB18945008A9B54 /* mapapi.bundle in Resources */,
+				1823AAD71AB61C2300C09D5C /* StationCell.xib in Resources */,
 				1872F3B11AAAD41A007F60BD /* PackageDetailViewController.xib in Resources */,
 				583C91161AAE8E3C00F1D756 /* TicketsViewController.xib in Resources */,
 				586C99FB1AA702F700ACD2CF /* MirrorViewController.xib in Resources */,
@@ -1068,6 +1100,7 @@
 				588A3DE51AA4428300EB1066 /* AppList.plist in Resources */,
 				1872F3A91AAAA9AA007F60BD /* PackageSearchViewController.xib in Resources */,
 				5847F4201AA5994000A57896 /* TulingViewController.xib in Resources */,
+				1823AAD21AB618B100C09D5C /* TrainCell.xib in Resources */,
 				5858BDA71AB142040000F07C /* DreamSearchViewController.xib in Resources */,
 				58BE590E1AA6ABCD001811D9 /* ExchangeViewController.xib in Resources */,
 				583C911B1AAE8EE700F1D756 /* PhonePayViewController.xib in Resources */,
@@ -1148,6 +1181,7 @@
 				583C912D1AAE989600F1D756 /* DMPasscodeInternalNavigationController.m in Sources */,
 				1872F3C21AAAFA16007F60BD /* PhotoPasswordViewController.m in Sources */,
 				585C82A41AA83C6100A98D16 /* WZInfo.m in Sources */,
+				1823AAD61AB61C2300C09D5C /* StationCell.m in Sources */,
 				5817F12B1A9D7BDB00B3A0A1 /* MainViewController.m in Sources */,
 				588A3DEE1AA45CAE00EB1066 /* RullerViewController.m in Sources */,
 				585C829C1AA802D500A98D16 /* CarType.m in Sources */,
@@ -1166,11 +1200,13 @@
 				588A3DE31AA4312600EB1066 /* AppInfoEntity.m in Sources */,
 				1872F3B01AAAD41A007F60BD /* PackageDetailViewController.m in Sources */,
 				582CC92B1AB2CCAE0074C3B6 /* RightContactCell.m in Sources */,
+				1823AAD11AB618B100C09D5C /* TrainCell.m in Sources */,
 				18E4FC3F1AB1D57E001E021E /* NSDate+Calendar.m in Sources */,
 				1872F3B51AAAE1DC007F60BD /* DreamListViewController.m in Sources */,
 				5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */,
 				582CC91D1AB2B4A90074C3B6 /* CalandarInfo.m in Sources */,
 				5858BD991AB127280000F07C /* OilViewController.m in Sources */,
+				1823AADA1AB621EE00C09D5C /* STSInfo.m in Sources */,
 				1872F3AC1AAAD36E007F60BD /* PostInfo.m in Sources */,
 				58EACBAC1AA03EC0006D5226 /* IDCardInfo.m in Sources */,
 				18E4FC381AB1D57E001E021E /* JBCalendarLogic.m in Sources */,
@@ -1182,6 +1218,7 @@
 				18E4FC461AB1D5C7001E021E /* CalandarTitleView.m in Sources */,
 				5847F41F1AA5994000A57896 /* TulingViewController.m in Sources */,
 				18E4FC3A1AB1D57E001E021E /* JBUnitGridView.m in Sources */,
+				1823AACD1AB615F900C09D5C /* StationInfo.m in Sources */,
 				582CC9351AB2DA4C0074C3B6 /* UnitViewController.m in Sources */,
 				18E4FC391AB1D57E001E021E /* JBEventModel.m in Sources */,
 				5858BDA61AB142040000F07C /* DreamSearchViewController.m in Sources */,
@@ -1208,6 +1245,7 @@
 				585C82A71AA83CF000A98D16 /* WZDetailInfo.m in Sources */,
 				582CC9301AB2D9AC0074C3B6 /* TrainViewController.m in Sources */,
 				18E4FC151AB1D567001E021E /* CalendarViewController.m in Sources */,
+				1823AACA1AB614A000C09D5C /* TrainInfo.m in Sources */,
 				58AD9C891AB01B6900EF2619 /* ScanViewController.m in Sources */,
 				18E4FC061AADF48E001E021E /* LLPayViewController.m in Sources */,
 				583C91351AAEEAAA00F1D756 /* ImageScanViewController.m in Sources */,

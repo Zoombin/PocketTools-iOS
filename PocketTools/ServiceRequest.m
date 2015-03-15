@@ -389,4 +389,36 @@ static ServiceRequest *request;
     }];
 }
 
+- (void)trainTimesSearch:(NSString *)trainName
+               withBlock:(void (^)(NSDictionary *result, NSError *error))block {
+    NSMutableDictionary *params =  [self getRequestParams];
+    params[@"name"] = trainName;
+    NSString *requestUrl = @"http://apis.juhe.cn/train/s";
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:requestUrl APIID:@"22" Parameters:params Method:@"GET" Success:^(id responseObject) {
+        block(responseObject, nil);
+    } Failure:^(NSError *error) {
+        block(nil, error);
+    }];
+}
+
+- (void)searchTrainByStart:(NSString *)start
+                       end:(NSString *)end
+                 trainType:(NSString *)type
+                 withBlock:(void (^)(NSDictionary *result, NSError *error))block {
+    NSMutableDictionary *params =  [self getRequestParams];
+    params[@"start"] = start;
+    params[@"end"] = end;
+    if (type) {
+        params[@"traintype"] = type;
+    }
+    NSString *requestUrl = @"http://apis.juhe.cn/train/s2s";
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:requestUrl APIID:@"22" Parameters:params Method:@"GET" Success:^(id responseObject) {
+        block(responseObject, nil);
+    } Failure:^(NSError *error) {
+        block(nil, error);
+    }];
+}
+
 @end
