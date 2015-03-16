@@ -12,12 +12,18 @@
 
 @end
 
-@implementation WeatherViewController
+@implementation WeatherViewController {
+    NSString *cityName;
+    NSArray *backgroundImages;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    backgroundImages = @[@"bg_sunny", @"bg_cloudy", @"bg_normal", @"bg_rain", @""];
     self.title = NSLocalizedString(@"天气预报", nil);
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"城市" style:UIBarButtonItemStylePlain target:self action:@selector(getCityList)];
+    
+    [self searchCityByName:@"苏州"];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -25,6 +31,12 @@
     WeatherCitiesViewController *viewCtrl = [WeatherCitiesViewController new];
     viewCtrl.delegate = self;
     [self.navigationController pushViewController:viewCtrl animated:YES];
+}
+
+- (void)searchCityByName:(NSString *)name {
+    [[ServiceRequest shared] searchAirByCity:name withBlock:^(NSDictionary *result, NSError *error) {
+        NSLog(@"%@", result);
+    }];
 }
 
 - (void)selectCityName:(NSString *)cityName {

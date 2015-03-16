@@ -484,4 +484,17 @@ static ServiceRequest *request;
         block(nil, error);
     }];
 }
+
+- (void)getWeatherByIdOrName:(NSString *)name
+                   withBlock:(void (^)(NSDictionary *result, NSError *error))block {
+    NSMutableDictionary *params =  [self getRequestParams];
+    params[@"cityname"] = name;
+    NSString *requestUrl = @"http://v.juhe.cn/weather/index";
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:requestUrl APIID:@"39" Parameters:params Method:@"GET" Success:^(id responseObject) {
+        block(responseObject, nil);
+    } Failure:^(NSError *error) {
+        block(nil, error);
+    }];
+}
 @end

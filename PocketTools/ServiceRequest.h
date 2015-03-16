@@ -137,4 +137,8 @@
 - (void)searchStarLuckByName:(NSString *)name
                         type:(NSString *)type
                    withBlock:(void (^)(NSDictionary *result, NSError *error))block;
+
+//天气预报
+- (void)getWeatherByIdOrName:(NSString *)name
+                   withBlock:(void (^)(NSDictionary *result, NSError *error))block;
 @end

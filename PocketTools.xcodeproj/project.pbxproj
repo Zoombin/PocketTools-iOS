@@ -150,6 +150,10 @@
 		588A3DF81AA462C200EB1066 /* ParkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A3DF61AA462C200EB1066 /* ParkViewController.m */; };
 		588A3DF91AA462C200EB1066 /* ParkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 588A3DF71AA462C200EB1066 /* ParkViewController.xib */; };
 		588BDBE51AA1A088009347CE /* IPInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 588BDBE41AA1A088009347CE /* IPInfo.m */; };
+		588CE94E1AB6CD770068AA28 /* WeatherCurrentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 588CE94D1AB6CD770068AA28 /* WeatherCurrentInfo.m */; };
+		588CE9511AB6CEA30068AA28 /* WeatherTodayInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 588CE9501AB6CEA30068AA28 /* WeatherTodayInfo.m */; };
+		588CE9541AB6D0FA0068AA28 /* WeatherFutureInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 588CE9531AB6D0FA0068AA28 /* WeatherFutureInfo.m */; };
+		588CE9581AB6D60F0068AA28 /* Weather.plist in Resources */ = {isa = PBXBuildFile; fileRef = 588CE9571AB6D60F0068AA28 /* Weather.plist */; };
 		5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589446981AA15A52004BEE7B /* CalculatorViewController.m */; };
 		5894469B1AA15A52004BEE7B /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 589446991AA15A52004BEE7B /* CalculatorViewController.xib */; };
 		58AD9C891AB01B6900EF2619 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AD9C871AB01B6900EF2619 /* ScanViewController.m */; };
@@ -484,6 +488,13 @@
 		588A3DF71AA462C200EB1066 /* ParkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParkViewController.xib; sourceTree = "<group>"; };
 		588BDBE31AA1A088009347CE /* IPInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPInfo.h; sourceTree = "<group>"; };
 		588BDBE41AA1A088009347CE /* IPInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPInfo.m; sourceTree = "<group>"; };
+		588CE94C1AB6CD770068AA28 /* WeatherCurrentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherCurrentInfo.h; sourceTree = "<group>"; };
+		588CE94D1AB6CD770068AA28 /* WeatherCurrentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherCurrentInfo.m; sourceTree = "<group>"; };
+		588CE94F1AB6CEA30068AA28 /* WeatherTodayInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherTodayInfo.h; sourceTree = "<group>"; };
+		588CE9501AB6CEA30068AA28 /* WeatherTodayInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherTodayInfo.m; sourceTree = "<group>"; };
+		588CE9521AB6D0FA0068AA28 /* WeatherFutureInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherFutureInfo.h; sourceTree = "<group>"; };
+		588CE9531AB6D0FA0068AA28 /* WeatherFutureInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherFutureInfo.m; sourceTree = "<group>"; };
+		588CE9571AB6D60F0068AA28 /* Weather.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Weather.plist; sourceTree = "<group>"; };
 		589446971AA15A52004BEE7B /* CalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
 		589446981AA15A52004BEE7B /* CalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
 		589446991AA15A52004BEE7B /* CalculatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
@@ -659,6 +670,7 @@
 				5817F1241A9D7BDB00B3A0A1 /* main.m */,
 				588A3DE41AA4428300EB1066 /* AppList.plist */,
 				5845D84F1AA547F60007E4D8 /* PocketTools.pch */,
+				588CE9571AB6D60F0068AA28 /* Weather.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1047,6 +1059,12 @@
 				585CB0841AB67E9D00E0D390 /* StarMonthInfo.m */,
 				585CB0861AB68A4B00E0D390 /* StarYearInfo.h */,
 				585CB0871AB68A4B00E0D390 /* StarYearInfo.m */,
+				588CE94C1AB6CD770068AA28 /* WeatherCurrentInfo.h */,
+				588CE94D1AB6CD770068AA28 /* WeatherCurrentInfo.m */,
+				588CE94F1AB6CEA30068AA28 /* WeatherTodayInfo.h */,
+				588CE9501AB6CEA30068AA28 /* WeatherTodayInfo.m */,
+				588CE9521AB6D0FA0068AA28 /* WeatherFutureInfo.h */,
+				588CE9531AB6D0FA0068AA28 /* WeatherFutureInfo.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -1204,6 +1222,7 @@
 				583C91361AAEEAAA00F1D756 /* ImageScanViewController.xib in Resources */,
 				582CC9271AB2CC850074C3B6 /* LeftContactCell.xib in Resources */,
 				582CC92C1AB2CCAE0074C3B6 /* RightContactCell.xib in Resources */,
+				588CE9581AB6D60F0068AA28 /* Weather.plist in Resources */,
 				585C82A11AA8284D00A98D16 /* CarVioResultViewController.xib in Resources */,
 				586C99F61AA6EDF100ACD2CF /* MoneyTableViewCell.xib in Resources */,
 			);
@@ -1284,6 +1303,7 @@
 				582CC92B1AB2CCAE0074C3B6 /* RightContactCell.m in Sources */,
 				1823AAD11AB618B100C09D5C /* TrainCell.m in Sources */,
 				585CB0821AB6723000E0D390 /* StarWeekInfo.m in Sources */,
+				588CE94E1AB6CD770068AA28 /* WeatherCurrentInfo.m in Sources */,
 				18E4FC3F1AB1D57E001E021E /* NSDate+Calendar.m in Sources */,
 				1872F3B51AAAE1DC007F60BD /* DreamListViewController.m in Sources */,
 				5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */,
@@ -1300,6 +1320,7 @@
 				582BD55D1AB163D9008A9B54 /* PlaneInfo.m in Sources */,
 				585CB0851AB67E9D00E0D390 /* StarMonthInfo.m in Sources */,
 				588A3DE91AA45A4E00EB1066 /* FlashViewController.m in Sources */,
+				588CE9541AB6D0FA0068AA28 /* WeatherFutureInfo.m in Sources */,
 				18E4FC461AB1D5C7001E021E /* CalandarTitleView.m in Sources */,
 				5847F41F1AA5994000A57896 /* TulingViewController.m in Sources */,
 				18E4FC3A1AB1D57E001E021E /* JBUnitGridView.m in Sources */,
@@ -1337,6 +1358,7 @@
 				583C91351AAEEAAA00F1D756 /* ImageScanViewController.m in Sources */,
 				582CC9391AB2DD2C0074C3B6 /* UnitInfo.m in Sources */,
 				18E4FC421AB1D57E001E021E /* JBImageFileManager.m in Sources */,
+				588CE9511AB6CEA30068AA28 /* WeatherTodayInfo.m in Sources */,
 				18E4FC371AB1D57E001E021E /* JBCalendarDate.m in Sources */,
 				5847F4231AA59B0800A57896 /* RobotInfo.m in Sources */,
 				582CC9261AB2CC850074C3B6 /* LeftContactCell.m in Sources */,
