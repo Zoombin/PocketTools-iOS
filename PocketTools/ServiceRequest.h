@@ -122,11 +122,19 @@
 
 //获取PM城市列表
 - (void)loadPMCityListWithBlock:(void (^)(NSDictionary *result, NSError *error))block;
+
+//获取天气预报的城市列表
 - (void)loadAirCityListWithBlock:(void (^)(NSDictionary *result, NSError *error))block;
 
+//根据城市获取PM2.5
 - (void)searchPM25ByCity:(NSString *)city
                WithBlock:(void (^)(NSDictionary *result, NSError *error))block;
 //搜索空气
 - (void)searchAirByCity:(NSString *)city
               withBlock:(void (^)(NSDictionary *result, NSError *error))block;
+
+//搜索运势
+- (void)searchStarLuckByName:(NSString *)name
+                        type:(NSString *)type
+                   withBlock:(void (^)(NSDictionary *result, NSError *error))block;
 @end

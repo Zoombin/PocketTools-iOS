@@ -9,22 +9,7 @@
 #import "ZBModel.h"
 
 @interface StationInfo : ZBModel
-//"train_id": "1",
-//"station_name": "西安北",
-//"arrived_time": "-",
-//"leave_time": "10:10",
-//"mileage": "-",
-//"fsoftSeat": "-",
-//"ssoftSeat": "-",
-//"hardSead": "-",
-//"softSeat": "-",
-//"hardSleep": "-",
-//"softSleep": "-",
-//"wuzuo": "-",
-//"swz": "-",
-//"tdz": "-",
-//"gjrw": "-",
-//"stay": "-"
+
 @property (nonatomic, strong) NSString *train_id;
 @property (nonatomic, strong) NSString *station_name;
 @property (nonatomic, strong) NSString *arrived_time;

@@ -9,11 +9,7 @@
 #import "ZBModel.h"
 
 @interface MovieInfo : ZBModel
-//"rid":"1",
-//"name":"中国合伙人",
-//"wk":"2013.5.20--2013.5.26（单位：人民币）",
-//"wboxoffice":"￥20900万",
-//"tboxoffice":"￥31700万"
+
 @property (nonatomic, strong) NSString *rid;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *wk;

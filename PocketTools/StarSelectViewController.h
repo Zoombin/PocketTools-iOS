@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol StarSelectDelegate <NSObject>
+- (void)selectStarAtIndex:(NSInteger)index;
+@end
+
 @interface StarSelectViewController : UIViewController
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) id<StarSelectDelegate> delegate;
 @end

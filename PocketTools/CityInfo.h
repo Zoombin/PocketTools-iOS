@@ -9,16 +9,7 @@
 #import "ZBModel.h"
 
 @interface CityInfo : ZBModel
-//abbr = "\U6d59";
-//"city_code" = "ZJ_CXX";
-//"city_name" = "\U957f\U5174\U53bf";
-//class = 1;
-//classa = 1;
-//classno = 6;
-//engine = 0;
-//engineno = 0;
-//regist = 0;
-//registno = 0;
+
 @property (nonatomic, strong) NSString *abbr;
 @property (nonatomic, strong) NSString *cityCode;
 @property (nonatomic, strong) NSString *cityName;

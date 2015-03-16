@@ -131,6 +131,10 @@
 		585CB07A1AB66AD100E0D390 /* StarSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 585CB0751AB66AD100E0D390 /* StarSelectViewController.xib */; };
 		585CB07B1AB66AD100E0D390 /* StarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 585CB0771AB66AD100E0D390 /* StarViewController.m */; };
 		585CB07C1AB66AD100E0D390 /* StarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 585CB0781AB66AD100E0D390 /* StarViewController.xib */; };
+		585CB07F1AB6700400E0D390 /* StarCurrentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 585CB07E1AB6700400E0D390 /* StarCurrentInfo.m */; };
+		585CB0821AB6723000E0D390 /* StarWeekInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 585CB0811AB6723000E0D390 /* StarWeekInfo.m */; };
+		585CB0851AB67E9D00E0D390 /* StarMonthInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 585CB0841AB67E9D00E0D390 /* StarMonthInfo.m */; };
+		585CB0881AB68A4B00E0D390 /* StarYearInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 585CB0871AB68A4B00E0D390 /* StarYearInfo.m */; };
 		586C99F51AA6EDF100ACD2CF /* MoneyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 586C99F31AA6EDF100ACD2CF /* MoneyTableViewCell.m */; };
 		586C99F61AA6EDF100ACD2CF /* MoneyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586C99F41AA6EDF100ACD2CF /* MoneyTableViewCell.xib */; };
 		586C99FA1AA702F700ACD2CF /* MirrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 586C99F81AA702F700ACD2CF /* MirrorViewController.m */; };
@@ -449,6 +453,14 @@
 		585CB0761AB66AD100E0D390 /* StarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarViewController.h; sourceTree = "<group>"; };
 		585CB0771AB66AD100E0D390 /* StarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarViewController.m; sourceTree = "<group>"; };
 		585CB0781AB66AD100E0D390 /* StarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StarViewController.xib; sourceTree = "<group>"; };
+		585CB07D1AB6700400E0D390 /* StarCurrentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarCurrentInfo.h; sourceTree = "<group>"; };
+		585CB07E1AB6700400E0D390 /* StarCurrentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarCurrentInfo.m; sourceTree = "<group>"; };
+		585CB0801AB6723000E0D390 /* StarWeekInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarWeekInfo.h; sourceTree = "<group>"; };
+		585CB0811AB6723000E0D390 /* StarWeekInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarWeekInfo.m; sourceTree = "<group>"; };
+		585CB0831AB67E9D00E0D390 /* StarMonthInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarMonthInfo.h; sourceTree = "<group>"; };
+		585CB0841AB67E9D00E0D390 /* StarMonthInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarMonthInfo.m; sourceTree = "<group>"; };
+		585CB0861AB68A4B00E0D390 /* StarYearInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarYearInfo.h; sourceTree = "<group>"; };
+		585CB0871AB68A4B00E0D390 /* StarYearInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarYearInfo.m; sourceTree = "<group>"; };
 		586C99F21AA6EDF100ACD2CF /* MoneyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyTableViewCell.h; sourceTree = "<group>"; };
 		586C99F31AA6EDF100ACD2CF /* MoneyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyTableViewCell.m; sourceTree = "<group>"; };
 		586C99F41AA6EDF100ACD2CF /* MoneyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoneyTableViewCell.xib; sourceTree = "<group>"; };
@@ -1027,6 +1039,14 @@
 				1823AAD91AB621EE00C09D5C /* STSInfo.m */,
 				1823AAE51AB62C9400C09D5C /* AirInfo.h */,
 				1823AAE61AB62C9400C09D5C /* AirInfo.m */,
+				585CB07D1AB6700400E0D390 /* StarCurrentInfo.h */,
+				585CB07E1AB6700400E0D390 /* StarCurrentInfo.m */,
+				585CB0801AB6723000E0D390 /* StarWeekInfo.h */,
+				585CB0811AB6723000E0D390 /* StarWeekInfo.m */,
+				585CB0831AB67E9D00E0D390 /* StarMonthInfo.h */,
+				585CB0841AB67E9D00E0D390 /* StarMonthInfo.m */,
+				585CB0861AB68A4B00E0D390 /* StarYearInfo.h */,
+				585CB0871AB68A4B00E0D390 /* StarYearInfo.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -1242,6 +1262,7 @@
 				585C82A41AA83C6100A98D16 /* WZInfo.m in Sources */,
 				1823AAD61AB61C2300C09D5C /* StationCell.m in Sources */,
 				5817F12B1A9D7BDB00B3A0A1 /* MainViewController.m in Sources */,
+				585CB0881AB68A4B00E0D390 /* StarYearInfo.m in Sources */,
 				588A3DEE1AA45CAE00EB1066 /* RullerViewController.m in Sources */,
 				585C829C1AA802D500A98D16 /* CarType.m in Sources */,
 				1823AAF01AB64AAD00C09D5C /* WeatherCitiesViewController.m in Sources */,
@@ -1262,6 +1283,7 @@
 				1872F3B01AAAD41A007F60BD /* PackageDetailViewController.m in Sources */,
 				582CC92B1AB2CCAE0074C3B6 /* RightContactCell.m in Sources */,
 				1823AAD11AB618B100C09D5C /* TrainCell.m in Sources */,
+				585CB0821AB6723000E0D390 /* StarWeekInfo.m in Sources */,
 				18E4FC3F1AB1D57E001E021E /* NSDate+Calendar.m in Sources */,
 				1872F3B51AAAE1DC007F60BD /* DreamListViewController.m in Sources */,
 				5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */,
@@ -1270,11 +1292,13 @@
 				1823AADA1AB621EE00C09D5C /* STSInfo.m in Sources */,
 				1872F3AC1AAAD36E007F60BD /* PostInfo.m in Sources */,
 				58EACBAC1AA03EC0006D5226 /* IDCardInfo.m in Sources */,
+				585CB07F1AB6700400E0D390 /* StarCurrentInfo.m in Sources */,
 				18E4FC381AB1D57E001E021E /* JBCalendarLogic.m in Sources */,
 				5858BDAB1AB1422B0000F07C /* DreamDetailViewController.m in Sources */,
 				1872F3BD1AAAE71C007F60BD /* DreamTypeSecondViewController.m in Sources */,
 				58AD9C901AB03D2D00EF2619 /* ShopInfo.m in Sources */,
 				582BD55D1AB163D9008A9B54 /* PlaneInfo.m in Sources */,
+				585CB0851AB67E9D00E0D390 /* StarMonthInfo.m in Sources */,
 				588A3DE91AA45A4E00EB1066 /* FlashViewController.m in Sources */,
 				18E4FC461AB1D5C7001E021E /* CalandarTitleView.m in Sources */,
 				5847F41F1AA5994000A57896 /* TulingViewController.m in Sources */,

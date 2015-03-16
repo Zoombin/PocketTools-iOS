@@ -468,4 +468,20 @@ static ServiceRequest *request;
         block(nil, error);
     }];
 }
+
+- (void)searchStarLuckByName:(NSString *)name
+                        type:(NSString *)type
+                   withBlock:(void (^)(NSDictionary *result, NSError *error))block {
+    NSMutableDictionary *params =  [self getRequestParams];
+    params[@"consName"] = name;
+    params[@"type"] = type;
+//    运势类型：today,tomorrow,week,nextweek,month,year
+    NSString *requestUrl = @"http://web.juhe.cn:8080/constellation/getAll";
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:requestUrl APIID:@"58" Parameters:params Method:@"GET" Success:^(id responseObject) {
+        block(responseObject, nil);
+    } Failure:^(NSError *error) {
+        block(nil, error);
+    }];
+}
 @end
