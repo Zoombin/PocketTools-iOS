@@ -432,6 +432,17 @@ static ServiceRequest *request;
     }];
 }
 
+- (void)loadAirCityListWithBlock:(void (^)(NSDictionary *result, NSError *error))block {
+    NSMutableDictionary *params =  [self getRequestParams];
+    NSString *requestUrl = @"http://v.juhe.cn/weather/citys";
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:requestUrl APIID:@"39" Parameters:params Method:@"GET" Success:^(id responseObject) {
+        block(responseObject, nil);
+    } Failure:^(NSError *error) {
+        block(nil, error);
+    }];
+}
+
 - (void)searchPM25ByCity:(NSString *)city
                WithBlock:(void (^)(NSDictionary *result, NSError *error))block {
     NSMutableDictionary *params =  [self getRequestParams];
