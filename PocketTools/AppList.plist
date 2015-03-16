@@ -62,7 +62,7 @@
 		<key>appName</key>
 		<string>星座</string>
 		<key>controlName</key>
-		<string></string>
+		<string>StarViewController</string>
 		<key>iconName</key>
 		<string>gr_tool_zodaic</string>
 	</dict>
