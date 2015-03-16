@@ -23,6 +23,8 @@
 		1823AAEC1AB6480500C09D5C /* WeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1823AAEA1AB6480500C09D5C /* WeatherViewController.xib */; };
 		1823AAF01AB64AAD00C09D5C /* WeatherCitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1823AAEE1AB64AAD00C09D5C /* WeatherCitiesViewController.m */; };
 		1823AAF11AB64AAD00C09D5C /* WeatherCitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1823AAEF1AB64AAD00C09D5C /* WeatherCitiesViewController.xib */; };
+		1823AAF51AB71E8E00C09D5C /* WeatherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1823AAF31AB71E8E00C09D5C /* WeatherCell.m */; };
+		1823AAF61AB71E8E00C09D5C /* WeatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1823AAF41AB71E8E00C09D5C /* WeatherCell.xib */; };
 		1872F3A81AAAA9AA007F60BD /* PackageSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1872F3A61AAAA9AA007F60BD /* PackageSearchViewController.m */; };
 		1872F3A91AAAA9AA007F60BD /* PackageSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1872F3A71AAAA9AA007F60BD /* PackageSearchViewController.xib */; };
 		1872F3AC1AAAD36E007F60BD /* PostInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1872F3AB1AAAD36E007F60BD /* PostInfo.m */; };
@@ -212,6 +214,9 @@
 		1823AAED1AB64AAD00C09D5C /* WeatherCitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherCitiesViewController.h; sourceTree = "<group>"; };
 		1823AAEE1AB64AAD00C09D5C /* WeatherCitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherCitiesViewController.m; sourceTree = "<group>"; };
 		1823AAEF1AB64AAD00C09D5C /* WeatherCitiesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherCitiesViewController.xib; sourceTree = "<group>"; };
+		1823AAF21AB71E8E00C09D5C /* WeatherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherCell.h; sourceTree = "<group>"; };
+		1823AAF31AB71E8E00C09D5C /* WeatherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherCell.m; sourceTree = "<group>"; };
+		1823AAF41AB71E8E00C09D5C /* WeatherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherCell.xib; sourceTree = "<group>"; };
 		1872F3A51AAAA9AA007F60BD /* PackageSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageSearchViewController.h; sourceTree = "<group>"; };
 		1872F3A61AAAA9AA007F60BD /* PackageSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageSearchViewController.m; sourceTree = "<group>"; };
 		1872F3A71AAAA9AA007F60BD /* PackageSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PackageSearchViewController.xib; sourceTree = "<group>"; };
@@ -968,6 +973,9 @@
 				1823AAE81AB6480500C09D5C /* WeatherViewController.h */,
 				1823AAE91AB6480500C09D5C /* WeatherViewController.m */,
 				1823AAEA1AB6480500C09D5C /* WeatherViewController.xib */,
+				1823AAF21AB71E8E00C09D5C /* WeatherCell.h */,
+				1823AAF31AB71E8E00C09D5C /* WeatherCell.m */,
+				1823AAF41AB71E8E00C09D5C /* WeatherCell.xib */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -1186,6 +1194,7 @@
 				1823AAD71AB61C2300C09D5C /* StationCell.xib in Resources */,
 				1872F3B11AAAD41A007F60BD /* PackageDetailViewController.xib in Resources */,
 				583C91161AAE8E3C00F1D756 /* TicketsViewController.xib in Resources */,
+				1823AAF61AB71E8E00C09D5C /* WeatherCell.xib in Resources */,
 				586C99FB1AA702F700ACD2CF /* MirrorViewController.xib in Resources */,
 				582BD55A1AB161A7008A9B54 /* PlaneSearchViewController.xib in Resources */,
 				5858BDAC1AB1422B0000F07C /* DreamDetailViewController.xib in Resources */,
@@ -1309,6 +1318,7 @@
 				5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */,
 				582CC91D1AB2B4A90074C3B6 /* CalandarInfo.m in Sources */,
 				5858BD991AB127280000F07C /* OilViewController.m in Sources */,
+				1823AAF51AB71E8E00C09D5C /* WeatherCell.m in Sources */,
 				1823AADA1AB621EE00C09D5C /* STSInfo.m in Sources */,
 				1872F3AC1AAAD36E007F60BD /* PostInfo.m in Sources */,
 				58EACBAC1AA03EC0006D5226 /* IDCardInfo.m in Sources */,
