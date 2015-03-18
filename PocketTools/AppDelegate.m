@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "ReadingViewController.h"
+#import "LifeViewController.h"
+#import "DailyViewController.h"
 
 @interface AppDelegate ()
 
@@ -23,7 +26,37 @@
     if (!ret) {
         NSLog(@"manager start failed!");
     }
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self initTabBar];
     return YES;
+}
+
+- (void)initTabBar {
+    UINavigationController *navigation1 = [[UINavigationController alloc] initWithRootViewController:[DailyViewController new]];
+    
+    UINavigationController *navigation2 = [[UINavigationController alloc] initWithRootViewController:[LifeViewController new]];
+    
+    UINavigationController *navigation3 = [[UINavigationController alloc] initWithRootViewController:[ReadingViewController new]];
+    
+    self.tabBarController = [[UITabBarController alloc] init];
+    [self.tabBarController.tabBar setBackgroundImage:[self createImageWithColor:[UIColor clearColor]]];
+    [self.tabBarController.tabBar setShadowImage:[self createImageWithColor:[UIColor clearColor]]];
+    self.tabBarController.viewControllers = @[navigation1, navigation2, navigation3];
+    self.window.rootViewController = self.tabBarController;
+    [self.window makeKeyAndVisible];
+}
+
+- (UIImage *)createImageWithColor:(UIColor *)color
+{
+    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return theImage;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

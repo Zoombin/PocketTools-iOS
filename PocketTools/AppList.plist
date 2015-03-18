@@ -48,7 +48,7 @@
 		<key>controlName</key>
 		<string>TulingViewController</string>
 		<key>iconName</key>
-		<string></string>
+		<string>gr_tool_robot</string>
 	</dict>
 	<dict>
 		<key>appName</key>
@@ -136,7 +136,7 @@
 		<key>controlName</key>
 		<string>ParkViewController</string>
 		<key>iconName</key>
-		<string></string>
+		<string>gr_tool_park</string>
 	</dict>
 	<dict>
 		<key>appName</key>
@@ -144,7 +144,7 @@
 		<key>controlName</key>
 		<string>PoiSearchViewController</string>
 		<key>iconName</key>
-		<string>gr_search_stores</string>
+		<string>gr_tool_stores</string>
 	</dict>
 	<dict>
 		<key>appName</key>
@@ -184,7 +184,7 @@
 		<key>controlName</key>
 		<string>LLPayViewController</string>
 		<key>iconName</key>
-		<string></string>
+		<string>gr_tool_ll</string>
 	</dict>
 	<dict>
 		<key>appName</key>

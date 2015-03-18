@@ -141,6 +141,12 @@
 		586C99F61AA6EDF100ACD2CF /* MoneyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586C99F41AA6EDF100ACD2CF /* MoneyTableViewCell.xib */; };
 		586C99FA1AA702F700ACD2CF /* MirrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 586C99F81AA702F700ACD2CF /* MirrorViewController.m */; };
 		586C99FB1AA702F700ACD2CF /* MirrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586C99F91AA702F700ACD2CF /* MirrorViewController.xib */; };
+		5880F7581AB917E00049014B /* ReadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5880F7561AB917E00049014B /* ReadingViewController.m */; };
+		5880F7591AB917E00049014B /* ReadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5880F7571AB917E00049014B /* ReadingViewController.xib */; };
+		5880F7621AB918440049014B /* DailyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5880F7601AB918440049014B /* DailyViewController.m */; };
+		5880F7631AB918440049014B /* DailyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5880F7611AB918440049014B /* DailyViewController.xib */; };
+		5880F7671AB919DB0049014B /* LifeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5880F7651AB919DB0049014B /* LifeViewController.m */; };
+		5880F7681AB919DB0049014B /* LifeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5880F7661AB919DB0049014B /* LifeViewController.xib */; };
 		588A3DE31AA4312600EB1066 /* AppInfoEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A3DE21AA4312600EB1066 /* AppInfoEntity.m */; };
 		588A3DE51AA4428300EB1066 /* AppList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 588A3DE41AA4428300EB1066 /* AppList.plist */; };
 		588A3DE91AA45A4E00EB1066 /* FlashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A3DE71AA45A4E00EB1066 /* FlashViewController.m */; };
@@ -476,6 +482,15 @@
 		586C99F71AA702F700ACD2CF /* MirrorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MirrorViewController.h; sourceTree = "<group>"; };
 		586C99F81AA702F700ACD2CF /* MirrorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MirrorViewController.m; sourceTree = "<group>"; };
 		586C99F91AA702F700ACD2CF /* MirrorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MirrorViewController.xib; sourceTree = "<group>"; };
+		5880F7551AB917E00049014B /* ReadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadingViewController.h; sourceTree = "<group>"; };
+		5880F7561AB917E00049014B /* ReadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadingViewController.m; sourceTree = "<group>"; };
+		5880F7571AB917E00049014B /* ReadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadingViewController.xib; sourceTree = "<group>"; };
+		5880F75F1AB918440049014B /* DailyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyViewController.h; sourceTree = "<group>"; };
+		5880F7601AB918440049014B /* DailyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyViewController.m; sourceTree = "<group>"; };
+		5880F7611AB918440049014B /* DailyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DailyViewController.xib; sourceTree = "<group>"; };
+		5880F7641AB919DB0049014B /* LifeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LifeViewController.h; sourceTree = "<group>"; };
+		5880F7651AB919DB0049014B /* LifeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LifeViewController.m; sourceTree = "<group>"; };
+		5880F7661AB919DB0049014B /* LifeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LifeViewController.xib; sourceTree = "<group>"; };
 		588A3DE11AA4312600EB1066 /* AppInfoEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoEntity.h; sourceTree = "<group>"; };
 		588A3DE21AA4312600EB1066 /* AppInfoEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoEntity.m; sourceTree = "<group>"; };
 		588A3DE41AA4428300EB1066 /* AppList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppList.plist; sourceTree = "<group>"; };
@@ -652,6 +667,7 @@
 		5817F1211A9D7BDB00B3A0A1 /* PocketTools */ = {
 			isa = PBXGroup;
 			children = (
+				5880F7541AB9179F0049014B /* Tab */,
 				5845D8581AA5597F0007E4D8 /* Tools */,
 				58E8506E1AA01AD00095DDC7 /* Entity */,
 				58E850651AA012DF0095DDC7 /* Service */,
@@ -828,6 +844,22 @@
 				5845D85A1AA559A10007E4D8 /* CalculatorTools.m */,
 			);
 			name = Tools;
+			sourceTree = "<group>";
+		};
+		5880F7541AB9179F0049014B /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				5880F7551AB917E00049014B /* ReadingViewController.h */,
+				5880F7561AB917E00049014B /* ReadingViewController.m */,
+				5880F7571AB917E00049014B /* ReadingViewController.xib */,
+				5880F75F1AB918440049014B /* DailyViewController.h */,
+				5880F7601AB918440049014B /* DailyViewController.m */,
+				5880F7611AB918440049014B /* DailyViewController.xib */,
+				5880F7641AB919DB0049014B /* LifeViewController.h */,
+				5880F7651AB919DB0049014B /* LifeViewController.m */,
+				5880F7661AB919DB0049014B /* LifeViewController.xib */,
+			);
+			name = Tab;
 			sourceTree = "<group>";
 		};
 		58E850541AA010980095DDC7 /* Tools */ = {
@@ -1186,6 +1218,7 @@
 				582BD5C11AB18945008A9B54 /* readme.txt in Resources */,
 				582BD5751AB18239008A9B54 /* PlaneCell.xib in Resources */,
 				58BE59091AA6A60C001811D9 /* CarVioSearchViewController.xib in Resources */,
+				5880F7681AB919DB0049014B /* LifeViewController.xib in Resources */,
 				1872F3C31AAAFA16007F60BD /* PhotoPasswordViewController.xib in Resources */,
 				5817F12E1A9D7BDB00B3A0A1 /* Main.storyboard in Resources */,
 				585CB07C1AB66AD100E0D390 /* StarViewController.xib in Resources */,
@@ -1198,6 +1231,7 @@
 				586C99FB1AA702F700ACD2CF /* MirrorViewController.xib in Resources */,
 				582BD55A1AB161A7008A9B54 /* PlaneSearchViewController.xib in Resources */,
 				5858BDAC1AB1422B0000F07C /* DreamDetailViewController.xib in Resources */,
+				5880F7591AB917E00049014B /* ReadingViewController.xib in Resources */,
 				588A3DE51AA4428300EB1066 /* AppList.plist in Resources */,
 				1872F3A91AAAA9AA007F60BD /* PackageSearchViewController.xib in Resources */,
 				5847F4201AA5994000A57896 /* TulingViewController.xib in Resources */,
@@ -1229,6 +1263,7 @@
 				582CC91A1AB277430074C3B6 /* CalendarViewController.xib in Resources */,
 				582CC9361AB2DA4C0074C3B6 /* UnitViewController.xib in Resources */,
 				583C91361AAEEAAA00F1D756 /* ImageScanViewController.xib in Resources */,
+				5880F7631AB918440049014B /* DailyViewController.xib in Resources */,
 				582CC9271AB2CC850074C3B6 /* LeftContactCell.xib in Resources */,
 				582CC92C1AB2CCAE0074C3B6 /* RightContactCell.xib in Resources */,
 				588CE9581AB6D60F0068AA28 /* Weather.plist in Resources */,
@@ -1326,6 +1361,7 @@
 				18E4FC381AB1D57E001E021E /* JBCalendarLogic.m in Sources */,
 				5858BDAB1AB1422B0000F07C /* DreamDetailViewController.m in Sources */,
 				1872F3BD1AAAE71C007F60BD /* DreamTypeSecondViewController.m in Sources */,
+				5880F7621AB918440049014B /* DailyViewController.m in Sources */,
 				58AD9C901AB03D2D00EF2619 /* ShopInfo.m in Sources */,
 				582BD55D1AB163D9008A9B54 /* PlaneInfo.m in Sources */,
 				585CB0851AB67E9D00E0D390 /* StarMonthInfo.m in Sources */,
@@ -1372,6 +1408,7 @@
 				18E4FC371AB1D57E001E021E /* JBCalendarDate.m in Sources */,
 				5847F4231AA59B0800A57896 /* RobotInfo.m in Sources */,
 				582CC9261AB2CC850074C3B6 /* LeftContactCell.m in Sources */,
+				5880F7581AB917E00049014B /* ReadingViewController.m in Sources */,
 				585C82961AA7F7F800A98D16 /* ProvinceInfo.m in Sources */,
 				18E4FC3C1AB1D57E001E021E /* JBUnitView.m in Sources */,
 				5817F1251A9D7BDB00B3A0A1 /* main.m in Sources */,
@@ -1389,6 +1426,7 @@
 				5858BDA11AB130DB0000F07C /* OilCell.m in Sources */,
 				5845D8561AA54A420007E4D8 /* PhoneSearchViewController.m in Sources */,
 				588A3DF81AA462C200EB1066 /* ParkViewController.m in Sources */,
+				5880F7671AB919DB0049014B /* LifeViewController.m in Sources */,
 				18E4FC0F1AB09B91001E021E /* MovieInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
