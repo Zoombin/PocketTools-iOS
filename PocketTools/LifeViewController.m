@@ -136,6 +136,7 @@ static NSInteger const numberPerLine = 4;
     }
     UIViewController *viewCtrl = [NSClassFromString(entity.controlName) new];
     viewCtrl.hidesBottomBarWhenPushed = YES;
+    [BackButtonTool addBackButton:viewCtrl];
     [self.navigationController pushViewController:viewCtrl animated:YES];
 }
 

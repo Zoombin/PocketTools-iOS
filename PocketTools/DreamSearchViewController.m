@@ -83,6 +83,7 @@
     if ([info.list count] > 0) {
         detailViewCtrl.content = info.list[0];
     }
+    [BackButtonTool addBackButton:detailViewCtrl];
     [self.navigationController pushViewController:detailViewCtrl animated:YES];
     
 }

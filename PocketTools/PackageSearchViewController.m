@@ -75,6 +75,7 @@
     PackageDetailViewController *viewCtrl = [PackageDetailViewController new];
     viewCtrl.postCompany = postmanSimplesArray[currentPostMan];
     viewCtrl.postNum = _codeTextField.text;
+    [BackButtonTool addBackButton:viewCtrl];
     [self.navigationController pushViewController:viewCtrl animated:YES];
 }
 
@@ -129,6 +130,7 @@
     PackageDetailViewController *viewCtrl = [PackageDetailViewController new];
     viewCtrl.postCompany = historyInfo[@"com"];
     viewCtrl.postNum = historyInfo[@"no"];
+    [BackButtonTool addBackButton:viewCtrl];
     [self.navigationController pushViewController:viewCtrl animated:YES];
 }
 

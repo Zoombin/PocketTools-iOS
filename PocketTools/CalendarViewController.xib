@@ -34,7 +34,7 @@
                 </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            <point key="canvasLocation" x="189" y="276"/>
+            <point key="canvasLocation" x="229" y="234"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

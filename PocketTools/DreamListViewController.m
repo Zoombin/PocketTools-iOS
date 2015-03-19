@@ -51,6 +51,7 @@
     }
     DreamSearchViewController *viewCtrl = [DreamSearchViewController new];
     viewCtrl.keyWord = _searchTextField.text;
+    [BackButtonTool addBackButton:viewCtrl];
     [self.navigationController pushViewController:viewCtrl animated:YES];
 }
 

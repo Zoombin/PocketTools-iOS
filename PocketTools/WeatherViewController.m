@@ -55,6 +55,7 @@
 - (void)getCityList {
     WeatherCitiesViewController *viewCtrl = [WeatherCitiesViewController new];
     viewCtrl.delegate = self;
+    [BackButtonTool addBackButton:viewCtrl];
     [self.navigationController pushViewController:viewCtrl animated:YES];
 }
 

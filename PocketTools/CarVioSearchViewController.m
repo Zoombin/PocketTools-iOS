@@ -133,6 +133,7 @@
         carVioResultViewCtrl.registNum = _registTextField.text;
     }
     [[ServiceRequest shared] saveUserSearch:searchInfo];
+    [BackButtonTool addBackButton:carVioResultViewCtrl];
     [self.navigationController pushViewController:carVioResultViewCtrl animated:YES];
 }
 
@@ -320,6 +321,7 @@
     carVioResultViewCtrl.carFrameNum = searchInfo[@"carFrameNum"];
     carVioResultViewCtrl.engineNum = searchInfo[@"carEngineNum"];
     carVioResultViewCtrl.registNum = searchInfo[@"carRegist"] ;
+    [BackButtonTool addBackButton:carVioResultViewCtrl];
     [self.navigationController pushViewController:carVioResultViewCtrl animated:YES];
 
 }

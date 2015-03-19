@@ -101,6 +101,7 @@
 - (void)getCityList {
     PMCitySelectViewController *viewCtrl = [PMCitySelectViewController new];
     viewCtrl.delegate = self;
+    [BackButtonTool addBackButton:viewCtrl];
     [self.navigationController pushViewController:viewCtrl animated:YES];
 }
 

@@ -141,6 +141,7 @@
 - (void)selectStar {
     StarSelectViewController *viewCtrl = [StarSelectViewController new];
     viewCtrl.delegate = self;
+    [BackButtonTool addBackButton:viewCtrl];
     [self.navigationController pushViewController:viewCtrl animated:YES];
 }
 

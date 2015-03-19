@@ -195,6 +195,7 @@ static NSInteger const numberPerLine = 4;
         return;
     }
     id viewCtrl = [NSClassFromString(entity.controlName) new];
+    [BackButtonTool addBackButton:viewCtrl];
     [self.navigationController pushViewController:viewCtrl animated:YES];
 }
 

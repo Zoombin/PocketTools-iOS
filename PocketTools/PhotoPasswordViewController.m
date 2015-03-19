@@ -168,6 +168,7 @@
     if (!isEditing) {
         ImageScanViewController *viewCtrl = [ImageScanViewController new];
         viewCtrl.image = imageView.image;
+        [BackButtonTool addBackButton:viewCtrl];
         [self.navigationController pushViewController:viewCtrl animated:YES];
         return;
     }
