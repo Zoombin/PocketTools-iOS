@@ -9,7 +9,7 @@
 #import "AppleDeviceIdSearchViewController.h"
 #import "AppleInfo.h"
 
-#define DEFAULT_STRING @"序列号位置:通用->关于本机->序列号->点击粘贴"
+#define DEFAULT_STRING @"查看序列号的方法:设置->通用->关于本机"
 
 @interface AppleDeviceIdSearchViewController ()
 
@@ -27,12 +27,21 @@
     } else {
         [_snTextField becomeFirstResponder];
     }
+    _contentTextView.numberOfLines = 0;
+    _contentTextView.lineBreakMode = NSLineBreakByWordWrapping;
+    
+    [_searchButton.layer setCornerRadius:6.0];
+    [_searchButton.layer setMasksToBounds:YES];
     // Do any additional setup after loading the view from its nib.
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [self loadAppleInfo];
     return YES;
+}
+
+- (IBAction)searchButtonClicked:(id)sender {
+    [self loadAppleInfo];
 }
 
 - (void)loadAppleInfo {
