@@ -12,4 +12,6 @@
 
 @property (nonatomic, weak) IBOutlet UITextField *searchTextField;
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) IBOutlet UIButton *searchButton;
+- (IBAction)searchButtonClicked:(id)sender;
 @end

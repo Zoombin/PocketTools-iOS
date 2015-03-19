@@ -24,12 +24,19 @@
     self.title = NSLocalizedString(@"周公解梦", nil);
     resultArray = [NSMutableArray array];
     // Do any additional setup after loading the view from its nib.
+    [_searchButton.layer setCornerRadius:6.0];
+    [_searchButton.layer setMasksToBounds:YES];
+    
     [self loadTypeList];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)searchButtonClicked:(id)sender {
+    [self search];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -84,7 +91,7 @@
     }
     DreamType *type = resultArray[indexPath.row];
     cell.textLabel.text = type.name;
-    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.textColor = [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0];
     return cell;
 }
 
