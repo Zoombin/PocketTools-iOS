@@ -55,6 +55,7 @@
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setFrame:CGRectMake(offSetX * (index + 1) + buttonWidth * index, 10 * (line + 1) + line * buttonHeight, buttonWidth, buttonHeight)];
         [button addTarget:self action:@selector(postmanButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [button setTitleColor:[UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0] forState:UIControlStateNormal];
         [button setTag:i];
         [button setTitle:postmansArray[i] forState:UIControlStateNormal];
         [_headerView addSubview:button];
@@ -86,7 +87,7 @@
     [self allButtonClearColor];
     UIButton *button = (UIButton *)sender;
     currentPostMan = button.tag;
-    [button setBackgroundColor:[UIColor colorWithRed:33/255.0 green:162/255.0 blue:232/255.0 alpha:1.0]];
+    [button setBackgroundColor:[UIColor colorWithRed:237/255.0 green:237/255.0 blue:237/255.0 alpha:1.0]];
 }
 
 - (void)allButtonClearColor {
@@ -117,7 +118,7 @@
         cell.backgroundColor = [UIColor clearColor];
     }
     NSDictionary *historyInfo = searchHistory[indexPath.row];
-    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.textColor = [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0];
     cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", historyInfo[@"name"], historyInfo[@"no"]];
     return cell;
 }
