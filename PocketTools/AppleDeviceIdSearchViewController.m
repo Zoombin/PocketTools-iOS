@@ -65,6 +65,7 @@
                 NSLog(@"数据获取失败");
                 [self displayHUDTitle:nil message:@"获取失败" duration:DELAY_TIMES];
                 _contentTextView.text = DEFAULT_STRING;
+                [_contentTextView sizeToFit];
             }
         } else {
             NSLog(@"网络异常");
@@ -78,6 +79,7 @@
 {
     NSString *content = [NSString stringWithFormat:@"设备型号: %@\n\n设备序列号: %@\n\nIMEI号: %@\n\n激活状态: %@\n\n保修状态: %@\n\n保修到期: %@\n\n电话支持到期: %@\n\n电话支持状态: %@\n\n生产工厂: %@\n\n生产时间: %@ 至 %@", appleInfo.phoneModel, appleInfo.serialNumber , appleInfo.imeiNumber, appleInfo.active, appleInfo.warrantyStatus, appleInfo.warranty, appleInfo.teleSupport, appleInfo.teleSupportStatus, appleInfo.madeArea, appleInfo.startDate, appleInfo.endDate];
     _contentTextView.text = content;
+    [_contentTextView sizeToFit];
 }
 
 - (void)didReceiveMemoryWarning {

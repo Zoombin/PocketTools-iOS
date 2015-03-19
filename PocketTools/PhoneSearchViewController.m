@@ -20,6 +20,16 @@
     self.title = NSLocalizedString(@"来电号码查询", nil);
     // Do any additional setup after loading the view from its nib.
     [_phoneTextField becomeFirstResponder];
+    
+    _contentTextView.numberOfLines = 0;
+    _contentTextView.lineBreakMode = NSLineBreakByWordWrapping;
+    
+    [_searchButton.layer setCornerRadius:6.0];
+    [_searchButton.layer setMasksToBounds:YES];
+}
+
+- (IBAction)searchButtonClicked:(id)sender {
+    [self loadPhoneInfo];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -34,18 +44,19 @@
         return;
     }
     [_phoneTextField resignFirstResponder];
+    [self displayHUD:@"加载中..."];
     [[ServiceRequest shared] phoneSearch:_phoneTextField.text withBlock:^(NSDictionary *result, NSError *error) {
         if (!error) {
             ServiceResult *resultInfo= [[ServiceResult alloc] initWithAttributes:result];
             if ([resultInfo.resultcode integerValue] == 200) {
-                NSLog(@"数据获取成功!");
+                [self hideHUD:YES];
                 PhoneInfo *appleInfo = [[PhoneInfo alloc] initWithAttributes:resultInfo.result];
                 [self showContentWithPhoneInfo:appleInfo];
             } else {
-                NSLog(@"数据获取失败");
+                [self displayHUDTitle:nil message:@"数据获取失败!" duration:DELAY_TIMES];
             }
         } else {
-            NSLog(@"网络异常");
+           [self displayHUDTitle:nil message:NETWORK_ERROR duration:DELAY_TIMES];
         }
     }];
 }
