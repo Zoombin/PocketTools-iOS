@@ -36,7 +36,7 @@
 	</dict>
 	<dict>
 		<key>appName</key>
-		<string>来电号码查询</string>
+		<string>来电查询</string>
 		<key>controlName</key>
 		<string>PhoneSearchViewController</string>
 		<key>iconName</key>

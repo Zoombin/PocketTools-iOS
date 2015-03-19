@@ -72,19 +72,9 @@
 
 - (void)initMenuButtons:(NSInteger)index {
     [self removeAllButtons];
-    if (index == 0) {
-        NSArray *apps = @[@"苹果序列号", @"老黄历" ,@"天气预报", @"镜子", @"秘密相册", @"话费充值", @"空气质量", @"周公解梦", @"科学计算器", @"汇率换算", @"单位换算", @"手电筒", @"尺码对照表", @"条码比价"];
-        currentApps = [self getAppsWithAppNames:apps];
-        [self setElements:currentApps];
-    } else if (index == 1) {
-        NSArray *apps = @[@"车辆违章", @"快递", @"火车订票", @"彩票购买", @"来电号码查询", @"电影", @"航班动态", @"加油站"];
-        currentApps = [self getAppsWithAppNames:apps];
-        [self setElements:currentApps];
-    } else if (index == 2) {
-        NSArray *apps = @[@"新闻", @"星座", @"POI", @"游戏充值", @"流量直充", @"停车场", @"聊天机器人", @"尺子"];
-        currentApps = [self getAppsWithAppNames:apps];
-        [self setElements:currentApps];
-    }
+     NSArray *apps = @[@"科学计算器", @"秘密相册", @"镜子", @"手电筒", @"尺子", @"尺码对照表", @"汇率换算", @"单位换算", @"苹果序列号", @"聊天机器人", @"来电查询", @"条码比价"];
+    currentApps = [self getAppsWithAppNames:apps];
+    [self setElements:currentApps];
 }
 
 - (NSArray *)getAppsWithAppNames:(NSArray *)names {

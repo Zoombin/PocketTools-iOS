@@ -489,7 +489,7 @@
 		5880F7601AB918440049014B /* DailyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyViewController.m; sourceTree = "<group>"; };
 		5880F7611AB918440049014B /* DailyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DailyViewController.xib; sourceTree = "<group>"; };
 		5880F7641AB919DB0049014B /* LifeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LifeViewController.h; sourceTree = "<group>"; };
-		5880F7651AB919DB0049014B /* LifeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LifeViewController.m; sourceTree = "<group>"; };
+		5880F7651AB919DB0049014B /* LifeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LifeViewController.m; sourceTree = "<group>"; wrapsLines = 0; };
 		5880F7661AB919DB0049014B /* LifeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LifeViewController.xib; sourceTree = "<group>"; };
 		588A3DE11AA4312600EB1066 /* AppInfoEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoEntity.h; sourceTree = "<group>"; };
 		588A3DE21AA4312600EB1066 /* AppInfoEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoEntity.m; sourceTree = "<group>"; };
