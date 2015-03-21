@@ -5,9 +5,8 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReadingViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StoreViewController">
             <connections>
-                <outlet property="menuScrollView" destination="nVj-DS-PY0" id="NgC-vp-mAC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,14 +14,8 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="nVj-DS-PY0">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                </scrollView>
-            </subviews>
             <color key="backgroundColor" red="0.019607843140000001" green="0.1764705882" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
-            <point key="canvasLocation" x="541" y="278"/>
+            <point key="canvasLocation" x="325" y="368"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

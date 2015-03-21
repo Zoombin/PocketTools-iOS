@@ -23,12 +23,14 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        UIImage *normalImage = [UIImage imageNamed:@"reading"];
-        UIImage *selectedImage = [UIImage imageNamed:@"reading_sel"];
-        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:self.title image:[normalImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-        
-        UIImageView *titleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo"]];
-        self.navigationItem.titleView = titleImageView;
+        UIImage *normalImage = [UIImage imageNamed:@"pay"];
+        UIImage *selectedImage = [UIImage imageNamed:@"pay_sel"];
+        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"" image:[normalImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+       
+        self.title = @"99工具";
+        self.tabBarItem.title = @"";
+//        UIImageView *titleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo"]];
+//        self.navigationItem.titleView = titleImageView;
     }
     return self;
 }
@@ -79,22 +81,33 @@
     return appsArray;
 }
 
-static NSInteger const numberPerLine = 4;
+//static NSInteger const numberPerLine = 4;
 - (void)setElements:(NSArray *)elements {
+    NSInteger numberPerLine = 4;
+    if ([UIScreen mainScreen].bounds.size.width > 320) {
+        NSLog(@"6 or 6+");
+        numberPerLine = 5;
+    }
     NSInteger numberOfLine = 1;
     NSInteger count = [elements count];
-    if (count > 4) {
-        if ([elements count] % 4 == 0) {
-            numberOfLine = count / 4;
+    if (count > numberPerLine) {
+        if ([elements count] % numberPerLine == 0) {
+            numberOfLine = count / numberPerLine;
         } else {
-            numberOfLine = count / 4 + 1;
+            numberOfLine = count / numberPerLine + 1;
         }
     } else {
         numberOfLine = 1;
     }
+    NSInteger page = 1;
+    if (numberPerLine > 2) {
+        
+    } else {
+        page = 1;
+    }
     
     CGRect rect = CGRectZero;
-    CGFloat width = [UIScreen mainScreen].bounds.size.width / 4;
+    CGFloat width = [UIScreen mainScreen].bounds.size.width / numberPerLine;
     CGFloat height = width;
     rect.size.width = width;
     rect.size.height = height;
@@ -106,10 +119,10 @@ static NSInteger const numberPerLine = 4;
         [button setTag:i];
         button.frame = rect;
         
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, button.frame.size.height - 15, button.frame.size.width, 15)];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, button.frame.size.height - 10, button.frame.size.width, 15)];
         label.text = entity.appName;
         label.font = [UIFont systemFontOfSize:10];
-        label.textColor = [UIColor colorWithRed:9/255.0 green:9/255.0 blue:9/255.0 alpha:1.0];
+        label.textColor = [UIColor whiteColor];
         label.textAlignment = NSTextAlignmentCenter;
         [button addSubview:label];
         
@@ -120,12 +133,12 @@ static NSInteger const numberPerLine = 4;
             rect.origin.y = 0;
         } else if (i % numberPerLine == 0) {
             rect.origin.x = 0;
-            rect.origin.y = height * (i / 4);
+            rect.origin.y = height * (i / numberPerLine);
         } else {
             rect.origin.x += width;
         }
     }
-    _menuScrollView.contentSize = CGSizeMake(_menuScrollView.bounds.size.width, height * (numberOfLine - 1));
+    _menuScrollView.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width,  height * 2);
 }
 
 - (void)menuButtonClicked:(id)sender {

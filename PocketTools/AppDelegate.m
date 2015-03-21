@@ -10,6 +10,7 @@
 #import "ReadingViewController.h"
 #import "LifeViewController.h"
 #import "DailyViewController.h"
+#import "StoreViewController.h"
 
 @interface AppDelegate ()
 
@@ -32,16 +33,22 @@
 }
 
 - (void)initTabBar {
+    //日常工具
     UINavigationController *navigation1 = [[UINavigationController alloc] initWithRootViewController:[DailyViewController new]];
     
+    //生活服务
     UINavigationController *navigation2 = [[UINavigationController alloc] initWithRootViewController:[LifeViewController new]];
     
+    //充值服务
     UINavigationController *navigation3 = [[UINavigationController alloc] initWithRootViewController:[ReadingViewController new]];
+    
+    //99商城
+     UINavigationController *navigation4 = [[UINavigationController alloc] initWithRootViewController:[StoreViewController new]];
     
     self.tabBarController = [[UITabBarController alloc] init];
     [self.tabBarController.tabBar setBackgroundImage:[self createImageWithColor:[UIColor clearColor]]];
     [self.tabBarController.tabBar setShadowImage:[self createImageWithColor:[UIColor clearColor]]];
-    self.tabBarController.viewControllers = @[navigation1, navigation2, navigation3];
+    self.tabBarController.viewControllers = @[navigation1, navigation2, navigation3, navigation4];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
 }

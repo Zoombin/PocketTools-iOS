@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18011FD11ABD441900F3A86C /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18011FCF1ABD441900F3A86C /* StoreViewController.m */; };
+		18011FD21ABD441900F3A86C /* StoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18011FD01ABD441900F3A86C /* StoreViewController.xib */; };
 		1823AACA1AB614A000C09D5C /* TrainInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1823AAC91AB614A000C09D5C /* TrainInfo.m */; };
 		1823AACD1AB615F900C09D5C /* StationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1823AACC1AB615F900C09D5C /* StationInfo.m */; };
 		1823AAD11AB618B100C09D5C /* TrainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1823AACF1AB618B100C09D5C /* TrainCell.m */; };
@@ -195,6 +197,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18011FCE1ABD441900F3A86C /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
+		18011FCF1ABD441900F3A86C /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
+		18011FD01ABD441900F3A86C /* StoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreViewController.xib; sourceTree = "<group>"; };
 		1823AAC81AB614A000C09D5C /* TrainInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainInfo.h; sourceTree = "<group>"; };
 		1823AAC91AB614A000C09D5C /* TrainInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainInfo.m; sourceTree = "<group>"; };
 		1823AACB1AB615F900C09D5C /* StationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationInfo.h; sourceTree = "<group>"; };
@@ -863,6 +868,9 @@
 				5880F7641AB919DB0049014B /* LifeViewController.h */,
 				5880F7651AB919DB0049014B /* LifeViewController.m */,
 				5880F7661AB919DB0049014B /* LifeViewController.xib */,
+				18011FCE1ABD441900F3A86C /* StoreViewController.h */,
+				18011FCF1ABD441900F3A86C /* StoreViewController.m */,
+				18011FD01ABD441900F3A86C /* StoreViewController.xib */,
 			);
 			name = Tab;
 			sourceTree = "<group>";
@@ -1227,6 +1235,7 @@
 				1872F3C31AAAFA16007F60BD /* PhotoPasswordViewController.xib in Resources */,
 				5817F12E1A9D7BDB00B3A0A1 /* Main.storyboard in Resources */,
 				585CB07C1AB66AD100E0D390 /* StarViewController.xib in Resources */,
+				18011FD21ABD441900F3A86C /* StoreViewController.xib in Resources */,
 				5858BD9A1AB127280000F07C /* OilViewController.xib in Resources */,
 				582BD5C01AB18945008A9B54 /* mapapi.bundle in Resources */,
 				1823AAD71AB61C2300C09D5C /* StationCell.xib in Resources */,
@@ -1383,6 +1392,7 @@
 				58E850741AA01BFC0095DDC7 /* AppleInfo.m in Sources */,
 				5845D85F1AA56ACB0007E4D8 /* SizesViewController.m in Sources */,
 				58EE96C21AA84BBF00E35B51 /* UserCarSearchInfo.m in Sources */,
+				18011FD11ABD441900F3A86C /* StoreViewController.m in Sources */,
 				58E8506C1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.m in Sources */,
 				582BD5701AB17B25008A9B54 /* AppDelegate.m in Sources */,
 				58BE590D1AA6ABCD001811D9 /* ExchangeViewController.m in Sources */,

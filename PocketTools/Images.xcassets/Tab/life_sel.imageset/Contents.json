@@ -2,12 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "life_sel.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "life_sel.png"
+      "filename" : "life_sel@2x.png"
     },
     {
       "idiom" : "universal",
