@@ -27,6 +27,7 @@
 		1823AAF11AB64AAD00C09D5C /* WeatherCitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1823AAEF1AB64AAD00C09D5C /* WeatherCitiesViewController.xib */; };
 		1823AAF51AB71E8E00C09D5C /* WeatherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1823AAF31AB71E8E00C09D5C /* WeatherCell.m */; };
 		1823AAF61AB71E8E00C09D5C /* WeatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1823AAF41AB71E8E00C09D5C /* WeatherCell.xib */; };
+		184DC98F1ABD92E1001E8F1A /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184DC98E1ABD92E1001E8F1A /* MainViewController.xib */; };
 		1872F3A81AAAA9AA007F60BD /* PackageSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1872F3A61AAAA9AA007F60BD /* PackageSearchViewController.m */; };
 		1872F3A91AAAA9AA007F60BD /* PackageSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1872F3A71AAAA9AA007F60BD /* PackageSearchViewController.xib */; };
 		1872F3AC1AAAD36E007F60BD /* PostInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1872F3AB1AAAD36E007F60BD /* PostInfo.m */; };
@@ -63,7 +64,6 @@
 		18E4FC461AB1D5C7001E021E /* CalandarTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4FC451AB1D5C7001E021E /* CalandarTitleView.m */; };
 		5817F1251A9D7BDB00B3A0A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F1241A9D7BDB00B3A0A1 /* main.m */; };
 		5817F12B1A9D7BDB00B3A0A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F12A1A9D7BDB00B3A0A1 /* MainViewController.m */; };
-		5817F12E1A9D7BDB00B3A0A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5817F12C1A9D7BDB00B3A0A1 /* Main.storyboard */; };
 		5817F1301A9D7BDB00B3A0A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5817F12F1A9D7BDB00B3A0A1 /* Images.xcassets */; };
 		5817F13F1A9D7BDB00B3A0A1 /* PocketToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F13E1A9D7BDB00B3A0A1 /* PocketToolsTests.m */; };
 		582BD5551AB14815008A9B54 /* DreamInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 582BD5541AB14815008A9B54 /* DreamInfo.m */; };
@@ -229,6 +229,7 @@
 		1823AAF21AB71E8E00C09D5C /* WeatherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherCell.h; sourceTree = "<group>"; };
 		1823AAF31AB71E8E00C09D5C /* WeatherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherCell.m; sourceTree = "<group>"; };
 		1823AAF41AB71E8E00C09D5C /* WeatherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherCell.xib; sourceTree = "<group>"; };
+		184DC98E1ABD92E1001E8F1A /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		1872F3A51AAAA9AA007F60BD /* PackageSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageSearchViewController.h; sourceTree = "<group>"; };
 		1872F3A61AAAA9AA007F60BD /* PackageSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageSearchViewController.m; sourceTree = "<group>"; };
 		1872F3A71AAAA9AA007F60BD /* PackageSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PackageSearchViewController.xib; sourceTree = "<group>"; };
@@ -297,7 +298,6 @@
 		5817F1261A9D7BDB00B3A0A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5817F1291A9D7BDB00B3A0A1 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		5817F12A1A9D7BDB00B3A0A1 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		5817F12D1A9D7BDB00B3A0A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5817F12F1A9D7BDB00B3A0A1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5817F1381A9D7BDB00B3A0A1 /* PocketToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5817F13D1A9D7BDB00B3A0A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -550,7 +550,6 @@
 		58E850701AA01AF90095DDC7 /* ServiceResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceResult.m; sourceTree = "<group>"; };
 		58E850721AA01BFC0095DDC7 /* AppleInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleInfo.h; sourceTree = "<group>"; };
 		58E850731AA01BFC0095DDC7 /* AppleInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppleInfo.m; sourceTree = "<group>"; };
-		58EACBA91AA03935006D5226 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		58EACBAA1AA03EC0006D5226 /* IDCardInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDCardInfo.h; sourceTree = "<group>"; };
 		58EACBAB1AA03EC0006D5226 /* IDCardInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDCardInfo.m; sourceTree = "<group>"; };
 		58EE96C01AA84BBF00E35B51 /* UserCarSearchInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCarSearchInfo.h; sourceTree = "<group>"; };
@@ -685,7 +684,7 @@
 				582BD56F1AB17B25008A9B54 /* AppDelegate.m */,
 				5817F1291A9D7BDB00B3A0A1 /* MainViewController.h */,
 				5817F12A1A9D7BDB00B3A0A1 /* MainViewController.m */,
-				5817F12C1A9D7BDB00B3A0A1 /* Main.storyboard */,
+				184DC98E1ABD92E1001E8F1A /* MainViewController.xib */,
 				5817F12F1A9D7BDB00B3A0A1 /* Images.xcassets */,
 				5817F1221A9D7BDB00B3A0A1 /* Supporting Files */,
 			);
@@ -1228,12 +1227,12 @@
 				18E4FC401AB1D57E001E021E /* README in Resources */,
 				588A3DF91AA462C200EB1066 /* ParkViewController.xib in Resources */,
 				18E4FC021AADF415001E021E /* GamePayViewController.xib in Resources */,
+				184DC98F1ABD92E1001E8F1A /* MainViewController.xib in Resources */,
 				582BD5C11AB18945008A9B54 /* readme.txt in Resources */,
 				582BD5751AB18239008A9B54 /* PlaneCell.xib in Resources */,
 				58BE59091AA6A60C001811D9 /* CarVioSearchViewController.xib in Resources */,
 				5880F7681AB919DB0049014B /* LifeViewController.xib in Resources */,
 				1872F3C31AAAFA16007F60BD /* PhotoPasswordViewController.xib in Resources */,
-				5817F12E1A9D7BDB00B3A0A1 /* Main.storyboard in Resources */,
 				585CB07C1AB66AD100E0D390 /* StarViewController.xib in Resources */,
 				18011FD21ABD441900F3A86C /* StoreViewController.xib in Resources */,
 				5858BD9A1AB127280000F07C /* OilViewController.xib in Resources */,
@@ -1464,18 +1463,6 @@
 			targetProxy = 5817F1391A9D7BDB00B3A0A1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		5817F12C1A9D7BDB00B3A0A1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5817F12D1A9D7BDB00B3A0A1 /* Base */,
-				58EACBA91AA03935006D5226 /* zh-Hans */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5817F1401A9D7BDB00B3A0A1 /* Debug */ = {

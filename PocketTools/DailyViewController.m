@@ -100,9 +100,10 @@
         numberPerLine = 5;
     }
     NSInteger numberOfLine = 1;
-    NSInteger count = [elements count];
+    NSInteger count = 33;
+//    [elements count];
     if (count > numberPerLine) {
-        if ([elements count] % numberPerLine == 0) {
+        if (count % numberPerLine == 0) {
             numberOfLine = count / numberPerLine;
         } else {
             numberOfLine = count / numberPerLine + 1;
@@ -110,22 +111,35 @@
     } else {
         numberOfLine = 1;
     }
+    NSInteger page = 1;
+    if (numberPerLine > 2) {
+        if (count % (numberPerLine * 2) == 0) {
+            page = count / (numberPerLine * 2);
+        } else {
+            page = (count / (numberPerLine * 2)) + 1;
+        }
+    } else {
+        page = 1;
+    }
+    NSLog(@"总共=>%ld页", page);
     
     CGRect rect = CGRectZero;
     CGFloat width = [UIScreen mainScreen].bounds.size.width / numberPerLine;
     CGFloat height = width;
     rect.size.width = width;
     rect.size.height = height;
+    NSInteger cPage = 1;
     for (int i = 0; i < count;) {
-        AppInfoEntity *entity = elements[i];
+//        AppInfoEntity *entity = elements[i];
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [button setImage:[UIImage imageNamed:entity.iconName] forState:UIControlStateNormal];
+//        [button setImage:[UIImage imageNamed:entity.iconName] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(menuButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [button setTitle:[NSString stringWithFormat:@"%d", i] forState:UIControlStateNormal];
         [button setTag:i];
         button.frame = rect;
         
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, button.frame.size.height - 10, button.frame.size.width, 15)];
-        label.text = entity.appName;
+//        label.text = entity.appName;
         label.font = [UIFont systemFontOfSize:10];
         label.textColor = [UIColor whiteColor];
         label.textAlignment = NSTextAlignmentCenter;
@@ -133,17 +147,21 @@
         
         [_menuScrollView addSubview:button];
         i++;
+       
         if (i % (numberPerLine * numberOfLine) == 0) {
-            rect.origin.x = _menuScrollView.bounds.size.width * (count / numberPerLine);
+            rect.origin.x = (cPage - 1) * _menuScrollView.bounds.size.width + _menuScrollView.bounds.size.width * (count / numberPerLine);
             rect.origin.y = 0;
         } else if (i % numberPerLine == 0) {
-            rect.origin.x = 0;
-            rect.origin.y = height * (i / numberPerLine);
+            rect.origin.x = (cPage - 1) * _menuScrollView.bounds.size.width;
+            if (i % (numberPerLine * 2) == 0) {
+                cPage++;
+            }
+            rect.origin.y = height ;
         } else {
-            rect.origin.x += width;
+            rect.origin.x = rect.origin.x + width + (cPage - 1) * _menuScrollView.bounds.size.width;
         }
     }
-    _menuScrollView.contentSize = CGSizeMake(_menuScrollView.bounds.size.width, height * (numberOfLine - 1));
+    _menuScrollView.contentSize = CGSizeMake(_menuScrollView.bounds.size.width * page, height * 2);
 }
 
 - (void)menuButtonClicked:(id)sender {

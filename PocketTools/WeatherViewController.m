@@ -59,6 +59,7 @@
     [self.navigationController pushViewController:viewCtrl animated:YES];
 }
 
+
 - (void)searchCityByName:(NSString *)name {
     [self displayHUD:@"加载中..."];
     [[ServiceRequest shared] getWeatherByIdOrName:name withBlock:^(NSDictionary *result, NSError *error) {
