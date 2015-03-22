@@ -13,5 +13,6 @@
 @property (nonatomic, strong) NSString *appName;
 @property (nonatomic, strong) NSString *controlName;
 @property (nonatomic, strong) NSString *iconName;
+@property (nonatomic, strong) NSString *url;
 + (NSMutableArray *)initWithArray:(NSArray *)infoArray;
 @end

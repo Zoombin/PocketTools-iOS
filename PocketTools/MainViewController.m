@@ -11,6 +11,7 @@
 #import "WeatherCurrentInfo.h"
 #import "WeatherFutureInfo.h"
 #import "WeatherTodayInfo.h"
+#import "WebViewController.h"
 
 @interface MainViewController ()
 
@@ -18,6 +19,7 @@
 
 @implementation MainViewController {
     NSArray *allApps;
+    NSArray *allStroes;
     NSArray *currentApps;
     NSMutableArray *bottomButtons;
     UIScrollView *menuScrollView;
@@ -46,6 +48,7 @@
     [self bottomButtonClicked:bottomButtons[0]];
     
     [self initAllApps];
+    [self initAllStores];
     [self initMenuButtons:0];
     [self searchCityByName:@"苏州"];
     // Do any additional setup after loading the view, typically from a nib.
@@ -180,6 +183,14 @@
     }
 }
 
+- (void)initAllStores {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"StoreList" ofType:@"plist"];
+    NSArray *infoArray = [[NSArray alloc] initWithContentsOfFile:path];
+    if ([infoArray count] > 0) {
+        allStroes = [AppInfoEntity initWithArray:infoArray];
+    }
+}
+
 - (void)initAllApps {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"AppList" ofType:@"plist"];
     NSArray *infoArray = [[NSArray alloc] initWithContentsOfFile:path];
@@ -209,7 +220,7 @@
         currentApps = [self getAppsWithAppNames:apps];
         [self setElements:currentApps];
     } else if (index == 1) {
-         NSArray *apps = @[@"天气预报", @"空气质量", @"车辆违章", @"加油站", @"停车场", @"快递", @"电影", @"航班动态", @"星座", @"老黄历", @"周公解梦", @"POI", @"新闻"];
+         NSArray *apps = @[@"天气预报", @"空气质量", @"车辆违章", @"加油站", @"停车场", @"快递", @"电影", @"航班动态", @"星座", @"老黄历", @"周公解梦", @"POI"];
         currentApps = [self getAppsWithAppNames:apps];
         [self setElements:currentApps];
     } else if (index == 2) {
@@ -217,10 +228,26 @@
         currentApps = [self getAppsWithAppNames:apps];
         [self setElements:currentApps];
     } else if (index == 3) {
-        NSArray *apps = @[];
-        currentApps = [self getAppsWithAppNames:apps];
+        NSArray *apps = @[@"天天特价", @"大众团购", @"一号店", @"美团外卖", @"饿了吗", @"百度外卖", @"外卖超人", @"聚划算", @"潮流女装", @"精品男装", @"周末去哪玩", @"美团", @"每日爆款", @"抢火车票", @"爱淘宝", @"彩票", @"猫眼", @"微信电影票"];
+        currentApps = [self getStoresWithAppNames:apps];
         [self setElements:currentApps];
     }
+}
+
+- (NSArray *)getStoresWithAppNames:(NSArray *)names {
+    if ([names count] == 0) {
+        return nil;
+    }
+    NSMutableArray *appsArray = [NSMutableArray array];
+    for (NSString *appName in names) {
+        for (int j = 0; j < allStroes.count; j++) {
+            AppInfoEntity *entity = allStroes[j];
+            if ([appName isEqualToString:entity.appName]) {
+                [appsArray addObject:entity];
+            }
+        }
+    }
+    return appsArray;
 }
 
 - (NSArray *)getAppsWithAppNames:(NSArray *)names {
@@ -318,7 +345,12 @@
 - (void)menuButtonClicked:(id)sender {
     NSLog(@"%ld", [sender tag]);
     AppInfoEntity *entity = currentApps[[sender tag]];
-    if ([entity.controlName isEqualToString:@""]) {
+    if (entity.url != nil) {
+        WebViewController *webViewController = [WebViewController new];
+        webViewController.url = entity.url;
+        webViewController.title = entity.appName;
+        [BackButtonTool addBackButton:webViewController];
+        [self.navigationController pushViewController:webViewController animated:YES];
         return;
     }
     UIViewController *viewCtrl = [NSClassFromString(entity.controlName) new];

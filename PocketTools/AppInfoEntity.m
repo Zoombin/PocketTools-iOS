@@ -16,6 +16,7 @@
         self.appName = attributes[@"appName"];
         self.controlName = attributes[@"controlName"];
         self.iconName = attributes[@"iconName"];
+        self.url = attributes[@"url"];
     }
     return self;
 }
