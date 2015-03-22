@@ -17,6 +17,7 @@
 #define POSTMAN_HISTORY @"postman_history"
 #define PHOTO_PASSWORD @"photo_password"
 #define PHOTO_LIST @"photo_list"
+#define BACKGROUND @"background"
 #define NETWORK_ERROR @"网络异常"
 
 @interface ServiceRequest : NSObject
@@ -27,6 +28,9 @@
 
 - (void)savePassword:(NSString *)hasSet;
 - (NSString *)getPassword;
+
+- (void)saveBackGround:(NSString *)name;
+- (NSString *)getBackground;
 
 - (void)savePostManSearch:(NSDictionary *)searchInfo;
 - (NSArray *)getPostManSearch;

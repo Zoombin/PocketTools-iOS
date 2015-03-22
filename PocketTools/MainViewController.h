@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainViewController : UIViewController <UIScrollViewDelegate>
+@interface MainViewController : UIViewController <UIScrollViewDelegate, UIActionSheetDelegate>
 
 @property (nonatomic, weak) IBOutlet UILabel *cityLabel;
 @property (nonatomic, weak) IBOutlet UILabel *timeLabel;
@@ -16,6 +16,8 @@
 @property (nonatomic, weak) IBOutlet UIView *weatherView;
 @property (nonatomic, weak) IBOutlet UIImageView *iconImageView;
 @property (nonatomic, weak) IBOutlet UILabel *weatherLabel;
-@property (nonatomic, weak) IBOutlet UILabel *rangeLabel;
+
+@property (nonatomic, weak) IBOutlet UILabel *lowLabel;
+@property (nonatomic, weak) IBOutlet UILabel *highLabel;
 @end
 

@@ -59,6 +59,17 @@ static ServiceRequest *request;
     return [userDefault objectForKey:PHOTO_PASSWORD];
 }
 
+- (void)saveBackGround:(NSString *)name {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    [userDefault setObject:name forKey:BACKGROUND];
+    [userDefault synchronize];
+}
+
+- (NSString *)getBackground {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    return [userDefault objectForKey:BACKGROUND];
+}
+
 - (void)savePostManSearch:(NSDictionary *)searchInfo {
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     NSArray *historyArray = [userDefault objectForKey:POSTMAN_HISTORY];
