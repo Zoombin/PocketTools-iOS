@@ -12,6 +12,7 @@
 #import "WeatherFutureInfo.h"
 #import "WeatherTodayInfo.h"
 #import "WebViewController.h"
+#import "ThreeHourInfo.h"
 
 @interface MainViewController ()
 
@@ -75,10 +76,26 @@
     [self initAllStores];
     [self initMenuButtons:0];
     [self searchCityByName:@"苏州"];
+    
     if([[ServiceRequest shared] getBackground]) {
         [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[[ServiceRequest shared] getBackground]]]];
     }
-    // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)threeHour:(NSString *)city {
+    [[ServiceRequest shared] threeHour:city withBlock:^(NSDictionary *result, NSError *error) {
+        NSLog(@"%@", result);
+        if (!error) {
+            ServiceResult *resultInfo = [[ServiceResult alloc] initWithAttributes:result];
+            if ([resultInfo.error_code integerValue] == 0) {
+                NSLog(@"%@", resultInfo.result);
+                NSArray *resultArray = (NSArray *)resultInfo.result;
+                weatherArray = [ThreeHourInfo initWithArray:resultArray];
+                NSLog(@"%@", weatherArray);
+                [self showThreeHourInfo];
+            }
+        }
+    }];
 }
 
 - (void)searchCityByName:(NSString *)name {
@@ -92,9 +109,9 @@
                 NSLog(@"%@", resultInfo.result);
                 WeatherTodayInfo *tInfo = [[WeatherTodayInfo alloc] initWithAttributes:resultInfo.result[@"today"]];
                 WeatherCurrentInfo *cInfo = [[WeatherCurrentInfo alloc] initWithAttributes:resultInfo.result[@"sk"]];
-                weatherArray = [WeatherFutureInfo initWithArray:[resultInfo.result[@"future"] allValues]];
                 [self showCurrentInfo:cInfo];
                 [self showTodayInfo:tInfo];
+                [self threeHour:name];
             } else {
                 [self displayHUDTitle:nil message:resultInfo.reason duration:DELAY_TIMES];
             }
@@ -102,6 +119,34 @@
             [self displayHUDTitle:nil message:NETWORK_ERROR duration:DELAY_TIMES];
         }
     }];
+}
+
+- (void)showThreeHourInfo {
+    CGFloat width = 80;
+    CGFloat height = _futureWeatherScrollView.frame.size.height/3;
+    for (int i = 0; i < [weatherArray count]; i++) {
+        NSLog(@"%d", i);
+        ThreeHourInfo *info = weatherArray[i];
+        UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(width * i, 0, width, height)];
+        [label1 setTextAlignment:NSTextAlignmentCenter];
+        [label1 setTextColor:[UIColor whiteColor]];
+        [label1 setFont:[UIFont systemFontOfSize:14]];
+        [label1 setText:[NSString stringWithFormat:@"%ld点", [info.sh integerValue]]];
+        [_futureWeatherScrollView addSubview:label1];
+        
+        UIImageView *iconView = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetMinX(label1.frame) + 20, CGRectGetMaxY(label1.frame), width / 2, height)];
+        NSString *icon = icons[info.weatherid][@"ic"];
+        [iconView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.png", icon]]];
+        [_futureWeatherScrollView addSubview:iconView];
+        
+        UILabel *label3 = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMinX(label1.frame), CGRectGetMaxY(iconView.frame), width, height)];
+        [label3 setTextAlignment:NSTextAlignmentCenter];
+        [label3 setTextColor:[UIColor whiteColor]];
+        [label3 setFont:[UIFont systemFontOfSize:14]];
+        [label3 setText:[NSString stringWithFormat:@"%@°", info.temp2]];
+        [_futureWeatherScrollView addSubview:label3];
+    }
+    [_futureWeatherScrollView setContentSize:CGSizeMake(width * [weatherArray count], 0)];
 }
 
 - (void)showTodayInfo:(WeatherTodayInfo *)tInfo {
@@ -148,7 +193,7 @@
 
 - (void)initScrollView {
     menuScrollView = [[UIScrollView alloc] init];
-    [menuScrollView setBackgroundColor:[UIColor colorWithRed:35/255.0 green:57/255.0 blue:70/255.0 alpha:1.0]];
+    [menuScrollView setBackgroundColor:[UIColor clearColor]];
     [menuScrollView setDelegate:self];
     [menuScrollView setScrollEnabled:YES];
     [menuScrollView setPagingEnabled:YES];
@@ -162,12 +207,13 @@
         numberPerLine = 5;
     }
     CGFloat width = [UIScreen mainScreen].bounds.size.width / numberPerLine;
-    CGFloat height = width + 20;
+    CGFloat height = width;
     [menuScrollView setFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - (height * 2) - buttonHeight - 20, [UIScreen mainScreen].bounds.size.width, height * 2)];
+    [menuScrollView setBackgroundColor:[UIColor clearColor]];
      [self.view addSubview:menuScrollView];
     
     pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(menuScrollView.frame), 320, 20)];
-    [pageControl setBackgroundColor:[UIColor colorWithRed:35/255.0 green:57/255.0 blue:70/255.0 alpha:1.0]];
+    [pageControl setBackgroundColor:[UIColor clearColor]];
     [pageControl addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:pageControl];
 }
@@ -186,8 +232,8 @@
         [button setBackgroundColor:[UIColor whiteColor]];
         [button addTarget:self action:@selector(bottomButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [button setTag:i];
-        [button setFrame:CGRectMake(i * (buttonWidth + 1), [UIScreen mainScreen].bounds.size.height - buttonHeight, buttonWidth, buttonHeight)];
-        [button setBackgroundColor:[UIColor colorWithRed:44/255.0 green:57/255.0 blue:59/255.0 alpha:0.8]];
+        [button setFrame:CGRectMake(i * buttonWidth, [UIScreen mainScreen].bounds.size.height - buttonHeight, buttonWidth, buttonHeight)];
+        [button setBackgroundColor:[UIColor colorWithRed:44/255.0 green:57/255.0 blue:59/255.0 alpha:0]];
         [button setBackgroundImage:[UIImage imageNamed:imageNames[i]] forState:UIControlStateNormal];
         [button setBackgroundImage:[UIImage imageNamed:imageSel[i]] forState:UIControlStateSelected];
         [self.view addSubview:button];
@@ -328,7 +374,7 @@
     [pageControl setNumberOfPages:page];
     CGRect rect = CGRectZero;
     CGFloat width = [UIScreen mainScreen].bounds.size.width / numberPerLine;
-    CGFloat height = width + 20;
+    CGFloat height = width;
     rect.size.width = width;
     rect.size.height = height;
     NSInteger index = 0;
@@ -338,11 +384,11 @@
         AppInfoEntity *entity = elements[i];
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setImage:[UIImage imageNamed:entity.iconName] forState:UIControlStateNormal];
-        [button setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 15, 0)];
+        [button setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 20, 0)];
         [button.layer setBorderColor:[UIColor whiteColor].CGColor];
         [button addTarget:self action:@selector(menuButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        [button setBackgroundColor:[UIColor colorWithRed:35/255.0 green:57/255.0 blue:70/255.0 alpha:1.0]];
-        [button.layer setBorderWidth:.5];
+        [button setBackgroundColor:[UIColor clearColor]];
+//        [button.layer setBorderWidth:.5];
         [button setTag:i];
         if (i % numberPerLine == 0 && i != 0) {
             rect.origin.x = index * width;
@@ -360,7 +406,7 @@
         }
         button.frame = CGRectMake(index * width + currentPage * numberPerLine * width, -64 + (height * line), width, height);
         
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, button.frame.size.height - 25, button.frame.size.width, 15)];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, button.frame.size.height - 15, button.frame.size.width, 10)];
         label.text = entity.appName;
         label.font = [UIFont systemFontOfSize:10];
         label.textColor = [UIColor whiteColor];

@@ -65,6 +65,7 @@
 		18E4FC421AB1D57E001E021E /* JBImageFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4FC341AB1D57E001E021E /* JBImageFileManager.m */; };
 		18E4FC431AB1D57E001E021E /* JBPlistFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4FC361AB1D57E001E021E /* JBPlistFileManager.m */; };
 		18E4FC461AB1D5C7001E021E /* CalandarTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4FC451AB1D5C7001E021E /* CalandarTitleView.m */; };
+		5805447E1ABFC336004BB298 /* ThreeHourInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5805447D1ABFC336004BB298 /* ThreeHourInfo.m */; };
 		5817F1251A9D7BDB00B3A0A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F1241A9D7BDB00B3A0A1 /* main.m */; };
 		5817F12B1A9D7BDB00B3A0A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F12A1A9D7BDB00B3A0A1 /* MainViewController.m */; };
 		5817F1301A9D7BDB00B3A0A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5817F12F1A9D7BDB00B3A0A1 /* Images.xcassets */; };
@@ -252,7 +253,7 @@
 		1872F3BF1AAAFA16007F60BD /* PhotoPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPasswordViewController.h; sourceTree = "<group>"; };
 		1872F3C01AAAFA16007F60BD /* PhotoPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPasswordViewController.m; sourceTree = "<group>"; };
 		1872F3C11AAAFA16007F60BD /* PhotoPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoPasswordViewController.xib; sourceTree = "<group>"; };
-		18D937021ABE624300DDAF75 /* StoreList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StoreList.plist; sourceTree = "<group>"; };
+		18D937021ABE624300DDAF75 /* StoreList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = StoreList.plist; path = ../PocketTools/StoreList.plist; sourceTree = "<group>"; };
 		18D937041ABE67AD00DDAF75 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		18D937051ABE67AD00DDAF75 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		18D937061ABE67AD00DDAF75 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
@@ -299,6 +300,8 @@
 		18E4FC361AB1D57E001E021E /* JBPlistFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBPlistFileManager.m; sourceTree = "<group>"; };
 		18E4FC441AB1D5C7001E021E /* CalandarTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalandarTitleView.h; sourceTree = "<group>"; };
 		18E4FC451AB1D5C7001E021E /* CalandarTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalandarTitleView.m; sourceTree = "<group>"; };
+		5805447C1ABFC336004BB298 /* ThreeHourInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeHourInfo.h; sourceTree = "<group>"; };
+		5805447D1ABFC336004BB298 /* ThreeHourInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeHourInfo.m; sourceTree = "<group>"; };
 		5817F11F1A9D7BDB00B3A0A1 /* PocketTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5817F1231A9D7BDB00B3A0A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5817F1241A9D7BDB00B3A0A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -706,7 +709,6 @@
 				588A3DE41AA4428300EB1066 /* AppList.plist */,
 				5845D84F1AA547F60007E4D8 /* PocketTools.pch */,
 				588CE9571AB6D60F0068AA28 /* Weather.plist */,
-				18D937021ABE624300DDAF75 /* StoreList.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -714,6 +716,7 @@
 		5817F13B1A9D7BDB00B3A0A1 /* PocketToolsTests */ = {
 			isa = PBXGroup;
 			children = (
+				18D937021ABE624300DDAF75 /* StoreList.plist */,
 				5817F13E1A9D7BDB00B3A0A1 /* PocketToolsTests.m */,
 				5817F13C1A9D7BDB00B3A0A1 /* Supporting Files */,
 			);
@@ -1128,6 +1131,8 @@
 				588CE9501AB6CEA30068AA28 /* WeatherTodayInfo.m */,
 				588CE9521AB6D0FA0068AA28 /* WeatherFutureInfo.h */,
 				588CE9531AB6D0FA0068AA28 /* WeatherFutureInfo.m */,
+				5805447C1ABFC336004BB298 /* ThreeHourInfo.h */,
+				5805447D1ABFC336004BB298 /* ThreeHourInfo.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -1378,6 +1383,7 @@
 				1872F3B51AAAE1DC007F60BD /* DreamListViewController.m in Sources */,
 				5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */,
 				582CC91D1AB2B4A90074C3B6 /* CalandarInfo.m in Sources */,
+				5805447E1ABFC336004BB298 /* ThreeHourInfo.m in Sources */,
 				5858BD991AB127280000F07C /* OilViewController.m in Sources */,
 				1823AAF51AB71E8E00C09D5C /* WeatherCell.m in Sources */,
 				1823AADA1AB621EE00C09D5C /* STSInfo.m in Sources */,

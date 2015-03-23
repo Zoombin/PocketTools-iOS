@@ -19,5 +19,6 @@
 
 @property (nonatomic, weak) IBOutlet UILabel *lowLabel;
 @property (nonatomic, weak) IBOutlet UILabel *highLabel;
+@property (nonatomic, weak) IBOutlet UIScrollView *futureWeatherScrollView;
 @end
 
