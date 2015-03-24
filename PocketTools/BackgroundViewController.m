@@ -44,6 +44,7 @@
     
     [self allUnSelected];
     [self selectWithIndex:index];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[[ServiceRequest shared] getBackground]]]];
 }
 
 - (void)selectWithIndex:(NSInteger)index {

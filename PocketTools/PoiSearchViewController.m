@@ -48,6 +48,7 @@
         [_locationManager requestAlwaysAuthorization];//添加这句
     }
     [_locationManager startUpdatingLocation];
+    self.navigationController.navigationBar.translucent = YES;
     // Do any additional setup after loading the view from its nib.
 }
 

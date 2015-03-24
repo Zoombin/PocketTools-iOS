@@ -36,11 +36,12 @@
 }
 
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     if([[ServiceRequest shared] getBackground]) {
         [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[[ServiceRequest shared] getBackground]]]];
     }
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[[ServiceRequest shared] getBackground]]]];
 }
 
 - (void)viewDidLoad {
@@ -60,9 +61,32 @@
     [self initAllApps];
     [self initAllStores];
     [self initMenuButtons:0];
-    [self searchCityByName:@"苏州"];
     
+    self.locationManager = [[CLLocationManager alloc]init];
+    _locationManager.delegate = self;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    _locationManager.distanceFilter = 10;
+    if( ([[[UIDevice currentDevice] systemVersion] doubleValue] >= 8.0)) {
+        [_locationManager requestAlwaysAuthorization];//添加这句
+    }
+    [_locationManager startUpdatingLocation];
     
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation {
+    //获取所在地城市名
+    CLGeocoder *geocoder=[[CLGeocoder alloc]init];
+    [geocoder reverseGeocodeLocation:newLocation completionHandler:^(NSArray *placemarks,NSError *error)
+     {
+         for(CLPlacemark *placemark in placemarks)
+         {
+             NSString *cityName = [[placemark.addressDictionary objectForKey:@"City"] substringToIndex:2];
+             [self searchCityByName:cityName];
+         }
+     }];
+    [self.locationManager stopUpdatingLocation];
 }
 
 - (void)threeHour:(NSString *)city {
@@ -259,14 +283,6 @@
     if ([infoArray count] > 0) {
         allApps = [AppInfoEntity initWithArray:infoArray];
     }
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
 }
 
 - (void)removeAllButtons {

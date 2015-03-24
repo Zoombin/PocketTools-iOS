@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface MainViewController : UIViewController <UIScrollViewDelegate, UIActionSheetDelegate>
+@interface MainViewController : PTViewController <UIScrollViewDelegate, UIActionSheetDelegate, CLLocationManagerDelegate>
 
 @property (nonatomic, weak) IBOutlet UILabel *cityLabel;
 @property (nonatomic, weak) IBOutlet UILabel *timeLabel;
@@ -20,5 +21,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *lowLabel;
 @property (nonatomic, weak) IBOutlet UILabel *highLabel;
 @property (nonatomic, weak) IBOutlet UIScrollView *futureWeatherScrollView;
+
+@property (nonatomic, strong) CLLocationManager *locationManager;
 @end
 
