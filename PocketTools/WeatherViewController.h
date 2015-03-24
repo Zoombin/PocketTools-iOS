@@ -8,14 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "WeatherCitiesViewController.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface WeatherViewController : PTViewController <CitySelectDelegate>
+@interface WeatherViewController : PTViewController <CitySelectDelegate, CLLocationManagerDelegate>
 
 @property (nonatomic, weak) IBOutlet UIImageView *backgroundImg;
 @property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, weak) IBOutlet UIView *firstView;
 @property (nonatomic, weak) IBOutlet UILabel *temLabel;
-@property (nonatomic, weak) IBOutlet UILabel *temRangeLabel;
+@property (nonatomic, weak) IBOutlet UILabel *lowLabel;
+@property (nonatomic, weak) IBOutlet UILabel *highLabel;
 
 @property (nonatomic, weak) IBOutlet UIView *secondView;
 @property (nonatomic, weak) IBOutlet UIImageView *iconImageView;
@@ -33,4 +35,8 @@
 
 @property (nonatomic, weak) IBOutlet UIView *fourView;
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
+
+@property (nonatomic, weak) IBOutlet UIScrollView *weatherScrollView;
+
+@property (nonatomic, strong) CLLocationManager *locationManager;
 @end
