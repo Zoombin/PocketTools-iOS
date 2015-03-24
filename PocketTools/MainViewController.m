@@ -13,6 +13,7 @@
 #import "WeatherTodayInfo.h"
 #import "WebViewController.h"
 #import "ThreeHourInfo.h"
+#import "BackgroundViewController.h"
 
 @interface MainViewController ()
 
@@ -153,6 +154,9 @@
 
 - (void)menuClicked {
     //TODO:菜单
+    BackgroundViewController *viewCtrl = [BackgroundViewController new];
+    [BackButtonTool addBackButton:viewCtrl];
+    [self.navigationController pushViewController:viewCtrl animated:YES];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender

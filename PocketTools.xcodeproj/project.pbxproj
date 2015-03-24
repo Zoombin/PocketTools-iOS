@@ -98,6 +98,8 @@
 		582CC9351AB2DA4C0074C3B6 /* UnitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 582CC9331AB2DA4C0074C3B6 /* UnitViewController.m */; };
 		582CC9361AB2DA4C0074C3B6 /* UnitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 582CC9341AB2DA4C0074C3B6 /* UnitViewController.xib */; };
 		582CC9391AB2DD2C0074C3B6 /* UnitInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 582CC9381AB2DD2C0074C3B6 /* UnitInfo.m */; };
+		58329A021AC0F72600B546E7 /* BackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58329A001AC0F72600B546E7 /* BackgroundViewController.m */; };
+		58329A031AC0F72600B546E7 /* BackgroundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58329A011AC0F72600B546E7 /* BackgroundViewController.xib */; };
 		583C212F1ABAB23100A9C54B /* BackButtonTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 583C212E1ABAB23100A9C54B /* BackButtonTool.m */; };
 		583C91151AAE8E3C00F1D756 /* TicketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583C91131AAE8E3C00F1D756 /* TicketsViewController.m */; };
 		583C91161AAE8E3C00F1D756 /* TicketsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 583C91141AAE8E3C00F1D756 /* TicketsViewController.xib */; };
@@ -415,6 +417,9 @@
 		582CC9341AB2DA4C0074C3B6 /* UnitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UnitViewController.xib; sourceTree = "<group>"; };
 		582CC9371AB2DD2C0074C3B6 /* UnitInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitInfo.h; sourceTree = "<group>"; };
 		582CC9381AB2DD2C0074C3B6 /* UnitInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitInfo.m; sourceTree = "<group>"; };
+		583299FF1AC0F72600B546E7 /* BackgroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundViewController.h; sourceTree = "<group>"; };
+		58329A001AC0F72600B546E7 /* BackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundViewController.m; sourceTree = "<group>"; };
+		58329A011AC0F72600B546E7 /* BackgroundViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackgroundViewController.xib; sourceTree = "<group>"; };
 		583C212D1ABAB23100A9C54B /* BackButtonTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackButtonTool.h; sourceTree = "<group>"; };
 		583C212E1ABAB23100A9C54B /* BackButtonTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackButtonTool.m; sourceTree = "<group>"; };
 		583C91121AAE8E3C00F1D756 /* TicketsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketsViewController.h; sourceTree = "<group>"; };
@@ -1039,6 +1044,9 @@
 				18D937041ABE67AD00DDAF75 /* WebViewController.h */,
 				18D937051ABE67AD00DDAF75 /* WebViewController.m */,
 				18D937061ABE67AD00DDAF75 /* WebViewController.xib */,
+				583299FF1AC0F72600B546E7 /* BackgroundViewController.h */,
+				58329A001AC0F72600B546E7 /* BackgroundViewController.m */,
+				58329A011AC0F72600B546E7 /* BackgroundViewController.xib */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -1298,6 +1306,7 @@
 				582CC91A1AB277430074C3B6 /* CalendarViewController.xib in Resources */,
 				582CC9361AB2DA4C0074C3B6 /* UnitViewController.xib in Resources */,
 				583C91361AAEEAAA00F1D756 /* ImageScanViewController.xib in Resources */,
+				58329A031AC0F72600B546E7 /* BackgroundViewController.xib in Resources */,
 				5880F7631AB918440049014B /* DailyViewController.xib in Resources */,
 				582CC9271AB2CC850074C3B6 /* LeftContactCell.xib in Resources */,
 				582CC92C1AB2CCAE0074C3B6 /* RightContactCell.xib in Resources */,
@@ -1453,6 +1462,7 @@
 				585C82961AA7F7F800A98D16 /* ProvinceInfo.m in Sources */,
 				18E4FC3C1AB1D57E001E021E /* JBUnitView.m in Sources */,
 				5817F1251A9D7BDB00B3A0A1 /* main.m in Sources */,
+				58329A021AC0F72600B546E7 /* BackgroundViewController.m in Sources */,
 				583C91151AAE8E3C00F1D756 /* TicketsViewController.m in Sources */,
 				1823AADE1AB62A7400C09D5C /* PMViewController.m in Sources */,
 				583C91291AAE989600F1D756 /* DMKeychain.m in Sources */,
