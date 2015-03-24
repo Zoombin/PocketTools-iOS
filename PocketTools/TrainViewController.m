@@ -22,26 +22,41 @@
     NSArray *typeNames;
     NSArray *typeSimple;
     NSString *currentType;
+    NSInteger index;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    index = 0;
     trianInfoArray = [NSMutableArray array];
     typeSimple = @[@"G", @"K", @"T", @"D", @"Z", @"Q"];
     typeNames = @[@"高速动车", @"快速", @"空调特快", @"动车组", @"直达特快", @"其他"];
-    self.navigationItem.titleView = _titleSegmentedControl;
-    [_titleSegmentedControl addTarget:self action:@selector(valueChanged) forControlEvents:UIControlEventValueChanged];
-    [self valueChanged];
+    self.title = @"火车订票";
+    [self leftButtonClicked:nil];
     // Do any additional setup after loading the view from its nib.
 }
 
-- (void)valueChanged {
-    if (_titleSegmentedControl.selectedSegmentIndex == 0) {
-        [_tableView setTableHeaderView:_firstHeader];
-    } else if (_titleSegmentedControl.selectedSegmentIndex == 1) {
-        [_tableView setTableHeaderView:_searchBar];
-    }
+- (IBAction)leftButtonClicked:(id)sender {
+    index = 0;
+    [trianInfoArray removeAllObjects];
+    [_tableView reloadData];
+    [_tableView setTableHeaderView:_firstHeader];
 }
+
+- (IBAction)rightButtonClicked:(id)sender {
+    index = 1;
+    [trianInfoArray removeAllObjects];
+    [_tableView reloadData];
+    [_tableView setTableHeaderView:_searchView];
+}
+
+- (IBAction)replaceButtonClicked:(id)sender {
+    NSString *from = _startTextField.text;
+    NSString *to = _endTextField.text;
+    _startTextField.text = to;
+    _endTextField.text = from;
+}
+
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [_searchBar resignFirstResponder];
@@ -142,7 +157,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (_titleSegmentedControl.selectedSegmentIndex == 1) {
+    if (index == 1) {
         if (indexPath.row == 0) {
             return 70;
         } else {
@@ -156,7 +171,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"UITableViewCell";
-    if (_titleSegmentedControl.selectedSegmentIndex == 1) {
+    if (index == 1) {
         if (indexPath.row == 0) {
             TrainCell *cell = (TrainCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
             if (cell == nil) {
