@@ -24,6 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = NSLocalizedString(@"快递", nil);
+    [_searchButton.layer setCornerRadius:6.0];
+    [_searchButton.layer setMasksToBounds:YES];
     currentPostMan = 0;
     postmansArray = @[@"顺丰", @"申通", @"圆通", @"韵达", @"天天", @"EMS", @"中通", @"汇通"];
     postmanSimplesArray = @[@"sf", @"sto", @"yt", @"yd", @"tt", @"ems", @"zto", @"ht"];
