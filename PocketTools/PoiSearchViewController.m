@@ -27,6 +27,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = NSLocalizedString(@"POI", nil);
+    [_searchButton.layer setCornerRadius:6.0];
+    [_searchButton.layer setMasksToBounds:YES];
+    
+    [_nextPageButton.layer setCornerRadius:6.0];
+    [_nextPageButton.layer setMasksToBounds:YES];
+    
     //适配ios7
     if( ([[[UIDevice currentDevice] systemVersion] doubleValue]>=7.0))
     {

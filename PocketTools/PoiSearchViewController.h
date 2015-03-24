@@ -15,6 +15,7 @@
     IBOutlet UITextField* _cityText;
     IBOutlet UITextField* _keyText;
     IBOutlet UIButton* _nextPageButton;
+    IBOutlet UIButton* _searchButton;
     BMKPoiSearch* _poisearch;
     int curPage;
 }
