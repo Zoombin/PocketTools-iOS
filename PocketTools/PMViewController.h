@@ -10,10 +10,11 @@
 #import <CoreLocation/CoreLocation.h>
 #import "PMCitySelectViewController.h"
 
-@interface PMViewController : UIViewController <CitySelectDelegate, CLLocationManagerDelegate>
+@interface PMViewController : PTViewController <CitySelectDelegate, CLLocationManagerDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet UILabel *nowLabel;
 @property (nonatomic, weak) IBOutlet UILabel *nowPMLabel;
+@property (nonatomic, weak) IBOutlet UILabel *nowDesLabel;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @end

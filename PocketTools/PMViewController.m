@@ -7,6 +7,7 @@
 //
 
 #import "PMViewController.h"
+#import "PMCell.h"
 
 @interface PMViewController ()
 
@@ -30,6 +31,8 @@
         [_locationManager requestAlwaysAuthorization];//添加这句
     }
     [_locationManager startUpdatingLocation];
+    [self searchPMByCity:@"苏州"];
+    [self searchAirByCity:@"苏州"];
 }
 
 - (void)locationManager:(CLLocationManager *)manager
@@ -64,6 +67,8 @@
                     NSDictionary *dict = infoArray[0];
                     NSDictionary *cityNow = dict[@"citynow"];
                     _nowLabel.text = cityNow[@"AQI"];
+                    _nowDesLabel.text = cityNow[@"quality"];
+                    _nowDesLabel.backgroundColor = [self setColorWithPM:[cityNow[@"AQI"] integerValue]];
                     if (dict[@"lastMoniData"]) {
                         [locationArray addObjectsFromArray:[dict[@"lastMoniData"] allValues]];
                         [_tableView reloadData];
@@ -87,7 +92,7 @@
                 NSArray *infoArray = (NSArray *)resultInfo.result;
                 if ([infoArray count] != 0) {
                     NSDictionary *dict = infoArray[0];
-                    _nowPMLabel.text = [NSString stringWithFormat:@"PM2.5 : %@ PM10 : %@ SO2 : %@ NO2 : %@", dict[@"PM2.5"], dict[@"PM10"], dict[@"SO2"], dict[@"NO2"]];
+                    _nowPMLabel.text = [NSString stringWithFormat:@"PM2.5: %@ PM10: %@ SO2: %@ NO2: %@", dict[@"PM2.5"], dict[@"PM10"], dict[@"SO2"], dict[@"NO2"]];
                 }
             } else {
                 [self displayHUDTitle:nil message:resultInfo.reason duration:DELAY_TIMES];
@@ -116,23 +121,38 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44;
+    return 70;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"UITableViewCell";
     
-    UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    PMCell *cell = (PMCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+        NSArray *nibs = [[NSBundle mainBundle]loadNibNamed:@"PMCell" owner:nil options:nil];
+        cell = [nibs lastObject];
         cell.backgroundColor = [UIColor clearColor];
     }
-    cell.textLabel.textColor = [UIColor whiteColor];
-    cell.detailTextLabel.textColor = [UIColor whiteColor];
     NSDictionary *info = locationArray[indexPath.row];
-    cell.textLabel.text = info[@"city"];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"空气质量: %@", info[@"AQI"]];
+    cell.locationLabel.text = info[@"city"];
+    cell.pmDescribeLabel.text = info[@"quality"];
+    cell.pmDescribeLabel.textColor = [self setColorWithPM:[info[@"AQI"] integerValue]];
+    cell.pmLabel.textColor = [self setColorWithPM:[info[@"AQI"] integerValue]];
+    cell.pmLabel.text = info[@"AQI"];
     return cell;
+}
+
+- (UIColor *)setColorWithPM:(NSInteger)pm {
+    if (pm <= 50) {
+        return [UIColor blueColor];
+    } else if (pm > 50 && pm <= 100) {
+        return [UIColor greenColor];
+    } else if (pm > 100 && pm <= 200) {
+        return [UIColor yellowColor];
+    } else if (pm > 200) {
+        return [UIColor redColor];
+    }
+    return [UIColor clearColor];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

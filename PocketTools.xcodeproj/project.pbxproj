@@ -178,6 +178,8 @@
 		58AD9C8A1AB01B6900EF2619 /* ScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58AD9C881AB01B6900EF2619 /* ScanViewController.xib */; };
 		58AD9C8D1AB0378E00EF2619 /* GoodsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AD9C8C1AB0378E00EF2619 /* GoodsInfo.m */; };
 		58AD9C901AB03D2D00EF2619 /* ShopInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AD9C8F1AB03D2D00EF2619 /* ShopInfo.m */; };
+		58B334F51AC15B08008AB9FA /* PMCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B334F31AC15B08008AB9FA /* PMCell.m */; };
+		58B334F61AC15B08008AB9FA /* PMCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58B334F41AC15B08008AB9FA /* PMCell.xib */; };
 		58BE59081AA6A60C001811D9 /* CarVioSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BE59061AA6A60C001811D9 /* CarVioSearchViewController.m */; };
 		58BE59091AA6A60C001811D9 /* CarVioSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58BE59071AA6A60C001811D9 /* CarVioSearchViewController.xib */; };
 		58BE590D1AA6ABCD001811D9 /* ExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BE590B1AA6ABCD001811D9 /* ExchangeViewController.m */; };
@@ -551,6 +553,9 @@
 		58AD9C8C1AB0378E00EF2619 /* GoodsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsInfo.m; sourceTree = "<group>"; };
 		58AD9C8E1AB03D2D00EF2619 /* ShopInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopInfo.h; sourceTree = "<group>"; };
 		58AD9C8F1AB03D2D00EF2619 /* ShopInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopInfo.m; sourceTree = "<group>"; };
+		58B334F21AC15B08008AB9FA /* PMCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMCell.h; sourceTree = "<group>"; };
+		58B334F31AC15B08008AB9FA /* PMCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMCell.m; sourceTree = "<group>"; };
+		58B334F41AC15B08008AB9FA /* PMCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMCell.xib; sourceTree = "<group>"; };
 		58BE59051AA6A60C001811D9 /* CarVioSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarVioSearchViewController.h; sourceTree = "<group>"; };
 		58BE59061AA6A60C001811D9 /* CarVioSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarVioSearchViewController.m; sourceTree = "<group>"; };
 		58BE59071AA6A60C001811D9 /* CarVioSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarVioSearchViewController.xib; sourceTree = "<group>"; };
@@ -990,6 +995,9 @@
 				1823AAE01AB62AAD00C09D5C /* PMCitySelectViewController.h */,
 				1823AAE11AB62AAD00C09D5C /* PMCitySelectViewController.m */,
 				1823AAE21AB62AAD00C09D5C /* PMCitySelectViewController.xib */,
+				58B334F21AC15B08008AB9FA /* PMCell.h */,
+				58B334F31AC15B08008AB9FA /* PMCell.m */,
+				58B334F41AC15B08008AB9FA /* PMCell.xib */,
 				1823AADB1AB62A7400C09D5C /* PMViewController.h */,
 				1823AADC1AB62A7400C09D5C /* PMViewController.m */,
 				1823AADD1AB62A7400C09D5C /* PMViewController.xib */,
@@ -1295,6 +1303,7 @@
 				18E4FC071AADF48E001E021E /* LLPayViewController.xib in Resources */,
 				585CB07A1AB66AD100E0D390 /* StarSelectViewController.xib in Resources */,
 				1823AAEC1AB6480500C09D5C /* WeatherViewController.xib in Resources */,
+				58B334F61AC15B08008AB9FA /* PMCell.xib in Resources */,
 				582CC9311AB2D9AC0074C3B6 /* TrainViewController.xib in Resources */,
 				1872F3BE1AAAE71C007F60BD /* DreamTypeSecondViewController.xib in Resources */,
 				5858BDA21AB130DB0000F07C /* OilCell.xib in Resources */,
@@ -1376,6 +1385,7 @@
 				585C829C1AA802D500A98D16 /* CarType.m in Sources */,
 				1823AAF01AB64AAD00C09D5C /* WeatherCitiesViewController.m in Sources */,
 				18E4FC0B1AB09AEE001E021E /* MoiveViewController.m in Sources */,
+				58B334F51AC15B08008AB9FA /* PMCell.m in Sources */,
 				583C912B1AAE989600F1D756 /* DMPasscodeConfig.m in Sources */,
 				58BE59111AA6B75D001811D9 /* MoneyEntity.m in Sources */,
 				583C912C1AAE989600F1D756 /* DMPasscodeInternalField.m in Sources */,
