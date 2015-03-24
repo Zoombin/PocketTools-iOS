@@ -35,12 +35,8 @@
     currentTypeIndex = -1;
     currentProviceIndex = -1;
     
-    UIButton *searchButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [searchButton setBackgroundColor:[UIColor colorWithRed:33/255.0 green:162/255.0 blue:232/255.0 alpha:1.0]];
-    [searchButton setTitle:@"查询" forState:UIControlStateNormal];
-    [searchButton setFrame:CGRectMake(0, 0, 60, 30)];
-    [searchButton addTarget:self action:@selector(searchButtonClicked) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:searchButton];
+    [_searchButton.layer setCornerRadius:6.0];
+    [_searchButton.layer setMasksToBounds:YES];
     
     [self loadCarTypes];
     [self loadAllCities];
@@ -53,16 +49,19 @@
 
 - (void)hidenAll {
     _carFrameLabel.hidden = YES;
+    _line4.hidden = YES;
     _carFrameTextField.hidden = YES;
     
     _engineLabel.hidden = YES;
+    _line5.hidden = YES;
     _engineTextField.hidden = YES;
     
     _registLabel.hidden = YES;
+    _line6.hidden = YES;
     _registTextField.hidden = YES;
 }
 
-- (void)searchButtonClicked {
+- (IBAction)searchButtonClicked:(id)sender {
     [_carNumTextField resignFirstResponder];
     if ([allProvices count] == 0 || carTypes == nil) {
         [self displayHUDTitle:nil message:@"城市信息或车辆类型尚未获取完毕!" duration:DELAY_TIMES];
@@ -268,22 +267,22 @@
 - (void)showLabel {
     [self hidenAll];
     CityInfo *info = allCitys[currentIndex];
-    NSLog(@"%ld", [info.classa integerValue]);
-    NSLog(@"%ld", [info.engine integerValue]);
-    NSLog(@"%ld", [info.regist integerValue]);
     if ([info.classa isEqualToString:@"1"]) {
         _carFrameTextField.hidden = NO;
         _carFrameLabel.hidden = NO;
+        _line4.hidden = NO;
         _carFrameTextField.placeholder = [info.classno integerValue] == 0 ? @"完整的车架号码" : [NSString stringWithFormat:@"车架号后%@位", info.classno];
     }
     if ([info.engine isEqualToString:@"1"]) {
         _engineTextField.hidden = NO;
         _engineLabel.hidden = NO;
+        _line5.hidden = NO;
         _engineTextField.placeholder = [info.engineno integerValue] == 0 ? @"完整的发动机号" : [NSString stringWithFormat:@"发动机号后%@位", info.engineno];
     }
     if ([info.regist isEqualToString:@"1"]) {
         _registTextField.hidden = NO;
         _registLabel.hidden = NO;
+        _line6.hidden = NO;
         _registTextField.placeholder = [info.registno integerValue] == 0 ? @"完整的登记证书号" : [NSString stringWithFormat:@"登记证书后%@位", info.registno];
     }
     

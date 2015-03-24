@@ -22,24 +22,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = NSLocalizedString(@"电影", nil);
-//    [_allSegmetedControl addTarget:self action:@selector(allValueChanged:) forControlEvents:UIControlEventValueChanged];
     [_areaSegmetedControl addTarget:self action:@selector(areaValueChanged:) forControlEvents:UIControlEventValueChanged];
-//    self.navigationItem.titleView = _allSegmetedControl;
-//    [self allValueChanged:nil];
     [self leftButtonClicked:nil];
 }
 
-//- (void)allValueChanged:(id)sender {
-//    if (_allSegmetedControl.selectedSegmentIndex == 0) {
-//        [self loadAreaMoview:@"CN"];
-//        [_tableView setTableHeaderView:_areaSegmetedControl];
-//        _areaSegmetedControl.selectedSegmentIndex = 0;
-//    } else {
-//        [self loadWebMovie];
-//        [_tableView setTableHeaderView:nil];
-//    }
-//}
-//
 - (void)areaValueChanged:(id)sender {
 //    CN US UK
     if (_areaSegmetedControl.selectedSegmentIndex == 0) {

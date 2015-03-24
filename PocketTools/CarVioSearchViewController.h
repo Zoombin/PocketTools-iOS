@@ -24,7 +24,16 @@
 @property (nonatomic, weak) IBOutlet UILabel *carFrameLabel;
 @property (nonatomic, weak) IBOutlet UILabel *registLabel;
 
+@property (nonatomic, weak) IBOutlet UIButton *searchButton;
+@property (nonatomic, weak) IBOutlet UILabel *line1;
+@property (nonatomic, weak) IBOutlet UILabel *line2;
+@property (nonatomic, weak) IBOutlet UILabel *line3;
+@property (nonatomic, weak) IBOutlet UILabel *line4;
+@property (nonatomic, weak) IBOutlet UILabel *line5;
+@property (nonatomic, weak) IBOutlet UILabel *line6;
+
 - (IBAction)sureButtonClicked:(id)sender;
+- (IBAction)searchButtonClicked:(id)sender;
 - (IBAction)seletTypeButtonClicked:(id)sender;
 - (IBAction)selectCityButtonClicked:(id)sender;
 @end
