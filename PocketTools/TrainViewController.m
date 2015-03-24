@@ -59,7 +59,6 @@
     _endTextField.text = from;
 }
 
-
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [_searchBar resignFirstResponder];
     if ([searchBar.text isEqualToString:@""]) {

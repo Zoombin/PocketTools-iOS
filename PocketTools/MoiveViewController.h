@@ -11,6 +11,11 @@
 @interface MoiveViewController : PTViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
-@property (nonatomic, weak) IBOutlet UISegmentedControl *allSegmetedControl;
+//@property (nonatomic, weak) IBOutlet UISegmentedControl *allSegmetedControl;
+@property (nonatomic, strong) IBOutlet UIView *areaView;
 @property (nonatomic, strong) IBOutlet UISegmentedControl *areaSegmetedControl;
+@property (nonatomic, strong) IBOutlet UIView *leftHeaderView;
+@property (nonatomic, strong) IBOutlet UIView *rightHeaderView;
+- (IBAction)leftButtonClicked:(id)sender;
+- (IBAction)rightButtonClicked:(id)sender;
 @end

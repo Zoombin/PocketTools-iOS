@@ -15,29 +15,31 @@
 
 @implementation MoiveViewController {
     NSArray *movieArray;
+    NSInteger index;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = NSLocalizedString(@"电影", nil);
-    [_allSegmetedControl addTarget:self action:@selector(allValueChanged:) forControlEvents:UIControlEventValueChanged];
+//    [_allSegmetedControl addTarget:self action:@selector(allValueChanged:) forControlEvents:UIControlEventValueChanged];
     [_areaSegmetedControl addTarget:self action:@selector(areaValueChanged:) forControlEvents:UIControlEventValueChanged];
-    self.navigationItem.titleView = _allSegmetedControl;
-    [self allValueChanged:nil];
+//    self.navigationItem.titleView = _allSegmetedControl;
+//    [self allValueChanged:nil];
+    [self leftButtonClicked:nil];
 }
 
-- (void)allValueChanged:(id)sender {
-    if (_allSegmetedControl.selectedSegmentIndex == 0) {
-        [self loadAreaMoview:@"CN"];
-        [_tableView setTableHeaderView:_areaSegmetedControl];
-        _areaSegmetedControl.selectedSegmentIndex = 0;
-    } else {
-        [self loadWebMovie];
-        [_tableView setTableHeaderView:nil];
-    }
-}
-
+//- (void)allValueChanged:(id)sender {
+//    if (_allSegmetedControl.selectedSegmentIndex == 0) {
+//        [self loadAreaMoview:@"CN"];
+//        [_tableView setTableHeaderView:_areaSegmetedControl];
+//        _areaSegmetedControl.selectedSegmentIndex = 0;
+//    } else {
+//        [self loadWebMovie];
+//        [_tableView setTableHeaderView:nil];
+//    }
+//}
+//
 - (void)areaValueChanged:(id)sender {
 //    CN US UK
     if (_areaSegmetedControl.selectedSegmentIndex == 0) {
@@ -99,6 +101,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)leftButtonClicked:(id)sender {
+    index = 0;
+    [self loadAreaMoview:@"CN"];
+    [_tableView setFrame:CGRectMake(_tableView.frame.origin.x, _tableView.frame.origin.y, _tableView.frame.size.width, _tableView.frame.size.height - _areaView.frame.size.height)];
+    [_areaView setHidden:NO];
+    [_tableView setTableHeaderView:_leftHeaderView];
+}
+
+- (IBAction)rightButtonClicked:(id)sender {
+    index = 1;
+    [self loadWebMovie];
+    [_tableView setFrame:CGRectMake(_tableView.frame.origin.x, _tableView.frame.origin.y, _tableView.frame.size.width, _tableView.frame.size.height + _areaView.frame.size.height)];
+    [_areaView setHidden:YES];
+    [_tableView setTableHeaderView:_rightHeaderView];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [movieArray count];
 }
@@ -115,15 +133,17 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
         cell.backgroundColor = [UIColor clearColor];
     }
-    cell.textLabel.textColor = [UIColor whiteColor];
-    cell.detailTextLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.textColor = [UIColor colorWithRed:157/255.0 green:157/255.0 blue:157/255.0 alpha:1.0];
+    cell.textLabel.font = [UIFont systemFontOfSize:14];
+    cell.detailTextLabel.textColor = [UIColor colorWithRed:157/255.0 green:157/255.0 blue:157/255.0 alpha:1.0];
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
     MovieInfo *info = movieArray[indexPath.row];
-    if (_allSegmetedControl.selectedSegmentIndex == 0) {
+    if (index == 0) {
         cell.textLabel.text = [NSString stringWithFormat:@"%@:%@", info.rid, info.name];
         cell.detailTextLabel.text = [NSString stringWithFormat:@"总票房:%@", info.tboxoffice];
     } else {
         cell.textLabel.text = [NSString stringWithFormat:@"%@", info.name];
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"价格:%@", info.boxoffice];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"票房:%@", info.boxoffice];
     }
     return cell;
 }
