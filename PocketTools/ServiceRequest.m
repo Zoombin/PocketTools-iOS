@@ -26,6 +26,50 @@ static ServiceRequest *request;
     return request;
 }
 
+//获取&保存城市名称
+- (void)saveCityName:(NSString *)cityName {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    return [userDefault setObject:cityName forKey:CITY_NAME];
+}
+
+- (NSString *)getCityName {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    return [userDefault objectForKey:CITY_NAME];
+}
+
+//获取&保存天气信息
+- (void)saveWeather:(NSDictionary *)info {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    return [userDefault setObject:info forKey:WEATHER_INFO];
+}
+
+- (NSDictionary *)getWeather {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    return [userDefault objectForKey:WEATHER_INFO];
+}
+
+//获取&保存3小时信息
+- (void)saveThreeWeather:(NSArray *)array {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    return [userDefault setObject:array forKey:THREE_HOUR];
+}
+
+- (NSArray *)getThreeWeather {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    return [userDefault objectForKey:THREE_HOUR];
+}
+
+//获取&保存PM信息
+- (void)savePMInfo:(NSDictionary *)info {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    return [userDefault setObject:info forKey:PM_VALUE];
+}
+
+- (NSDictionary *)getPMinfo {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    return [userDefault objectForKey:PM_VALUE];
+}
+
 - (void)saveUserSearch:(NSDictionary *)searchInfo {
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     NSArray *historyArray = [userDefault objectForKey:SEARCH_HISTORY];

@@ -19,8 +19,27 @@
 #define PHOTO_LIST @"photo_list"
 #define BACKGROUND @"background"
 #define NETWORK_ERROR @"网络异常"
+#define CITY_NAME @"cityname"
+#define WEATHER_INFO @"weather"
+#define PM_VALUE @"pm2.5"
+#define THREE_HOUR @"threehour"
 
 @interface ServiceRequest : NSObject
+//获取&保存城市名称
+- (void)saveCityName:(NSString *)cityName;
+- (NSString *)getCityName;
+
+//获取&保存天气信息
+- (void)saveWeather:(NSDictionary *)info;
+- (NSDictionary *)getWeather;
+
+//获取&保存3小时信息
+- (void)saveThreeWeather:(NSArray *)array;
+- (NSArray *)getThreeWeather;
+
+//获取&保存PM信息
+- (void)savePMInfo:(NSDictionary *)info;
+- (NSDictionary *)getPMinfo;
 
 - (void)saveAppID:(NSString *)appId;
 - (void)saveUserSearch:(NSDictionary *)searchInfo;
