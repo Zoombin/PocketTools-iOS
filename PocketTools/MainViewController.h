@@ -21,6 +21,8 @@
 @property (nonatomic, weak) IBOutlet UILabel *lowLabel;
 @property (nonatomic, weak) IBOutlet UILabel *highLabel;
 @property (nonatomic, weak) IBOutlet UIScrollView *futureWeatherScrollView;
+@property (nonatomic, weak) IBOutlet UILabel *pmLabel;
+@property (nonatomic, weak) IBOutlet UILabel *pmDesLabel;
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @end

@@ -12,6 +12,8 @@
                 <outlet property="highLabel" destination="z5U-pG-0Sf" id="1pW-pt-VFH"/>
                 <outlet property="iconImageView" destination="hJz-Qs-zTj" id="5sA-Tb-Wmt"/>
                 <outlet property="lowLabel" destination="dZs-eL-J7R" id="qld-Kr-wmn"/>
+                <outlet property="pmDesLabel" destination="0R4-h5-vIJ" id="lyQ-t1-oN7"/>
+                <outlet property="pmLabel" destination="GB0-nk-Do9" id="y0F-4y-yIQ"/>
                 <outlet property="timeLabel" destination="EgL-p5-iF9" id="sfQ-ic-MZ3"/>
                 <outlet property="tmptureLabel" destination="ayJ-ax-cCa" id="VLw-n5-XbB"/>
                 <outlet property="view" destination="iN0-l3-epB" id="scU-dy-pfN"/>
@@ -90,6 +92,27 @@
                     <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PM2.5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YMd-kH-1FS">
+                    <rect key="frame" x="258" y="49" width="42" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GB0-nk-Do9">
+                    <rect key="frame" x="258" y="70" width="42" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0R4-h5-vIJ">
+                    <rect key="frame" x="249" y="99" width="63" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>

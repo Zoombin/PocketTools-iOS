@@ -89,6 +89,38 @@
     [self.locationManager stopUpdatingLocation];
 }
 
+- (void)searchPMByCity:(NSString *)cityName {
+    [[ServiceRequest shared] searchAirByCity:cityName withBlock:^(NSDictionary *result, NSError *error) {
+        if (!error) {
+            ServiceResult *resultInfo= [[ServiceResult alloc] initWithAttributes:result];
+            if ([resultInfo.error_code integerValue] == 0) {
+                [self hideHUD:YES];
+                NSArray *infoArray = (NSArray *)resultInfo.result;
+                if ([infoArray count] != 0) {
+                    NSDictionary *dict = infoArray[0];
+                    NSDictionary *cityNow = dict[@"citynow"];
+                    _pmLabel.text = cityNow[@"AQI"];
+                    _pmDesLabel.text = cityNow[@"quality"];
+                    NSInteger aqi = [cityNow[@"AQI"] integerValue];
+                    if (aqi <= 50) {
+                        _pmDesLabel.backgroundColor = [UIColor blueColor];
+                    } else if (aqi > 50 && aqi <= 100) {
+                        _pmDesLabel.backgroundColor = [UIColor greenColor];
+                    } else if (aqi > 100 && aqi <= 200) {
+                        _pmDesLabel.backgroundColor = [UIColor yellowColor];
+                    } else if (aqi > 200){
+                         _pmDesLabel.backgroundColor = [UIColor redColor];
+                    }
+                }
+            } else {
+                [self displayHUDTitle:nil message:resultInfo.reason duration:DELAY_TIMES];
+            }
+        } else {
+            [self displayHUDTitle:nil message:NETWORK_ERROR duration:DELAY_TIMES];
+        }
+    }];
+}
+
 - (void)threeHour:(NSString *)city {
     [[ServiceRequest shared] threeHour:city withBlock:^(NSDictionary *result, NSError *error) {
         NSLog(@"%@", result);
@@ -99,6 +131,7 @@
                 NSArray *resultArray = (NSArray *)resultInfo.result;
                 weatherArray = [ThreeHourInfo initWithArray:resultArray];
                 NSLog(@"%@", weatherArray);
+                [self searchPMByCity:city];
                 [self showThreeHourInfo];
             }
         }
