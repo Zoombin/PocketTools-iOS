@@ -30,12 +30,14 @@
         if (!error) {
             ServiceResult *resultInfo= [[ServiceResult alloc] initWithAttributes:result];
             if ([resultInfo.error_code integerValue] == 0) {
-                [self hideHUD:YES];
                 NSLog(@"%@", resultInfo.result);
                 NSArray *array = (NSArray *)resultInfo.result;
                 if ([array isKindOfClass:[NSArray class]]) {
+                    [self hideHUD:YES];
                     dreamArray = [DreamInfo initWithArray:array];
                     [_tableView reloadData];
+                } else {
+                    [self displayHUDTitle:nil message:@"未查到相关信息"];
                 }
             } else {
                 [self displayHUDTitle:nil message:resultInfo.reason duration:DELAY_TIMES];
