@@ -23,7 +23,16 @@
     self.title = NSLocalizedString(@"航班动态", nil);
     planesArray = [NSMutableArray array];
     [_tableView setTableHeaderView:_headerView];
+    [_searchButton.layer setCornerRadius:6.0];
+    [_searchButton.layer setMasksToBounds:YES];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (IBAction)replaceButtonClicked:(id)sender {
+    NSString *from = _startTextField.text;
+    NSString *to = _endTextField.text;
+    _startTextField.text = to;
+    _endTextField.text = from;
 }
 
 - (IBAction)sureButtonClicked:(id)sender {
@@ -47,7 +56,7 @@
                     [_tableView reloadData];
                 }
             } else {
-                [self displayHUDTitle:nil message:resultInfo.reason duration:DELAY_TIMES];
+                [self displayHUDTitle:nil message:@"搜索失败!" duration:DELAY_TIMES];
             }
         } else {
             [self displayHUDTitle:nil message:NETWORK_ERROR duration:DELAY_TIMES];

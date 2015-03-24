@@ -33,6 +33,8 @@
     typeNames = @[@"高速动车", @"快速", @"空调特快", @"动车组", @"直达特快", @"其他"];
     self.title = @"火车订票";
     [self leftButtonClicked:nil];
+    [_searchButton.layer setCornerRadius:6.0];
+    [_searchButton.layer setMasksToBounds:YES];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -82,7 +84,7 @@
                     [_tableView reloadData];
                 }
             } else {
-                [self displayHUDTitle:nil message:resultInfo.reason duration:DELAY_TIMES];
+                [self displayHUDTitle:nil message:@"查询失败!" duration:DELAY_TIMES];
             }
         } else {
             [self displayHUDTitle:nil message:NETWORK_ERROR duration:DELAY_TIMES];

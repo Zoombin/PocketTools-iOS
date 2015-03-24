@@ -14,5 +14,7 @@
 @property (nonatomic, weak) IBOutlet UITextField *endTextField;
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet UIView *headerView;
+@property (nonatomic, weak) IBOutlet UIButton *searchButton;
+- (IBAction)replaceButtonClicked:(id)sender;
 - (IBAction)sureButtonClicked:(id)sender;
 @end
