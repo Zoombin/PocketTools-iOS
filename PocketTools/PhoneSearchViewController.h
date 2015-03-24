@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PhoneSearchViewController : UIViewController
+@interface PhoneSearchViewController : PTViewController
 
 @property (nonatomic, weak) IBOutlet UITextField *phoneTextField;
 @property (nonatomic, weak) IBOutlet UILabel *contentTextView;

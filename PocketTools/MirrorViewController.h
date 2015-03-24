@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MirrorViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface MirrorViewController : PTViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @end

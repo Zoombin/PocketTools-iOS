@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PhotoPasswordViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface PhotoPasswordViewController : PTViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, weak) IBOutlet UIView *bottomView;

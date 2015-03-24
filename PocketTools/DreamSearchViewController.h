@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DreamSearchViewController : UIViewController
+@interface DreamSearchViewController : PTViewController
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSString *keyWord;

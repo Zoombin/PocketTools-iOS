@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppleDeviceIdSearchViewController : UIViewController<UITextFieldDelegate>
+@interface AppleDeviceIdSearchViewController : PTViewController<UITextFieldDelegate>
 
 @property (nonatomic, weak) IBOutlet UITextField *snTextField;
 @property (nonatomic, weak) IBOutlet UILabel *contentTextView;

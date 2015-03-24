@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CarVioResultViewController : UIViewController
+@interface CarVioResultViewController : PTViewController
 
 @property (nonatomic, strong) NSString *cityName;
 @property (nonatomic, strong) NSString *carNum;

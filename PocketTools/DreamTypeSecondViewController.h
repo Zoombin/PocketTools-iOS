@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DreamTypeSecondViewController : UIViewController
+@interface DreamTypeSecondViewController : PTViewController
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) NSString *name;

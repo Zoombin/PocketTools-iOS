@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "WeatherCitiesViewController.h"
 
-@interface WeatherViewController : UIViewController <CitySelectDelegate>
+@interface WeatherViewController : PTViewController <CitySelectDelegate>
 
 @property (nonatomic, weak) IBOutlet UIImageView *backgroundImg;
 @property (nonatomic, weak) IBOutlet UIScrollView *scrollView;

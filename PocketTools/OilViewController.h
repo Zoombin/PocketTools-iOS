@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface OilViewController : UIViewController<CLLocationManagerDelegate>
+@interface OilViewController : PTViewController<CLLocationManagerDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) CLLocationManager  *locationManager;

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ParkViewController : UIViewController
+@interface ParkViewController : PTViewController
 
 @property (nonatomic, weak) IBOutlet UIWebView *webView;
 @end

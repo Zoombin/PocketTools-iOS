@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RullerViewController : UIViewController
+@interface RullerViewController : PTViewController
 
 @property (nonatomic, weak) IBOutlet UIButton *rullerButton;
 @property (nonatomic, weak) IBOutlet UIButton *backButton;

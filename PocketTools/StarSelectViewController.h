@@ -12,7 +12,7 @@
 - (void)selectStarAtIndex:(NSInteger)index;
 @end
 
-@interface StarSelectViewController : UIViewController
+@interface StarSelectViewController : PTViewController
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) id<StarSelectDelegate> delegate;

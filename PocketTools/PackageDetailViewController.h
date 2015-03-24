@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PackageDetailViewController : UIViewController
+@interface PackageDetailViewController : PTViewController
 
 @property (nonatomic, weak) IBOutlet UITextView *contentTextView;
 @property (nonatomic, strong) NSString *postNum;

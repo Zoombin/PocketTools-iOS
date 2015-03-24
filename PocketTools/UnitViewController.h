@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UnitViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface UnitViewController : PTViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UISegmentedControl *segmentedControl;
 @property (nonatomic, weak) IBOutlet UIPickerView *pickerView;

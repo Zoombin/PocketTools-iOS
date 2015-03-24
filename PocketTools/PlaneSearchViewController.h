@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PlaneSearchViewController : UIViewController
+@interface PlaneSearchViewController : PTViewController
 
 @property (nonatomic, weak) IBOutlet UITextField *startTextField;
 @property (nonatomic, weak) IBOutlet UITextField *endTextField;

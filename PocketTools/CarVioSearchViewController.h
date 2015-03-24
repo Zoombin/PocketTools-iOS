@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CarVioSearchViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate, UIActionSheetDelegate>
+@interface CarVioSearchViewController : PTViewController <UIPickerViewDataSource, UIPickerViewDelegate, UIActionSheetDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet UIPickerView *picker;

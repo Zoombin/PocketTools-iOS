@@ -154,6 +154,7 @@
 		5880F7631AB918440049014B /* DailyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5880F7611AB918440049014B /* DailyViewController.xib */; };
 		5880F7671AB919DB0049014B /* LifeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5880F7651AB919DB0049014B /* LifeViewController.m */; };
 		5880F7681AB919DB0049014B /* LifeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5880F7661AB919DB0049014B /* LifeViewController.xib */; };
+		58858F971AC0F25000EE888C /* PTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58858F961AC0F25000EE888C /* PTViewController.m */; };
 		588A3DE31AA4312600EB1066 /* AppInfoEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A3DE21AA4312600EB1066 /* AppInfoEntity.m */; };
 		588A3DE51AA4428300EB1066 /* AppList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 588A3DE41AA4428300EB1066 /* AppList.plist */; };
 		588A3DE91AA45A4E00EB1066 /* FlashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A3DE71AA45A4E00EB1066 /* FlashViewController.m */; };
@@ -509,6 +510,8 @@
 		5880F7641AB919DB0049014B /* LifeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LifeViewController.h; sourceTree = "<group>"; };
 		5880F7651AB919DB0049014B /* LifeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LifeViewController.m; sourceTree = "<group>"; wrapsLines = 0; };
 		5880F7661AB919DB0049014B /* LifeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LifeViewController.xib; sourceTree = "<group>"; };
+		58858F951AC0F25000EE888C /* PTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTViewController.h; sourceTree = "<group>"; };
+		58858F961AC0F25000EE888C /* PTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTViewController.m; sourceTree = "<group>"; };
 		588A3DE11AA4312600EB1066 /* AppInfoEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoEntity.h; sourceTree = "<group>"; };
 		588A3DE21AA4312600EB1066 /* AppInfoEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoEntity.m; sourceTree = "<group>"; };
 		588A3DE41AA4428300EB1066 /* AppList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppList.plist; sourceTree = "<group>"; };
@@ -862,6 +865,8 @@
 				583C212E1ABAB23100A9C54B /* BackButtonTool.m */,
 				5845D8591AA559A10007E4D8 /* CalculatorTools.h */,
 				5845D85A1AA559A10007E4D8 /* CalculatorTools.m */,
+				58858F951AC0F25000EE888C /* PTViewController.h */,
+				58858F961AC0F25000EE888C /* PTViewController.m */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -1354,6 +1359,7 @@
 				583C912D1AAE989600F1D756 /* DMPasscodeInternalNavigationController.m in Sources */,
 				1872F3C21AAAFA16007F60BD /* PhotoPasswordViewController.m in Sources */,
 				585C82A41AA83C6100A98D16 /* WZInfo.m in Sources */,
+				58858F971AC0F25000EE888C /* PTViewController.m in Sources */,
 				1823AAD61AB61C2300C09D5C /* StationCell.m in Sources */,
 				5817F12B1A9D7BDB00B3A0A1 /* MainViewController.m in Sources */,
 				585CB0881AB68A4B00E0D390 /* StarYearInfo.m in Sources */,

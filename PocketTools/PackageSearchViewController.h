@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PackageSearchViewController : UIViewController <UITextFieldDelegate>
+@interface PackageSearchViewController : PTViewController <UITextFieldDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet UIView *headerView;

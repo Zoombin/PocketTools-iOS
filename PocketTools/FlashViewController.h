@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface FlashViewController : UIViewController
+@interface FlashViewController : PTViewController
 
 @property (weak,nonatomic) IBOutlet UIButton *button;
 @property (nonatomic, assign) BOOL btnStatus;

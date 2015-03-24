@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PhonePayViewController : UIViewController
+@interface PhonePayViewController : PTViewController
 
 @property (nonatomic, weak) IBOutlet UIWebView *webView;
 @end

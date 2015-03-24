@@ -12,7 +12,7 @@
 - (void)selectCityName:(NSString *)cityName;
 @end
 
-@interface PMCitySelectViewController : UIViewController
+@interface PMCitySelectViewController : PTViewController
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) id<CitySelectDelegate> delegate;

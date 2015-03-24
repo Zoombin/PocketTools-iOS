@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LLPayViewController : UIViewController
+@interface LLPayViewController : PTViewController
 
 @property (nonatomic, weak) IBOutlet UIWebView *webView;
 

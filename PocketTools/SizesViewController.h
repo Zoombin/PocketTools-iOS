@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SizesViewController : UIViewController
+@interface SizesViewController : PTViewController
 
 @property (nonatomic,strong) UIImageView *backImage;
 //服装view

@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "BMapKit.h"
 
-@interface PoiSearchViewController : UIViewController<BMKMapViewDelegate, BMKPoiSearchDelegate,CLLocationManagerDelegate, UITextFieldDelegate> {
+@interface PoiSearchViewController : PTViewController<BMKMapViewDelegate, BMKPoiSearchDelegate,CLLocationManagerDelegate, UITextFieldDelegate> {
     IBOutlet BMKMapView* _mapView;
     IBOutlet UITextField* _cityText;
     IBOutlet UITextField* _keyText;

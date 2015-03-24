@@ -25,7 +25,6 @@
     NSMutableArray *bottomButtons;
     UIScrollView *menuScrollView;
     UIPageControl *pageControl;
-    NSArray *backgrounds;
     NSArray *weatherArray;
     NSDictionary *icons;
 }
@@ -35,32 +34,17 @@
     icons = [[NSDictionary alloc] initWithContentsOfFile:path];
 }
 
-- (void)selectBackground {
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"选择皮肤" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"样式一", @"样式二", @"样式三", nil];
-    [actionSheet showInView:self.view];
-}
 
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (actionSheet.cancelButtonIndex == buttonIndex) {
-        return;
-    }
-    if (actionSheet.firstOtherButtonIndex == buttonIndex) {
-        [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:backgrounds[0]]]];
-        [[ServiceRequest shared] saveBackGround:backgrounds[0]];
-    } else if (actionSheet.firstOtherButtonIndex + 1 == buttonIndex) {
-        [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:backgrounds[1]]]];
-        [[ServiceRequest shared] saveBackGround:backgrounds[1]];
-    } else if (actionSheet.firstOtherButtonIndex + 2 == buttonIndex) {
-        [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:backgrounds[2]]]];
-        [[ServiceRequest shared] saveBackGround:backgrounds[2]];
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if([[ServiceRequest shared] getBackground]) {
+        [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[[ServiceRequest shared] getBackground]]]];
     }
 }
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initAllIcons];
-    backgrounds = @[@"background1", @"background2", @"background3"];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"menu"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(menuClicked)];
     self.title = @"工具99";
     [self initScrollView];
@@ -77,9 +61,7 @@
     [self initMenuButtons:0];
     [self searchCityByName:@"苏州"];
     
-    if([[ServiceRequest shared] getBackground]) {
-        [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[[ServiceRequest shared] getBackground]]]];
-    }
+    
 }
 
 - (void)threeHour:(NSString *)city {
@@ -171,7 +153,6 @@
 
 - (void)menuClicked {
     //TODO:菜单
-    [self selectBackground];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender

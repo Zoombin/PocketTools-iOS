@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TrainViewController : UIViewController <UISearchBarDelegate, UIActionSheetDelegate>
+@interface TrainViewController : PTViewController <UISearchBarDelegate, UIActionSheetDelegate>
 
 @property (nonatomic, weak) IBOutlet UISegmentedControl *titleSegmentedControl;
 @property (nonatomic, strong) IBOutlet UIView *firstHeader;

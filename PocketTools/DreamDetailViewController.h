@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DreamDetailViewController : UIViewController
+@interface DreamDetailViewController : PTViewController
 
 @property (nonatomic, weak) IBOutlet UITextView *contentTextView;
 @property (nonatomic, strong) NSString *content;

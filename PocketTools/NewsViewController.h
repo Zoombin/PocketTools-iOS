@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewsViewController : UIViewController
+@interface NewsViewController : PTViewController
 
 @property (nonatomic, weak) IBOutlet UIWebView *webView;
 @end

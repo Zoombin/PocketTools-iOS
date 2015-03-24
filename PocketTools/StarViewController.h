@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "StarSelectViewController.h"
 
-@interface StarViewController : UIViewController <StarSelectDelegate>
+@interface StarViewController : PTViewController <StarSelectDelegate>
 
 @property (nonatomic, weak) IBOutlet UISegmentedControl *segmentedControl;
 @property (nonatomic, weak) IBOutlet UITextView *contentTextView;

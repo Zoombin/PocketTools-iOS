@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DreamListViewController : UIViewController <UITextFieldDelegate>
+@interface DreamListViewController : PTViewController <UITextFieldDelegate>
 
 @property (nonatomic, weak) IBOutlet UITextField *searchTextField;
 @property (nonatomic, weak) IBOutlet UITableView *tableView;

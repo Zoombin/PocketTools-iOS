@@ -7,7 +7,7 @@
 //
 
 
-@interface ImageScanViewController : UIViewController <UIAlertViewDelegate>
+@interface ImageScanViewController : PTViewController <UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (nonatomic, strong) NSString *imageName;

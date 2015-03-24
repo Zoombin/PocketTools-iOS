@@ -28,7 +28,7 @@
 #define kRadical        26  // √ 根号
 #define kMod            27  //  %求模
 
-@interface CalculatorViewController : UIViewController
+@interface CalculatorViewController : PTViewController
 
 @property (nonatomic, weak) IBOutlet UILabel *resultText;
 @property (nonatomic, weak) IBOutlet UILabel *preLabel;

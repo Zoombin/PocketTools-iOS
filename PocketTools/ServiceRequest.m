@@ -67,7 +67,8 @@ static ServiceRequest *request;
 
 - (NSString *)getBackground {
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-    return [userDefault objectForKey:BACKGROUND];
+    NSString *background = [userDefault objectForKey:BACKGROUND];
+    return background == nil ? @"background1" : background;
 }
 
 - (void)savePostManSearch:(NSDictionary *)searchInfo {

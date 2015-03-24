@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TicketsViewController : UIViewController
+@interface TicketsViewController : PTViewController
 
 @property (nonatomic, weak) IBOutlet UIWebView *webView;
 @end

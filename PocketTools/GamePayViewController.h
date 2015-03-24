@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GamePayViewController : UIViewController
+@interface GamePayViewController : PTViewController
 
 @property (nonatomic, weak) IBOutlet UIWebView *webView;
 @end

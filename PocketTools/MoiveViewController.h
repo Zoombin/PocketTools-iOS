@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MoiveViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface MoiveViewController : PTViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet UISegmentedControl *allSegmetedControl;
