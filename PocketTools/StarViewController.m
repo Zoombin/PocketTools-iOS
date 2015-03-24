@@ -19,6 +19,7 @@
 @implementation StarViewController {
     NSArray *stars;
     NSArray *types;
+    NSArray *times;
     NSInteger currentIndex;
 }
 
@@ -28,6 +29,7 @@
     self.title = NSLocalizedString(@"星座运势", nil);
     stars = @[@"白羊座", @"金牛座", @"双子座", @"巨蟹座", @"狮子座", @"处女座", @"天秤座", @"天蝎座", @"射手座", @"摩羯座", @"水瓶座", @"双鱼座"];
     types = @[@"today",@"tomorrow",@"week",@"month",@"year"];
+    times = @[@"3.21~4.19", @"4.20~5.20", @"5.21~6.21)", @"6.22~7.22", @"7.23~8.22", @"8.23~9.22", @"9.23~10.23", @"10.24~11.22", @"11.23~12.21", @"12.22~1.19", @"1.20~2.18", @"2.19~3.20"];
     currentIndex = 11;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"选择星座" style:UIBarButtonItemStylePlain target:self action:@selector(selectStar)];
     [_segmentedControl addTarget:self action:@selector(valueChanged) forControlEvents:UIControlEventValueChanged];
@@ -43,7 +45,7 @@
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     [paragraphStyle setLineSpacing:5];//调整行间距
     [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [_contentTextView.text length])];
-    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0, [_contentTextView.text length])];
+    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0] range:NSMakeRange(0, [_contentTextView.text length])];
     _contentTextView.attributedText = attributedString;
 }
 
@@ -149,6 +151,7 @@
     currentIndex = index;
     [_iconButton setImage:[UIImage imageNamed:[NSString stringWithFormat:@"star_%ld.png", index]] forState:UIControlStateNormal];
     [_iconButton setTitle:stars[index] forState:UIControlStateNormal];
+    [_timeLabel setText:times[index]];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -15,6 +15,7 @@
 @property (nonatomic, weak) IBOutlet UITextView *contentTextView;
 @property (nonatomic, weak) IBOutlet UILabel *describeLabel;
 @property (nonatomic, weak) IBOutlet UIButton *iconButton;
+@property (nonatomic, weak) IBOutlet UILabel *timeLabel;
 @property (nonatomic, weak) IBOutlet UILabel *dayLabel1;
 @property (nonatomic, weak) IBOutlet UILabel *dayLabel2;
 @property (nonatomic, weak) IBOutlet UILabel *dayLabel3;
