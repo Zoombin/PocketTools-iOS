@@ -14,17 +14,17 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_header" id="y7H-1E-qwS">
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_header" id="y7H-1E-qwS">
                         <rect key="frame" x="262" y="15" width="50" height="50"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bubble_right" id="EjH-ng-wMi">
-                        <rect key="frame" x="27" y="5" width="227" height="70"/>
+                        <rect key="frame" x="78" y="5" width="227" height="70"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <rect key="contentStretch" x="0.5" y="0.5" width="0.0" height="0.0"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123123" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1r4-VW-sL5">
-                        <rect key="frame" x="52" y="15" width="182" height="50"/>
+                        <rect key="frame" x="103" y="15" width="182" height="50"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>

@@ -36,10 +36,14 @@
             ServiceResult *resultInfo= [[ServiceResult alloc] initWithAttributes:result];
             if ([resultInfo.resultcode integerValue] == 0) {
                 RobotInfo *info = [[RobotInfo alloc] init];
-                info.text = resultInfo.result[@"text"];
-                info.isLeft = YES;
-                [infoArray addObject:info];
-                [_tableView reloadData];
+                if ([resultInfo.result isKindOfClass:[NSDictionary class]]) {
+                    info.text = resultInfo.result[@"text"];
+                    info.isLeft = YES;
+                    [infoArray addObject:info];
+                    [_tableView reloadData];
+                } else {
+                    [self displayHUDTitle:nil message:@"查询失败!"];
+                }
             }
         }
     }];
