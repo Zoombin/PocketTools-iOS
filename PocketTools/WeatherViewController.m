@@ -140,7 +140,7 @@
         [label1 setText:[NSString stringWithFormat:@"%ld点", [info.sh integerValue]]];
         [_weatherScrollView addSubview:label1];
         
-        UIImageView *iconView = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetMinX(label1.frame) + 20, CGRectGetMaxY(label1.frame), width / 2, height)];
+        UIImageView *iconView = [[UIImageView alloc] initWithFrame:CGRectMake(width * i + ((width - height) / 2), CGRectGetMaxY(label1.frame), height, height)];
         NSString *icon = icons[info.weatherid][@"ic"];
         [iconView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.png", icon]]];
         [_weatherScrollView addSubview:iconView];

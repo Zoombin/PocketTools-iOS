@@ -270,7 +270,7 @@
 
 - (void)initScrollView {
     menuScrollView = [[UIScrollView alloc] init];
-    [menuScrollView setBackgroundColor:[UIColor clearColor]];
+    [menuScrollView setBackgroundColor:[UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.2]];
     [menuScrollView setDelegate:self];
     [menuScrollView setScrollEnabled:YES];
     [menuScrollView setPagingEnabled:YES];
@@ -286,11 +286,10 @@
     CGFloat width = [UIScreen mainScreen].bounds.size.width / numberPerLine;
     CGFloat height = width;
     [menuScrollView setFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - (height * 2) - buttonHeight - 20, [UIScreen mainScreen].bounds.size.width, height * 2)];
-    [menuScrollView setBackgroundColor:[UIColor clearColor]];
      [self.view addSubview:menuScrollView];
     
     pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(menuScrollView.frame), 320, 20)];
-    [pageControl setBackgroundColor:[UIColor clearColor]];
+    [pageControl setBackgroundColor:[UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.2]];
     [pageControl addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:pageControl];
 }
@@ -453,7 +452,7 @@
         AppInfoEntity *entity = elements[i];
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setImage:[UIImage imageNamed:entity.iconName] forState:UIControlStateNormal];
-        [button setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 20, 0)];
+        [button setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 18, 0)];
         [button.layer setBorderColor:[UIColor whiteColor].CGColor];
         [button addTarget:self action:@selector(menuButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [button setBackgroundColor:[UIColor clearColor]];
