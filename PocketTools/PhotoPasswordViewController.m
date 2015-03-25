@@ -56,6 +56,7 @@
     [localPhotoButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     localPhotoButton.contentMode = UIViewContentModeCenter;
     [localPhotoButton setImage:[UIImage imageNamed:@"btn_secret_library"] forState:UIControlStateNormal];
+    [localPhotoButton setContentMode:UIViewContentModeScaleAspectFill];
     [localPhotoButton addTarget:self action:@selector(localPhoto) forControlEvents:UIControlEventTouchUpInside];
     [_bottomView addSubview:localPhotoButton];
     
