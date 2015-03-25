@@ -14,6 +14,7 @@
 
 @implementation MirrorViewController {
     UIImagePickerController *imagePicker;
+    UIImage *currentImage;
 }
 
 - (void)viewDidLoad {
@@ -43,15 +44,32 @@
 - (void)imagePickerController: (UIImagePickerController *)picker didFinishPickingMediaWithInfo: (NSDictionary *)info
 {
     UIImage *image = info[UIImagePickerControllerOriginalImage];
-    UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
+    currentImage = image;
+    [self showSaveAlertView];
+    
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (alertView.cancelButtonIndex == buttonIndex) {
+        return;
+    }
+    [self displayHUD:@"保存中..."];
+    UIImageWriteToSavedPhotosAlbum(currentImage, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
+}
+
+- (void)showSaveAlertView {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"是否保存图片?" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"好的", nil];
+    [alertView show];
 }
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
     NSString *msg = nil;
     if(error != NULL) {
         msg = @"保存图片失败";
+        [self displayHUDTitle:nil message:@"保存图片失败"];
     }else {
         msg = @"保存图片成功";
+        [self displayHUDTitle:nil message:@"保存图片成功"];
     }
     [self displayHUDTitle:nil message:msg duration:DELAY_TIMES];
 }
