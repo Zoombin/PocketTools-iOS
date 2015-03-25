@@ -450,7 +450,7 @@
         AppInfoEntity *entity = elements[i];
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setImage:[UIImage imageNamed:entity.iconName] forState:UIControlStateNormal];
-        [button setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 18, 0)];
+        [button setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 5, 0)];
         [button.layer setBorderColor:[UIColor whiteColor].CGColor];
         [button addTarget:self action:@selector(menuButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [button setBackgroundColor:[UIColor clearColor]];
@@ -472,7 +472,7 @@
         }
         button.frame = CGRectMake(index * width + currentPage * numberPerLine * width, -64 + (height * line), width, height);
         
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, button.frame.size.height - 15, button.frame.size.width, 10)];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, button.frame.size.height - 10, button.frame.size.width, 10)];
         label.text = entity.appName;
         label.font = [UIFont systemFontOfSize:10];
         label.textColor = [UIColor whiteColor];
