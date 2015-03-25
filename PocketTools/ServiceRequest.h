@@ -108,8 +108,10 @@
 //搜索梦
 - (void)searchDreamByKey:(NSString *)kword
                withBlock:(void (^)(NSDictionary *result, NSError *error))block;
+
 //条码查询
 - (void)goodsSearchWithNum:(NSString *)num
+                    cityId:(NSNumber *)cityId
                  withBlock:(void (^)(NSDictionary *result, NSError *error))block;
 
 //最新票房
@@ -168,4 +170,10 @@
 //天气预报
 - (void)getWeatherByIdOrName:(NSString *)name
                    withBlock:(void (^)(NSDictionary *result, NSError *error))block;
+
+//省份(条码)
+- (void)scanProvinceListWithBlock:(void (^)(NSDictionary *result, NSError *error))block;
+
+//城市(条码)
+- (void)scanCityListWithBlock:(void (^)(NSDictionary *result, NSError *error))block;
 @end

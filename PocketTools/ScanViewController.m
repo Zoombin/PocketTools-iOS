@@ -8,6 +8,7 @@
 
 #import "ScanViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "ScanCityListViewController.h"
 #import "GoodsInfo.h"
 #import "ShopInfo.h"
 
@@ -17,15 +18,24 @@
 
 @implementation ScanViewController {
     NSMutableArray *companysArray;
+    NSNumber *cityId;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    cityId = @(1);
     companysArray = [NSMutableArray array];
     [_tableView setTableHeaderView:_headerView];
     self.title = NSLocalizedString(@"条码比价", nil);
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"城市" style:UIBarButtonItemStylePlain target:self action:@selector(showSelectCity)];
     // Do any additional setup after loading the view from its nib.
     [self setupScaner];
+}
+
+- (void)showSelectCity {
+    ScanCityListViewController *control = [ScanCityListViewController new];
+    [BackButtonTool addBackButton:control];
+    [self.navigationController pushViewController:control animated:YES];
 }
 
 -(void)setupScaner
@@ -67,7 +77,9 @@
 - (void)searchGoodsWithNumber:(NSString *)num {
     [companysArray removeAllObjects];
     [_tableView reloadData];
-    [[ServiceRequest shared] goodsSearchWithNum:num withBlock:^(NSDictionary *result, NSError *error) {
+    [[ServiceRequest shared] goodsSearchWithNum:num
+                                         cityId:cityId
+                                      withBlock:^(NSDictionary *result, NSError *error) {
         if (!error) {
             ServiceResult *resultInfo= [[ServiceResult alloc] initWithAttributes:result];
             if ([resultInfo.error_code integerValue] == 0) {
@@ -118,4 +130,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+- (void)selectedCityId:(NSNumber *)cid {
+    NSLog(@"%@", cid);
+    cityId = cid;
+}
 @end

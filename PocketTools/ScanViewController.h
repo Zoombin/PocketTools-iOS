@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ScanCityListViewController.h"
 #import "ZBarSDK.h"
 
-@interface ScanViewController : PTViewController<ZBarReaderViewDelegate, ZBarReaderDelegate>
+@interface ScanViewController : PTViewController<ZBarReaderViewDelegate, ZBarReaderDelegate, ScanCityDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet UIView *headerView;

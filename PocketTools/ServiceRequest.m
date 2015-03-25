@@ -359,11 +359,12 @@ static ServiceRequest *request;
 }
 
 - (void)goodsSearchWithNum:(NSString *)num
+                    cityId:(NSNumber *)cityId
                  withBlock:(void (^)(NSDictionary *result, NSError *error))block {
     NSMutableDictionary *params =  [self getRequestParams];
     params[@"pkg"] = @"com.koudai";
     params[@"barcode"] = num;
-    params[@"cityid"] = @"1";
+    params[@"cityid"] = cityId;
     NSString *requestUrl = @"http://api.juheapi.com/jhbar/bar";
     JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
     [juheapi executeWorkWithAPI:requestUrl APIID:@"52" Parameters:params Method:@"GET" Success:^(id responseObject) {
@@ -561,6 +562,30 @@ static ServiceRequest *request;
     NSString *requestUrl = @"http://v.juhe.cn/weather/index";
     JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
     [juheapi executeWorkWithAPI:requestUrl APIID:@"39" Parameters:params Method:@"GET" Success:^(id responseObject) {
+        block(responseObject, nil);
+    } Failure:^(NSError *error) {
+        block(nil, error);
+    }];
+}
+
+- (void)scanProvinceListWithBlock:(void (^)(NSDictionary *result, NSError *error))block {
+    NSMutableDictionary *params =  [self getRequestParams];
+    params[@"pkg"] = @"com.koudai";
+    NSString *requestUrl = @"http://api.juheapi.com/jhbar/province";
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:requestUrl APIID:@"52" Parameters:params Method:@"GET" Success:^(id responseObject) {
+        block(responseObject, nil);
+    } Failure:^(NSError *error) {
+        block(nil, error);
+    }];
+}
+
+- (void)scanCityListWithBlock:(void (^)(NSDictionary *result, NSError *error))block {
+    NSMutableDictionary *params =  [self getRequestParams];
+    params[@"pkg"] = @"com.koudai";
+    NSString *requestUrl = @"http://api.juheapi.com/jhbar/city";
+    JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
+    [juheapi executeWorkWithAPI:requestUrl APIID:@"52" Parameters:params Method:@"GET" Success:^(id responseObject) {
         block(responseObject, nil);
     } Failure:^(NSError *error) {
         block(nil, error);
