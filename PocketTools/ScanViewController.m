@@ -42,8 +42,9 @@
 {
     ZBarReaderView *readerView = [[ZBarReaderView alloc]init];
     [readerView.layer setBorderColor:[UIColor colorWithRed:200/255.0 green:255/255.0 blue:60/255.0 alpha:1.0].CGColor];
+    readerView.autoresizingMask = YES;
     [readerView.layer setBorderWidth:.5];
-    readerView.frame = CGRectMake(30, 44 + 20 + 10, self.view.frame.size.width - 60, 100);
+    readerView.frame = CGRectMake(30, 44 + 20 + 10, self.view.frame.size.width - 60, 120);
     readerView.readerDelegate = self;
     //关闭闪光灯
     readerView.torchMode = 0;
@@ -59,7 +60,7 @@
     [self.view addSubview:readerView];
     [readerView start];
     
-    [_tableView setFrame:CGRectMake(0, CGRectGetMaxY(readerView.frame), self.view.frame.size.width, self.view.frame.size.height - 150)];
+    [_tableView setFrame:CGRectMake(0, 10 + CGRectGetMaxY(readerView.frame), self.view.frame.size.width, self.view.frame.size.height - 160)];
 }
 
 - (void)readerView:(ZBarReaderView *)readerView didReadSymbols:(ZBarSymbolSet *)symbols fromImage:(UIImage *)image
