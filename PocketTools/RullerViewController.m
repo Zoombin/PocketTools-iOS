@@ -27,14 +27,13 @@
     
     [_rullerButton setFrame:CGRectMake((mainW / 2) - _rullerButton.frame.size.width / 2, _rullerButton.frame.origin.y, _rullerButton.frame.size.width, _rullerButton.frame.size.height)];
     [_backButton setFrame:CGRectMake((mainW / 2) - _backButton.frame.size.width / 2, _backButton.frame.origin.y, _backButton.frame.size.width, _backButton.frame.size.height)];
-
-    
-    [self btnclick:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = YES;
+    [self btnclick:nil];
+    self.view.backgroundColor = [UIColor blackColor];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -46,11 +45,11 @@
 {
     if (self.btnStatus == YES) {
         [self.rullerButton setImage:_btnImagecm forState:UIControlStateNormal];
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"gr_ruler_cm"]];
+        _imageView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"gr_ruler_cm"]];
     }
     else{
         [self.rullerButton setImage:_btnImageinch forState:UIControlStateNormal];
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"gr_ruler_inch"]];
+        _imageView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"gr_ruler_inch"]];
     }
     self.btnStatus = !self.btnStatus;
 }

@@ -13,6 +13,7 @@
 @property (nonatomic, weak) IBOutlet UIButton *rullerButton;
 @property (nonatomic, weak) IBOutlet UIButton *backButton;
 @property (nonatomic, assign) BOOL btnStatus;
+@property (nonatomic, weak) IBOutlet UIImageView *imageView;
 @property (nonatomic, strong) UIImage *btnImagecm;
 @property (nonatomic, strong) UIImage *btnImageinch;
 
