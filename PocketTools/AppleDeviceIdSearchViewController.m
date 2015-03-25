@@ -62,7 +62,7 @@
                 [[ServiceRequest shared] saveAppID:_snTextField.text];
                 [self showContentWithAppleInfo:appleInfo];
             } else {
-                NSLog(@"数据获取失败");
+                NSLog(@"数据获取失败 %@", resultInfo.reason);
                 [self displayHUDTitle:nil message:@"获取失败" duration:DELAY_TIMES];
                 _contentTextView.text = DEFAULT_STRING;
                 [_contentTextView sizeToFit];
