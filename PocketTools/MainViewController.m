@@ -56,11 +56,10 @@
     
     bottomButtons = [NSMutableArray array];
     [self addBottomButtons];
-    
+    [self bottomButtonClicked:bottomButtons[0]];
     [self initAllApps];
     [self initAllStores];
     [self initMenuButtons:0];
-    [self bottomButtonClicked:bottomButtons[0]];
     
     self.locationManager = [[CLLocationManager alloc]init];
     _locationManager.delegate = self;
@@ -323,7 +322,7 @@
     [self initMenuButtons:[sender tag]];
     
     //TODO:不知道为什么初始点是64，好奇怪..
-    [menuScrollView setContentOffset:CGPointMake(0, 0)];
+    [menuScrollView setContentOffset:CGPointMake(0, -64)];
 }
 
 - (void)allUnSelect {
@@ -471,7 +470,7 @@
                 index++;
             }
         }
-        button.frame = CGRectMake(index * width + currentPage * numberPerLine * width, 0 + (height * line), width, height);
+        button.frame = CGRectMake(index * width + currentPage * numberPerLine * width, -64 + (height * line), width, height);
         
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, button.frame.size.height - 15, button.frame.size.width, 10)];
         label.text = entity.appName;
