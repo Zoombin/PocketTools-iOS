@@ -43,14 +43,16 @@
 
 - (void)imagePickerController: (UIImagePickerController *)picker didFinishPickingMediaWithInfo: (NSDictionary *)info
 {
+    [picker dismissViewControllerAnimated:YES completion:nil];
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     currentImage = image;
     [self showSaveAlertView];
-    
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
     if (alertView.cancelButtonIndex == buttonIndex) {
+        [self showCamera];
         return;
     }
     [self displayHUD:@"保存中..."];
@@ -66,12 +68,12 @@
     NSString *msg = nil;
     if(error != NULL) {
         msg = @"保存图片失败";
-        [self displayHUDTitle:nil message:@"保存图片失败"];
-    }else {
+    } else {
         msg = @"保存图片成功";
-        [self displayHUDTitle:nil message:@"保存图片成功"];
     }
     [self displayHUDTitle:nil message:msg duration:DELAY_TIMES];
+    [imagePicker dismissViewControllerAnimated:NO completion:nil];
+    [self showCamera];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {

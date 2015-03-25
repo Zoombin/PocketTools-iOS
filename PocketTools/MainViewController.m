@@ -54,7 +54,6 @@
     [self.view addSubview:_weatherView];
     
     bottomButtons = [NSMutableArray array];
-    [self searchCityByName:@"苏州"];
     [self addBottomButtons];
     [self bottomButtonClicked:bottomButtons[0]];
     
