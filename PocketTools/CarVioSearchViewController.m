@@ -49,15 +49,15 @@
 
 - (void)hidenAll {
     _carFrameLabel.hidden = YES;
-    _line4.hidden = YES;
+//    _line4.hidden = YES;
     _carFrameTextField.hidden = YES;
     
     _engineLabel.hidden = YES;
-    _line5.hidden = YES;
+//    _line5.hidden = YES;
     _engineTextField.hidden = YES;
     
     _registLabel.hidden = YES;
-    _line6.hidden = YES;
+//    _line6.hidden = YES;
     _registTextField.hidden = YES;
 }
 
@@ -270,19 +270,19 @@
     if ([info.classa isEqualToString:@"1"]) {
         _carFrameTextField.hidden = NO;
         _carFrameLabel.hidden = NO;
-        _line4.hidden = NO;
+//        _line4.hidden = NO;
         _carFrameTextField.placeholder = [info.classno integerValue] == 0 ? @"完整的车架号码" : [NSString stringWithFormat:@"车架号后%@位", info.classno];
     }
     if ([info.engine isEqualToString:@"1"]) {
         _engineTextField.hidden = NO;
         _engineLabel.hidden = NO;
-        _line5.hidden = NO;
+//        _line5.hidden = NO;
         _engineTextField.placeholder = [info.engineno integerValue] == 0 ? @"完整的发动机号" : [NSString stringWithFormat:@"发动机号后%@位", info.engineno];
     }
     if ([info.regist isEqualToString:@"1"]) {
         _registTextField.hidden = NO;
         _registLabel.hidden = NO;
-        _line6.hidden = NO;
+//        _line6.hidden = NO;
         _registTextField.placeholder = [info.registno integerValue] == 0 ? @"完整的登记证书号" : [NSString stringWithFormat:@"登记证书后%@位", info.registno];
     }
     
