@@ -49,17 +49,18 @@
     [self initAllIcons];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"menu"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(menuClicked)];
     self.title = @"工具99";
+//    [self searchCityByName:@"苏州"];
     [self initScrollView];
     [_weatherView setFrame:CGRectMake(0, 64, _weatherView.frame.size.width, _weatherView.frame.size.height)];
     [self.view addSubview:_weatherView];
     
     bottomButtons = [NSMutableArray array];
     [self addBottomButtons];
-    [self bottomButtonClicked:bottomButtons[0]];
     
     [self initAllApps];
     [self initAllStores];
     [self initMenuButtons:0];
+    [self bottomButtonClicked:bottomButtons[0]];
     
     self.locationManager = [[CLLocationManager alloc]init];
     _locationManager.delegate = self;
@@ -157,7 +158,6 @@
 
 - (void)threeHour:(NSString *)city {
     [[ServiceRequest shared] threeHour:city withBlock:^(NSDictionary *result, NSError *error) {
-        NSLog(@"%@", result);
         if (!error) {
             ServiceResult *resultInfo = [[ServiceResult alloc] initWithAttributes:result];
             if ([resultInfo.error_code integerValue] == 0) {
@@ -173,7 +173,6 @@
 - (void)searchCityByName:(NSString *)name {
     [self displayHUD:@"加载中..."];
     [[ServiceRequest shared] getWeatherByIdOrName:name withBlock:^(NSDictionary *result, NSError *error) {
-        NSLog(@"%@", result);
         if (!error) {
             ServiceResult *resultInfo = [[ServiceResult alloc] initWithAttributes:result];
             if ([resultInfo.error_code integerValue] == 0) {
@@ -199,7 +198,6 @@
     CGFloat width = 80;
     CGFloat height = _futureWeatherScrollView.frame.size.height/3;
     for (int i = 0; i < [weatherArray count]; i++) {
-        NSLog(@"%d", i);
         ThreeHourInfo *info = weatherArray[i];
         UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(width * i, 0, width, height)];
         [label1 setTextAlignment:NSTextAlignmentCenter];
@@ -234,7 +232,6 @@
     }
     [_iconImageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.png", icon]]];
     _weatherLabel.text = tInfo.weather;
-    NSLog(@"%@", pic);
 }
 
 - (void)showCurrentInfo:(WeatherCurrentInfo *)cInfo {
@@ -264,7 +261,7 @@
     CGRect frame = menuScrollView.frame;
     frame.origin.x = frame.size.width * page;
     frame.origin.y = 0;
-    [menuScrollView setContentOffset:CGPointMake(frame.size.width * page, -64)];
+    [menuScrollView setContentOffset:CGPointMake(frame.size.width * page, 0)];
 }
 
 - (void)initScrollView {
@@ -326,7 +323,7 @@
     [self initMenuButtons:[sender tag]];
     
     //TODO:不知道为什么初始点是64，好奇怪..
-    [menuScrollView setContentOffset:CGPointMake(0, -64)];
+    [menuScrollView setContentOffset:CGPointMake(0, 0)];
 }
 
 - (void)allUnSelect {
@@ -474,7 +471,7 @@
                 index++;
             }
         }
-        button.frame = CGRectMake(index * width + currentPage * numberPerLine * width, -64 + (height * line), width, height);
+        button.frame = CGRectMake(index * width + currentPage * numberPerLine * width, 0 + (height * line), width, height);
         
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, button.frame.size.height - 15, button.frame.size.width, 10)];
         label.text = entity.appName;
@@ -490,7 +487,6 @@
 }
 
 - (void)menuButtonClicked:(id)sender {
-    NSLog(@"%ld", [sender tag]);
     AppInfoEntity *entity = currentApps[[sender tag]];
     if (entity.url != nil) {
         WebViewController *webViewController = [WebViewController new];
