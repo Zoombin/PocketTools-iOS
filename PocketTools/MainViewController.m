@@ -301,15 +301,18 @@
     NSInteger buttonCount = [buttonNames count];
     NSArray *imageNames = @[@"daily", @"life", @"pay", @"99store"];
     NSArray *imageSel = @[@"daily_sel", @"life_sel", @"pay_sel", @"99store_sel"];
-    CGFloat buttonWidth = ([UIScreen mainScreen].bounds.size.width) / buttonCount;
-    CGFloat buttonHeight = buttonWidth * 0.66;
+    NSInteger buttonWidth = ([UIScreen mainScreen].bounds.size.width) / buttonCount;
+    NSInteger buttonHeight = buttonWidth * 0.66;
     for (int i = 0; i <buttonCount; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setBackgroundColor:[UIColor whiteColor]];
         [button addTarget:self action:@selector(bottomButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [button setTag:i];
         [button setFrame:CGRectMake(i * buttonWidth, [UIScreen mainScreen].bounds.size.height - buttonHeight, buttonWidth, buttonHeight)];
-        [button setBackgroundColor:[UIColor colorWithRed:44/255.0 green:57/255.0 blue:59/255.0 alpha:0]];
+        if (i == [buttonNames count] - 1) {
+            [button setFrame:CGRectMake(button.frame.origin.x, button.frame.origin.y, [UIScreen mainScreen].bounds.size.width - button.frame.origin.x, buttonHeight)];
+        }
+        [button setBackgroundColor:[UIColor clearColor]];
         [button setBackgroundImage:[UIImage imageNamed:imageNames[i]] forState:UIControlStateNormal];
         [button setBackgroundImage:[UIImage imageNamed:imageSel[i]] forState:UIControlStateSelected];
         [self.view addSubview:button];
