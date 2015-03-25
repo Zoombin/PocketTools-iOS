@@ -146,6 +146,7 @@
 		585CB0821AB6723000E0D390 /* StarWeekInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 585CB0811AB6723000E0D390 /* StarWeekInfo.m */; };
 		585CB0851AB67E9D00E0D390 /* StarMonthInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 585CB0841AB67E9D00E0D390 /* StarMonthInfo.m */; };
 		585CB0881AB68A4B00E0D390 /* StarYearInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 585CB0871AB68A4B00E0D390 /* StarYearInfo.m */; };
+		585F17551AC2B40100975468 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 585F17571AC2B40100975468 /* Localizable.strings */; };
 		586C99F51AA6EDF100ACD2CF /* MoneyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 586C99F31AA6EDF100ACD2CF /* MoneyTableViewCell.m */; };
 		586C99F61AA6EDF100ACD2CF /* MoneyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586C99F41AA6EDF100ACD2CF /* MoneyTableViewCell.xib */; };
 		586C99FA1AA702F700ACD2CF /* MirrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 586C99F81AA702F700ACD2CF /* MirrorViewController.m */; };
@@ -502,6 +503,9 @@
 		585CB0841AB67E9D00E0D390 /* StarMonthInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarMonthInfo.m; sourceTree = "<group>"; };
 		585CB0861AB68A4B00E0D390 /* StarYearInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarYearInfo.h; sourceTree = "<group>"; };
 		585CB0871AB68A4B00E0D390 /* StarYearInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarYearInfo.m; sourceTree = "<group>"; };
+		585F17561AC2B40100975468 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		585F17591AC2B41B00975468 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		585F175A1AC2B44500975468 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		586C99F21AA6EDF100ACD2CF /* MoneyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyTableViewCell.h; sourceTree = "<group>"; };
 		586C99F31AA6EDF100ACD2CF /* MoneyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyTableViewCell.m; sourceTree = "<group>"; };
 		586C99F41AA6EDF100ACD2CF /* MoneyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoneyTableViewCell.xib; sourceTree = "<group>"; };
@@ -722,6 +726,7 @@
 				588A3DE41AA4428300EB1066 /* AppList.plist */,
 				5845D84F1AA547F60007E4D8 /* PocketTools.pch */,
 				588CE9571AB6D60F0068AA28 /* Weather.plist */,
+				585F17571AC2B40100975468 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1242,8 +1247,9 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				"zh-Hans",
+				en,
 			);
 			mainGroup = 5817F1161A9D7BDB00B3A0A1;
 			productRefGroup = 5817F1201A9D7BDB00B3A0A1 /* Products */;
@@ -1292,6 +1298,7 @@
 				5858BDA71AB142040000F07C /* DreamSearchViewController.xib in Resources */,
 				58BE590E1AA6ABCD001811D9 /* ExchangeViewController.xib in Resources */,
 				583C911B1AAE8EE700F1D756 /* PhonePayViewController.xib in Resources */,
+				585F17551AC2B40100975468 /* Localizable.strings in Resources */,
 				5845D8571AA54A420007E4D8 /* PhoneSearchViewController.xib in Resources */,
 				18E4FC0C1AB09AEE001E021E /* MoiveViewController.xib in Resources */,
 				58E8506D1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.xib in Resources */,
@@ -1509,6 +1516,19 @@
 			targetProxy = 5817F1391A9D7BDB00B3A0A1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		585F17571AC2B40100975468 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				585F17561AC2B40100975468 /* Base */,
+				585F17591AC2B41B00975468 /* zh-Hans */,
+				585F175A1AC2B44500975468 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5817F1401A9D7BDB00B3A0A1 /* Debug */ = {
