@@ -18,23 +18,27 @@
 
 @implementation ScanViewController {
     NSMutableArray *companysArray;
+    UIButton *cityButton;
+    NSString *cName;
     NSNumber *cityId;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     cityId = @(1);
+    cName = @"城市";
     companysArray = [NSMutableArray array];
     [_tableView setTableHeaderView:_headerView];
     self.title = NSLocalizedString(@"条码比价", nil);
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"城市" style:UIBarButtonItemStylePlain target:self action:@selector(showSelectCity)];
     // Do any additional setup after loading the view from its nib.
     [self setupScaner];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:cName style:UIBarButtonItemStylePlain target:self action:@selector(showSelectCity)];
 }
 
 - (void)showSelectCity {
     ScanCityListViewController *control = [ScanCityListViewController new];
     [BackButtonTool addBackButton:control];
+    control.delegate = self;
     [self.navigationController pushViewController:control animated:YES];
 }
 
@@ -131,8 +135,12 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-- (void)selectedCityId:(NSNumber *)cid {
+- (void)selectedCityId:(NSNumber *)cid andName:(NSString *)cityName {
     NSLog(@"%@", cid);
+    NSLog(@"%@", cityName);
     cityId = cid;
+    cName = cityName;
+    self.navigationItem.rightBarButtonItem = nil;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:cityName style:UIBarButtonItemStylePlain target:self action:@selector(showSelectCity)];
 }
 @end

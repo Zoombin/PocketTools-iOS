@@ -122,8 +122,8 @@
     } else if (tableView == _rightTableView) {
         ScanCityInfo *info = citysArray[indexPath.row];
         NSLog(@"%@", info.cityName);
-        if ([self.delegate respondsToSelector:@selector(selectedCityId:)]) {
-            [self.delegate selectedCityId:info.cid];
+        if ([self.delegate respondsToSelector:@selector(selectedCityId:andName:)]) {
+            [self.delegate selectedCityId:info.cid andName:info.cityName];
         }
         [self.navigationController popViewControllerAnimated:YES];
     }

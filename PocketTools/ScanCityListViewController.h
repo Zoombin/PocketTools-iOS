@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @protocol ScanCityDelegate <NSObject>
-- (void)selectedCityId:(NSNumber *)cid;
+- (void)selectedCityId:(NSNumber *)cid andName:(NSString *)cityName;
 
 @end
 @interface ScanCityListViewController : PTViewController <UITableViewDataSource, UITableViewDelegate>
