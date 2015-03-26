@@ -49,7 +49,6 @@
     [self initAllIcons];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"menu"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(menuClicked)];
     self.title = @"工具99";
-//    [self searchCityByName:@"苏州"];
     [self initScrollView];
     [_weatherView setFrame:CGRectMake(0, 64, _weatherView.frame.size.width, _weatherView.frame.size.height)];
     [self.view addSubview:_weatherView];
@@ -60,6 +59,7 @@
     [self initAllApps];
     [self initAllStores];
     [self initMenuButtons:0];
+    [self loadLocalData];
     
     self.locationManager = [[CLLocationManager alloc]init];
     _locationManager.delegate = self;
@@ -69,7 +69,14 @@
         [_locationManager requestAlwaysAuthorization];//添加这句
     }
     [_locationManager startUpdatingLocation];
-    
+}
+
+- (void)showLoading {
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_loadingView];
+}
+
+- (void)hidenLoading {
+    self.navigationItem.leftBarButtonItem = nil;
 }
 
 - (void)locationManager:(CLLocationManager *)manager
@@ -82,7 +89,9 @@
          for(CLPlacemark *placemark in placemarks)
          {
              NSString *cityName = [[placemark.addressDictionary objectForKey:@"City"] substringToIndex:2];
-             [self searchCityByName:cityName];
+             if (cityName) {
+                 [self searchCityByName:cityName];
+             }
          }
      }];
     [self.locationManager stopUpdatingLocation];
@@ -91,25 +100,25 @@
 - (void)locationManager:(CLLocationManager *)manager
        didFailWithError:(NSError *)error {
     NSLog(@"获取位置出错!");
-    [self loadLoaclData];
 }
 
 - (void)searchPMByCity:(NSString *)cityName {
+    [self showLoading];
     [[ServiceRequest shared] searchAirByCity:cityName withBlock:^(NSDictionary *result, NSError *error) {
         if (!error) {
             ServiceResult *resultInfo= [[ServiceResult alloc] initWithAttributes:result];
             if ([resultInfo.error_code integerValue] == 0) {
-                [self hideHUD:YES];
+                [self hidenLoading];
                 NSArray *infoArray = (NSArray *)resultInfo.result;
                 if ([infoArray count] != 0) {
                     [[ServiceRequest shared] savePMInfo:infoArray[0]];
                     [self showPMInfo:infoArray[0]];
                 }
             } else {
-                [self displayHUDTitle:nil message:resultInfo.reason duration:DELAY_TIMES];
+                [self hidenLoading];
             }
         } else {
-            [self displayHUDTitle:nil message:NETWORK_ERROR duration:DELAY_TIMES];
+            [self hidenLoading];
         }
     }];
 }
@@ -137,7 +146,7 @@
     [self showTodayInfo:tInfo];
 }
 
-- (void)loadLoaclData {
+- (void)loadLocalData {
     NSString *cityName = [[ServiceRequest shared] getCityName];
     if (cityName != nil) {
         NSDictionary *weatherInfo = [[ServiceRequest shared] getWeather];
@@ -156,36 +165,42 @@
 }
 
 - (void)threeHour:(NSString *)city {
+    [self showLoading];
     [[ServiceRequest shared] threeHour:city withBlock:^(NSDictionary *result, NSError *error) {
         if (!error) {
             ServiceResult *resultInfo = [[ServiceResult alloc] initWithAttributes:result];
             if ([resultInfo.error_code integerValue] == 0) {
+                [self hidenLoading];
                 NSArray *array = (NSArray *)resultInfo.result;
                 [[ServiceRequest shared] saveThreeWeather:array];
                 [self searchPMByCity:city];
                 [self showThreeHourInfo:array];
+            } else {
+                [self hidenLoading];
             }
+        } else {
+            [self hidenLoading];
         }
     }];
 }
 
 - (void)searchCityByName:(NSString *)name {
-    [self displayHUD:@"加载中..."];
+    [self showLoading];
     [[ServiceRequest shared] getWeatherByIdOrName:name withBlock:^(NSDictionary *result, NSError *error) {
         if (!error) {
             ServiceResult *resultInfo = [[ServiceResult alloc] initWithAttributes:result];
             if ([resultInfo.error_code integerValue] == 0) {
-                [self hideHUD:YES];
+                [self hidenLoading];
                 [[ServiceRequest shared] saveCityName:name];
                 [[ServiceRequest shared] saveWeather:resultInfo.result];
                 [self showWeatherInfo:resultInfo.result];
                 [self threeHour:name];
             } else {
-                [self loadLoaclData];
+                [self hidenLoading];
                 [self displayHUDTitle:nil message:resultInfo.reason duration:DELAY_TIMES];
             }
         } else {
-            [self loadLoaclData];
+            [self hidenLoading];
             [self displayHUDTitle:nil message:NETWORK_ERROR duration:DELAY_TIMES];
         }
     }];

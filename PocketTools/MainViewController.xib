@@ -11,6 +11,7 @@
                 <outlet property="futureWeatherScrollView" destination="xWq-ES-70q" id="QMV-DF-sLd"/>
                 <outlet property="highLabel" destination="z5U-pG-0Sf" id="1pW-pt-VFH"/>
                 <outlet property="iconImageView" destination="hJz-Qs-zTj" id="5sA-Tb-Wmt"/>
+                <outlet property="loadingView" destination="eHW-gx-RcL" id="GDg-xH-XYe"/>
                 <outlet property="lowLabel" destination="dZs-eL-J7R" id="qld-Kr-wmn"/>
                 <outlet property="pmDesLabel" destination="0R4-h5-vIJ" id="lyQ-t1-oN7"/>
                 <outlet property="pmLabel" destination="GB0-nk-Do9" id="y0F-4y-yIQ"/>
@@ -119,7 +120,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="325" y="802"/>
+            <point key="canvasLocation" x="325" y="787"/>
         </view>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
@@ -128,6 +129,11 @@
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
             <point key="canvasLocation" x="325" y="367"/>
         </view>
+        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" id="eHW-gx-RcL">
+            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <point key="canvasLocation" x="618" y="696"/>
+        </activityIndicatorView>
     </objects>
     <resources>
         <image name="highest_tmp" width="14" height="16"/>
