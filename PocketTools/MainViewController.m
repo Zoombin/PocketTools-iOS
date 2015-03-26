@@ -276,7 +276,7 @@
     CGRect frame = menuScrollView.frame;
     frame.origin.x = frame.size.width * page;
     frame.origin.y = 0;
-    [menuScrollView setContentOffset:CGPointMake(frame.size.width * page, 0)];
+    [menuScrollView setContentOffset:CGPointMake(frame.size.width * page, -64)];
 }
 
 - (void)initScrollView {

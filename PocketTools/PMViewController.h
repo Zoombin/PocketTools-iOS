@@ -14,7 +14,11 @@
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet UILabel *nowLabel;
-@property (nonatomic, weak) IBOutlet UILabel *nowPMLabel;
 @property (nonatomic, weak) IBOutlet UILabel *nowDesLabel;
+@property (nonatomic, weak) IBOutlet UITextField *pm25ValueLabel;
+@property (nonatomic, weak) IBOutlet UITextField *pmValueLabel;
+@property (nonatomic, weak) IBOutlet UITextField *so2ValueLabel;
+@property (nonatomic, weak) IBOutlet UITextField *no2ValueLabel;
+@property (nonatomic, weak) IBOutlet UIView *headerView;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @end

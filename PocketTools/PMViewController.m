@@ -31,6 +31,7 @@
         [_locationManager requestAlwaysAuthorization];//添加这句
     }
     [_locationManager startUpdatingLocation];
+    [_tableView setTableHeaderView:_headerView];
 }
 
 - (void)locationManager:(CLLocationManager *)manager
@@ -65,10 +66,6 @@
                 NSArray *infoArray = (NSArray *)resultInfo.result;
                 if ([infoArray count] != 0) {
                     NSDictionary *dict = infoArray[0];
-//                    NSDictionary *cityNow = dict[@"citynow"];
-//                    _nowLabel.text = cityNow[@"AQI"];
-//                    _nowDesLabel.text = cityNow[@"quality"];
-//                    _nowDesLabel.backgroundColor = [self setColorWithPM:[cityNow[@"AQI"] integerValue]];
                     if (dict[@"lastMoniData"]) {
                         [locationArray addObjectsFromArray:[dict[@"lastMoniData"] allValues]];
                         [_tableView reloadData];
@@ -95,7 +92,10 @@
                     _nowLabel.text = dict[@"AQI"];
                     _nowDesLabel.text = dict[@"quality"];
                     _nowDesLabel.backgroundColor = [self setColorWithPM:[dict[@"AQI"] integerValue]];
-                    _nowPMLabel.text = [NSString stringWithFormat:@"PM2.5: %@ PM10: %@ SO2: %@ NO2: %@", dict[@"PM2.5"], dict[@"PM10"], dict[@"SO2"], dict[@"NO2"]];
+                    _pm25ValueLabel.text = dict[@"PM2.5"];
+                    _pmValueLabel.text = dict[@"PM10"];
+                    _so2ValueLabel.text = dict[@"SO2"];
+                    _no2ValueLabel.text = dict[@"NO2"];
                 }
             } else {
                 [self displayHUDTitle:nil message:resultInfo.reason duration:DELAY_TIMES];
