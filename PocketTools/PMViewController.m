@@ -31,8 +31,6 @@
         [_locationManager requestAlwaysAuthorization];//添加这句
     }
     [_locationManager startUpdatingLocation];
-    [self searchPMByCity:@"苏州"];
-    [self searchAirByCity:@"苏州"];
 }
 
 - (void)locationManager:(CLLocationManager *)manager
@@ -46,8 +44,10 @@
          {
              NSString *cityName = [[placemark.addressDictionary objectForKey:@"City"] substringToIndex:2];
              self.title = cityName;
-             [self searchPMByCity:cityName];
-             [self searchAirByCity:cityName];
+             if (cityName) {
+                 [self searchPMByCity:cityName];
+                 [self searchAirByCity:cityName];
+             }
          }
      }];
     [self.locationManager stopUpdatingLocation];

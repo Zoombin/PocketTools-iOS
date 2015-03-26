@@ -503,7 +503,9 @@ static ServiceRequest *request;
 - (void)searchPM25ByCity:(NSString *)city
                WithBlock:(void (^)(NSDictionary *result, NSError *error))block {
     NSMutableDictionary *params =  [self getRequestParams];
-    params[@"city"] = city;
+    if (city) {
+        params[@"city"] = city;
+    }
     NSString *requestUrl = @"http://web.juhe.cn:8080/environment/air/pm";
     JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
     [juheapi executeWorkWithAPI:requestUrl APIID:@"33" Parameters:params Method:@"GET" Success:^(id responseObject) {
@@ -516,7 +518,9 @@ static ServiceRequest *request;
 - (void)searchAirByCity:(NSString *)city
               withBlock:(void (^)(NSDictionary *result, NSError *error))block {
     NSMutableDictionary *params =  [self getRequestParams];
-    params[@"city"] = city;
+    if (city) {
+        params[@"city"] = city;
+    }
     NSString *requestUrl = @"http://web.juhe.cn:8080/environment/air/cityair";
     JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
     [juheapi executeWorkWithAPI:requestUrl APIID:@"33" Parameters:params Method:@"GET" Success:^(id responseObject) {
