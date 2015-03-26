@@ -40,13 +40,14 @@
     [self valueChanged];
 }
 
-- (void)addLineSpace {
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:_contentTextView.text];
+- (void)addLineSpace:(UITextView *)textView {
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:textView.text];
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     [paragraphStyle setLineSpacing:5];//调整行间距
-    [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [_contentTextView.text length])];
-    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0] range:NSMakeRange(0, [_contentTextView.text length])];
-    _contentTextView.attributedText = attributedString;
+    [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [textView.text length])];
+    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0, [textView.text length])];
+    [attributedString addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"FZKATJW--GB1-0" size:16] range:NSMakeRange(0, [textView.text length])];
+    textView.attributedText = attributedString;
 }
 
 - (void)valueChanged {
@@ -81,7 +82,7 @@
                     StarYearInfo *yInfo = [[StarYearInfo alloc] initWithAttributes:result];
                     [self showInfoWithYear:yInfo];
                 }
-                [self addLineSpace];
+                [self addLineSpace:_contentTextView];
             } else {
                 [self displayHUDTitle:nil message:resultInfo.reason duration:DELAY_TIMES];
             }
@@ -97,6 +98,7 @@
     _dayLabel2.text = [NSString stringWithFormat:@"幸运数字:%@ 幸运颜色:%@", info.number, info.color];
     _dayLabel3.text = [NSString stringWithFormat:@"健康:%@ 爱情:%@ 财运:%@ 工作:%@", info.health, info.love, info.money, info.work];
     _dayContentTextView.text = info.summary;
+    [self addLineSpace:_dayContentTextView];
     _contentTextView.hidden = YES;
 }
 

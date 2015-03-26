@@ -75,6 +75,7 @@
 		581139311AC3E0C800530DED /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 5811392A1AC3E0C800530DED /* MJRefreshConst.m */; };
 		581139321AC3E0C800530DED /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5811392C1AC3E0C800530DED /* MJRefreshFooterView.m */; };
 		581139331AC3E0C800530DED /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5811392E1AC3E0C800530DED /* MJRefreshHeaderView.m */; };
+		581139361AC402DC00530DED /* FZKTJT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 581139351AC402DC00530DED /* FZKTJT.ttf */; };
 		5817F1251A9D7BDB00B3A0A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F1241A9D7BDB00B3A0A1 /* main.m */; };
 		5817F12B1A9D7BDB00B3A0A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F12A1A9D7BDB00B3A0A1 /* MainViewController.m */; };
 		5817F1301A9D7BDB00B3A0A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5817F12F1A9D7BDB00B3A0A1 /* Images.xcassets */; };
@@ -334,6 +335,7 @@
 		5811392C1AC3E0C800530DED /* MJRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooterView.m; sourceTree = "<group>"; };
 		5811392D1AC3E0C800530DED /* MJRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderView.h; sourceTree = "<group>"; };
 		5811392E1AC3E0C800530DED /* MJRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderView.m; sourceTree = "<group>"; };
+		581139351AC402DC00530DED /* FZKTJT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZKTJT.ttf; sourceTree = "<group>"; };
 		5817F11F1A9D7BDB00B3A0A1 /* PocketTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5817F1231A9D7BDB00B3A0A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5817F1241A9D7BDB00B3A0A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -721,6 +723,14 @@
 			path = MJRefresh;
 			sourceTree = "<group>";
 		};
+		581139341AC402DC00530DED /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				581139351AC402DC00530DED /* FZKTJT.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		5817F1161A9D7BDB00B3A0A1 = {
 			isa = PBXGroup;
 			children = (
@@ -764,6 +774,7 @@
 		5817F1221A9D7BDB00B3A0A1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				581139341AC402DC00530DED /* fonts */,
 				5817F1231A9D7BDB00B3A0A1 /* Info.plist */,
 				5817F1241A9D7BDB00B3A0A1 /* main.m */,
 				588A3DE41AA4428300EB1066 /* AppList.plist */,
@@ -1318,6 +1329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				581139361AC402DC00530DED /* FZKTJT.ttf in Resources */,
 				18E4FC401AB1D57E001E021E /* README in Resources */,
 				588A3DF91AA462C200EB1066 /* ParkViewController.xib in Resources */,
 				18E4FC021AADF415001E021E /* GamePayViewController.xib in Resources */,

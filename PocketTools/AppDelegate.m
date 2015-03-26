@@ -28,6 +28,15 @@
     if (!ret) {
         NSLog(@"manager start failed!");
     }
+    NSMutableArray *fontNames = [[NSMutableArray alloc] init];
+    NSArray *fontFamilyNames = [UIFont familyNames];
+    for (NSString *familyName in fontFamilyNames) {
+        //        NSLog(@"Font Family Name = %@", familyName);
+        NSArray *names = [UIFont fontNamesForFamilyName:familyName];
+        //        NSLog(@"Font Names = %@", fontNames);
+        [fontNames addObjectsFromArray:names];
+    }
+    NSLog(@"fontNames==%@",fontNames);
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self initTabBar];
     return YES;

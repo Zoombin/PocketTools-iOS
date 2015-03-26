@@ -32,6 +32,10 @@
 	</array>
 	<key>CFBundleDisplayName</key>
 	<string>工具99</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FZKTJT.ttf</string>
+	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
