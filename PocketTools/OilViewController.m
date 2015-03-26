@@ -9,6 +9,7 @@
 #import "OilViewController.h"
 #import "OilCell.h"
 #import "OilInfo.h"
+#import "MJRefresh.h"
 
 @interface OilViewController ()
 
@@ -16,11 +17,18 @@
 
 @implementation OilViewController {
     NSMutableArray *nearByOilList;
+    NSInteger currentPage;
+    CLLocation *currLocation;
+    MJRefreshHeaderView *_header;
+    MJRefreshFooterView *_footer;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = NSLocalizedString(@"附近油价", nil);
+    currentPage = 1;
+    [self addHeader];
+    [self addFooter];
     nearByOilList = [NSMutableArray array];
     self.locationManager = [[CLLocationManager alloc]init];
     _locationManager.delegate = self;
@@ -33,16 +41,50 @@
     // Do any additional setup after loading the view from its nib.
 }
 
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+- (void)addHeader
 {
-    CLLocation *currLocation = [locations lastObject];
-    NSLog(@"经度=%f 纬度=%f 高度=%f", currLocation.coordinate.latitude, currLocation.coordinate.longitude, currLocation.altitude);
-    [self loadNearByOilList:@(currLocation.coordinate.longitude) andLat:@(currLocation.coordinate.latitude)];
+    MJRefreshHeaderView *header = [MJRefreshHeaderView header];
+    header.scrollView = _tableView;
+    header.beginRefreshingBlock = ^(MJRefreshBaseView *refreshView) {
+        NSLog(@"%@----开始进入刷新状态", refreshView.class);
+        currentPage = 1;
+        [self loadNearByOilList];
+    };
+    _header = header;
 }
 
-- (void)loadNearByOilList:(NSNumber *)lon andLat:(NSNumber *)lat {
+- (void)addFooter
+{
+    MJRefreshFooterView *footer = [MJRefreshFooterView footer];
+    footer.scrollView = _tableView;
+    footer.beginRefreshingBlock = ^(MJRefreshBaseView *refreshView) {
+        NSLog(@"%@----开始进入刷新状态", refreshView.class);
+        currentPage++;
+        [self loadNearByOilList];
+    };
+    _footer = footer;
+}
+
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    currLocation = [locations lastObject];
+    [self loadNearByOilList];
+}
+
+- (void)loadNearByOilList {
+    if (currLocation == nil) {
+        return;
+    }
+    NSNumber *lon = @(currLocation.coordinate.longitude);
+    NSNumber *lat = @(currLocation.coordinate.latitude);
     [self displayHUD:@"加载中..."];
-    [[ServiceRequest shared] nearByOilPrice:lon lat:lat withBlock:^(NSDictionary *result, NSError *error) {
+    [[ServiceRequest shared] nearByOilPrice:lon
+                                        lat:lat
+                                       page:currentPage
+                                  withBlock:^(NSDictionary *result, NSError *error) {
+                                      [_header endRefreshing];
+                                      [_footer endRefreshing];
         if (!error) {
             ServiceResult *resultInfo= [[ServiceResult alloc] initWithAttributes:result];
             if ([resultInfo.resultcode integerValue] == SUCCESS_CODE) {
@@ -54,12 +96,11 @@
                     [_tableView reloadData];
                 }
             } else {
-                [self displayHUDTitle:nil message:resultInfo.reason duration:DELAY_TIMES];
+                [self displayHUDTitle:nil message:@"已无更多数据!" duration:DELAY_TIMES];
             }
         } else {
             [self displayHUDTitle:nil message:NETWORK_ERROR duration:DELAY_TIMES];
         }
-
     }];
 }
 
@@ -106,6 +147,7 @@
     OilInfo *info = nearByOilList[indexPath.row];
     cell.nameLabel.text = info.name;
     cell.addressLabel.text = info.address;
+    [cell.addressLabel sizeToFit];
     cell.tagLabel.text = [NSString stringWithFormat:@"标签 : %@", info.fwlsmc];
     cell.distanceLabel.text = [NSString stringWithFormat:@"%@米", info.distance];
     if (![info.gastprice isKindOfClass:[NSNull class]]) {

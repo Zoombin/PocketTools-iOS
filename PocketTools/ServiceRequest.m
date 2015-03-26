@@ -403,10 +403,13 @@ static ServiceRequest *request;
 //附近油价
 - (void)nearByOilPrice:(NSNumber *)lon
                    lat:(NSNumber *)lat
+                  page:(NSInteger)page
              withBlock:(void (^)(NSDictionary *result, NSError *error))block {
     NSMutableDictionary *params =  [self getRequestParams];
     params[@"lon"] = lon;
     params[@"lat"] = lat;
+    params[@"page"] = @(page);
+    params[@"r"] = @(10000);
     NSString *requestUrl = @"http://apis.juhe.cn/oil/local";
     JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
     [juheapi executeWorkWithAPI:requestUrl APIID:@"7" Parameters:params Method:@"GET" Success:^(id responseObject) {

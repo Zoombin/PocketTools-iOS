@@ -124,6 +124,7 @@
 //附近油价
 - (void)nearByOilPrice:(NSNumber *)lon
                    lat:(NSNumber *)lat
+                  page:(NSInteger)page
              withBlock:(void (^)(NSDictionary *result, NSError *error))block;
 
 //航线查询

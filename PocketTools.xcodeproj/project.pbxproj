@@ -70,6 +70,11 @@
 		18E4FC431AB1D57E001E021E /* JBPlistFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4FC361AB1D57E001E021E /* JBPlistFileManager.m */; };
 		18E4FC461AB1D5C7001E021E /* CalandarTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4FC451AB1D5C7001E021E /* CalandarTitleView.m */; };
 		5805447E1ABFC336004BB298 /* ThreeHourInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5805447D1ABFC336004BB298 /* ThreeHourInfo.m */; };
+		5811392F1AC3E0C800530DED /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 581139251AC3E0C800530DED /* MJRefresh.bundle */; };
+		581139301AC3E0C800530DED /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 581139281AC3E0C800530DED /* MJRefreshBaseView.m */; };
+		581139311AC3E0C800530DED /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 5811392A1AC3E0C800530DED /* MJRefreshConst.m */; };
+		581139321AC3E0C800530DED /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5811392C1AC3E0C800530DED /* MJRefreshFooterView.m */; };
+		581139331AC3E0C800530DED /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5811392E1AC3E0C800530DED /* MJRefreshHeaderView.m */; };
 		5817F1251A9D7BDB00B3A0A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F1241A9D7BDB00B3A0A1 /* main.m */; };
 		5817F12B1A9D7BDB00B3A0A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5817F12A1A9D7BDB00B3A0A1 /* MainViewController.m */; };
 		5817F1301A9D7BDB00B3A0A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5817F12F1A9D7BDB00B3A0A1 /* Images.xcassets */; };
@@ -319,6 +324,16 @@
 		18E4FC451AB1D5C7001E021E /* CalandarTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalandarTitleView.m; sourceTree = "<group>"; };
 		5805447C1ABFC336004BB298 /* ThreeHourInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeHourInfo.h; sourceTree = "<group>"; };
 		5805447D1ABFC336004BB298 /* ThreeHourInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeHourInfo.m; sourceTree = "<group>"; };
+		581139251AC3E0C800530DED /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
+		581139261AC3E0C800530DED /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
+		581139271AC3E0C800530DED /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
+		581139281AC3E0C800530DED /* MJRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBaseView.m; sourceTree = "<group>"; };
+		581139291AC3E0C800530DED /* MJRefreshConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshConst.h; sourceTree = "<group>"; };
+		5811392A1AC3E0C800530DED /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
+		5811392B1AC3E0C800530DED /* MJRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooterView.h; sourceTree = "<group>"; };
+		5811392C1AC3E0C800530DED /* MJRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooterView.m; sourceTree = "<group>"; };
+		5811392D1AC3E0C800530DED /* MJRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderView.h; sourceTree = "<group>"; };
+		5811392E1AC3E0C800530DED /* MJRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderView.m; sourceTree = "<group>"; };
 		5817F11F1A9D7BDB00B3A0A1 /* PocketTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5817F1231A9D7BDB00B3A0A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5817F1241A9D7BDB00B3A0A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -687,6 +702,23 @@
 				18E4FC361AB1D57E001E021E /* JBPlistFileManager.m */,
 			);
 			path = LocalFileManager;
+			sourceTree = "<group>";
+		};
+		581139241AC3E0C800530DED /* MJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				581139251AC3E0C800530DED /* MJRefresh.bundle */,
+				581139261AC3E0C800530DED /* MJRefresh.h */,
+				581139271AC3E0C800530DED /* MJRefreshBaseView.h */,
+				581139281AC3E0C800530DED /* MJRefreshBaseView.m */,
+				581139291AC3E0C800530DED /* MJRefreshConst.h */,
+				5811392A1AC3E0C800530DED /* MJRefreshConst.m */,
+				5811392B1AC3E0C800530DED /* MJRefreshFooterView.h */,
+				5811392C1AC3E0C800530DED /* MJRefreshFooterView.m */,
+				5811392D1AC3E0C800530DED /* MJRefreshHeaderView.h */,
+				5811392E1AC3E0C800530DED /* MJRefreshHeaderView.m */,
+			);
+			path = MJRefresh;
 			sourceTree = "<group>";
 		};
 		5817F1161A9D7BDB00B3A0A1 = {
@@ -1081,6 +1113,7 @@
 		58E8505D1AA012AC0095DDC7 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				581139241AC3E0C800530DED /* MJRefresh */,
 				18E4FC161AB1D57E001E021E /* JustBen */,
 				582BD57B1AB18945008A9B54 /* BaiduMap_IOSSDK_v2.6.0_Lib */,
 				582BD55E1AB17A2F008A9B54 /* JuheApisSDK */,
@@ -1318,6 +1351,7 @@
 				58BE590E1AA6ABCD001811D9 /* ExchangeViewController.xib in Resources */,
 				583C911B1AAE8EE700F1D756 /* PhonePayViewController.xib in Resources */,
 				585F17551AC2B40100975468 /* Localizable.strings in Resources */,
+				5811392F1AC3E0C800530DED /* MJRefresh.bundle in Resources */,
 				5845D8571AA54A420007E4D8 /* PhoneSearchViewController.xib in Resources */,
 				18E4FC0C1AB09AEE001E021E /* MoiveViewController.xib in Resources */,
 				58E8506D1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.xib in Resources */,
@@ -1417,6 +1451,7 @@
 				583C912C1AAE989600F1D756 /* DMPasscodeInternalField.m in Sources */,
 				58E850681AA012F10095DDC7 /* ServiceRequest.m in Sources */,
 				5858BD9D1AB12E070000F07C /* OilInfo.m in Sources */,
+				581139301AC3E0C800530DED /* MJRefreshBaseView.m in Sources */,
 				583C912E1AAE989600F1D756 /* DMPasscodeInternalViewController.m in Sources */,
 				582BD5551AB14815008A9B54 /* DreamInfo.m in Sources */,
 				585CB0791AB66AD100E0D390 /* StarSelectViewController.m in Sources */,
@@ -1449,6 +1484,7 @@
 				1872F3BD1AAAE71C007F60BD /* DreamTypeSecondViewController.m in Sources */,
 				583C212F1ABAB23100A9C54B /* BackButtonTool.m in Sources */,
 				18D937071ABE67AD00DDAF75 /* WebViewController.m in Sources */,
+				581139331AC3E0C800530DED /* MJRefreshHeaderView.m in Sources */,
 				5880F7621AB918440049014B /* DailyViewController.m in Sources */,
 				58AD9C901AB03D2D00EF2619 /* ShopInfo.m in Sources */,
 				582BD55D1AB163D9008A9B54 /* PlaneInfo.m in Sources */,
@@ -1472,6 +1508,7 @@
 				588BDBE51AA1A088009347CE /* IPInfo.m in Sources */,
 				1823AAE71AB62C9400C09D5C /* AirInfo.m in Sources */,
 				18E4FC431AB1D57E001E021E /* JBPlistFileManager.m in Sources */,
+				581139321AC3E0C800530DED /* MJRefreshFooterView.m in Sources */,
 				18E4FC011AADF415001E021E /* GamePayViewController.m in Sources */,
 				18E4FC3D1AB1D57E001E021E /* JBWeekdaysBarView.m in Sources */,
 				583C912A1AAE989600F1D756 /* DMPasscode.m in Sources */,
@@ -1505,6 +1542,7 @@
 				583C91151AAE8E3C00F1D756 /* TicketsViewController.m in Sources */,
 				1823AADE1AB62A7400C09D5C /* PMViewController.m in Sources */,
 				583C91291AAE989600F1D756 /* DMKeychain.m in Sources */,
+				581139311AC3E0C800530DED /* MJRefreshConst.m in Sources */,
 				585CB07B1AB66AD100E0D390 /* StarViewController.m in Sources */,
 				18E4FC3B1AB1D57E001E021E /* JBUnitTileView.m in Sources */,
 				1823AAE31AB62AAD00C09D5C /* PMCitySelectViewController.m in Sources */,
