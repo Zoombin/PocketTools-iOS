@@ -104,15 +104,17 @@
 
 - (void)searchPMByCity:(NSString *)cityName {
     [self showLoading];
-    [[ServiceRequest shared] searchAirByCity:cityName withBlock:^(NSDictionary *result, NSError *error) {
+    [[ServiceRequest shared] searchPM25ByCity:cityName WithBlock:^(NSDictionary *result, NSError *error) {
         if (!error) {
             ServiceResult *resultInfo= [[ServiceResult alloc] initWithAttributes:result];
             if ([resultInfo.error_code integerValue] == 0) {
                 [self hidenLoading];
-                NSArray *infoArray = (NSArray *)resultInfo.result;
-                if ([infoArray count] != 0) {
-                    [[ServiceRequest shared] savePMInfo:infoArray[0]];
-                    [self showPMInfo:infoArray[0]];
+                NSArray *array = (NSArray *)resultInfo.result;
+                if ([array isKindOfClass:[NSArray class]]) {
+                    if ([array count] > 0) {
+                        [[ServiceRequest shared] savePMInfo:array[0]];
+                        [self showPMInfo:array[0]];
+                    }
                 }
             } else {
                 [self hidenLoading];
@@ -124,10 +126,9 @@
 }
 
 - (void)showPMInfo:(NSDictionary *)info {
-    NSDictionary *cityNow = info[@"citynow"];
-    _pmLabel.text = cityNow[@"AQI"];
-    _pmDesLabel.text = cityNow[@"quality"];
-    NSInteger aqi = [cityNow[@"AQI"] integerValue];
+    _pmLabel.text = info[@"AQI"];
+    _pmDesLabel.text = info[@"quality"];
+    NSInteger aqi = [info[@"AQI"] integerValue];
     if (aqi <= 50) {
         _pmDesLabel.backgroundColor = [UIColor blueColor];
     } else if (aqi > 50 && aqi <= 100) {
