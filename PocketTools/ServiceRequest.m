@@ -545,7 +545,9 @@ static ServiceRequest *request;
 - (void)threeHour:(NSString *)city
         withBlock:(void (^)(NSDictionary *result, NSError *error))block {
     NSMutableDictionary *params =  [self getRequestParams];
-    params[@"cityname"] = city;
+    if (city) {
+        params[@"cityname"] = city;
+    }
     NSString *requestUrl = @"http://v.juhe.cn/weather/forecast3h";
     JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
     [juheapi executeWorkWithAPI:requestUrl APIID:@"39" Parameters:params Method:@"GET" Success:^(id responseObject) {
@@ -558,7 +560,9 @@ static ServiceRequest *request;
 - (void)getWeatherByIdOrName:(NSString *)name
                    withBlock:(void (^)(NSDictionary *result, NSError *error))block {
     NSMutableDictionary *params =  [self getRequestParams];
-    params[@"cityname"] = name;
+    if (name) {
+        params[@"cityname"] = name;
+    }
     NSString *requestUrl = @"http://v.juhe.cn/weather/index";
     JHAPISDK *juheapi = [JHAPISDK shareJHAPISDK];
     [juheapi executeWorkWithAPI:requestUrl APIID:@"39" Parameters:params Method:@"GET" Success:^(id responseObject) {
