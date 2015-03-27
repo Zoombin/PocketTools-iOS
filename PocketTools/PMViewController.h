@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "PMCitySelectViewController.h"
+#import "EColumnChart.h"
 
-@interface PMViewController : PTViewController <CitySelectDelegate, CLLocationManagerDelegate>
+@interface PMViewController : PTViewController <CitySelectDelegate, CLLocationManagerDelegate, EColumnChartDelegate, EColumnChartDataSource>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet UILabel *nowLabel;
@@ -21,4 +22,5 @@
 @property (nonatomic, weak) IBOutlet UITextField *no2ValueLabel;
 @property (nonatomic, weak) IBOutlet UIView *headerView;
 @property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic, weak) IBOutlet UIView *pmView;
 @end

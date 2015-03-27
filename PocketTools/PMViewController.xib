@@ -13,6 +13,7 @@
                 <outlet property="nowLabel" destination="D4g-YU-CMw" id="ro4-a1-2oD"/>
                 <outlet property="pm25ValueLabel" destination="Lrp-3u-utn" id="LvS-Ze-4Ok"/>
                 <outlet property="pmValueLabel" destination="uhy-MD-CRw" id="usK-Th-Khf"/>
+                <outlet property="pmView" destination="8yA-Oi-g1Z" id="Unn-7R-tha"/>
                 <outlet property="so2ValueLabel" destination="ste-hB-h81" id="8Ze-Ze-uAY"/>
                 <outlet property="tableView" destination="xWP-IT-ZcY" id="UWo-z4-RF6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -52,7 +53,7 @@
             <point key="canvasLocation" x="278" y="156"/>
         </view>
         <view contentMode="scaleToFill" id="eRP-PX-yTT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="210"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PM2.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Iir-hg-hdn">
@@ -116,7 +117,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="检测点数据" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UEo-y0-WPH">
-                    <rect key="frame" x="9" y="189" width="300" height="21"/>
+                    <rect key="frame" x="9" y="269" width="300" height="21"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -131,17 +132,22 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BIn-Z4-YeM">
-                    <rect key="frame" x="30" y="167" width="260" height="1"/>
+                    <rect key="frame" x="30" y="259" width="260" height="1"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最近七天空气质量" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YJo-mu-c6d">
-                    <rect key="frame" x="82" y="56" width="157" height="21"/>
+                <view contentMode="scaleToFill" id="8yA-Oi-g1Z">
+                    <rect key="frame" x="9" y="57" width="303" height="185"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最近七天空气质量" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YJo-mu-c6d">
+                    <rect key="frame" x="82" y="43" width="157" height="12"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -149,7 +155,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="634" y="194"/>
+            <point key="canvasLocation" x="632" y="78"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

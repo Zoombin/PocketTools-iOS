@@ -130,7 +130,7 @@
     _pmDesLabel.text = info[@"quality"];
     NSInteger aqi = [info[@"AQI"] integerValue];
     if (aqi <= 50) {
-        _pmDesLabel.backgroundColor = [UIColor blueColor];
+        _pmDesLabel.backgroundColor = [UIColor greenColor];
     } else if (aqi > 50 && aqi <= 100) {
         _pmDesLabel.backgroundColor = [UIColor greenColor];
     } else if (aqi > 100 && aqi <= 200) {

@@ -123,6 +123,23 @@
 		583C912E1AAE989600F1D756 /* DMPasscodeInternalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583C91281AAE989600F1D756 /* DMPasscodeInternalViewController.m */; };
 		583C91351AAEEAAA00F1D756 /* ImageScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583C91331AAEEAAA00F1D756 /* ImageScanViewController.m */; };
 		583C91361AAEEAAA00F1D756 /* ImageScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 583C91341AAEEAAA00F1D756 /* ImageScanViewController.xib */; };
+		583DFE8D1AC4F77B00BACAA1 /* EColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 583DFE761AC4F77A00BACAA1 /* EColor.m */; };
+		583DFE8E1AC4F77B00BACAA1 /* EColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = 583DFE781AC4F77A00BACAA1 /* EColumn.m */; };
+		583DFE8F1AC4F77B00BACAA1 /* EColumnChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 583DFE7A1AC4F77A00BACAA1 /* EColumnChart.m */; };
+		583DFE901AC4F77B00BACAA1 /* EColumnChartLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 583DFE7C1AC4F77A00BACAA1 /* EColumnChartLabel.m */; };
+		583DFE911AC4F77B00BACAA1 /* EColumnDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 583DFE7E1AC4F77A00BACAA1 /* EColumnDataModel.m */; };
+		583DFE921AC4F77B00BACAA1 /* EFloatBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 583DFE801AC4F77A00BACAA1 /* EFloatBox.m */; };
+		583DFE931AC4F77B00BACAA1 /* ELine.m in Sources */ = {isa = PBXBuildFile; fileRef = 583DFE821AC4F77A00BACAA1 /* ELine.m */; };
+		583DFE941AC4F77B00BACAA1 /* ELineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 583DFE841AC4F77A00BACAA1 /* ELineChart.m */; };
+		583DFE951AC4F77B00BACAA1 /* ELineChartDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 583DFE861AC4F77A00BACAA1 /* ELineChartDataModel.m */; };
+		583DFE961AC4F77B00BACAA1 /* EPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 583DFE881AC4F77A00BACAA1 /* EPieChart.m */; };
+		583DFE971AC4F77B00BACAA1 /* EViewSwitcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 583DFE8A1AC4F77A00BACAA1 /* EViewSwitcher.m */; };
+		583DFE981AC4F77B00BACAA1 /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 583DFE8C1AC4F77B00BACAA1 /* UICountingLabel.m */; };
+		583DFEA41AC4F9E900BACAA1 /* EChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583DFE9B1AC4F9E900BACAA1 /* EChartViewController.m */; };
+		583DFEA51AC4F9E900BACAA1 /* EColumnChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583DFE9D1AC4F9E900BACAA1 /* EColumnChartViewController.m */; };
+		583DFEA61AC4F9E900BACAA1 /* ELineChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583DFE9F1AC4F9E900BACAA1 /* ELineChartViewController.m */; };
+		583DFEA71AC4F9E900BACAA1 /* EPieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583DFEA11AC4F9E900BACAA1 /* EPieChartViewController.m */; };
+		583DFEA81AC4F9E900BACAA1 /* EViewSwitcherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583DFEA31AC4F9E900BACAA1 /* EViewSwitcherViewController.m */; };
 		5845D8521AA5499D0007E4D8 /* PhoneInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5845D8511AA5499D0007E4D8 /* PhoneInfo.m */; };
 		5845D8561AA54A420007E4D8 /* PhoneSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5845D8541AA54A420007E4D8 /* PhoneSearchViewController.m */; };
 		5845D8571AA54A420007E4D8 /* PhoneSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5845D8551AA54A420007E4D8 /* PhoneSearchViewController.xib */; };
@@ -474,6 +491,41 @@
 		583C91321AAEEAAA00F1D756 /* ImageScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScanViewController.h; sourceTree = "<group>"; };
 		583C91331AAEEAAA00F1D756 /* ImageScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageScanViewController.m; sourceTree = "<group>"; };
 		583C91341AAEEAAA00F1D756 /* ImageScanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageScanViewController.xib; sourceTree = "<group>"; };
+		583DFE741AC4F77A00BACAA1 /* EChart-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EChart-Prefix.pch"; sourceTree = "<group>"; };
+		583DFE751AC4F77A00BACAA1 /* EColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EColor.h; sourceTree = "<group>"; };
+		583DFE761AC4F77A00BACAA1 /* EColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EColor.m; sourceTree = "<group>"; };
+		583DFE771AC4F77A00BACAA1 /* EColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EColumn.h; sourceTree = "<group>"; };
+		583DFE781AC4F77A00BACAA1 /* EColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EColumn.m; sourceTree = "<group>"; };
+		583DFE791AC4F77A00BACAA1 /* EColumnChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EColumnChart.h; sourceTree = "<group>"; };
+		583DFE7A1AC4F77A00BACAA1 /* EColumnChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EColumnChart.m; sourceTree = "<group>"; };
+		583DFE7B1AC4F77A00BACAA1 /* EColumnChartLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EColumnChartLabel.h; sourceTree = "<group>"; };
+		583DFE7C1AC4F77A00BACAA1 /* EColumnChartLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EColumnChartLabel.m; sourceTree = "<group>"; };
+		583DFE7D1AC4F77A00BACAA1 /* EColumnDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EColumnDataModel.h; sourceTree = "<group>"; };
+		583DFE7E1AC4F77A00BACAA1 /* EColumnDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EColumnDataModel.m; sourceTree = "<group>"; };
+		583DFE7F1AC4F77A00BACAA1 /* EFloatBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFloatBox.h; sourceTree = "<group>"; };
+		583DFE801AC4F77A00BACAA1 /* EFloatBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFloatBox.m; sourceTree = "<group>"; };
+		583DFE811AC4F77A00BACAA1 /* ELine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELine.h; sourceTree = "<group>"; };
+		583DFE821AC4F77A00BACAA1 /* ELine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELine.m; sourceTree = "<group>"; };
+		583DFE831AC4F77A00BACAA1 /* ELineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELineChart.h; sourceTree = "<group>"; };
+		583DFE841AC4F77A00BACAA1 /* ELineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELineChart.m; sourceTree = "<group>"; };
+		583DFE851AC4F77A00BACAA1 /* ELineChartDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELineChartDataModel.h; sourceTree = "<group>"; };
+		583DFE861AC4F77A00BACAA1 /* ELineChartDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELineChartDataModel.m; sourceTree = "<group>"; };
+		583DFE871AC4F77A00BACAA1 /* EPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPieChart.h; sourceTree = "<group>"; };
+		583DFE881AC4F77A00BACAA1 /* EPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPieChart.m; sourceTree = "<group>"; };
+		583DFE891AC4F77A00BACAA1 /* EViewSwitcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EViewSwitcher.h; sourceTree = "<group>"; };
+		583DFE8A1AC4F77A00BACAA1 /* EViewSwitcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EViewSwitcher.m; sourceTree = "<group>"; };
+		583DFE8B1AC4F77A00BACAA1 /* UICountingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICountingLabel.h; sourceTree = "<group>"; };
+		583DFE8C1AC4F77B00BACAA1 /* UICountingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICountingLabel.m; sourceTree = "<group>"; };
+		583DFE9A1AC4F9E900BACAA1 /* EChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EChartViewController.h; sourceTree = "<group>"; };
+		583DFE9B1AC4F9E900BACAA1 /* EChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EChartViewController.m; sourceTree = "<group>"; };
+		583DFE9C1AC4F9E900BACAA1 /* EColumnChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EColumnChartViewController.h; sourceTree = "<group>"; };
+		583DFE9D1AC4F9E900BACAA1 /* EColumnChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EColumnChartViewController.m; sourceTree = "<group>"; };
+		583DFE9E1AC4F9E900BACAA1 /* ELineChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELineChartViewController.h; sourceTree = "<group>"; };
+		583DFE9F1AC4F9E900BACAA1 /* ELineChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELineChartViewController.m; sourceTree = "<group>"; };
+		583DFEA01AC4F9E900BACAA1 /* EPieChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPieChartViewController.h; sourceTree = "<group>"; };
+		583DFEA11AC4F9E900BACAA1 /* EPieChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPieChartViewController.m; sourceTree = "<group>"; };
+		583DFEA21AC4F9E900BACAA1 /* EViewSwitcherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EViewSwitcherViewController.h; sourceTree = "<group>"; };
+		583DFEA31AC4F9E900BACAA1 /* EViewSwitcherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EViewSwitcherViewController.m; sourceTree = "<group>"; };
 		5845D84F1AA547F60007E4D8 /* PocketTools.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PocketTools.pch; sourceTree = "<group>"; };
 		5845D8501AA5499D0007E4D8 /* PhoneInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneInfo.h; sourceTree = "<group>"; };
 		5845D8511AA5499D0007E4D8 /* PhoneInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneInfo.m; sourceTree = "<group>"; };
@@ -927,6 +979,56 @@
 			path = DMPasscode;
 			sourceTree = "<group>";
 		};
+		583DFE731AC4F77A00BACAA1 /* EChart */ = {
+			isa = PBXGroup;
+			children = (
+				583DFE991AC4F9E900BACAA1 /* EChartDemo */,
+				583DFE741AC4F77A00BACAA1 /* EChart-Prefix.pch */,
+				583DFE751AC4F77A00BACAA1 /* EColor.h */,
+				583DFE761AC4F77A00BACAA1 /* EColor.m */,
+				583DFE771AC4F77A00BACAA1 /* EColumn.h */,
+				583DFE781AC4F77A00BACAA1 /* EColumn.m */,
+				583DFE791AC4F77A00BACAA1 /* EColumnChart.h */,
+				583DFE7A1AC4F77A00BACAA1 /* EColumnChart.m */,
+				583DFE7B1AC4F77A00BACAA1 /* EColumnChartLabel.h */,
+				583DFE7C1AC4F77A00BACAA1 /* EColumnChartLabel.m */,
+				583DFE7D1AC4F77A00BACAA1 /* EColumnDataModel.h */,
+				583DFE7E1AC4F77A00BACAA1 /* EColumnDataModel.m */,
+				583DFE7F1AC4F77A00BACAA1 /* EFloatBox.h */,
+				583DFE801AC4F77A00BACAA1 /* EFloatBox.m */,
+				583DFE811AC4F77A00BACAA1 /* ELine.h */,
+				583DFE821AC4F77A00BACAA1 /* ELine.m */,
+				583DFE831AC4F77A00BACAA1 /* ELineChart.h */,
+				583DFE841AC4F77A00BACAA1 /* ELineChart.m */,
+				583DFE851AC4F77A00BACAA1 /* ELineChartDataModel.h */,
+				583DFE861AC4F77A00BACAA1 /* ELineChartDataModel.m */,
+				583DFE871AC4F77A00BACAA1 /* EPieChart.h */,
+				583DFE881AC4F77A00BACAA1 /* EPieChart.m */,
+				583DFE891AC4F77A00BACAA1 /* EViewSwitcher.h */,
+				583DFE8A1AC4F77A00BACAA1 /* EViewSwitcher.m */,
+				583DFE8B1AC4F77A00BACAA1 /* UICountingLabel.h */,
+				583DFE8C1AC4F77B00BACAA1 /* UICountingLabel.m */,
+			);
+			path = EChart;
+			sourceTree = "<group>";
+		};
+		583DFE991AC4F9E900BACAA1 /* EChartDemo */ = {
+			isa = PBXGroup;
+			children = (
+				583DFE9A1AC4F9E900BACAA1 /* EChartViewController.h */,
+				583DFE9B1AC4F9E900BACAA1 /* EChartViewController.m */,
+				583DFE9C1AC4F9E900BACAA1 /* EColumnChartViewController.h */,
+				583DFE9D1AC4F9E900BACAA1 /* EColumnChartViewController.m */,
+				583DFE9E1AC4F9E900BACAA1 /* ELineChartViewController.h */,
+				583DFE9F1AC4F9E900BACAA1 /* ELineChartViewController.m */,
+				583DFEA01AC4F9E900BACAA1 /* EPieChartViewController.h */,
+				583DFEA11AC4F9E900BACAA1 /* EPieChartViewController.m */,
+				583DFEA21AC4F9E900BACAA1 /* EViewSwitcherViewController.h */,
+				583DFEA31AC4F9E900BACAA1 /* EViewSwitcherViewController.m */,
+			);
+			path = EChartDemo;
+			sourceTree = "<group>";
+		};
 		5845D8581AA5597F0007E4D8 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -1124,6 +1226,7 @@
 		58E8505D1AA012AC0095DDC7 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				583DFE731AC4F77A00BACAA1 /* EChart */,
 				581139241AC3E0C800530DED /* MJRefresh */,
 				18E4FC161AB1D57E001E021E /* JustBen */,
 				582BD57B1AB18945008A9B54 /* BaiduMap_IOSSDK_v2.6.0_Lib */,
@@ -1448,8 +1551,10 @@
 				583C911A1AAE8EE700F1D756 /* PhonePayViewController.m in Sources */,
 				583C912D1AAE989600F1D756 /* DMPasscodeInternalNavigationController.m in Sources */,
 				1872F3C21AAAFA16007F60BD /* PhotoPasswordViewController.m in Sources */,
+				583DFE8D1AC4F77B00BACAA1 /* EColor.m in Sources */,
 				585C82A41AA83C6100A98D16 /* WZInfo.m in Sources */,
 				58858F971AC0F25000EE888C /* PTViewController.m in Sources */,
+				583DFEA51AC4F9E900BACAA1 /* EColumnChartViewController.m in Sources */,
 				1823AAD61AB61C2300C09D5C /* StationCell.m in Sources */,
 				5817F12B1A9D7BDB00B3A0A1 /* MainViewController.m in Sources */,
 				585CB0881AB68A4B00E0D390 /* StarYearInfo.m in Sources */,
@@ -1457,8 +1562,10 @@
 				585C829C1AA802D500A98D16 /* CarType.m in Sources */,
 				1823AAF01AB64AAD00C09D5C /* WeatherCitiesViewController.m in Sources */,
 				18E4FC0B1AB09AEE001E021E /* MoiveViewController.m in Sources */,
+				583DFE971AC4F77B00BACAA1 /* EViewSwitcher.m in Sources */,
 				58B334F51AC15B08008AB9FA /* PMCell.m in Sources */,
 				583C912B1AAE989600F1D756 /* DMPasscodeConfig.m in Sources */,
+				583DFE8E1AC4F77B00BACAA1 /* EColumn.m in Sources */,
 				58BE59111AA6B75D001811D9 /* MoneyEntity.m in Sources */,
 				583C912C1AAE989600F1D756 /* DMPasscodeInternalField.m in Sources */,
 				58E850681AA012F10095DDC7 /* ServiceRequest.m in Sources */,
@@ -1469,7 +1576,9 @@
 				585CB0791AB66AD100E0D390 /* StarSelectViewController.m in Sources */,
 				58BE59081AA6A60C001811D9 /* CarVioSearchViewController.m in Sources */,
 				1872F3A81AAAA9AA007F60BD /* PackageSearchViewController.m in Sources */,
+				583DFEA81AC4F9E900BACAA1 /* EViewSwitcherViewController.m in Sources */,
 				1872F3B91AAAE40E007F60BD /* DreamType.m in Sources */,
+				583DFEA71AC4F9E900BACAA1 /* EPieChartViewController.m in Sources */,
 				18E4FC411AB1D57E001E021E /* JBBasicFileManager.m in Sources */,
 				588A3DE31AA4312600EB1066 /* AppInfoEntity.m in Sources */,
 				1872F3B01AAAD41A007F60BD /* PackageDetailViewController.m in Sources */,
@@ -1481,6 +1590,7 @@
 				18A3BFEA1AC3011D0026F57B /* ScanCityListViewController.m in Sources */,
 				18E4FC3F1AB1D57E001E021E /* NSDate+Calendar.m in Sources */,
 				1872F3B51AAAE1DC007F60BD /* DreamListViewController.m in Sources */,
+				583DFE951AC4F77B00BACAA1 /* ELineChartDataModel.m in Sources */,
 				5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */,
 				582CC91D1AB2B4A90074C3B6 /* CalandarInfo.m in Sources */,
 				5805447E1ABFC336004BB298 /* ThreeHourInfo.m in Sources */,
@@ -1488,8 +1598,10 @@
 				18A3BFF11AC3049B0026F57B /* ScanCityInfo.m in Sources */,
 				1823AAF51AB71E8E00C09D5C /* WeatherCell.m in Sources */,
 				1823AADA1AB621EE00C09D5C /* STSInfo.m in Sources */,
+				583DFEA41AC4F9E900BACAA1 /* EChartViewController.m in Sources */,
 				1872F3AC1AAAD36E007F60BD /* PostInfo.m in Sources */,
 				58EACBAC1AA03EC0006D5226 /* IDCardInfo.m in Sources */,
+				583DFE931AC4F77B00BACAA1 /* ELine.m in Sources */,
 				585CB07F1AB6700400E0D390 /* StarCurrentInfo.m in Sources */,
 				18E4FC381AB1D57E001E021E /* JBCalendarLogic.m in Sources */,
 				5858BDAB1AB1422B0000F07C /* DreamDetailViewController.m in Sources */,
@@ -1501,6 +1613,7 @@
 				58AD9C901AB03D2D00EF2619 /* ShopInfo.m in Sources */,
 				582BD55D1AB163D9008A9B54 /* PlaneInfo.m in Sources */,
 				585CB0851AB67E9D00E0D390 /* StarMonthInfo.m in Sources */,
+				583DFE921AC4F77B00BACAA1 /* EFloatBox.m in Sources */,
 				588A3DE91AA45A4E00EB1066 /* FlashViewController.m in Sources */,
 				588CE9541AB6D0FA0068AA28 /* WeatherFutureInfo.m in Sources */,
 				18E4FC461AB1D5C7001E021E /* CalandarTitleView.m in Sources */,
@@ -1515,8 +1628,10 @@
 				58EE96C21AA84BBF00E35B51 /* UserCarSearchInfo.m in Sources */,
 				18011FD11ABD441900F3A86C /* StoreViewController.m in Sources */,
 				58E8506C1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.m in Sources */,
+				583DFE901AC4F77B00BACAA1 /* EColumnChartLabel.m in Sources */,
 				582BD5701AB17B25008A9B54 /* AppDelegate.m in Sources */,
 				58BE590D1AA6ABCD001811D9 /* ExchangeViewController.m in Sources */,
+				583DFE911AC4F77B00BACAA1 /* EColumnDataModel.m in Sources */,
 				588BDBE51AA1A088009347CE /* IPInfo.m in Sources */,
 				1823AAE71AB62C9400C09D5C /* AirInfo.m in Sources */,
 				18E4FC431AB1D57E001E021E /* JBPlistFileManager.m in Sources */,
@@ -1529,7 +1644,10 @@
 				586C99FA1AA702F700ACD2CF /* MirrorViewController.m in Sources */,
 				58E850711AA01AF90095DDC7 /* ServiceResult.m in Sources */,
 				5845D8521AA5499D0007E4D8 /* PhoneInfo.m in Sources */,
+				583DFE981AC4F77B00BACAA1 /* UICountingLabel.m in Sources */,
+				583DFE8F1AC4F77B00BACAA1 /* EColumnChart.m in Sources */,
 				585C82A01AA8284D00A98D16 /* CarVioResultViewController.m in Sources */,
+				583DFEA61AC4F9E900BACAA1 /* ELineChartViewController.m in Sources */,
 				5845D85B1AA559A10007E4D8 /* CalculatorTools.m in Sources */,
 				585C82991AA7F91F00A98D16 /* CityInfo.m in Sources */,
 				582BD5791AB18695008A9B54 /* PoiSearchViewController.m in Sources */,
@@ -1550,6 +1668,8 @@
 				585C82961AA7F7F800A98D16 /* ProvinceInfo.m in Sources */,
 				18E4FC3C1AB1D57E001E021E /* JBUnitView.m in Sources */,
 				5817F1251A9D7BDB00B3A0A1 /* main.m in Sources */,
+				583DFE941AC4F77B00BACAA1 /* ELineChart.m in Sources */,
+				583DFE961AC4F77B00BACAA1 /* EPieChart.m in Sources */,
 				58329A021AC0F72600B546E7 /* BackgroundViewController.m in Sources */,
 				583C91151AAE8E3C00F1D756 /* TicketsViewController.m in Sources */,
 				1823AADE1AB62A7400C09D5C /* PMViewController.m in Sources */,

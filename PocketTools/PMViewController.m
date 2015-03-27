@@ -15,12 +15,15 @@
 
 @implementation PMViewController {
     NSMutableArray *locationArray;
+    NSMutableArray *data;
+    EColumnChart *_eColumnChart;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = NSLocalizedString(@"PM2.5", nil);
+    data = [NSMutableArray array];
     locationArray = [NSMutableArray array];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"城市" style:UIBarButtonItemStylePlain target:self action:@selector(getCityList)];
     self.locationManager = [[CLLocationManager alloc]init];
@@ -32,6 +35,15 @@
     }
     [_locationManager startUpdatingLocation];
     [_tableView setTableHeaderView:_headerView];
+}
+
+- (void)initPmView {    
+    _eColumnChart = [[EColumnChart alloc] initWithFrame:CGRectMake(40, 0, _pmView.frame.size.width - 80, _pmView.frame.size.height)];
+    [_eColumnChart setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+    [_eColumnChart setColumnsIndexStartFromLeft:YES];
+    [_eColumnChart setDelegate:self];
+    [_eColumnChart setDataSource:self];
+    [_pmView addSubview:_eColumnChart];
 }
 
 - (void)locationManager:(CLLocationManager *)manager
@@ -57,6 +69,10 @@
 - (void)searchPMByCity:(NSString *)cityName {
     [locationArray removeAllObjects];
     [_tableView reloadData];
+    [data removeAllObjects];
+    for (UIView *v in _pmView.subviews) {
+        [v removeFromSuperview];
+    }
     [self displayHUD:@"加载中..."];
     [[ServiceRequest shared] searchAirByCity:cityName withBlock:^(NSDictionary *result, NSError *error) {
         if (!error) {
@@ -70,6 +86,11 @@
                         [locationArray addObjectsFromArray:[dict[@"lastMoniData"] allValues]];
                         [_tableView reloadData];
                     }
+                    if (dict[@"lastTwoWeeks"]) {
+                        if ([[dict[@"lastTwoWeeks"] allKeys] count]> 0) {
+                            [self loadPMdata:dict[@"lastTwoWeeks"]];
+                        }
+                    }
                 }
             } else {
                 [self displayHUDTitle:nil message:resultInfo.reason duration:DELAY_TIMES];
@@ -78,6 +99,34 @@
             [self displayHUDTitle:nil message:NETWORK_ERROR duration:DELAY_TIMES];
         }
     }];
+}
+
+- (void)loadPMdata:(NSDictionary *)lastTwoWeeks {
+    NSArray *charArray = [lastTwoWeeks allKeys];
+    NSStringCompareOptions comparisonOptions = NSCaseInsensitiveSearch|NSNumericSearch | NSWidthInsensitiveSearch | NSForcedOrderingSearch;
+    NSComparator sort = ^(NSString *obj1, NSString *obj2){
+        NSRange range = NSMakeRange(0, obj1.length);
+        return [obj1 compare:obj2 options:comparisonOptions range:range];
+    };
+    NSArray *resultArray2 = [charArray sortedArrayUsingComparator:sort];
+    NSLog(@"字符串数组排序结果%@",resultArray2);
+    
+    NSDateFormatter *dateFormatter1 = [[NSDateFormatter alloc] init];
+    [dateFormatter1 setDateFormat:@"yyyy-MM-dd"];
+    
+    NSDateFormatter *dateFormatter2 = [[NSDateFormatter alloc] init];
+    [dateFormatter2 setDateFormat:@"MM-dd"];
+    NSInteger count = [resultArray2 count];
+    for (int i = 1; i < 8 ; i++) {
+        NSString *key = resultArray2[count - i];
+        NSDictionary *dict = lastTwoWeeks[key];
+        NSLog(@"%@", dict);
+        NSDate *date = [dateFormatter1 dateFromString:dict[@"date"]];
+        NSString *dateString = [dateFormatter2 stringFromDate:date];
+        EColumnDataModel *eColumnDataModel = [[EColumnDataModel alloc] initWithLabel:dateString value:[dict[@"AQI"] floatValue] index:i unit:@""];
+        [data addObject:eColumnDataModel];
+    }
+    [self initPmView];
 }
 
 - (void)searchAirByCity:(NSString *)cityName {
@@ -147,7 +196,7 @@
 
 - (UIColor *)setColorWithPM:(NSInteger)pm {
     if (pm <= 50) {
-        return [UIColor blueColor];
+        return [UIColor greenColor];
     } else if (pm > 50 && pm <= 100) {
         return [UIColor greenColor];
     } else if (pm > 100 && pm <= 200) {
@@ -162,14 +211,103 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark ChartView
+#pragma -mark- Actions
+- (IBAction)highlightMaxAndMinChanged:(id)sender
+{
+    UISwitch *mySwith = (UISwitch *)sender;
+    if ([mySwith isOn]) {
+        [_eColumnChart setShowHighAndLowColumnWithColor:YES];
+    } else {
+        [_eColumnChart setShowHighAndLowColumnWithColor:NO];
+    }
 }
-*/
+
+- (IBAction)eventHandleChanged:(id)sender
+{
+    UISwitch *mySwith = (UISwitch *)sender;
+    if ([mySwith isOn]) {
+        [_eColumnChart setDelegate:self];
+    }
+    else {
+        [_eColumnChart setDelegate:nil];
+    }
+}
+
+- (IBAction)chartDirectionChanged:(id)sender
+{
+    UISwitch *mySwith = (UISwitch *)sender;
+    if ([mySwith isOn]) {
+        [_eColumnChart removeFromSuperview];
+        _eColumnChart = nil;
+        _eColumnChart = [[EColumnChart alloc] initWithFrame:CGRectMake(40, 100, 250, 200)];
+        [_eColumnChart setColumnsIndexStartFromLeft:YES];
+        [_eColumnChart setDelegate:self];
+        [_eColumnChart setDataSource:self];
+        [self.view addSubview:_eColumnChart];
+    } else {
+        [_eColumnChart removeFromSuperview];
+        _eColumnChart = nil;
+        _eColumnChart = [[EColumnChart alloc] initWithFrame:CGRectMake(40, 100, 250, 200)];
+        [_eColumnChart setColumnsIndexStartFromLeft:NO];
+        [_eColumnChart setDelegate:self];
+        [_eColumnChart setDataSource:self];
+        [self.view addSubview:_eColumnChart];
+    }
+}
+
+#pragma -mark- EColumnChartDataSource
+
+- (NSInteger)numberOfColumnsInEColumnChart:(EColumnChart *)eColumnChart
+{
+    return [data count];
+}
+
+- (NSInteger)numberOfColumnsPresentedEveryTime:(EColumnChart *)eColumnChart
+{
+    return 7;
+}
+
+- (EColumnDataModel *)highestValueEColumnChart:(EColumnChart *)eColumnChart
+{
+    EColumnDataModel *maxDataModel = nil;
+    float maxValue = -FLT_MIN;
+    for (EColumnDataModel *dataModel in data)
+    {
+        if (dataModel.value > maxValue)
+        {
+            maxValue = dataModel.value;
+            maxDataModel = dataModel;
+        }
+    }
+    return maxDataModel;
+}
+
+- (EColumnDataModel *)eColumnChart:(EColumnChart *)eColumnChart valueForIndex:(NSInteger)index
+{
+    if (index >= [data count] || index < 0) return nil;
+    return [data objectAtIndex:index];
+}
+
+#pragma -mark- EColumnChartDelegate
+- (void)eColumnChart:(EColumnChart *)eColumnChart
+     didSelectColumn:(EColumn *)eColumn {
+    
+}
+
+- (void)eColumnChart:(EColumnChart *)eColumnChart
+fingerDidEnterColumn:(EColumn *)eColumn {
+    
+}
+
+- (void)eColumnChart:(EColumnChart *)eColumnChart
+fingerDidLeaveColumn:(EColumn *)eColumn {
+    
+}
+
+- (void)fingerDidLeaveEColumnChart:(EColumnChart *)eColumnChart {
+    
+}
 
 @end
