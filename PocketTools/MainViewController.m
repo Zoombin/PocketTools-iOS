@@ -27,6 +27,7 @@
     UIScrollView *menuScrollView;
     UIPageControl *pageControl;
     NSArray *weatherArray;
+    NSString *currentCity;
     NSDictionary *icons;
 }
 
@@ -90,6 +91,7 @@
          {
              NSString *cityName = [[placemark.addressDictionary objectForKey:@"City"] substringToIndex:2];
              if (cityName) {
+                 currentCity = cityName;
                  [self searchCityByName:cityName];
              }
          }
@@ -100,6 +102,10 @@
 - (void)locationManager:(CLLocationManager *)manager
        didFailWithError:(NSError *)error {
     NSLog(@"获取位置出错!");
+    if (![[ServiceRequest shared] getCityName]) {
+        currentCity = @"北京";
+        [self searchCityByName:@"北京"];
+    }
 }
 
 - (void)searchPMByCity:(NSString *)cityName {
@@ -148,8 +154,8 @@
 }
 
 - (void)loadLocalData {
-    NSString *cityName = [[ServiceRequest shared] getCityName];
-    if (cityName != nil) {
+    currentCity = [[ServiceRequest shared] getCityName];
+    if (currentCity != nil) {
         NSDictionary *weatherInfo = [[ServiceRequest shared] getWeather];
         if (weatherInfo) {
             [self showWeatherInfo:weatherInfo];
@@ -252,7 +258,7 @@
 - (void)showCurrentInfo:(WeatherCurrentInfo *)cInfo {
     _tmptureLabel.text = [NSString stringWithFormat:@"%@%@", cInfo.temp, @"°"];
     _timeLabel.text = [NSString stringWithFormat:@"%@更新", cInfo.time];
-    _cityLabel.text = @"苏州";
+    _cityLabel.text = currentCity;
 }
 
 - (void)menuClicked {
