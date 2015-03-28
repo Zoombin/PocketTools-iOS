@@ -44,6 +44,7 @@
 		18A3BFEB1AC3011D0026F57B /* ScanCityListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A3BFE91AC3011D0026F57B /* ScanCityListViewController.xib */; };
 		18A3BFEE1AC304900026F57B /* ScanProviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A3BFED1AC304900026F57B /* ScanProviceInfo.m */; };
 		18A3BFF11AC3049B0026F57B /* ScanCityInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A3BFF01AC3049B0026F57B /* ScanCityInfo.m */; };
+		18B85EF81AC6428300437EE9 /* BallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B85EF71AC6428300437EE9 /* BallView.m */; };
 		18D937031ABE624300DDAF75 /* StoreList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18D937021ABE624300DDAF75 /* StoreList.plist */; };
 		18D937071ABE67AD00DDAF75 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D937051ABE67AD00DDAF75 /* WebViewController.m */; };
 		18D937081ABE67AD00DDAF75 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D937061ABE67AD00DDAF75 /* WebViewController.xib */; };
@@ -293,6 +294,8 @@
 		18A3BFED1AC304900026F57B /* ScanProviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanProviceInfo.m; sourceTree = "<group>"; };
 		18A3BFEF1AC3049B0026F57B /* ScanCityInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanCityInfo.h; sourceTree = "<group>"; };
 		18A3BFF01AC3049B0026F57B /* ScanCityInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanCityInfo.m; sourceTree = "<group>"; };
+		18B85EF61AC6428300437EE9 /* BallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallView.h; sourceTree = "<group>"; };
+		18B85EF71AC6428300437EE9 /* BallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallView.m; sourceTree = "<group>"; };
 		18D937021ABE624300DDAF75 /* StoreList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = StoreList.plist; path = ../PocketTools/StoreList.plist; sourceTree = "<group>"; };
 		18D937041ABE67AD00DDAF75 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		18D937051ABE67AD00DDAF75 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
@@ -1032,6 +1035,8 @@
 		5845D8581AA5597F0007E4D8 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				18B85EF61AC6428300437EE9 /* BallView.h */,
+				18B85EF71AC6428300437EE9 /* BallView.m */,
 				583C212D1ABAB23100A9C54B /* BackButtonTool.h */,
 				583C212E1ABAB23100A9C54B /* BackButtonTool.m */,
 				5845D8591AA559A10007E4D8 /* CalculatorTools.h */,
@@ -1592,6 +1597,7 @@
 				1872F3B51AAAE1DC007F60BD /* DreamListViewController.m in Sources */,
 				583DFE951AC4F77B00BACAA1 /* ELineChartDataModel.m in Sources */,
 				5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */,
+				18B85EF81AC6428300437EE9 /* BallView.m in Sources */,
 				582CC91D1AB2B4A90074C3B6 /* CalandarInfo.m in Sources */,
 				5805447E1ABFC336004BB298 /* ThreeHourInfo.m in Sources */,
 				5858BD991AB127280000F07C /* OilViewController.m in Sources */,

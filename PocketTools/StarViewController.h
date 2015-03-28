@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BallView.h"
 #import "StarSelectViewController.h"
 
 @interface StarViewController : PTViewController <StarSelectDelegate>
@@ -21,9 +22,9 @@
 @property (nonatomic, weak) IBOutlet UILabel *dayLabel3;
 @property (nonatomic, weak) IBOutlet UITextView *dayContentTextView;
 
-@property (nonatomic, weak) IBOutlet UIButton *firstButton;
-@property (nonatomic, weak) IBOutlet UIButton *secondButton;
-@property (nonatomic, weak) IBOutlet UIButton *thirdButton;
-@property (nonatomic, weak) IBOutlet UIButton *fourthButton;
+@property (nonatomic, weak) IBOutlet BallView *firstButton;
+@property (nonatomic, weak) IBOutlet BallView *secondButton;
+@property (nonatomic, weak) IBOutlet BallView *thirdButton;
+@property (nonatomic, weak) IBOutlet BallView *fourthButton;
 
 @end

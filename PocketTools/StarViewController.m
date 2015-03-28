@@ -27,6 +27,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = NSLocalizedString(@"星座运势", nil);
+    _firstButton.color = [UIColor colorWithRed:161/255.0 green:175/255.0 blue:53/255.0 alpha:1.0];
+    _secondButton.color = [UIColor colorWithRed:234/255.0 green:91/255.0 blue:105/255.0 alpha:1.0];
+    _thirdButton.color = [UIColor colorWithRed:238/255.0 green:184/255.0 blue:55/255.0 alpha:1.0];
+    _fourthButton.color = [UIColor colorWithRed:109/255.0 green:165/255.0 blue:229/255.0 alpha:1.0];
+    
     stars = @[@"白羊座", @"金牛座", @"双子座", @"巨蟹座", @"狮子座", @"处女座", @"天秤座", @"天蝎座", @"射手座", @"摩羯座", @"水瓶座", @"双鱼座"];
     types = @[@"today",@"tomorrow",@"week",@"month",@"year"];
     times = @[@"3.21~4.19", @"4.20~5.20", @"5.21~6.21)", @"6.22~7.22", @"7.23~8.22", @"8.23~9.22", @"9.23~10.23", @"10.24~11.22", @"11.23~12.21", @"12.22~1.19", @"1.20~2.18", @"2.19~3.20"];
@@ -52,12 +57,32 @@
 
 - (void)valueChanged {
 //    今日 明日 本周 本月 今年
+    _firstButton.hidden = YES;
+    _secondButton.hidden = YES;
+    _thirdButton.hidden = YES;
+    _fourthButton.hidden = YES;
+    
     _contentTextView.text = @"";
     _describeLabel.text = @"";
     _dayLabel1.text = @"";
     _dayLabel2.text = @"";
     _dayLabel3.text = @"";
     _dayContentTextView.text = @"";
+    _firstButton.per = 0;
+    _firstButton.text = @"健康";
+    [_firstButton reDraw];
+    
+    _secondButton.per = 0;
+    _secondButton.text = @"爱情";
+    [_secondButton reDraw];
+    
+    _thirdButton.per = 0;
+    _thirdButton.text = @"财运";
+    [_thirdButton reDraw];
+    
+    _fourthButton.per = 0;
+    _fourthButton.text = @"工作";
+    [_fourthButton reDraw];
     [self showInfo];
 }
 
@@ -70,6 +95,10 @@
             if ([resultInfo.resultcode integerValue] == SUCCESS_CODE) {
                 [self hideHUD:YES];
                 if (_segmentedControl.selectedSegmentIndex == 0 || _segmentedControl.selectedSegmentIndex == 1) {
+                    _firstButton.hidden = NO;
+                    _secondButton.hidden = NO;
+                    _thirdButton.hidden = NO;
+                    _fourthButton.hidden = NO;
                     StarCurrentInfo *cInfo = [[StarCurrentInfo alloc] initWithAttributes:result];
                     [self showInfoWithCurrent:cInfo];
                 } else if (_segmentedControl.selectedSegmentIndex == 2) {
@@ -97,6 +126,25 @@
     _dayLabel1.text = [NSString stringWithFormat:@"综合指数:%@ 速配星座:%@", info.all, info.QFriend];
     _dayLabel2.text = [NSString stringWithFormat:@"幸运数字:%@ 幸运颜色:%@", info.number, info.color];
     _dayLabel3.text = [NSString stringWithFormat:@"健康:%@ 爱情:%@ 财运:%@ 工作:%@", info.health, info.love, info.money, info.work];
+    NSString *health = [info.health stringByReplacingOccurrencesOfString:@"%" withString:@""];
+    NSString *love = [info.love stringByReplacingOccurrencesOfString:@"%" withString:@""];
+    NSString *money = [info.money stringByReplacingOccurrencesOfString:@"%" withString:@""];
+    NSString *work = [info.work stringByReplacingOccurrencesOfString:@"%" withString:@""];
+    _firstButton.per = [health floatValue] / 100;
+    _firstButton.text = @"健康";
+    [_firstButton reDraw];
+    
+    _secondButton.per = [love floatValue] / 100;
+    _secondButton.text = @"爱情";
+    [_secondButton reDraw];
+    
+    _thirdButton.per = [money floatValue] / 100;
+    _thirdButton.text = @"财运";
+    [_thirdButton reDraw];
+    
+    _fourthButton.per = [work floatValue] / 100;
+    _fourthButton.text = @"工作";
+    [_fourthButton reDraw];
     _dayContentTextView.text = info.summary;
     [self addLineSpace:_dayContentTextView];
     _contentTextView.hidden = YES;
