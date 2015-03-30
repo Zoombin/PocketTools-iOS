@@ -175,6 +175,8 @@
 		585CB0851AB67E9D00E0D390 /* StarMonthInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 585CB0841AB67E9D00E0D390 /* StarMonthInfo.m */; };
 		585CB0881AB68A4B00E0D390 /* StarYearInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 585CB0871AB68A4B00E0D390 /* StarYearInfo.m */; };
 		585F17551AC2B40100975468 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 585F17571AC2B40100975468 /* Localizable.strings */; };
+		586B7C7D1AC9301B005003D2 /* PackageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 586B7C7B1AC9301B005003D2 /* PackageCell.m */; };
+		586B7C7E1AC9301B005003D2 /* PackageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586B7C7C1AC9301B005003D2 /* PackageCell.xib */; };
 		586C99F51AA6EDF100ACD2CF /* MoneyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 586C99F31AA6EDF100ACD2CF /* MoneyTableViewCell.m */; };
 		586C99F61AA6EDF100ACD2CF /* MoneyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586C99F41AA6EDF100ACD2CF /* MoneyTableViewCell.xib */; };
 		586C99FA1AA702F700ACD2CF /* MirrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 586C99F81AA702F700ACD2CF /* MirrorViewController.m */; };
@@ -589,6 +591,9 @@
 		585F17561AC2B40100975468 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		585F17591AC2B41B00975468 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		585F175A1AC2B44500975468 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		586B7C7A1AC9301B005003D2 /* PackageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageCell.h; sourceTree = "<group>"; };
+		586B7C7B1AC9301B005003D2 /* PackageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageCell.m; sourceTree = "<group>"; };
+		586B7C7C1AC9301B005003D2 /* PackageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PackageCell.xib; sourceTree = "<group>"; };
 		586C99F21AA6EDF100ACD2CF /* MoneyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyTableViewCell.h; sourceTree = "<group>"; };
 		586C99F31AA6EDF100ACD2CF /* MoneyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyTableViewCell.m; sourceTree = "<group>"; };
 		586C99F41AA6EDF100ACD2CF /* MoneyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoneyTableViewCell.xib; sourceTree = "<group>"; };
@@ -1140,6 +1145,9 @@
 				1872F3A51AAAA9AA007F60BD /* PackageSearchViewController.h */,
 				1872F3A61AAAA9AA007F60BD /* PackageSearchViewController.m */,
 				1872F3A71AAAA9AA007F60BD /* PackageSearchViewController.xib */,
+				586B7C7A1AC9301B005003D2 /* PackageCell.h */,
+				586B7C7B1AC9301B005003D2 /* PackageCell.m */,
+				586B7C7C1AC9301B005003D2 /* PackageCell.xib */,
 				588A3DF51AA462C200EB1066 /* ParkViewController.h */,
 				588A3DF61AA462C200EB1066 /* ParkViewController.m */,
 				588A3DF71AA462C200EB1066 /* ParkViewController.xib */,
@@ -1486,6 +1494,7 @@
 				58B334F61AC15B08008AB9FA /* PMCell.xib in Resources */,
 				582CC9311AB2D9AC0074C3B6 /* TrainViewController.xib in Resources */,
 				1872F3BE1AAAE71C007F60BD /* DreamTypeSecondViewController.xib in Resources */,
+				586B7C7E1AC9301B005003D2 /* PackageCell.xib in Resources */,
 				5858BDA21AB130DB0000F07C /* OilCell.xib in Resources */,
 				582BD57A1AB18695008A9B54 /* PoiSearchViewController.xib in Resources */,
 				5817F1301A9D7BDB00B3A0A1 /* Images.xcassets in Resources */,
@@ -1595,6 +1604,7 @@
 				18A3BFEA1AC3011D0026F57B /* ScanCityListViewController.m in Sources */,
 				18E4FC3F1AB1D57E001E021E /* NSDate+Calendar.m in Sources */,
 				1872F3B51AAAE1DC007F60BD /* DreamListViewController.m in Sources */,
+				586B7C7D1AC9301B005003D2 /* PackageCell.m in Sources */,
 				583DFE951AC4F77B00BACAA1 /* ELineChartDataModel.m in Sources */,
 				5894469A1AA15A52004BEE7B /* CalculatorViewController.m in Sources */,
 				18B85EF81AC6428300437EE9 /* BallView.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "PackageDetailViewController.h"
 #import "PostInfo.h"
+#import "PackageCell.h"
 
 @interface PackageDetailViewController ()
 
@@ -50,12 +51,37 @@
 }
 
 - (void)showInfo {
-    NSMutableString *str = [@"" mutableCopy];
-    for (int i = 0; i < [resultArray count]; i++) {
-        PostInfo *info = resultArray[i];
-        [str appendFormat:@"时间 : %@\n状态 : %@\n\n", info.datetime, info.remark];
+    [_tableView reloadData];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [resultArray count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 90;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *CellIdentifier = @"UITableViewCell";
+    
+    PackageCell *cell = (PackageCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        NSArray *nibs = [[NSBundle mainBundle]loadNibNamed:@"PackageCell" owner:nil options:nil];
+        cell = [nibs lastObject];
+        cell.backgroundColor = [UIColor clearColor];
     }
-    [_contentTextView setText:str];
+    PostInfo *entity = resultArray[indexPath.row];
+    cell.timeLabel.text = [NSString stringWithFormat:@"时间 : %@", entity.datetime];
+    cell.contentLabel.text = [NSString stringWithFormat:@"状态 : %@", entity.remark];;
+    cell.contentLabel.numberOfLines = 0;
+    cell.contentLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    [cell.contentLabel sizeToFit];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

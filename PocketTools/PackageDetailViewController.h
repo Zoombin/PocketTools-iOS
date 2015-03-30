@@ -11,6 +11,7 @@
 @interface PackageDetailViewController : PTViewController
 
 @property (nonatomic, weak) IBOutlet UITextView *contentTextView;
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSString *postNum;
 @property (nonatomic, strong) NSString *postCompany;
 @end
