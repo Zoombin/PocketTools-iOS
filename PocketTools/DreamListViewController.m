@@ -92,7 +92,7 @@
     }
     DreamType *type = resultArray[indexPath.row];
     cell.textLabel.text = type.name;
-    cell.textLabel.textColor = [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0];
+    cell.textLabel.textColor = [UIColor whiteColor];
     return cell;
 }
 
