@@ -119,9 +119,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
         cell.backgroundColor = [UIColor clearColor];
     }
-    cell.textLabel.textColor = [UIColor colorWithRed:157/255.0 green:157/255.0 blue:157/255.0 alpha:1.0];
+    cell.textLabel.textColor = [UIColor whiteColor];
     cell.textLabel.font = [UIFont systemFontOfSize:14];
-    cell.detailTextLabel.textColor = [UIColor colorWithRed:157/255.0 green:157/255.0 blue:157/255.0 alpha:1.0];
+    cell.detailTextLabel.textColor = [UIColor whiteColor];
     cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
     MovieInfo *info = movieArray[indexPath.row];
     if (index == 0) {

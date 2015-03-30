@@ -121,7 +121,7 @@
         cell.backgroundColor = [UIColor clearColor];
     }
     NSDictionary *historyInfo = searchHistory[indexPath.row];
-    cell.textLabel.textColor = [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0];
+    cell.textLabel.textColor = [UIColor whiteColor];
     cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", historyInfo[@"name"], historyInfo[@"no"]];
     return cell;
 }
