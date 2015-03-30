@@ -177,6 +177,8 @@
 		585F17551AC2B40100975468 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 585F17571AC2B40100975468 /* Localizable.strings */; };
 		586B7C7D1AC9301B005003D2 /* PackageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 586B7C7B1AC9301B005003D2 /* PackageCell.m */; };
 		586B7C7E1AC9301B005003D2 /* PackageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586B7C7C1AC9301B005003D2 /* PackageCell.xib */; };
+		586B7C821AC93442005003D2 /* CarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 586B7C801AC93442005003D2 /* CarCell.m */; };
+		586B7C831AC93442005003D2 /* CarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586B7C811AC93442005003D2 /* CarCell.xib */; };
 		586C99F51AA6EDF100ACD2CF /* MoneyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 586C99F31AA6EDF100ACD2CF /* MoneyTableViewCell.m */; };
 		586C99F61AA6EDF100ACD2CF /* MoneyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586C99F41AA6EDF100ACD2CF /* MoneyTableViewCell.xib */; };
 		586C99FA1AA702F700ACD2CF /* MirrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 586C99F81AA702F700ACD2CF /* MirrorViewController.m */; };
@@ -594,6 +596,9 @@
 		586B7C7A1AC9301B005003D2 /* PackageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageCell.h; sourceTree = "<group>"; };
 		586B7C7B1AC9301B005003D2 /* PackageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageCell.m; sourceTree = "<group>"; };
 		586B7C7C1AC9301B005003D2 /* PackageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PackageCell.xib; sourceTree = "<group>"; };
+		586B7C7F1AC93442005003D2 /* CarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarCell.h; sourceTree = "<group>"; };
+		586B7C801AC93442005003D2 /* CarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarCell.m; sourceTree = "<group>"; };
+		586B7C811AC93442005003D2 /* CarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarCell.xib; sourceTree = "<group>"; };
 		586C99F21AA6EDF100ACD2CF /* MoneyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyTableViewCell.h; sourceTree = "<group>"; };
 		586C99F31AA6EDF100ACD2CF /* MoneyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyTableViewCell.m; sourceTree = "<group>"; };
 		586C99F41AA6EDF100ACD2CF /* MoneyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoneyTableViewCell.xib; sourceTree = "<group>"; };
@@ -1088,6 +1093,9 @@
 				585C829D1AA8284D00A98D16 /* CarVioResultViewController.h */,
 				585C829E1AA8284D00A98D16 /* CarVioResultViewController.m */,
 				585C829F1AA8284D00A98D16 /* CarVioResultViewController.xib */,
+				586B7C7F1AC93442005003D2 /* CarCell.h */,
+				586B7C801AC93442005003D2 /* CarCell.m */,
+				586B7C811AC93442005003D2 /* CarCell.xib */,
 				58BE59051AA6A60C001811D9 /* CarVioSearchViewController.h */,
 				58BE59061AA6A60C001811D9 /* CarVioSearchViewController.m */,
 				58BE59071AA6A60C001811D9 /* CarVioSearchViewController.xib */,
@@ -1483,6 +1491,7 @@
 				5845D8571AA54A420007E4D8 /* PhoneSearchViewController.xib in Resources */,
 				18E4FC0C1AB09AEE001E021E /* MoiveViewController.xib in Resources */,
 				58E8506D1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.xib in Resources */,
+				586B7C831AC93442005003D2 /* CarCell.xib in Resources */,
 				588A3DF41AA4609400EB1066 /* NewsViewController.xib in Resources */,
 				1872F3B61AAAE1DC007F60BD /* DreamListViewController.xib in Resources */,
 				588A3DEF1AA45CAE00EB1066 /* RullerViewController.xib in Resources */,
@@ -1617,6 +1626,7 @@
 				583DFEA41AC4F9E900BACAA1 /* EChartViewController.m in Sources */,
 				1872F3AC1AAAD36E007F60BD /* PostInfo.m in Sources */,
 				58EACBAC1AA03EC0006D5226 /* IDCardInfo.m in Sources */,
+				586B7C821AC93442005003D2 /* CarCell.m in Sources */,
 				583DFE931AC4F77B00BACAA1 /* ELine.m in Sources */,
 				585CB07F1AB6700400E0D390 /* StarCurrentInfo.m in Sources */,
 				18E4FC381AB1D57E001E021E /* JBCalendarLogic.m in Sources */,

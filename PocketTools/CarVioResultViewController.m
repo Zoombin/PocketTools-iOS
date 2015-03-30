@@ -8,6 +8,7 @@
 
 #import "CarVioResultViewController.h"
 #import "WZDetailInfo.h"
+#import "CarCell.h"
 #import "WZInfo.h"
 
 @interface CarVioResultViewController ()
@@ -26,32 +27,21 @@
     [self search];
 }
 
-- (void)showData {
-    NSString *contentString = @"";
-    for (int i = 0; i < [wzArrays count]; i++) {
-        WZDetailInfo *info = wzArrays[i];
-        NSString *str = [NSString stringWithFormat:@"\t时间 : %@\t地点 : %@\n\n\t原因 : %@\n\n\t扣分 : %@分\t罚款 : %@元\n\n\t是否已处理 : %@\n\n\n", info.date, info.area, info.act, info.fen, info.money, [info.handled integerValue] == 1 ? @"已处理" : @"未处理"];
-        contentString = [contentString stringByAppendingString:str];
-    }
-    _resultTextView.text = contentString;
-}
-
 - (void)search {
     [self displayHUD:@"加载中..."];
     [[ServiceRequest shared] searchWZ:_cityName carNum:_carNum carType:_carType carFrame:_carFrameNum engineNum:_engineNum registNum:_registNum withBlock:^(NSDictionary *result, NSError *error) {
         if (!error) {
-            [self hideHUD:YES];
             ServiceResult *resultInfo= [[ServiceResult alloc] initWithAttributes:result];
             if ([resultInfo.resultcode integerValue] == SUCCESS_CODE) {
                 WZInfo *wzInfo = [[WZInfo alloc] initWithAttributes:resultInfo.result];
                 if ([wzInfo.lists count] > 0) {
+                    [self hideHUD:YES];
                     [wzArrays addObjectsFromArray:wzInfo.lists];
-                    [self showData];
+                    [_tableView reloadData];
                 } else {
-                    _resultTextView.text = @"未查到违章记录";
+                    [self displayHUDTitle:nil message:@"未找到违章记录" duration:DELAY_TIMES];
                 }
             } else {
-                _resultTextView.text = @"未查到违章记录";
                 [self displayHUDTitle:nil message:@"获取数据失败" duration:DELAY_TIMES];
             }
         } else {
@@ -65,14 +55,39 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [wzArrays count];
 }
-*/
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 150;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *CellIdentifier = @"UITableViewCell";
+    
+    CarCell *cell = (CarCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        NSArray *nibs = [[NSBundle mainBundle]loadNibNamed:@"CarCell" owner:nil options:nil];
+        cell = [nibs lastObject];
+        cell.backgroundColor = [UIColor clearColor];
+    }
+    WZDetailInfo *entity = wzArrays[indexPath.row];
+    cell.timeLabel.text = [NSString stringWithFormat:@"时间 : %@", entity.date];
+    cell.locationLabel.text = [NSString stringWithFormat:@"地点 : %@", entity.area];
+    cell.locationLabel.numberOfLines = 0;
+    cell.locationLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    [cell.locationLabel sizeToFit];
+    cell.scoreLabel.text = [NSString stringWithFormat:@"扣分 : %@\t罚款 : %@\t是否已处理 : %@", entity.fen, entity.money, [entity.handled integerValue] == 1 ? @"是" : @"否"];
+    cell.reasonLabel.text = [NSString stringWithFormat:@"原因 : %@", entity.act];
+    cell.reasonLabel.numberOfLines = 0;
+    cell.reasonLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    [cell.reasonLabel sizeToFit];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 @end
