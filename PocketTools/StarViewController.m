@@ -42,10 +42,12 @@
     CGFloat offSet_X = ([UIScreen mainScreen].bounds.size.width - (_firstButton.frame.size.width * 4)) / 5;
     CGFloat width = _firstButton.frame.size.width;
     CGFloat height = _firstButton.frame.size.height;
-    [_firstButton setFrame:CGRectMake(offSet_X + width * 0, _firstButton.frame.origin.y, width, height)];
-    [_secondButton setFrame:CGRectMake(2 * offSet_X + width * 1, _firstButton.frame.origin.y, width, height)];
-    [_thirdButton setFrame:CGRectMake(3 * offSet_X + width * 2, _firstButton.frame.origin.y, width, height)];
-    [_fourthButton setFrame:CGRectMake(4 * offSet_X + width * 3, _firstButton.frame.origin.y, width, height)];
+    NSArray *btns = @[_firstButton, _secondButton, _thirdButton, _fourthButton];
+    for (int i = 0; i < [btns count]; i++) {
+        UIButton *button = (UIButton *)btns[i];
+        [button setFrame:CGRectMake((i + 1) * offSet_X + width * i, button.frame.origin.y, width, height)];
+    }
+    [_segmentedControl.layer setCornerRadius:8];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
