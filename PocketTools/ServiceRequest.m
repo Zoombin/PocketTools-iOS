@@ -87,7 +87,7 @@ static ServiceRequest *request;
 
 - (NSArray *)getSearchHistory {
      NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-     NSArray *historyArray = [userDefault objectForKey:POSTMAN_HISTORY];
+     NSArray *historyArray = [userDefault objectForKey:SEARCH_HISTORY];
     return historyArray;
 }
 
