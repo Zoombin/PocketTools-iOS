@@ -38,6 +38,14 @@
     currentIndex = 11;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"选择星座" style:UIBarButtonItemStylePlain target:self action:@selector(selectStar)];
     [_segmentedControl addTarget:self action:@selector(valueChanged) forControlEvents:UIControlEventValueChanged];
+    
+    CGFloat offSet_X = ([UIScreen mainScreen].bounds.size.width - (_firstButton.frame.size.width * 4)) / 5;
+    CGFloat width = _firstButton.frame.size.width;
+    CGFloat height = _firstButton.frame.size.height;
+    [_firstButton setFrame:CGRectMake(offSet_X + width * 0, _firstButton.frame.origin.y, width, height)];
+    [_secondButton setFrame:CGRectMake(2 * offSet_X + width * 1, _firstButton.frame.origin.y, width, height)];
+    [_thirdButton setFrame:CGRectMake(3 * offSet_X + width * 2, _firstButton.frame.origin.y, width, height)];
+    [_fourthButton setFrame:CGRectMake(4 * offSet_X + width * 3, _firstButton.frame.origin.y, width, height)];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
