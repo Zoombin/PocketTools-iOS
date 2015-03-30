@@ -36,12 +36,13 @@
 }
 
 - (IBAction)sureButtonClicked:(id)sender {
+    [_startTextField resignFirstResponder];
+    [_endTextField resignFirstResponder];
     if ([_startTextField.text length] == 0 || [_endTextField.text length] == 0) {
         [self displayHUDTitle:nil message:@"起点或终点不能为空!" duration:DELAY_TIMES];
         return;
     }
     [self displayHUD:@"加载中..."];
-    [_startTextField resignFirstResponder];
     [planesArray removeAllObjects];
     [_tableView reloadData];
     [[ServiceRequest shared] planceSearch:_startTextField.text endCity:_endTextField.text withBlock:^(NSDictionary *result, NSError *error) {

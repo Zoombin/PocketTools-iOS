@@ -127,6 +127,8 @@
 }
 
 - (IBAction)searchButtonClicked:(id)sender {
+    [_startTextField resignFirstResponder];
+    [_endTextField resignFirstResponder];
     if ([_startTextField.text isEqualToString:@""] || [_endTextField.text isEqualToString:@""]) {
         [self displayHUDTitle:nil message:@"请输入内容!" duration:DELAY_TIMES];
         return;
