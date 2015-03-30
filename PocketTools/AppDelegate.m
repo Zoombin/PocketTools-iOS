@@ -23,6 +23,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     _mapManager = [[BMKMapManager alloc]init];
+    [self setNavTintColorAndFont];
     // 如果要关注网络及授权验证事件，请设定generalDelegate参数
     BOOL ret = [_mapManager start:@"rt0EArVNsq8NNGjx49028hb1" generalDelegate:nil];
     if (!ret) {
@@ -31,6 +32,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self initTabBar];
     return YES;
+}
+
+- (void)setNavTintColorAndFont {
+    UIBarButtonItem *barItemInNavigationBarAppearanceProxy = [UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil];
+    
+    //设置字体为加粗的12号系统字，自己也可以随便设置。
+    [barItemInNavigationBarAppearanceProxy setTitleTextAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14], NSForegroundColorAttributeName : [UIColor whiteColor]} forState:UIControlStateNormal];
 }
 
 - (void)initTabBar {
