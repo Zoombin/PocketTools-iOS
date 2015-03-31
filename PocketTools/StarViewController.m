@@ -99,7 +99,14 @@
 - (void)showInfo {
     NSString *type = types[_segmentedControl.selectedSegmentIndex];
     [self displayHUD:@"加载中..."];
-    [[ServiceRequest shared] searchStarLuckByName:stars[currentIndex] type:type withBlock:^(NSDictionary *result, NSError *error) {
+    NSString *starName = [[ServiceRequest shared] getStarName];
+    currentIndex = [stars indexOfObject:starName];
+    
+    [_iconButton setImage:[UIImage imageNamed:[NSString stringWithFormat:@"star_%ld.png", currentIndex]] forState:UIControlStateNormal];
+    [_iconButton setTitle:starName forState:UIControlStateNormal];
+    [_timeLabel setText:times[currentIndex]];
+
+    [[ServiceRequest shared] searchStarLuckByName:starName type:type withBlock:^(NSDictionary *result, NSError *error) {
         if (!error) {
             ServiceResult *resultInfo= [[ServiceResult alloc] initWithAttributes:result];
             if ([resultInfo.resultcode integerValue] == SUCCESS_CODE) {
@@ -209,6 +216,7 @@
 
 - (void)selectStarAtIndex:(NSInteger)index {
     currentIndex = index;
+    [[ServiceRequest shared] saveStarName:stars[currentIndex]];
     [_iconButton setImage:[UIImage imageNamed:[NSString stringWithFormat:@"star_%ld.png", index]] forState:UIControlStateNormal];
     [_iconButton setTitle:stars[index] forState:UIControlStateNormal];
     [_timeLabel setText:times[index]];

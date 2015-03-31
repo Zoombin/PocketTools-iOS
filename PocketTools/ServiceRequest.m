@@ -26,6 +26,21 @@ static ServiceRequest *request;
     return request;
 }
 
+- (void)saveStarName:(NSString *)starName {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    [userDefault setObject:starName forKey:STAR_NAME];
+    [userDefault synchronize];
+}
+
+- (NSString *)getStarName {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSString *star = [userDefault objectForKey:STAR_NAME];
+    if (!star) {
+        return @"双鱼座";
+    }
+    return [userDefault objectForKey:STAR_NAME];
+}
+
 //获取&保存城市名称
 - (void)saveCityName:(NSString *)cityName {
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];

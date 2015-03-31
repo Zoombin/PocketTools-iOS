@@ -14,7 +14,7 @@
 #import "WebViewController.h"
 #import "ThreeHourInfo.h"
 #import "BackgroundViewController.h"
-
+#import "StarCurrentInfo.h"
 
 @interface MainViewController ()
 
@@ -26,12 +26,15 @@
     NSArray *currentApps;
     NSMutableArray *bottomButtons;
     UIScrollView *menuScrollView;
-    UIPageControl *pageControl;
+    UIPageControl *pageControl1;
+    UIPageControl *pageControl2;
     NSArray *weatherArray;
     NSString *currentCity;
     NSDictionary *icons;
     UITapGestureRecognizer *weatherGesture;
     UITapGestureRecognizer *pmGesture;
+    UITapGestureRecognizer *starGesture;
+    NSArray *stars;
 }
 
 - (void)initAllIcons {
@@ -47,6 +50,13 @@
     [self.navigationController pushViewController:ctrl animated:YES];
 }
 
+- (void)showStar {
+    Class viewCtrl = NSClassFromString(@"StarViewController");
+    id ctrl = [viewCtrl new];
+    [BackButtonTool addBackButton:ctrl];
+    [self.navigationController pushViewController:ctrl animated:YES];
+}
+
 //显示PM2.5
 - (void)showPM {
     Class viewCtrl = NSClassFromString(@"PMViewController");
@@ -55,6 +65,42 @@
     [self.navigationController pushViewController:ctrl animated:YES];
 }
 
+- (void)loadStarInfo {
+    NSString *starName = [[ServiceRequest shared] getStarName];
+    [_currentStarBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"star_%lu.png", (unsigned long)[stars indexOfObject:starName]]] forState:UIControlStateNormal];
+    [_currentStarBtn setTitle:starName forState:UIControlStateNormal];
+    [self showLoading];
+    [[ServiceRequest shared] searchStarLuckByName:starName type:@"today" withBlock:^(NSDictionary *result, NSError *error) {
+        if (!error) {
+            ServiceResult *resultInfo= [[ServiceResult alloc] initWithAttributes:result];
+            if ([resultInfo.resultcode integerValue] == SUCCESS_CODE) {
+                StarCurrentInfo *cInfo = [[StarCurrentInfo alloc] initWithAttributes:result];
+                [self showInfoWithCurrent:cInfo];
+                [self hidenLoading];
+            } else {
+                [self hidenLoading];
+            }
+        } else {
+            [self hidenLoading];
+        }
+    }];
+}
+
+- (void)showInfoWithCurrent:(StarCurrentInfo *)info {
+    NSLog(@"%@", info);
+    _currentRateLabel.text = info.all;
+    [_healthBtn setTitle:info.health forState:UIControlStateNormal];
+    [_loveBtn setTitle:info.love forState:UIControlStateNormal];
+    [_moneyBtn setTitle:info.money forState:UIControlStateNormal];
+    [_workBtn setTitle:info.work forState:UIControlStateNormal];
+    _contentTextView.text = info.summary;
+    [_contentTextView setFont:[UIFont fontWithName:@"FZKATJW--GB1-0" size:16]];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self loadStarInfo];
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -66,19 +112,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    stars = @[@"白羊座", @"金牛座", @"双子座", @"巨蟹座", @"狮子座", @"处女座", @"天秤座", @"天蝎座", @"射手座", @"摩羯座", @"水瓶座", @"双鱼座"];
     weatherGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showCityWeather)];
     pmGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPM)];
+    starGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showStar)];
     
     [_weatherView addGestureRecognizer:weatherGesture];
     [_pmtitleLabel addGestureRecognizer:pmGesture];
     [_pmLabel addGestureRecognizer:pmGesture];
     [_pmDesLabel addGestureRecognizer:pmGesture];
+    [_starView addGestureRecognizer:starGesture];
+    
     [self initAllIcons];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"menu"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(menuClicked)];
     self.title = @"工具99";
     [self initScrollView];
-    [_weatherView setFrame:CGRectMake(0, 64, _weatherView.frame.size.width, _weatherView.frame.size.height)];
-    [self.view addSubview:_weatherView];
+    
+    [_scrollView setPagingEnabled:YES];
+    [_scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width * 2, 0)];
+    [_scrollView setFrame:CGRectMake(0, 64, _weatherView.frame.size.width, _weatherView.frame.size.height)];
+    [self.view addSubview:_scrollView];
+    
+    [_weatherView setFrame:CGRectMake(0, 0, _weatherView.frame.size.width, _weatherView.frame.size.height)];
+    [_scrollView addSubview:_weatherView];
+    
+    [_starView setFrame:CGRectMake(0 + [UIScreen mainScreen].bounds.size.width, 0, _starView.frame.size.width, _weatherView.frame.size.height)];
+    [_scrollView addSubview:_starView];
+    
+    pageControl1 = [[UIPageControl alloc] initWithFrame:CGRectMake(0, CGRectGetMinY(menuScrollView.frame) - 15, 320, 20)];
+    [pageControl1 setBackgroundColor:[UIColor clearColor]];
+    [pageControl1 addTarget:self action:@selector(changePage1:) forControlEvents:UIControlEventValueChanged];
+    pageControl1.numberOfPages = 2;
+    [self.view addSubview:pageControl1];
+
     
     bottomButtons = [NSMutableArray array];
     [self addBottomButtons];
@@ -298,12 +364,23 @@
 {
     CGFloat pageWidth = sender.frame.size.width;
     int page = floor((sender.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
-    pageControl.currentPage = page;
+    NSLog(@"%d", page);
+    if (sender == _scrollView) {
+        pageControl1.currentPage = page;
+    } else {
+        pageControl2.currentPage = page;
+    }
 }
 
-- (void)changePage:(id)sender
+- (void)changePage1:(id)sender
 {
-    NSInteger page = pageControl.currentPage;
+    NSInteger page = pageControl1.currentPage;
+    [_scrollView setContentOffset:CGPointMake([UIScreen mainScreen].bounds.size.width * page, 0)];
+}
+
+- (void)changePage2:(id)sender
+{
+    NSInteger page = pageControl2.currentPage;
     // update the scroll view to the appropriate page
     CGRect frame = menuScrollView.frame;
     frame.origin.x = frame.size.width * page;
@@ -331,10 +408,10 @@
     [menuScrollView setFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - (height * 2) - buttonHeight - 20, [UIScreen mainScreen].bounds.size.width, height * 2)];
      [self.view addSubview:menuScrollView];
     
-    pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(menuScrollView.frame), 320, 20)];
-    [pageControl setBackgroundColor:[UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.2]];
-    [pageControl addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventValueChanged];
-    [self.view addSubview:pageControl];
+    pageControl2 = [[UIPageControl alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(menuScrollView.frame), 320, 20)];
+    [pageControl2 setBackgroundColor:[UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.2]];
+    [pageControl2 addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:pageControl2];
 }
 
 
@@ -485,7 +562,7 @@
             page = (count / (numberPerLine * 2)) + 1;
         }
     }
-    [pageControl setNumberOfPages:page];
+    [pageControl2 setNumberOfPages:page];
     CGRect rect = CGRectZero;
     CGFloat width = [UIScreen mainScreen].bounds.size.width / numberPerLine;
     CGFloat height = width;

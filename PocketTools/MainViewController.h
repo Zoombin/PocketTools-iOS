@@ -11,6 +11,16 @@
 
 @interface MainViewController : PTViewController <UIScrollViewDelegate, UIActionSheetDelegate, CLLocationManagerDelegate>
 
+
+@property (nonatomic, weak) IBOutlet UIView *starView;
+@property (nonatomic, weak) IBOutlet UIButton *healthBtn;
+@property (nonatomic, weak) IBOutlet UIButton *loveBtn;
+@property (nonatomic, weak) IBOutlet UIButton *moneyBtn;
+@property (nonatomic, weak) IBOutlet UIButton *workBtn;
+@property (nonatomic, weak) IBOutlet UILabel *currentRateLabel;
+@property (nonatomic, weak) IBOutlet UITextView *contentTextView;
+@property (nonatomic, weak) IBOutlet UIButton *currentStarBtn;
+
 @property (nonatomic, weak) IBOutlet UILabel *cityLabel;
 @property (nonatomic, weak) IBOutlet UILabel *timeLabel;
 @property (nonatomic, weak) IBOutlet UILabel *tmptureLabel;
@@ -26,6 +36,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *pmtitleLabel;
 @property (nonatomic, strong) IBOutlet UIActivityIndicatorView *loadingView;
 
+@property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @end
 

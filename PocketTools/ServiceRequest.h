@@ -23,8 +23,13 @@
 #define WEATHER_INFO @"weather"
 #define PM_VALUE @"pm2.5"
 #define THREE_HOUR @"threehour"
+#define STAR_NAME @"starname"
 
 @interface ServiceRequest : NSObject
+//星座名
+- (void)saveStarName:(NSString *)starName;
+- (NSString *)getStarName;
+
 //获取&保存城市名称
 - (void)saveCityName:(NSString *)cityName;
 - (NSString *)getCityName;
