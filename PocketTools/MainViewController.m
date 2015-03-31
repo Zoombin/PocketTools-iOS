@@ -15,6 +15,7 @@
 #import "ThreeHourInfo.h"
 #import "BackgroundViewController.h"
 
+
 @interface MainViewController ()
 
 @end
@@ -29,11 +30,29 @@
     NSArray *weatherArray;
     NSString *currentCity;
     NSDictionary *icons;
+    UITapGestureRecognizer *weatherGesture;
+    UITapGestureRecognizer *pmGesture;
 }
 
 - (void)initAllIcons {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Weather" ofType:@"plist"];
     icons = [[NSDictionary alloc] initWithContentsOfFile:path];
+}
+
+//显示天气
+- (void)showCityWeather {
+    Class viewCtrl = NSClassFromString(@"WeatherViewController");
+    id ctrl = [viewCtrl new];
+    [BackButtonTool addBackButton:ctrl];
+    [self.navigationController pushViewController:ctrl animated:YES];
+}
+
+//显示PM2.5
+- (void)showPM {
+    Class viewCtrl = NSClassFromString(@"PMViewController");
+    id ctrl = [viewCtrl new];
+    [BackButtonTool addBackButton:ctrl];
+    [self.navigationController pushViewController:ctrl animated:YES];
 }
 
 
@@ -47,6 +66,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    weatherGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showCityWeather)];
+    pmGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPM)];
+    
+    [_weatherView addGestureRecognizer:weatherGesture];
+    [_pmtitleLabel addGestureRecognizer:pmGesture];
+    [_pmLabel addGestureRecognizer:pmGesture];
+    [_pmDesLabel addGestureRecognizer:pmGesture];
     [self initAllIcons];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"menu"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(menuClicked)];
     self.title = @"工具99";

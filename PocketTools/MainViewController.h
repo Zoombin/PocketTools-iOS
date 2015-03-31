@@ -23,6 +23,7 @@
 @property (nonatomic, weak) IBOutlet UIScrollView *futureWeatherScrollView;
 @property (nonatomic, weak) IBOutlet UILabel *pmLabel;
 @property (nonatomic, weak) IBOutlet UILabel *pmDesLabel;
+@property (nonatomic, weak) IBOutlet UILabel *pmtitleLabel;
 @property (nonatomic, strong) IBOutlet UIActivityIndicatorView *loadingView;
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
