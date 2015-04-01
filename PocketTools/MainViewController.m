@@ -32,7 +32,9 @@
     NSString *currentCity;
     NSDictionary *icons;
     UITapGestureRecognizer *weatherGesture;
-    UITapGestureRecognizer *pmGesture;
+    UITapGestureRecognizer *pmGesture1;
+    UITapGestureRecognizer *pmGesture2;
+    UITapGestureRecognizer *pmGesture3;
     UITapGestureRecognizer *starGesture;
     NSArray *stars;
 }
@@ -114,13 +116,15 @@
     [super viewDidLoad];
     stars = @[@"白羊座", @"金牛座", @"双子座", @"巨蟹座", @"狮子座", @"处女座", @"天秤座", @"天蝎座", @"射手座", @"摩羯座", @"水瓶座", @"双鱼座"];
     weatherGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showCityWeather)];
-    pmGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPM)];
+    pmGesture1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPM)];
+    pmGesture2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPM)];
+    pmGesture3 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPM)];
     starGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showStar)];
     
     [_weatherView addGestureRecognizer:weatherGesture];
-    [_pmtitleLabel addGestureRecognizer:pmGesture];
-    [_pmLabel addGestureRecognizer:pmGesture];
-    [_pmDesLabel addGestureRecognizer:pmGesture];
+    [_pmtitleLabel addGestureRecognizer:pmGesture1];
+    [_pmLabel addGestureRecognizer:pmGesture2];
+    [_pmDesLabel addGestureRecognizer:pmGesture3];
     [_starView addGestureRecognizer:starGesture];
     
     [self initAllIcons];
