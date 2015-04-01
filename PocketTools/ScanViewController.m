@@ -64,7 +64,7 @@
     [self.view addSubview:readerView];
     [readerView start];
     
-    [_tableView setFrame:CGRectMake(0, 10 + CGRectGetMaxY(readerView.frame), self.view.frame.size.width, self.view.frame.size.height - 160)];
+    [_tableView setFrame:CGRectMake(0, 10 + CGRectGetMaxY(readerView.frame), self.view.frame.size.width, self.view.frame.size.height - 200)];
 }
 
 - (void)readerView:(ZBarReaderView *)readerView didReadSymbols:(ZBarSymbolSet *)symbols fromImage:(UIImage *)image

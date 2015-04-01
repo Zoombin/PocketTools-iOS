@@ -12,7 +12,7 @@
 - (id)initWithAttributes:(NSDictionary *)attributes {
     self = [super init];
     if (self) {
-        self.shopName = attributes[@"shopName"];
+        self.shopName = attributes[@"shopname"];
         self.price = attributes[@"price"];
     }
     return self;
