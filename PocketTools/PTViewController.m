@@ -21,6 +21,7 @@
     if([[ServiceRequest shared] getBackground]) {
         [self.view setBackgroundColor:[[ServiceRequest shared] getBackground]];
     }
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
 }
 
