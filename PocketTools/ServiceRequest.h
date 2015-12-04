@@ -53,8 +53,9 @@
 - (void)savePassword:(NSString *)hasSet;
 - (NSString *)getPassword;
 
-- (void)saveBackGround:(NSString *)name;
-- (NSString *)getBackground;
+- (void)saveBackGround:(NSNumber *)index;
+- (UIColor *)getBackground;
+- (NSArray *)backGrounds;
 
 - (void)savePostManSearch:(NSDictionary *)searchInfo;
 - (NSArray *)getPostManSearch;

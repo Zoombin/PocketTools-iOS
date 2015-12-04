@@ -14,14 +14,28 @@
 
 #define BASE_URL  @"http://apis.juhe.cn"
 
+
 static AFHTTPRequestOperationManager *manager;
 static ServiceRequest *request;
+static NSArray *backgrounds = nil;
+
 
 + (instancetype)shared {
     if (!request) {
         request = [[ServiceRequest alloc] init];
         [[JHOpenidSupplier shareSupplier] registerJuheAPIByOpenId:@"JH3d10c81c2da5d095c11b5537360a47ac"];
         manager = [AFHTTPRequestOperationManager manager];
+        backgrounds = @[[UIColor colorWithRed:253/255.0 green:96/255.0 blue:140/255.0 alpha:1.0],
+                                 [UIColor colorWithRed:253/255.0 green:126/255.0 blue:159/255.0 alpha:1.0],
+                                 [UIColor colorWithRed:253/255.0 green:121/255.0 blue:199/255.0 alpha:1.0],
+                                 
+                                 [UIColor colorWithRed:147/255.0 green:117/255.0 blue:234/255.0 alpha:1.0],
+                                 [UIColor colorWithRed:116/255.0 green:131/255.0 blue:246/255.0 alpha:1.0],
+                                 [UIColor colorWithRed:65/255.0 green:175/255.0 blue:232/255.0 alpha:1.0],
+                                 
+                                 [UIColor colorWithRed:45/255.0 green:194/255.0 blue:147/255.0 alpha:1.0],
+                                 [UIColor colorWithRed:52/255.0 green:180/255.0 blue:107/255.0 alpha:1.0],
+                                 [UIColor colorWithRed:73/255.0 green:187/255.0 blue:63/255.0 alpha:1.0]];
     }
     return request;
 }
@@ -118,16 +132,20 @@ static ServiceRequest *request;
     return [userDefault objectForKey:PHOTO_PASSWORD];
 }
 
-- (void)saveBackGround:(NSString *)name {
+- (void)saveBackGround:(NSNumber *)index {
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-    [userDefault setObject:name forKey:BACKGROUND];
+    [userDefault setObject:index forKey:BACKGROUND];
     [userDefault synchronize];
 }
 
-- (NSString *)getBackground {
+- (UIColor *)getBackground {
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-    NSString *background = [userDefault objectForKey:BACKGROUND];
-    return background == nil ? @"background1" : background;
+    NSNumber *index = [userDefault objectForKey:BACKGROUND];
+    return index == nil ? [UIColor colorWithRed:253/255.0 green:96/255.0 blue:140/255.0 alpha:1.0] : backgrounds[index.intValue];
+}
+
+- (NSArray *)backGrounds {
+    return backgrounds;
 }
 
 - (void)savePostManSearch:(NSDictionary *)searchInfo {

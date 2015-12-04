@@ -17,8 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSLog(@"%@", [[ServiceRequest shared] getBackground]);
     if([[ServiceRequest shared] getBackground]) {
-        [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[[ServiceRequest shared] getBackground]]]];
+        [self.view setBackgroundColor:[[ServiceRequest shared] getBackground]];
     }
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
 }

@@ -14,17 +14,43 @@
 
 @implementation BackgroundViewController {
     NSArray *backgrounds;
+    NSMutableArray *btns;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    backgrounds = @[@"background1", @"background2", @"background3"];
-    NSString *background = [[ServiceRequest shared] getBackground];
-    if ([backgrounds containsObject:background]) {
-        NSInteger index = [backgrounds indexOfObject:background];
-        [self saveBkg:index];
+    
+    btns = [[NSMutableArray alloc] init];
+    
+    backgrounds = [ServiceRequest shared].backGrounds;
+    
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    CGFloat offSetX = 10.0f;
+    CGFloat buttonWidth = (screenWidth - offSetX * 4) / 3;
+    CGFloat buttonHeight = buttonWidth;
+    
+    //总共9种颜色
+    NSInteger row = 0;
+    NSInteger index = 0;
+    for (int i = 0; i < backgrounds.count; i++) {
+        if (index % 3 == 0 && i != 0) {
+            row++;
+            index = 0;
+        }
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [button setBackgroundColor:backgrounds[i]];
+        button.frame = CGRectMake(offSetX * (index + 1) + index * buttonWidth, CGRectGetMaxY(_titleLabel.frame) + 15 + offSetX * row + (row * buttonHeight), buttonWidth, buttonHeight);
+        button.tag = i;
+        [button addTarget:self action:@selector(bkgButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:button];
+        [btns addObject:button];
+        index++;
     }
     self.title = @"修改皮肤";
+    
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSNumber *indexNumber = [userDefault objectForKey:BACKGROUND];
+    [self saveBkg:indexNumber.integerValue];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -33,36 +59,30 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)bkgButtonClicked:(id)sender {
+- (void)bkgButtonClicked:(id)sender {
     NSInteger tag = [sender tag];
     [self saveBkg:tag];
 }
 
 - (void)saveBkg:(NSInteger)index {
-    [[ServiceRequest shared] saveBackGround:backgrounds[index]];
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:backgrounds[index]]]];
+    [[ServiceRequest shared] saveBackGround:@(index)];
+    [self.view setBackgroundColor:[[ServiceRequest shared] getBackground]];
     
     [self allUnSelected];
     [self selectWithIndex:index];
-    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[[ServiceRequest shared] getBackground]]]];
+    [self.navigationController.navigationBar setBarTintColor:[[ServiceRequest shared] getBackground]];
 }
 
 - (void)selectWithIndex:(NSInteger)index {
-    if (index == 0) {
-        [_button1.layer setBorderColor:[UIColor whiteColor].CGColor];
-        [_button1.layer setBorderWidth:1];
-    } else if (index == 1) {
-        [_button2.layer setBorderColor:[UIColor whiteColor].CGColor];
-        [_button2.layer setBorderWidth:1];
-    } else if (index == 2) {
-        [_button3.layer setBorderColor:[UIColor whiteColor].CGColor];
-        [_button3.layer setBorderWidth:1];
-    }
+    UIButton *button = btns[index];
+    [button.layer setBorderColor:[UIColor whiteColor].CGColor];
+    [button.layer setBorderWidth:1];
 }
 
 - (void)allUnSelected {
-    [_button1.layer setBorderColor:[UIColor clearColor].CGColor];
-    [_button2.layer setBorderColor:[UIColor clearColor].CGColor];
-    [_button3.layer setBorderColor:[UIColor clearColor].CGColor];
+    for (int i = 0; i < btns.count; i++) {
+        UIButton *button = btns[i];
+        [button.layer setBorderColor:[UIColor clearColor].CGColor];
+    }
 }
 @end

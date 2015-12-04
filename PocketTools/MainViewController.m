@@ -107,9 +107,9 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     if([[ServiceRequest shared] getBackground]) {
-        [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[[ServiceRequest shared] getBackground]]]];
+        [self.view setBackgroundColor:[[ServiceRequest shared] getBackground]];
     }
-    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[[ServiceRequest shared] getBackground]]]];
+    [self.navigationController.navigationBar setBarTintColor:[[ServiceRequest shared] getBackground]];
 }
 
 - (void)viewDidLoad {
@@ -129,7 +129,7 @@
     
     [self initAllIcons];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"menu"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(menuClicked)];
-    self.title = @"工具99";
+    self.title = @"微工具";
     [self initScrollView];
     
     [_scrollView setPagingEnabled:YES];
@@ -414,14 +414,14 @@
     
     pageControl2 = [[UIPageControl alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(menuScrollView.frame), 320, 20)];
     [pageControl2 setBackgroundColor:[UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.2]];
-    [pageControl2 addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventValueChanged];
+    [pageControl2 addTarget:self action:@selector(changePage2:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:pageControl2];
 }
 
 
 
 - (void)addBottomButtons {
-    NSArray *buttonNames = @[@"日常工具", @"生活服务", @"充值服务", @"99商城"];
+    NSArray *buttonNames = @[@"日常工具", @"生活服务", @"充值服务", @"微商店"];
     NSInteger buttonCount = [buttonNames count];
     NSArray *imageNames = @[@"daily", @"life", @"pay", @"99store"];
     NSArray *imageSel = @[@"daily_sel", @"life_sel", @"pay_sel", @"99store_sel"];
