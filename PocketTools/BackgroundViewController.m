@@ -50,7 +50,7 @@
     
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     NSNumber *indexNumber = [userDefault objectForKey:BACKGROUND];
-    [self saveBkg:indexNumber.integerValue];
+    [self saveBkg:indexNumber == nil ? 7 : indexNumber.integerValue];
     // Do any additional setup after loading the view from its nib.
 }
 

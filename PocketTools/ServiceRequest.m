@@ -141,7 +141,7 @@ static NSArray *backgrounds = nil;
 - (UIColor *)getBackground {
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     NSNumber *index = [userDefault objectForKey:BACKGROUND];
-    return index == nil ? [UIColor colorWithRed:253/255.0 green:96/255.0 blue:140/255.0 alpha:1.0] : backgrounds[index.intValue];
+    return index == nil ? backgrounds[7] : backgrounds[index.intValue];
 }
 
 - (NSArray *)backGrounds {
