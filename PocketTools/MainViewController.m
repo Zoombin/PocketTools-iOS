@@ -421,12 +421,12 @@
 
 
 - (void)addBottomButtons {
-    NSArray *buttonNames = @[@"日常工具", @"生活服务", @"充值服务", @"微商城"];
+    NSArray *buttonNames = @[@"日常工具", @"生活服务", @"充值服务", @"微商城", @"关于我们"];
     NSInteger buttonCount = [buttonNames count];
-    NSArray *imageNames = @[@"daily", @"life", @"pay", @"99store"];
-    NSArray *imageSel = @[@"daily_sel", @"life_sel", @"pay_sel", @"99store_sel"];
+    NSArray *imageNames = @[@"daily", @"life", @"pay", @"99store", @"99store"];
+    NSArray *imageSel = @[@"daily_sel", @"life_sel", @"pay_sel", @"99store_sel", @"99store_sel"];
     NSInteger buttonWidth = ([UIScreen mainScreen].bounds.size.width) / buttonCount;
-    NSInteger buttonHeight = buttonWidth * 0.66;
+    NSInteger buttonHeight = buttonWidth * 0.8;
     for (int i = 0; i <buttonCount; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setBackgroundColor:[UIColor whiteColor]];
@@ -502,6 +502,10 @@
     } else if (index == 3) {
         NSArray *apps = @[@"天天特价", @"大众团购", @"一号店", @"美团外卖", @"饿了吗", @"百度外卖", @"外卖超人", @"聚划算", @"潮流女装", @"精品男装", @"周末去哪玩", @"美团", @"每日爆款", @"抢火车票", @"爱淘宝", @"彩票", @"猫眼", @"微信电影票"];
         currentApps = [self getStoresWithAppNames:apps];
+        [self setElements:currentApps];
+    } else if (index == 4) {
+        NSArray *apps = @[@"关于我们", @"应用推荐"];
+        currentApps = [self getAppsWithAppNames:apps];
         [self setElements:currentApps];
     }
 }

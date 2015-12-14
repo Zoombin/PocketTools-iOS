@@ -250,5 +250,21 @@
 		<key>iconName</key>
 		<string>gr_tool_flash</string>
 	</dict>
+	<dict>
+		<key>appName</key>
+		<string>关于我们</string>
+		<key>controlName</key>
+		<string>AboutUSViewController</string>
+		<key>iconName</key>
+		<string>gr_tool_flash</string>
+	</dict>
+	<dict>
+		<key>appName</key>
+		<string>应用推荐</string>
+		<key>controlName</key>
+		<string>AppRecommendViewController</string>
+		<key>iconName</key>
+		<string>gr_tool_flash</string>
+	</dict>
 </array>
 </plist>

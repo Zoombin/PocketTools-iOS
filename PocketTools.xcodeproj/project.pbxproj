@@ -45,6 +45,10 @@
 		18A3BFEE1AC304900026F57B /* ScanProviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A3BFED1AC304900026F57B /* ScanProviceInfo.m */; };
 		18A3BFF11AC3049B0026F57B /* ScanCityInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A3BFF01AC3049B0026F57B /* ScanCityInfo.m */; };
 		18B85EF81AC6428300437EE9 /* BallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B85EF71AC6428300437EE9 /* BallView.m */; };
+		18D6A5091C1E9D5900350003 /* AboutUSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6A5071C1E9D5900350003 /* AboutUSViewController.m */; };
+		18D6A50A1C1E9D5900350003 /* AboutUSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D6A5081C1E9D5900350003 /* AboutUSViewController.xib */; };
+		18D6A50E1C1E9D7D00350003 /* AppRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6A50C1C1E9D7D00350003 /* AppRecommendViewController.m */; };
+		18D6A50F1C1E9D7D00350003 /* AppRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D6A50D1C1E9D7D00350003 /* AppRecommendViewController.xib */; };
 		18D937031ABE624300DDAF75 /* StoreList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18D937021ABE624300DDAF75 /* StoreList.plist */; };
 		18D937071ABE67AD00DDAF75 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D937051ABE67AD00DDAF75 /* WebViewController.m */; };
 		18D937081ABE67AD00DDAF75 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D937061ABE67AD00DDAF75 /* WebViewController.xib */; };
@@ -300,6 +304,12 @@
 		18A3BFF01AC3049B0026F57B /* ScanCityInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanCityInfo.m; sourceTree = "<group>"; };
 		18B85EF61AC6428300437EE9 /* BallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallView.h; sourceTree = "<group>"; };
 		18B85EF71AC6428300437EE9 /* BallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallView.m; sourceTree = "<group>"; };
+		18D6A5061C1E9D5900350003 /* AboutUSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUSViewController.h; sourceTree = "<group>"; };
+		18D6A5071C1E9D5900350003 /* AboutUSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUSViewController.m; sourceTree = "<group>"; };
+		18D6A5081C1E9D5900350003 /* AboutUSViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutUSViewController.xib; sourceTree = "<group>"; };
+		18D6A50B1C1E9D7D00350003 /* AppRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppRecommendViewController.h; sourceTree = "<group>"; };
+		18D6A50C1C1E9D7D00350003 /* AppRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppRecommendViewController.m; sourceTree = "<group>"; };
+		18D6A50D1C1E9D7D00350003 /* AppRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppRecommendViewController.xib; sourceTree = "<group>"; };
 		18D937021ABE624300DDAF75 /* StoreList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = StoreList.plist; path = ../PocketTools/StoreList.plist; sourceTree = "<group>"; };
 		18D937041ABE67AD00DDAF75 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		18D937051ABE67AD00DDAF75 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
@@ -1240,6 +1250,12 @@
 				18A3BFE71AC3011D0026F57B /* ScanCityListViewController.h */,
 				18A3BFE81AC3011D0026F57B /* ScanCityListViewController.m */,
 				18A3BFE91AC3011D0026F57B /* ScanCityListViewController.xib */,
+				18D6A5061C1E9D5900350003 /* AboutUSViewController.h */,
+				18D6A5071C1E9D5900350003 /* AboutUSViewController.m */,
+				18D6A5081C1E9D5900350003 /* AboutUSViewController.xib */,
+				18D6A50B1C1E9D7D00350003 /* AppRecommendViewController.h */,
+				18D6A50C1C1E9D7D00350003 /* AppRecommendViewController.m */,
+				18D6A50D1C1E9D7D00350003 /* AppRecommendViewController.xib */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -1474,6 +1490,7 @@
 				583C91161AAE8E3C00F1D756 /* TicketsViewController.xib in Resources */,
 				1823AAF61AB71E8E00C09D5C /* WeatherCell.xib in Resources */,
 				586C99FB1AA702F700ACD2CF /* MirrorViewController.xib in Resources */,
+				18D6A50A1C1E9D5900350003 /* AboutUSViewController.xib in Resources */,
 				582BD55A1AB161A7008A9B54 /* PlaneSearchViewController.xib in Resources */,
 				5858BDAC1AB1422B0000F07C /* DreamDetailViewController.xib in Resources */,
 				5880F7591AB917E00049014B /* ReadingViewController.xib in Resources */,
@@ -1489,6 +1506,7 @@
 				585F17551AC2B40100975468 /* Localizable.strings in Resources */,
 				5811392F1AC3E0C800530DED /* MJRefresh.bundle in Resources */,
 				5845D8571AA54A420007E4D8 /* PhoneSearchViewController.xib in Resources */,
+				18D6A50F1C1E9D7D00350003 /* AppRecommendViewController.xib in Resources */,
 				18E4FC0C1AB09AEE001E021E /* MoiveViewController.xib in Resources */,
 				58E8506D1AA0138F0095DDC7 /* AppleDeviceIdSearchViewController.xib in Resources */,
 				586B7C831AC93442005003D2 /* CarCell.xib in Resources */,
@@ -1573,6 +1591,7 @@
 			files = (
 				583C911A1AAE8EE700F1D756 /* PhonePayViewController.m in Sources */,
 				583C912D1AAE989600F1D756 /* DMPasscodeInternalNavigationController.m in Sources */,
+				18D6A50E1C1E9D7D00350003 /* AppRecommendViewController.m in Sources */,
 				1872F3C21AAAFA16007F60BD /* PhotoPasswordViewController.m in Sources */,
 				583DFE8D1AC4F77B00BACAA1 /* EColor.m in Sources */,
 				585C82A41AA83C6100A98D16 /* WZInfo.m in Sources */,
@@ -1591,6 +1610,7 @@
 				583DFE8E1AC4F77B00BACAA1 /* EColumn.m in Sources */,
 				58BE59111AA6B75D001811D9 /* MoneyEntity.m in Sources */,
 				583C912C1AAE989600F1D756 /* DMPasscodeInternalField.m in Sources */,
+				18D6A5091C1E9D5900350003 /* AboutUSViewController.m in Sources */,
 				58E850681AA012F10095DDC7 /* ServiceRequest.m in Sources */,
 				5858BD9D1AB12E070000F07C /* OilInfo.m in Sources */,
 				581139301AC3E0C800530DED /* MJRefreshBaseView.m in Sources */,
