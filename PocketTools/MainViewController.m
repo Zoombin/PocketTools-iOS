@@ -421,7 +421,7 @@
 
 
 - (void)addBottomButtons {
-    NSArray *buttonNames = @[@"日常工具", @"生活服务", @"充值服务", @"微商店"];
+    NSArray *buttonNames = @[@"日常工具", @"生活服务", @"充值服务", @"微商城"];
     NSInteger buttonCount = [buttonNames count];
     NSArray *imageNames = @[@"daily", @"life", @"pay", @"99store"];
     NSArray *imageSel = @[@"daily_sel", @"life_sel", @"pay_sel", @"99store_sel"];

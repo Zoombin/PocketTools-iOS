@@ -109,6 +109,7 @@
     }
     MoneyEntity *entity = infoArray[indexPath.row];
     cell.nameLabel.text = entity.name;
+    NSLog(@"%@", entity.name);
     cell.signLabel.text = entity.code;
     cell.flagImageView.image = [UIImage imageNamed:entity.cn];
     float f1 = [current floatValue] * ([inputValue floatValue] / [entity.mBuyPri floatValue]);

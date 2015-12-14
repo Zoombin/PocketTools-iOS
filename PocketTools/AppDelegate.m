@@ -51,7 +51,7 @@
 //    //充值服务
 //    UINavigationController *navigation3 = [[UINavigationController alloc] initWithRootViewController:[ReadingViewController new]];
 //    
-//    //99商城
+//    //微商城
 //     UINavigationController *navigation4 = [[UINavigationController alloc] initWithRootViewController:[StoreViewController new]];
 //    
 //    self.tabBarController = [[UITabBarController alloc] init];
