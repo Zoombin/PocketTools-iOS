@@ -33,8 +33,28 @@
     [MobClick startWithAppkey:@"566e90cf67e58ef240003178" reportPolicy:BATCH channelId:@"iOS"];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    spashAd = [[GDTSplashAd alloc] initWithAppkey:@"1105020888"
+                                      placementId:@"5040103726503845"];
+    spashAd.delegate = self;
+    [spashAd loadAdAndShowInWindow:self.window];
+    
     [self initTabBar];
     return YES;
+}
+
+/**
+ *  开屏广告成功展示
+ */
+-(void)splashAdSuccessPresentScreen:(GDTSplashAd *)splashAd {
+    NSLog(@"开屏广告成功展示");
+}
+
+/**
+ *  开屏广告展示失败
+ */
+-(void)splashAdFailToPresent:(GDTSplashAd *)splashAd withError:(NSError *)error {
+    NSLog(@"开屏广告展示失败");
+    NSLog(@"%@", error);
 }
 
 - (void)setNavTintColorAndFont {

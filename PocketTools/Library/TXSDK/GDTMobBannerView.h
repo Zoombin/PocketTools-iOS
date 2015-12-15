@@ -79,12 +79,12 @@
  *  父视图
  *  详解：[必选]需设置为显示广告的UIViewController
  */
-@property (nonatomic, assign) UIViewController *currentViewController;
+@property (nonatomic, weak) UIViewController *currentViewController;
 
 /**
  *  委托 [可选]
  */
-@property(nonatomic, assign) id<GDTMobBannerViewDelegate> delegate;
+@property(nonatomic, weak) id<GDTMobBannerViewDelegate> delegate;
 
 /**
  *  广告刷新间隔 [可选]

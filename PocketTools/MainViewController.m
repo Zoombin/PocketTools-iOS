@@ -334,8 +334,12 @@
         [label3 setFont:[UIFont systemFontOfSize:14]];
         [label3 setText:[NSString stringWithFormat:@"%@°", info.temp2]];
         [_futureWeatherScrollView addSubview:label3];
+        
+        if (i > 10) {
+            break;
+        }
     }
-    [_futureWeatherScrollView setContentSize:CGSizeMake(width * [weatherArray count], 0)];
+    [_futureWeatherScrollView setContentSize:CGSizeMake(width * 10, 0)];
 }
 
 - (void)showTodayInfo:(WeatherTodayInfo *)tInfo {

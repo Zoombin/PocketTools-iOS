@@ -719,6 +719,7 @@
 		180EBF0C1C1FBAD800CCCFE2 /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
 		180EBF0D1C1FBAD800CCCFE2 /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
 		180EBF0E1C1FBAD800CCCFE2 /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		180EBF161C1FFCB800CCCFE2 /* GDTSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSplashAd.h; sourceTree = "<group>"; };
 		184DC98E1ABD92E1001E8F1A /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		18D6A5191C1EC7DE00350003 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
 		18D6A51A1C1EC7DE00350003 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
@@ -936,6 +937,7 @@
 		180EB8B01C1F7BAC00CCCFE2 /* TXSDK */ = {
 			isa = PBXGroup;
 			children = (
+				180EBF161C1FFCB800CCCFE2 /* GDTSplashAd.h */,
 				180EB8B11C1F7BAC00CCCFE2 /* GDTMobBannerView.h */,
 				180EB8B21C1F7BAC00CCCFE2 /* GDTMobInterstitial.h */,
 				180EB8B31C1F7BAC00CCCFE2 /* GDTNativeAd.h */,

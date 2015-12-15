@@ -71,12 +71,12 @@ extern NSString* const GDTNativeAdDataKeyAppPrice;
  *  viewControllerForPresentingModalView
  *  详解：[必选]开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
  */
-@property (nonatomic, assign) UIViewController *controller;
+@property (nonatomic, weak) UIViewController *controller;
 
 /**
  *  委托对象
  */
-@property (nonatomic, assign) id<GDTNativeAdDelegate> delegate;
+@property (nonatomic, weak) id<GDTNativeAdDelegate> delegate;
 
 /**
  *  构造方法

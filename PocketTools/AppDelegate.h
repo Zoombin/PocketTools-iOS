@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "BMapKit.h"
+#import "GDTSplashAd.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate> {
+@interface AppDelegate : UIResponder <UIApplicationDelegate, GDTSplashAdDelegate> {
      BMKMapManager* _mapManager;
+     GDTSplashAd *spashAd;
 }
 
 @property (strong, nonatomic) UIWindow *window;
