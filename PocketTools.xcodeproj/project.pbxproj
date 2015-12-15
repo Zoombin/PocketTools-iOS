@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		18011FD11ABD441900F3A86C /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18011FCF1ABD441900F3A86C /* StoreViewController.m */; };
 		18011FD21ABD441900F3A86C /* StoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18011FD01ABD441900F3A86C /* StoreViewController.xib */; };
+		180EB8B51C1F7BAC00CCCFE2 /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 180EB8B41C1F7BAC00CCCFE2 /* libGDTMobSDK.a */; };
+		180EB8B71C1F7C2400CCCFE2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 180EB8B61C1F7C2400CCCFE2 /* libz.tbd */; };
+		180EB8B91C1F7C3800CCCFE2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180EB8B81C1F7C3800CCCFE2 /* SystemConfiguration.framework */; };
+		180EB8BB1C1F7C5600CCCFE2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180EB8BA1C1F7C5600CCCFE2 /* Security.framework */; };
+		180EB8BD1C1F7CDC00CCCFE2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180EB8BC1C1F7CDC00CCCFE2 /* QuartzCore.framework */; };
+		180EB8BF1C1F7CE700CCCFE2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180EB8BE1C1F7CE700CCCFE2 /* StoreKit.framework */; };
 		1823AACA1AB614A000C09D5C /* TrainInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1823AAC91AB614A000C09D5C /* TrainInfo.m */; };
 		1823AACD1AB615F900C09D5C /* StationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1823AACC1AB615F900C09D5C /* StationInfo.m */; };
 		1823AAD11AB618B100C09D5C /* TrainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1823AACF1AB618B100C09D5C /* TrainCell.m */; };
@@ -49,6 +55,7 @@
 		18D6A50A1C1E9D5900350003 /* AboutUSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D6A5081C1E9D5900350003 /* AboutUSViewController.xib */; };
 		18D6A50E1C1E9D7D00350003 /* AppRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6A50C1C1E9D7D00350003 /* AppRecommendViewController.m */; };
 		18D6A50F1C1E9D7D00350003 /* AppRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D6A50D1C1E9D7D00350003 /* AppRecommendViewController.xib */; };
+		18D6A51C1C1EC7DE00350003 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D6A5191C1EC7DE00350003 /* libMobClickLibrary.a */; };
 		18D937031ABE624300DDAF75 /* StoreList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18D937021ABE624300DDAF75 /* StoreList.plist */; };
 		18D937071ABE67AD00DDAF75 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D937051ABE67AD00DDAF75 /* WebViewController.m */; };
 		18D937081ABE67AD00DDAF75 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D937061ABE67AD00DDAF75 /* WebViewController.xib */; };
@@ -91,7 +98,7 @@
 		582BD55D1AB163D9008A9B54 /* PlaneInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 582BD55C1AB163D9008A9B54 /* PlaneInfo.m */; };
 		582BD5641AB17A30008A9B54 /* JuheApisSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 582BD5631AB17A30008A9B54 /* JuheApisSDK.a */; };
 		582BD5661AB17A95008A9B54 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 582BD5651AB17A95008A9B54 /* CoreTelephony.framework */; };
-		582BD5681AB17AA1008A9B54 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 582BD5671AB17AA1008A9B54 /* AdSupport.framework */; };
+		582BD5681AB17AA1008A9B54 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 582BD5671AB17AA1008A9B54 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		582BD56A1AB17AA7008A9B54 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 582BD5691AB17AA7008A9B54 /* CoreLocation.framework */; };
 		582BD56C1AB17AC8008A9B54 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 582BD56B1AB17AC8008A9B54 /* libc++.dylib */; };
 		582BD5701AB17B25008A9B54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 582BD56F1AB17B25008A9B54 /* AppDelegate.m */; };
@@ -246,6 +253,15 @@
 		18011FCE1ABD441900F3A86C /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
 		18011FCF1ABD441900F3A86C /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
 		18011FD01ABD441900F3A86C /* StoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreViewController.xib; sourceTree = "<group>"; };
+		180EB8B11C1F7BAC00CCCFE2 /* GDTMobBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobBannerView.h; sourceTree = "<group>"; };
+		180EB8B21C1F7BAC00CCCFE2 /* GDTMobInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobInterstitial.h; sourceTree = "<group>"; };
+		180EB8B31C1F7BAC00CCCFE2 /* GDTNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeAd.h; sourceTree = "<group>"; };
+		180EB8B41C1F7BAC00CCCFE2 /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTMobSDK.a; sourceTree = "<group>"; };
+		180EB8B61C1F7C2400CCCFE2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		180EB8B81C1F7C3800CCCFE2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		180EB8BA1C1F7C5600CCCFE2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		180EB8BC1C1F7CDC00CCCFE2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		180EB8BE1C1F7CE700CCCFE2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		1823AAC81AB614A000C09D5C /* TrainInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainInfo.h; sourceTree = "<group>"; };
 		1823AAC91AB614A000C09D5C /* TrainInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainInfo.m; sourceTree = "<group>"; };
 		1823AACB1AB615F900C09D5C /* StationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationInfo.h; sourceTree = "<group>"; };
@@ -310,6 +326,9 @@
 		18D6A50B1C1E9D7D00350003 /* AppRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppRecommendViewController.h; sourceTree = "<group>"; };
 		18D6A50C1C1E9D7D00350003 /* AppRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppRecommendViewController.m; sourceTree = "<group>"; };
 		18D6A50D1C1E9D7D00350003 /* AppRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppRecommendViewController.xib; sourceTree = "<group>"; };
+		18D6A5191C1EC7DE00350003 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
+		18D6A51A1C1EC7DE00350003 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		18D6A51B1C1EC7DE00350003 /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
 		18D937021ABE624300DDAF75 /* StoreList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = StoreList.plist; path = ../PocketTools/StoreList.plist; sourceTree = "<group>"; };
 		18D937041ABE67AD00DDAF75 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		18D937051ABE67AD00DDAF75 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
@@ -694,13 +713,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180EB8BF1C1F7CE700CCCFE2 /* StoreKit.framework in Frameworks */,
+				180EB8BD1C1F7CDC00CCCFE2 /* QuartzCore.framework in Frameworks */,
+				180EB8BB1C1F7C5600CCCFE2 /* Security.framework in Frameworks */,
+				180EB8B91C1F7C3800CCCFE2 /* SystemConfiguration.framework in Frameworks */,
+				180EB8B71C1F7C2400CCCFE2 /* libz.tbd in Frameworks */,
+				582BD5681AB17AA1008A9B54 /* AdSupport.framework in Frameworks */,
 				582BD56C1AB17AC8008A9B54 /* libc++.dylib in Frameworks */,
 				582BD56A1AB17AA7008A9B54 /* CoreLocation.framework in Frameworks */,
-				582BD5681AB17AA1008A9B54 /* AdSupport.framework in Frameworks */,
+				18D6A51C1C1EC7DE00350003 /* libMobClickLibrary.a in Frameworks */,
 				582BD5661AB17A95008A9B54 /* CoreTelephony.framework in Frameworks */,
 				582BD5C51AB189F6008A9B54 /* libbaidumapapi.a in Frameworks */,
 				71078482F10AF41A8AF80980 /* libPods.a in Frameworks */,
 				582BD5641AB17A30008A9B54 /* JuheApisSDK.a in Frameworks */,
+				180EB8B51C1F7BAC00CCCFE2 /* libGDTMobSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,6 +740,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180EB8B01C1F7BAC00CCCFE2 /* TXSDK */ = {
+			isa = PBXGroup;
+			children = (
+				180EB8B11C1F7BAC00CCCFE2 /* GDTMobBannerView.h */,
+				180EB8B21C1F7BAC00CCCFE2 /* GDTMobInterstitial.h */,
+				180EB8B31C1F7BAC00CCCFE2 /* GDTNativeAd.h */,
+				180EB8B41C1F7BAC00CCCFE2 /* libGDTMobSDK.a */,
+			);
+			path = TXSDK;
+			sourceTree = "<group>";
+		};
+		18D6A5181C1EC7DE00350003 /* UMAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				18D6A5191C1EC7DE00350003 /* libMobClickLibrary.a */,
+				18D6A51A1C1EC7DE00350003 /* MobClick.h */,
+				18D6A51B1C1EC7DE00350003 /* MobClickSocialAnalytics.h */,
+			);
+			path = UMAnalytics;
+			sourceTree = "<group>";
+		};
 		18E4FC161AB1D57E001E021E /* JustBen */ = {
 			isa = PBXGroup;
 			children = (
@@ -1263,6 +1310,8 @@
 		58E8505D1AA012AC0095DDC7 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				180EB8B01C1F7BAC00CCCFE2 /* TXSDK */,
+				18D6A5181C1EC7DE00350003 /* UMAnalytics */,
 				583DFE731AC4F77A00BACAA1 /* EChart */,
 				581139241AC3E0C800530DED /* MJRefresh */,
 				18E4FC161AB1D57E001E021E /* JustBen */,
@@ -1368,6 +1417,11 @@
 		6330700DAAF1D5AC645F85AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				180EB8BE1C1F7CE700CCCFE2 /* StoreKit.framework */,
+				180EB8BC1C1F7CDC00CCCFE2 /* QuartzCore.framework */,
+				180EB8BA1C1F7C5600CCCFE2 /* Security.framework */,
+				180EB8B81C1F7C3800CCCFE2 /* SystemConfiguration.framework */,
+				180EB8B61C1F7C2400CCCFE2 /* libz.tbd */,
 				582BD56B1AB17AC8008A9B54 /* libc++.dylib */,
 				582BD5691AB17AA7008A9B54 /* CoreLocation.framework */,
 				582BD5671AB17AA1008A9B54 /* AdSupport.framework */,
@@ -1851,6 +1905,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = PocketTools/PocketTools.pch;
 				INFOPLIST_FILE = PocketTools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -1858,10 +1913,38 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PocketTools/Library/JuheApisSDK",
-					"$(PROJECT_DIR)/PocketTools/Library/BaiduMap_IOSSDK_v2.6.0_Lib/Release-iphoneos",
-					"$(PROJECT_DIR)/PocketTools/Library/BaiduMap_IOSSDK_v2.6.0_Lib/Release-iphonesimulator",
 					"$(PROJECT_DIR)/PocketTools/Library/BaiduMap_IOSSDK_v2.6.0_Lib",
+					"$(PROJECT_DIR)/PocketTools/Library/UMAnalytics",
+					"$(PROJECT_DIR)/PocketTools/Library/TXSDK",
 				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-l\"Pods-AFNetworking\"",
+					"-l\"Pods-IQKeyboardManager\"",
+					"-l\"Pods-MBProgressHUD\"",
+					"-l\"Pods-ZBUtilities\"",
+					"-l\"Pods-ZBarSDK\"",
+					"-l\"iconv\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreVideo\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-lz",
+					"-lstdc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoombin.koudai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1872,6 +1955,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = PocketTools/PocketTools.pch;
 				INFOPLIST_FILE = PocketTools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -1879,10 +1963,38 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PocketTools/Library/JuheApisSDK",
-					"$(PROJECT_DIR)/PocketTools/Library/BaiduMap_IOSSDK_v2.6.0_Lib/Release-iphoneos",
-					"$(PROJECT_DIR)/PocketTools/Library/BaiduMap_IOSSDK_v2.6.0_Lib/Release-iphonesimulator",
 					"$(PROJECT_DIR)/PocketTools/Library/BaiduMap_IOSSDK_v2.6.0_Lib",
+					"$(PROJECT_DIR)/PocketTools/Library/UMAnalytics",
+					"$(PROJECT_DIR)/PocketTools/Library/TXSDK",
 				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-l\"Pods-AFNetworking\"",
+					"-l\"Pods-IQKeyboardManager\"",
+					"-l\"Pods-MBProgressHUD\"",
+					"-l\"Pods-ZBUtilities\"",
+					"-l\"Pods-ZBarSDK\"",
+					"-l\"iconv\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreVideo\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-lz",
+					"-lstdc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoombin.koudai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

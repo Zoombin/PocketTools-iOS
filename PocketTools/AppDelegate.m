@@ -12,6 +12,7 @@
 #import "DailyViewController.h"
 #import "StoreViewController.h"
 #import "MainViewController.h"
+#import "MobClick.h"
 
 @interface AppDelegate ()
 
@@ -29,6 +30,8 @@
     if (!ret) {
         NSLog(@"manager start failed!");
     }
+    [MobClick startWithAppkey:@"566e90cf67e58ef240003178" reportPolicy:BATCH channelId:@"iOS"];
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self initTabBar];
     return YES;

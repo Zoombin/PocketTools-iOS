@@ -423,23 +423,30 @@
 - (void)addBottomButtons {
     NSArray *buttonNames = @[@"日常工具", @"生活服务", @"充值服务", @"微商城", @"关于我们"];
     NSInteger buttonCount = [buttonNames count];
-    NSArray *imageNames = @[@"daily", @"life", @"pay", @"99store", @"99store"];
-    NSArray *imageSel = @[@"daily_sel", @"life_sel", @"pay_sel", @"99store_sel", @"99store_sel"];
+    NSArray *imageNames = @[@"tool", @"services", @"pay", @"market", @"aboutus"];
+    NSArray *imageSel = @[@"tool_hl", @"services_hl", @"pay_hl", @"market_hl", @"aboutus_hl"];
     NSInteger buttonWidth = ([UIScreen mainScreen].bounds.size.width) / buttonCount;
     NSInteger buttonHeight = buttonWidth * 0.8;
     for (int i = 0; i <buttonCount; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [button setBackgroundColor:[UIColor whiteColor]];
+        [button setBackgroundColor:[UIColor clearColor]];
         [button addTarget:self action:@selector(bottomButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [button setTag:i];
         [button setFrame:CGRectMake(i * buttonWidth, [UIScreen mainScreen].bounds.size.height - buttonHeight, buttonWidth, buttonHeight)];
         if (i == [buttonNames count] - 1) {
             [button setFrame:CGRectMake(button.frame.origin.x, button.frame.origin.y, [UIScreen mainScreen].bounds.size.width - button.frame.origin.x, buttonHeight)];
         }
-        [button setBackgroundColor:[UIColor clearColor]];
-        [button setBackgroundImage:[UIImage imageNamed:imageNames[i]] forState:UIControlStateNormal];
-        [button setBackgroundImage:[UIImage imageNamed:imageSel[i]] forState:UIControlStateSelected];
+        [button setImage:[UIImage imageNamed:imageNames[i]] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:imageSel[i]] forState:UIControlStateSelected];
         [self.view addSubview:button];
+        
+        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, buttonHeight * 0.75, buttonWidth, buttonHeight / 4)];
+        titleLabel.text = buttonNames[i];
+        titleLabel.textColor = [UIColor blackColor];
+        titleLabel.font = [UIFont systemFontOfSize:8];
+        titleLabel.textAlignment = NSTextAlignmentCenter;
+        [button addSubview:titleLabel];
+        
         [bottomButtons addObject:button];
     }
 }
@@ -582,11 +589,11 @@
     for (int i = 0; i < count;) {
         AppInfoEntity *entity = elements[i];
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [button setBackgroundColor:[UIColor clearColor]];
         [button setImage:[UIImage imageNamed:entity.iconName] forState:UIControlStateNormal];
         [button setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 5, 0)];
         [button.layer setBorderColor:[UIColor whiteColor].CGColor];
         [button addTarget:self action:@selector(menuButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        [button setBackgroundColor:[UIColor clearColor]];
 //        [button.layer setBorderWidth:.5];
         [button setTag:i];
         if (i % numberPerLine == 0 && i != 0) {

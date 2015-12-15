@@ -256,7 +256,7 @@
 		<key>controlName</key>
 		<string>AboutUSViewController</string>
 		<key>iconName</key>
-		<string>gr_tool_flash</string>
+		<string>aboutus</string>
 	</dict>
 	<dict>
 		<key>appName</key>
@@ -264,7 +264,7 @@
 		<key>controlName</key>
 		<string>AppRecommendViewController</string>
 		<key>iconName</key>
-		<string>gr_tool_flash</string>
+		<string>services</string>
 	</dict>
 </array>
 </plist>
