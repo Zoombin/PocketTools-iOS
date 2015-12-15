@@ -4,3 +4,6 @@
 [submodule "PocketTools/Submodules/IQKeyboardManager"]
 	path = PocketTools/Submodules/IQKeyboardManager
 	url = https://github.com/hackiftekhar/IQKeyboardManager.git
+[submodule "PocketTools/Submodules/ZBarSDK-for-iOS"]
+	path = PocketTools/Submodules/ZBarSDK-for-iOS
+	url = https://github.com/null09264/ZBarSDK-for-iOS.git
