@@ -11,4 +11,5 @@
 @interface BackgroundViewController : PTViewController
 
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;
+@property (nonatomic, weak) IBOutlet UILabel *versionLabel;
 @end
