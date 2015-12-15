@@ -149,11 +149,11 @@
             <point key="canvasLocation" x="673" y="237"/>
         </view>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <animations/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <nil key="simulatedTopBarMetrics"/>
             <point key="canvasLocation" x="290" y="67"/>
         </view>
         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" id="eHW-gx-RcL">
@@ -297,8 +297,8 @@
             <point key="canvasLocation" x="673" y="492"/>
         </view>
         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="xkO-j6-OCp">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
             <animations/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
@@ -306,7 +306,7 @@
             <connections>
                 <outlet property="delegate" destination="-1" id="6ku-q0-9Iy"/>
             </connections>
-            <point key="canvasLocation" x="307" y="554"/>
+            <point key="canvasLocation" x="307" y="564"/>
         </scrollView>
     </objects>
     <resources>

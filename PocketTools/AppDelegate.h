@@ -8,15 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "BMapKit.h"
-#import "GDTSplashAd.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, GDTSplashAdDelegate> {
+@interface AppDelegate : UIResponder <UIApplicationDelegate> {
      BMKMapManager* _mapManager;
-     GDTSplashAd *spashAd;
+    
 }
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, strong) UITabBarController *tabBarController;
 
+- (void)initTabBar;
 @end
 
