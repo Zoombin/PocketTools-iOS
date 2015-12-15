@@ -10,4 +10,5 @@
 
 @interface AboutUSViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UIWebView *webView;
 @end

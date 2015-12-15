@@ -1,0 +1,9 @@
+[submodule "PocketTools/Submodules/AFNetworking"]
+	path = PocketTools/Submodules/AFNetworking
+	url = https://github.com/AFNetworking/AFNetworking.git
+[submodule "PocketTools/Submodules/IQKeyboardManager"]
+	path = PocketTools/Submodules/IQKeyboardManager
+	url = https://github.com/hackiftekhar/IQKeyboardManager.git
+[submodule "PocketTools/Submodules/MBProgressHUD"]
+	path = PocketTools/Submodules/MBProgressHUD
+	url = https://github.com/jdg/MBProgressHUD.git

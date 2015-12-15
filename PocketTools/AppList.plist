@@ -258,13 +258,5 @@
 		<key>iconName</key>
 		<string>aboutus</string>
 	</dict>
-	<dict>
-		<key>appName</key>
-		<string>应用推荐</string>
-		<key>controlName</key>
-		<string>AppRecommendViewController</string>
-		<key>iconName</key>
-		<string>services</string>
-	</dict>
 </array>
 </plist>
