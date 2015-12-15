@@ -203,6 +203,33 @@
 		180EBE771C1FB71200CCCFE2 /* ReadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180EBE6E1C1FB71200CCCFE2 /* ReadingViewController.xib */; };
 		180EBE781C1FB71200CCCFE2 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBE701C1FB71200CCCFE2 /* StoreViewController.m */; };
 		180EBE791C1FB71200CCCFE2 /* StoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180EBE711C1FB71200CCCFE2 /* StoreViewController.xib */; };
+		180EBE7F1C1FB87600CCCFE2 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 180EBE7B1C1FB87600CCCFE2 /* LICENSE */; };
+		180EBE801C1FB87600CCCFE2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBE7D1C1FB87600CCCFE2 /* MBProgressHUD.m */; };
+		180EBE811C1FB87600CCCFE2 /* README.mdown in Sources */ = {isa = PBXBuildFile; fileRef = 180EBE7E1C1FB87600CCCFE2 /* README.mdown */; };
+		180EBEA91C1FB89600CCCFE2 /* CLLocation+NSDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBE841C1FB89600CCCFE2 /* CLLocation+NSDictionary.m */; };
+		180EBEAA1C1FB89600CCCFE2 /* CLLocation+NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBE861C1FB89600CCCFE2 /* CLLocation+NSString.m */; };
+		180EBEAB1C1FB89600CCCFE2 /* IPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBE881C1FB89600CCCFE2 /* IPAddress.m */; };
+		180EBEAC1C1FB89600CCCFE2 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 180EBE891C1FB89600CCCFE2 /* LICENSE */; };
+		180EBEAD1C1FB89600CCCFE2 /* MBProgressHUD+Appearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBE8B1C1FB89600CCCFE2 /* MBProgressHUD+Appearance.m */; };
+		180EBEAE1C1FB89600CCCFE2 /* NSNumber+PrintableMeasurement.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBE8D1C1FB89600CCCFE2 /* NSNumber+PrintableMeasurement.m */; };
+		180EBEAF1C1FB89600CCCFE2 /* NSString+BundleExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBE8F1C1FB89600CCCFE2 /* NSString+BundleExtensions.m */; };
+		180EBEB01C1FB89600CCCFE2 /* NSString+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBE911C1FB89600CCCFE2 /* NSString+Hex.m */; };
+		180EBEB11C1FB89600CCCFE2 /* NSString+ZBUtilites.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBE931C1FB89600CCCFE2 /* NSString+ZBUtilites.m */; };
+		180EBEB21C1FB89600CCCFE2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 180EBE941C1FB89600CCCFE2 /* README.md */; };
+		180EBEB31C1FB89600CCCFE2 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBE961C1FB89600CCCFE2 /* UIColor+Hex.m */; };
+		180EBEB41C1FB89600CCCFE2 /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBE981C1FB89600CCCFE2 /* UIColor+Random.m */; };
+		180EBEB51C1FB89600CCCFE2 /* UIDevice+ZBUtilites.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBE9A1C1FB89600CCCFE2 /* UIDevice+ZBUtilites.m */; };
+		180EBEB61C1FB89600CCCFE2 /* UIImage+LogN.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBE9C1C1FB89600CCCFE2 /* UIImage+LogN.m */; };
+		180EBEB71C1FB89600CCCFE2 /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBE9E1C1FB89600CCCFE2 /* UIViewController+HUD.m */; };
+		180EBEB81C1FB89600CCCFE2 /* UIViewController+ZBUtilites.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBEA01C1FB89600CCCFE2 /* UIViewController+ZBUtilites.m */; };
+		180EBEB91C1FB89600CCCFE2 /* ZBHorizontalScrollTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBEA21C1FB89600CCCFE2 /* ZBHorizontalScrollTableViewCell.m */; };
+		180EBEBA1C1FB89600CCCFE2 /* ZBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBEA41C1FB89600CCCFE2 /* ZBModel.m */; };
+		180EBEBB1C1FB89600CCCFE2 /* ZBTextValidate.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBEA61C1FB89600CCCFE2 /* ZBTextValidate.m */; };
+		180EBEBC1C1FB89600CCCFE2 /* ZBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBEA81C1FB89600CCCFE2 /* ZBViewController.m */; };
+		180EBEC51C1FB8D200CCCFE2 /* BackButtonTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBEBE1C1FB8D200CCCFE2 /* BackButtonTool.m */; };
+		180EBEC61C1FB8D200CCCFE2 /* BallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBEC01C1FB8D200CCCFE2 /* BallView.m */; };
+		180EBEC71C1FB8D200CCCFE2 /* CalculatorTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBEC21C1FB8D200CCCFE2 /* CalculatorTools.m */; };
+		180EBEC81C1FB8D200CCCFE2 /* PTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBEC41C1FB8D200CCCFE2 /* PTViewController.m */; };
 		184DC98F1ABD92E1001E8F1A /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184DC98E1ABD92E1001E8F1A /* MainViewController.xib */; };
 		18D6A51C1C1EC7DE00350003 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D6A5191C1EC7DE00350003 /* libMobClickLibrary.a */; };
 		18D937031ABE624300DDAF75 /* StoreList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18D937021ABE624300DDAF75 /* StoreList.plist */; };
@@ -610,6 +637,56 @@
 		180EBE6F1C1FB71200CCCFE2 /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
 		180EBE701C1FB71200CCCFE2 /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
 		180EBE711C1FB71200CCCFE2 /* StoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreViewController.xib; sourceTree = "<group>"; };
+		180EBE7B1C1FB87600CCCFE2 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		180EBE7C1C1FB87600CCCFE2 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		180EBE7D1C1FB87600CCCFE2 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		180EBE7E1C1FB87600CCCFE2 /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.mdown; sourceTree = "<group>"; };
+		180EBE831C1FB89600CCCFE2 /* CLLocation+NSDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+NSDictionary.h"; sourceTree = "<group>"; };
+		180EBE841C1FB89600CCCFE2 /* CLLocation+NSDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+NSDictionary.m"; sourceTree = "<group>"; };
+		180EBE851C1FB89600CCCFE2 /* CLLocation+NSString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+NSString.h"; sourceTree = "<group>"; };
+		180EBE861C1FB89600CCCFE2 /* CLLocation+NSString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+NSString.m"; sourceTree = "<group>"; };
+		180EBE871C1FB89600CCCFE2 /* IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAddress.h; sourceTree = "<group>"; };
+		180EBE881C1FB89600CCCFE2 /* IPAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPAddress.m; sourceTree = "<group>"; };
+		180EBE891C1FB89600CCCFE2 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		180EBE8A1C1FB89600CCCFE2 /* MBProgressHUD+Appearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Appearance.h"; sourceTree = "<group>"; };
+		180EBE8B1C1FB89600CCCFE2 /* MBProgressHUD+Appearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Appearance.m"; sourceTree = "<group>"; };
+		180EBE8C1C1FB89600CCCFE2 /* NSNumber+PrintableMeasurement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+PrintableMeasurement.h"; sourceTree = "<group>"; };
+		180EBE8D1C1FB89600CCCFE2 /* NSNumber+PrintableMeasurement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+PrintableMeasurement.m"; sourceTree = "<group>"; };
+		180EBE8E1C1FB89600CCCFE2 /* NSString+BundleExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BundleExtensions.h"; sourceTree = "<group>"; };
+		180EBE8F1C1FB89600CCCFE2 /* NSString+BundleExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BundleExtensions.m"; sourceTree = "<group>"; };
+		180EBE901C1FB89600CCCFE2 /* NSString+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hex.h"; sourceTree = "<group>"; };
+		180EBE911C1FB89600CCCFE2 /* NSString+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hex.m"; sourceTree = "<group>"; };
+		180EBE921C1FB89600CCCFE2 /* NSString+ZBUtilites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZBUtilites.h"; sourceTree = "<group>"; };
+		180EBE931C1FB89600CCCFE2 /* NSString+ZBUtilites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZBUtilites.m"; sourceTree = "<group>"; };
+		180EBE941C1FB89600CCCFE2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		180EBE951C1FB89600CCCFE2 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		180EBE961C1FB89600CCCFE2 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		180EBE971C1FB89600CCCFE2 /* UIColor+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Random.h"; sourceTree = "<group>"; };
+		180EBE981C1FB89600CCCFE2 /* UIColor+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Random.m"; sourceTree = "<group>"; };
+		180EBE991C1FB89600CCCFE2 /* UIDevice+ZBUtilites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+ZBUtilites.h"; sourceTree = "<group>"; };
+		180EBE9A1C1FB89600CCCFE2 /* UIDevice+ZBUtilites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+ZBUtilites.m"; sourceTree = "<group>"; };
+		180EBE9B1C1FB89600CCCFE2 /* UIImage+LogN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LogN.h"; sourceTree = "<group>"; };
+		180EBE9C1C1FB89600CCCFE2 /* UIImage+LogN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LogN.m"; sourceTree = "<group>"; };
+		180EBE9D1C1FB89600CCCFE2 /* UIViewController+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
+		180EBE9E1C1FB89600CCCFE2 /* UIViewController+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
+		180EBE9F1C1FB89600CCCFE2 /* UIViewController+ZBUtilites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ZBUtilites.h"; sourceTree = "<group>"; };
+		180EBEA01C1FB89600CCCFE2 /* UIViewController+ZBUtilites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ZBUtilites.m"; sourceTree = "<group>"; };
+		180EBEA11C1FB89600CCCFE2 /* ZBHorizontalScrollTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBHorizontalScrollTableViewCell.h; sourceTree = "<group>"; };
+		180EBEA21C1FB89600CCCFE2 /* ZBHorizontalScrollTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBHorizontalScrollTableViewCell.m; sourceTree = "<group>"; };
+		180EBEA31C1FB89600CCCFE2 /* ZBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBModel.h; sourceTree = "<group>"; };
+		180EBEA41C1FB89600CCCFE2 /* ZBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBModel.m; sourceTree = "<group>"; };
+		180EBEA51C1FB89600CCCFE2 /* ZBTextValidate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBTextValidate.h; sourceTree = "<group>"; };
+		180EBEA61C1FB89600CCCFE2 /* ZBTextValidate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBTextValidate.m; sourceTree = "<group>"; };
+		180EBEA71C1FB89600CCCFE2 /* ZBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBViewController.h; sourceTree = "<group>"; };
+		180EBEA81C1FB89600CCCFE2 /* ZBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBViewController.m; sourceTree = "<group>"; };
+		180EBEBD1C1FB8D200CCCFE2 /* BackButtonTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackButtonTool.h; sourceTree = "<group>"; };
+		180EBEBE1C1FB8D200CCCFE2 /* BackButtonTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackButtonTool.m; sourceTree = "<group>"; };
+		180EBEBF1C1FB8D200CCCFE2 /* BallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallView.h; sourceTree = "<group>"; };
+		180EBEC01C1FB8D200CCCFE2 /* BallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallView.m; sourceTree = "<group>"; };
+		180EBEC11C1FB8D200CCCFE2 /* CalculatorTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorTools.h; sourceTree = "<group>"; };
+		180EBEC21C1FB8D200CCCFE2 /* CalculatorTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorTools.m; sourceTree = "<group>"; };
+		180EBEC31C1FB8D200CCCFE2 /* PTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTViewController.h; sourceTree = "<group>"; };
+		180EBEC41C1FB8D200CCCFE2 /* PTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTViewController.m; sourceTree = "<group>"; };
 		184DC98E1ABD92E1001E8F1A /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		18D6A5191C1EC7DE00350003 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
 		18D6A51A1C1EC7DE00350003 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
@@ -996,6 +1073,14 @@
 		180EBCD71C1FB5F500CCCFE2 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				180EBEBD1C1FB8D200CCCFE2 /* BackButtonTool.h */,
+				180EBEBE1C1FB8D200CCCFE2 /* BackButtonTool.m */,
+				180EBEBF1C1FB8D200CCCFE2 /* BallView.h */,
+				180EBEC01C1FB8D200CCCFE2 /* BallView.m */,
+				180EBEC11C1FB8D200CCCFE2 /* CalculatorTools.h */,
+				180EBEC21C1FB8D200CCCFE2 /* CalculatorTools.m */,
+				180EBEC31C1FB8D200CCCFE2 /* PTViewController.h */,
+				180EBEC41C1FB8D200CCCFE2 /* PTViewController.m */,
 				180EBCD81C1FB5F500CCCFE2 /* AboutUSViewController.h */,
 				180EBCD91C1FB5F500CCCFE2 /* AboutUSViewController.m */,
 				180EBCDA1C1FB5F500CCCFE2 /* AboutUSViewController.xib */,
@@ -1276,6 +1361,62 @@
 				180EBE711C1FB71200CCCFE2 /* StoreViewController.xib */,
 			);
 			path = Tab;
+			sourceTree = "<group>";
+		};
+		180EBE7A1C1FB87600CCCFE2 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				180EBE7B1C1FB87600CCCFE2 /* LICENSE */,
+				180EBE7C1C1FB87600CCCFE2 /* MBProgressHUD.h */,
+				180EBE7D1C1FB87600CCCFE2 /* MBProgressHUD.m */,
+				180EBE7E1C1FB87600CCCFE2 /* README.mdown */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		180EBE821C1FB89600CCCFE2 /* ZBUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				180EBE831C1FB89600CCCFE2 /* CLLocation+NSDictionary.h */,
+				180EBE841C1FB89600CCCFE2 /* CLLocation+NSDictionary.m */,
+				180EBE851C1FB89600CCCFE2 /* CLLocation+NSString.h */,
+				180EBE861C1FB89600CCCFE2 /* CLLocation+NSString.m */,
+				180EBE871C1FB89600CCCFE2 /* IPAddress.h */,
+				180EBE881C1FB89600CCCFE2 /* IPAddress.m */,
+				180EBE891C1FB89600CCCFE2 /* LICENSE */,
+				180EBE8A1C1FB89600CCCFE2 /* MBProgressHUD+Appearance.h */,
+				180EBE8B1C1FB89600CCCFE2 /* MBProgressHUD+Appearance.m */,
+				180EBE8C1C1FB89600CCCFE2 /* NSNumber+PrintableMeasurement.h */,
+				180EBE8D1C1FB89600CCCFE2 /* NSNumber+PrintableMeasurement.m */,
+				180EBE8E1C1FB89600CCCFE2 /* NSString+BundleExtensions.h */,
+				180EBE8F1C1FB89600CCCFE2 /* NSString+BundleExtensions.m */,
+				180EBE901C1FB89600CCCFE2 /* NSString+Hex.h */,
+				180EBE911C1FB89600CCCFE2 /* NSString+Hex.m */,
+				180EBE921C1FB89600CCCFE2 /* NSString+ZBUtilites.h */,
+				180EBE931C1FB89600CCCFE2 /* NSString+ZBUtilites.m */,
+				180EBE941C1FB89600CCCFE2 /* README.md */,
+				180EBE951C1FB89600CCCFE2 /* UIColor+Hex.h */,
+				180EBE961C1FB89600CCCFE2 /* UIColor+Hex.m */,
+				180EBE971C1FB89600CCCFE2 /* UIColor+Random.h */,
+				180EBE981C1FB89600CCCFE2 /* UIColor+Random.m */,
+				180EBE991C1FB89600CCCFE2 /* UIDevice+ZBUtilites.h */,
+				180EBE9A1C1FB89600CCCFE2 /* UIDevice+ZBUtilites.m */,
+				180EBE9B1C1FB89600CCCFE2 /* UIImage+LogN.h */,
+				180EBE9C1C1FB89600CCCFE2 /* UIImage+LogN.m */,
+				180EBE9D1C1FB89600CCCFE2 /* UIViewController+HUD.h */,
+				180EBE9E1C1FB89600CCCFE2 /* UIViewController+HUD.m */,
+				180EBE9F1C1FB89600CCCFE2 /* UIViewController+ZBUtilites.h */,
+				180EBEA01C1FB89600CCCFE2 /* UIViewController+ZBUtilites.m */,
+				180EBEA11C1FB89600CCCFE2 /* ZBHorizontalScrollTableViewCell.h */,
+				180EBEA21C1FB89600CCCFE2 /* ZBHorizontalScrollTableViewCell.m */,
+				180EBEA31C1FB89600CCCFE2 /* ZBModel.h */,
+				180EBEA41C1FB89600CCCFE2 /* ZBModel.m */,
+				180EBEA51C1FB89600CCCFE2 /* ZBTextValidate.h */,
+				180EBEA61C1FB89600CCCFE2 /* ZBTextValidate.m */,
+				180EBEA71C1FB89600CCCFE2 /* ZBViewController.h */,
+				180EBEA81C1FB89600CCCFE2 /* ZBViewController.m */,
+			);
+			path = ZBUtilities;
 			sourceTree = "<group>";
 		};
 		18D6A5181C1EC7DE00350003 /* UMAnalytics */ = {
@@ -1628,6 +1769,8 @@
 		58E8505D1AA012AC0095DDC7 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				180EBE821C1FB89600CCCFE2 /* ZBUtilities */,
+				180EBE7A1C1FB87600CCCFE2 /* MBProgressHUD */,
 				180EB8B01C1F7BAC00CCCFE2 /* TXSDK */,
 				18D6A5181C1EC7DE00350003 /* UMAnalytics */,
 				583DFE731AC4F77A00BACAA1 /* EChart */,
@@ -1781,8 +1924,10 @@
 				180EBDAD1C1FB5F500CCCFE2 /* NewsViewController.xib in Resources */,
 				180EBDCB1C1FB5F500CCCFE2 /* PoiSearchViewController.xib in Resources */,
 				588A3DE51AA4428300EB1066 /* AppList.plist in Resources */,
+				180EBE7F1C1FB87600CCCFE2 /* LICENSE in Resources */,
 				180EBD841C1FB5F500CCCFE2 /* AppRecommendViewController.xib in Resources */,
 				180EBD9B1C1FB5F500CCCFE2 /* ExchangeViewController.xib in Resources */,
+				180EBEAC1C1FB89600CCCFE2 /* LICENSE in Resources */,
 				180EBDA51C1FB5F500CCCFE2 /* LLPayViewController.xib in Resources */,
 				180EBDC11C1FB5F500CCCFE2 /* PlaneCell.xib in Resources */,
 				180EBDE31C1FB5F500CCCFE2 /* TulingViewController.xib in Resources */,
@@ -1833,16 +1978,19 @@
 				180EBE4D1C1FB69D00CCCFE2 /* PhoneInfo.m in Sources */,
 				180EBE551C1FB69D00CCCFE2 /* ShopInfo.m in Sources */,
 				180EBDB21C1FB5F500CCCFE2 /* PackageCell.m in Sources */,
+				180EBEB91C1FB89600CCCFE2 /* ZBHorizontalScrollTableViewCell.m in Sources */,
 				180EBE501C1FB69D00CCCFE2 /* ProvinceInfo.m in Sources */,
 				180EBDBA1C1FB5F500CCCFE2 /* PhonePayViewController.m in Sources */,
 				583DFE8D1AC4F77B00BACAA1 /* EColor.m in Sources */,
 				180EBDE01C1FB5F500CCCFE2 /* TrainViewController.m in Sources */,
 				180EBE411C1FB69D00CCCFE2 /* AppleInfo.m in Sources */,
+				180EBEB61C1FB89600CCCFE2 /* UIImage+LogN.m in Sources */,
 				180EBE521C1FB69D00CCCFE2 /* ScanCityInfo.m in Sources */,
 				180EBDE61C1FB5F500CCCFE2 /* WeatherCell.m in Sources */,
 				180EBE5C1C1FB69D00CCCFE2 /* ThreeHourInfo.m in Sources */,
 				583DFEA51AC4F9E900BACAA1 /* EColumnChartViewController.m in Sources */,
 				180EBBF61C1FADE500CCCFE2 /* IQBarButtonItem.m in Sources */,
+				180EBEB71C1FB89600CCCFE2 /* UIViewController+HUD.m in Sources */,
 				180EB98C1C1FABBC00CCCFE2 /* AFSecurityPolicy.m in Sources */,
 				180EBBF01C1FADE500CCCFE2 /* IQUIViewController+Additions.m in Sources */,
 				180EBE601C1FB69D00CCCFE2 /* WeatherCurrentInfo.m in Sources */,
@@ -1855,6 +2003,7 @@
 				583C912B1AAE989600F1D756 /* DMPasscodeConfig.m in Sources */,
 				583DFE8E1AC4F77B00BACAA1 /* EColumn.m in Sources */,
 				583C912C1AAE989600F1D756 /* DMPasscodeInternalField.m in Sources */,
+				180EBEBA1C1FB89600CCCFE2 /* ZBModel.m in Sources */,
 				180EBDC61C1FB5F500CCCFE2 /* PMCitySelectViewController.m in Sources */,
 				180EBD921C1FB5F500CCCFE2 /* DreamDetailViewController.m in Sources */,
 				180EBE5E1C1FB69D00CCCFE2 /* UnitInfo.m in Sources */,
@@ -1866,6 +2015,8 @@
 				180EBE421C1FB69D00CCCFE2 /* CalandarInfo.m in Sources */,
 				180EBE431C1FB69D00CCCFE2 /* CarType.m in Sources */,
 				180EB98F1C1FABBC00CCCFE2 /* AFURLSessionManager.m in Sources */,
+				180EBEB51C1FB89600CCCFE2 /* UIDevice+ZBUtilites.m in Sources */,
+				180EBE811C1FB87600CCCFE2 /* README.mdown in Sources */,
 				583C912E1AAE989600F1D756 /* DMPasscodeInternalViewController.m in Sources */,
 				180EBE401C1FB69D00CCCFE2 /* AppInfoEntity.m in Sources */,
 				180EBDAE1C1FB5F500CCCFE2 /* OilCell.m in Sources */,
@@ -1884,6 +2035,7 @@
 				180EBE591C1FB69D00CCCFE2 /* StarYearInfo.m in Sources */,
 				180EBE531C1FB69D00CCCFE2 /* ScanProviceInfo.m in Sources */,
 				180EBDA81C1FB5F500CCCFE2 /* MoiveViewController.m in Sources */,
+				180EBEC61C1FB8D200CCCFE2 /* BallView.m in Sources */,
 				180EBD901C1FB5F500CCCFE2 /* CarVioSearchViewController.m in Sources */,
 				180EBBF91C1FADE500CCCFE2 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				180EBDAA1C1FB5F500CCCFE2 /* MoneyTableViewCell.m in Sources */,
@@ -1893,8 +2045,11 @@
 				180EBDC81C1FB5F500CCCFE2 /* PMViewController.m in Sources */,
 				180EBBF51C1FADE500CCCFE2 /* IQTextView.m in Sources */,
 				180EBD961C1FB5F500CCCFE2 /* DreamSearchViewController.m in Sources */,
+				180EBEBC1C1FB89600CCCFE2 /* ZBViewController.m in Sources */,
 				180EBD881C1FB5F500CCCFE2 /* CalculatorViewController.m in Sources */,
+				180EBEB81C1FB89600CCCFE2 /* UIViewController+ZBUtilites.m in Sources */,
 				180EBE4C1C1FB69D00CCCFE2 /* OilInfo.m in Sources */,
+				180EBEAB1C1FB89600CCCFE2 /* IPAddress.m in Sources */,
 				180EBE571C1FB69D00CCCFE2 /* StarMonthInfo.m in Sources */,
 				180EBE631C1FB69D00CCCFE2 /* WZDetailInfo.m in Sources */,
 				180EB9FD1C1FABBC00CCCFE2 /* UIRefreshControl+AFNetworking.m in Sources */,
@@ -1912,6 +2067,9 @@
 				180EBE541C1FB69D00CCCFE2 /* ServiceResult.m in Sources */,
 				180EBBEE1C1FADE500CCCFE2 /* IQUITextFieldView+Additions.m in Sources */,
 				180EBD831C1FB5F500CCCFE2 /* AppRecommendViewController.m in Sources */,
+				180EBEA91C1FB89600CCCFE2 /* CLLocation+NSDictionary.m in Sources */,
+				180EBEB31C1FB89600CCCFE2 /* UIColor+Hex.m in Sources */,
+				180EBEC71C1FB8D200CCCFE2 /* CalculatorTools.m in Sources */,
 				180EB9FA1C1FABBC00CCCFE2 /* UIButton+AFNetworking.m in Sources */,
 				180EB98E1C1FABBC00CCCFE2 /* AFURLResponseSerialization.m in Sources */,
 				180EBDD01C1FB5F500CCCFE2 /* ScanCityListViewController.m in Sources */,
@@ -1932,9 +2090,11 @@
 				18E4FC3A1AB1D57E001E021E /* JBUnitGridView.m in Sources */,
 				18E4FC391AB1D57E001E021E /* JBEventModel.m in Sources */,
 				180EBD7F1C1FB5F500CCCFE2 /* AboutUSViewController.m in Sources */,
+				180EBEB21C1FB89600CCCFE2 /* README.md in Sources */,
 				180EBC031C1FAEDA00CCCFE2 /* AFURLConnectionOperation.m in Sources */,
 				583DFE901AC4F77B00BACAA1 /* EColumnChartLabel.m in Sources */,
 				582BD5701AB17B25008A9B54 /* AppDelegate.m in Sources */,
+				180EBEB11C1FB89600CCCFE2 /* NSString+ZBUtilites.m in Sources */,
 				180EBE5B1C1FB69D00CCCFE2 /* STSInfo.m in Sources */,
 				583DFE911AC4F77B00BACAA1 /* EColumnDataModel.m in Sources */,
 				180EBDB81C1FB5F500CCCFE2 /* ParkViewController.m in Sources */,
@@ -1946,6 +2106,7 @@
 				18E4FC431AB1D57E001E021E /* JBPlistFileManager.m in Sources */,
 				180EBD811C1FB5F500CCCFE2 /* AppleDeviceIdSearchViewController.m in Sources */,
 				581139321AC3E0C800530DED /* MJRefreshFooterView.m in Sources */,
+				180EBEAE1C1FB89600CCCFE2 /* NSNumber+PrintableMeasurement.m in Sources */,
 				18E4FC3D1AB1D57E001E021E /* JBWeekdaysBarView.m in Sources */,
 				180EB9F91C1FABBC00CCCFE2 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				180EBDF11C1FB63300CCCFE2 /* ServiceRequest.m in Sources */,
@@ -1955,13 +2116,17 @@
 				180EBBED1C1FADE500CCCFE2 /* IQNSArray+Sort.m in Sources */,
 				583DFE981AC4F77B00BACAA1 /* UICountingLabel.m in Sources */,
 				583DFE8F1AC4F77B00BACAA1 /* EColumnChart.m in Sources */,
+				180EBEBB1C1FB89600CCCFE2 /* ZBTextValidate.m in Sources */,
 				180EBDD41C1FB5F500CCCFE2 /* SizesViewController.m in Sources */,
+				180EBEAD1C1FB89600CCCFE2 /* MBProgressHUD+Appearance.m in Sources */,
+				180EBEAA1C1FB89600CCCFE2 /* CLLocation+NSString.m in Sources */,
 				180EBDB01C1FB5F500CCCFE2 /* OilViewController.m in Sources */,
 				583DFEA61AC4F9E900BACAA1 /* ELineChartViewController.m in Sources */,
 				180EBE5A1C1FB69D00CCCFE2 /* StationInfo.m in Sources */,
 				180EBE5F1C1FB69D00CCCFE2 /* UserCarSearchInfo.m in Sources */,
 				180EBD9E1C1FB5F500CCCFE2 /* GamePayViewController.m in Sources */,
 				180EBD981C1FB5F500CCCFE2 /* DreamTypeSecondViewController.m in Sources */,
+				180EBEAF1C1FB89600CCCFE2 /* NSString+BundleExtensions.m in Sources */,
 				180EBD941C1FB5F500CCCFE2 /* DreamListViewController.m in Sources */,
 				18E4FC421AB1D57E001E021E /* JBImageFileManager.m in Sources */,
 				180EBE441C1FB69D00CCCFE2 /* CityInfo.m in Sources */,
@@ -1977,6 +2142,7 @@
 				583DFE941AC4F77B00BACAA1 /* ELineChart.m in Sources */,
 				180EBE761C1FB71200CCCFE2 /* ReadingViewController.m in Sources */,
 				180EBD9C1C1FB5F500CCCFE2 /* FlashViewController.m in Sources */,
+				180EBEB01C1FB89600CCCFE2 /* NSString+Hex.m in Sources */,
 				180EBDCA1C1FB5F500CCCFE2 /* PoiSearchViewController.m in Sources */,
 				180EBE621C1FB69D00CCCFE2 /* WeatherTodayInfo.m in Sources */,
 				180EBE721C1FB71200CCCFE2 /* DailyViewController.m in Sources */,
@@ -1986,6 +2152,8 @@
 				180EBE4F1C1FB69D00CCCFE2 /* PostInfo.m in Sources */,
 				180EBE4B1C1FB69D00CCCFE2 /* MovieInfo.m in Sources */,
 				581139311AC3E0C800530DED /* MJRefreshConst.m in Sources */,
+				180EBEC81C1FB8D200CCCFE2 /* PTViewController.m in Sources */,
+				180EBE801C1FB87600CCCFE2 /* MBProgressHUD.m in Sources */,
 				180EBC061C1FAEE200CCCFE2 /* UIAlertView+AFNetworking.m in Sources */,
 				180EBE611C1FB69D00CCCFE2 /* WeatherFutureInfo.m in Sources */,
 				180EBE4E1C1FB69D00CCCFE2 /* PlaneInfo.m in Sources */,
@@ -1994,7 +2162,9 @@
 				180EB9FB1C1FABBC00CCCFE2 /* UIImageView+AFNetworking.m in Sources */,
 				180EBDEA1C1FB5F500CCCFE2 /* WeatherViewController.m in Sources */,
 				18E4FC3E1AB1D57E001E021E /* LunarCalendar.m in Sources */,
+				180EBEC51C1FB8D200CCCFE2 /* BackButtonTool.m in Sources */,
 				180EBC021C1FAEDA00CCCFE2 /* AFHTTPRequestOperationManager.m in Sources */,
+				180EBEB41C1FB89600CCCFE2 /* UIColor+Random.m in Sources */,
 				180EBE641C1FB69D00CCCFE2 /* WZInfo.m in Sources */,
 				180EBE741C1FB71200CCCFE2 /* LifeViewController.m in Sources */,
 				180EBDC41C1FB5F500CCCFE2 /* PMCell.m in Sources */,
