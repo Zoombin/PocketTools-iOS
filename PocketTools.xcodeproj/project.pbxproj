@@ -44,48 +44,6 @@
 		180EBC021C1FAEDA00CCCFE2 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBBFE1C1FAEDA00CCCFE2 /* AFHTTPRequestOperationManager.m */; };
 		180EBC031C1FAEDA00CCCFE2 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC001C1FAEDA00CCCFE2 /* AFURLConnectionOperation.m */; };
 		180EBC061C1FAEE200CCCFE2 /* UIAlertView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC051C1FAEE200CCCFE2 /* UIAlertView+AFNetworking.m */; };
-		180EBC971C1FB1D700CCCFE2 /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 180EBC1C1C1FB1D700CCCFE2 /* zbar-back.png */; };
-		180EBC981C1FB1D700CCCFE2 /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = 180EBC1D1C1FB1D700CCCFE2 /* zbar-help.html */; };
-		180EBC991C1FB1D700CCCFE2 /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = 180EBC1E1C1FB1D700CCCFE2 /* zbar-helpicons.png */; };
-		180EBC9A1C1FB1D700CCCFE2 /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = 180EBC1F1C1FB1D700CCCFE2 /* zbar-samples.png */; };
-		180EBC9B1C1FB1D700CCCFE2 /* ZBarCameraSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC201C1FB1D700CCCFE2 /* ZBarCameraSimulator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		180EBC9C1C1FB1D700CCCFE2 /* ZBarCaptureReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC211C1FB1D700CCCFE2 /* ZBarCaptureReader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		180EBC9D1C1FB1D700CCCFE2 /* ZBarCVImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC231C1FB1D700CCCFE2 /* ZBarCVImage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		180EBC9E1C1FB1D700CCCFE2 /* ZBarHelpController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC241C1FB1D700CCCFE2 /* ZBarHelpController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		180EBC9F1C1FB1D700CCCFE2 /* ZBarImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC251C1FB1D700CCCFE2 /* ZBarImage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		180EBCA01C1FB1D700CCCFE2 /* ZBarImageScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC261C1FB1D700CCCFE2 /* ZBarImageScanner.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		180EBCA11C1FB1D700CCCFE2 /* ZBarReaderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC271C1FB1D700CCCFE2 /* ZBarReaderController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		180EBCA21C1FB1D700CCCFE2 /* ZBarReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC281C1FB1D700CCCFE2 /* ZBarReaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		180EBCA31C1FB1D700CCCFE2 /* ZBarReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC291C1FB1D700CCCFE2 /* ZBarReaderViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		180EBCA41C1FB1D700CCCFE2 /* ZBarReaderViewImpl_Capture.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC2A1C1FB1D700CCCFE2 /* ZBarReaderViewImpl_Capture.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		180EBCA51C1FB1D700CCCFE2 /* ZBarReaderViewImpl_Simulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC2B1C1FB1D700CCCFE2 /* ZBarReaderViewImpl_Simulator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		180EBCA61C1FB1D700CCCFE2 /* ZBarSymbol.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC2C1C1FB1D700CCCFE2 /* ZBarSymbol.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		180EBCA71C1FB1D700CCCFE2 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 180EBC2D1C1FB1D700CCCFE2 /* LICENSE */; };
-		180EBCA81C1FB1D700CCCFE2 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 180EBC2E1C1FB1D700CCCFE2 /* README */; };
-		180EBCA91C1FB1D700CCCFE2 /* README.windows in Resources */ = {isa = PBXBuildFile; fileRef = 180EBC2F1C1FB1D700CCCFE2 /* README.windows */; };
-		180EBCAA1C1FB1D700CCCFE2 /* config.c in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC311C1FB1D700CCCFE2 /* config.c */; };
-		180EBCAB1C1FB1D700CCCFE2 /* codabar.c in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC341C1FB1D700CCCFE2 /* codabar.c */; };
-		180EBCAC1C1FB1D700CCCFE2 /* code128.c in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC361C1FB1D700CCCFE2 /* code128.c */; };
-		180EBCAD1C1FB1D700CCCFE2 /* code39.c in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC381C1FB1D700CCCFE2 /* code39.c */; };
-		180EBCAE1C1FB1D700CCCFE2 /* code93.c in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC3A1C1FB1D700CCCFE2 /* code93.c */; };
-		180EBCAF1C1FB1D700CCCFE2 /* databar.c in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC3C1C1FB1D700CCCFE2 /* databar.c */; };
-		180EBCB01C1FB1D700CCCFE2 /* ean.c in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC3E1C1FB1D700CCCFE2 /* ean.c */; };
-		180EBCB11C1FB1D700CCCFE2 /* i25.c in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC401C1FB1D700CCCFE2 /* i25.c */; };
-		180EBCB21C1FB1D700CCCFE2 /* qr_finder.c in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC441C1FB1D700CCCFE2 /* qr_finder.c */; };
-		180EBCB31C1FB1D700CCCFE2 /* decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC461C1FB1D700CCCFE2 /* decoder.c */; };
-		180EBCB41C1FB1D700CCCFE2 /* error.c in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC481C1FB1D700CCCFE2 /* error.c */; };
-		180EBCB51C1FB1D700CCCFE2 /* image.c in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC4B1C1FB1D700CCCFE2 /* image.c */; };
-		180EBCB61C1FB1D700CCCFE2 /* img_scanner.c in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC4D1C1FB1D700CCCFE2 /* img_scanner.c */; };
-		180EBCB71C1FB1D700CCCFE2 /* bch15_5.c in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC541C1FB1D700CCCFE2 /* bch15_5.c */; };
-		180EBCB81C1FB1D700CCCFE2 /* binarize.c in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC561C1FB1D700CCCFE2 /* binarize.c */; };
-		180EBCB91C1FB1D700CCCFE2 /* isaac.c in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC581C1FB1D700CCCFE2 /* isaac.c */; };
-		180EBCBA1C1FB1D700CCCFE2 /* qrdec.c in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC5A1C1FB1D700CCCFE2 /* qrdec.c */; };
-		180EBCBB1C1FB1D700CCCFE2 /* qrdectxt.c in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC5C1C1FB1D700CCCFE2 /* qrdectxt.c */; };
-		180EBCBC1C1FB1D700CCCFE2 /* rs.c in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC5D1C1FB1D700CCCFE2 /* rs.c */; };
-		180EBCBD1C1FB1D700CCCFE2 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC5F1C1FB1D700CCCFE2 /* util.c */; };
-		180EBCBE1C1FB1D700CCCFE2 /* refcnt.c in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC621C1FB1D700CCCFE2 /* refcnt.c */; };
-		180EBCBF1C1FB1D700CCCFE2 /* scanner.c in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC641C1FB1D700CCCFE2 /* scanner.c */; };
-		180EBCC01C1FB1D700CCCFE2 /* symbol.c in Sources */ = {isa = PBXBuildFile; fileRef = 180EBC661C1FB1D700CCCFE2 /* symbol.c */; };
 		180EBCD61C1FB4DE00CCCFE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180EBCD51C1FB4DE00CCCFE2 /* UIKit.framework */; };
 		180EBD7F1C1FB5F500CCCFE2 /* AboutUSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180EBCD91C1FB5F500CCCFE2 /* AboutUSViewController.m */; };
 		180EBD801C1FB5F500CCCFE2 /* AboutUSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180EBCDA1C1FB5F500CCCFE2 /* AboutUSViewController.xib */; };
@@ -394,98 +352,6 @@
 		180EBC001C1FAEDA00CCCFE2 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
 		180EBC041C1FAEE200CCCFE2 /* UIAlertView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+AFNetworking.h"; sourceTree = "<group>"; };
 		180EBC051C1FAEE200CCCFE2 /* UIAlertView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+AFNetworking.m"; sourceTree = "<group>"; };
-		180EBC0A1C1FB1D700CCCFE2 /* zbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zbar.h; sourceTree = "<group>"; };
-		180EBC0C1C1FB1D700CCCFE2 /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
-		180EBC0E1C1FB1D700CCCFE2 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
-		180EBC0F1C1FB1D700CCCFE2 /* prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prefix.pch; sourceTree = "<group>"; };
-		180EBC111C1FB1D700CCCFE2 /* ZBarCameraSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCameraSimulator.h; sourceTree = "<group>"; };
-		180EBC121C1FB1D700CCCFE2 /* ZBarCaptureReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCaptureReader.h; sourceTree = "<group>"; };
-		180EBC131C1FB1D700CCCFE2 /* ZBarHelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarHelpController.h; sourceTree = "<group>"; };
-		180EBC141C1FB1D700CCCFE2 /* ZBarImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImage.h; sourceTree = "<group>"; };
-		180EBC151C1FB1D700CCCFE2 /* ZBarImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImageScanner.h; sourceTree = "<group>"; };
-		180EBC161C1FB1D700CCCFE2 /* ZBarReaderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderController.h; sourceTree = "<group>"; };
-		180EBC171C1FB1D700CCCFE2 /* ZBarReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderView.h; sourceTree = "<group>"; };
-		180EBC181C1FB1D700CCCFE2 /* ZBarReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderViewController.h; sourceTree = "<group>"; };
-		180EBC191C1FB1D700CCCFE2 /* ZBarSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSDK.h; sourceTree = "<group>"; };
-		180EBC1A1C1FB1D700CCCFE2 /* ZBarSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSymbol.h; sourceTree = "<group>"; };
-		180EBC1C1C1FB1D700CCCFE2 /* zbar-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-back.png"; sourceTree = "<group>"; };
-		180EBC1D1C1FB1D700CCCFE2 /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
-		180EBC1E1C1FB1D700CCCFE2 /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
-		180EBC1F1C1FB1D700CCCFE2 /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
-		180EBC201C1FB1D700CCCFE2 /* ZBarCameraSimulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBarCameraSimulator.m; sourceTree = "<group>"; };
-		180EBC211C1FB1D700CCCFE2 /* ZBarCaptureReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBarCaptureReader.m; sourceTree = "<group>"; };
-		180EBC221C1FB1D700CCCFE2 /* ZBarCVImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCVImage.h; sourceTree = "<group>"; };
-		180EBC231C1FB1D700CCCFE2 /* ZBarCVImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBarCVImage.m; sourceTree = "<group>"; };
-		180EBC241C1FB1D700CCCFE2 /* ZBarHelpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBarHelpController.m; sourceTree = "<group>"; };
-		180EBC251C1FB1D700CCCFE2 /* ZBarImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBarImage.m; sourceTree = "<group>"; };
-		180EBC261C1FB1D700CCCFE2 /* ZBarImageScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBarImageScanner.m; sourceTree = "<group>"; };
-		180EBC271C1FB1D700CCCFE2 /* ZBarReaderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBarReaderController.m; sourceTree = "<group>"; };
-		180EBC281C1FB1D700CCCFE2 /* ZBarReaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBarReaderView.m; sourceTree = "<group>"; };
-		180EBC291C1FB1D700CCCFE2 /* ZBarReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBarReaderViewController.m; sourceTree = "<group>"; };
-		180EBC2A1C1FB1D700CCCFE2 /* ZBarReaderViewImpl_Capture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBarReaderViewImpl_Capture.m; sourceTree = "<group>"; };
-		180EBC2B1C1FB1D700CCCFE2 /* ZBarReaderViewImpl_Simulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBarReaderViewImpl_Simulator.m; sourceTree = "<group>"; };
-		180EBC2C1C1FB1D700CCCFE2 /* ZBarSymbol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBarSymbol.m; sourceTree = "<group>"; };
-		180EBC2D1C1FB1D700CCCFE2 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		180EBC2E1C1FB1D700CCCFE2 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
-		180EBC2F1C1FB1D700CCCFE2 /* README.windows */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.windows; sourceTree = "<group>"; };
-		180EBC311C1FB1D700CCCFE2 /* config.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = config.c; sourceTree = "<group>"; };
-		180EBC321C1FB1D700CCCFE2 /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
-		180EBC341C1FB1D700CCCFE2 /* codabar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = codabar.c; sourceTree = "<group>"; };
-		180EBC351C1FB1D700CCCFE2 /* codabar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = codabar.h; sourceTree = "<group>"; };
-		180EBC361C1FB1D700CCCFE2 /* code128.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = code128.c; sourceTree = "<group>"; };
-		180EBC371C1FB1D700CCCFE2 /* code128.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = code128.h; sourceTree = "<group>"; };
-		180EBC381C1FB1D700CCCFE2 /* code39.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = code39.c; sourceTree = "<group>"; };
-		180EBC391C1FB1D700CCCFE2 /* code39.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = code39.h; sourceTree = "<group>"; };
-		180EBC3A1C1FB1D700CCCFE2 /* code93.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = code93.c; sourceTree = "<group>"; };
-		180EBC3B1C1FB1D700CCCFE2 /* code93.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = code93.h; sourceTree = "<group>"; };
-		180EBC3C1C1FB1D700CCCFE2 /* databar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = databar.c; sourceTree = "<group>"; };
-		180EBC3D1C1FB1D700CCCFE2 /* databar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = databar.h; sourceTree = "<group>"; };
-		180EBC3E1C1FB1D700CCCFE2 /* ean.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ean.c; sourceTree = "<group>"; };
-		180EBC3F1C1FB1D700CCCFE2 /* ean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ean.h; sourceTree = "<group>"; };
-		180EBC401C1FB1D700CCCFE2 /* i25.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = i25.c; sourceTree = "<group>"; };
-		180EBC411C1FB1D700CCCFE2 /* i25.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = i25.h; sourceTree = "<group>"; };
-		180EBC421C1FB1D700CCCFE2 /* pdf417.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pdf417.h; sourceTree = "<group>"; };
-		180EBC431C1FB1D700CCCFE2 /* pdf417_hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pdf417_hash.h; sourceTree = "<group>"; };
-		180EBC441C1FB1D700CCCFE2 /* qr_finder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qr_finder.c; sourceTree = "<group>"; };
-		180EBC451C1FB1D700CCCFE2 /* qr_finder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qr_finder.h; sourceTree = "<group>"; };
-		180EBC461C1FB1D700CCCFE2 /* decoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = decoder.c; sourceTree = "<group>"; };
-		180EBC471C1FB1D700CCCFE2 /* decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decoder.h; sourceTree = "<group>"; };
-		180EBC481C1FB1D700CCCFE2 /* error.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = error.c; sourceTree = "<group>"; };
-		180EBC491C1FB1D700CCCFE2 /* error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = error.h; sourceTree = "<group>"; };
-		180EBC4A1C1FB1D700CCCFE2 /* event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = event.h; sourceTree = "<group>"; };
-		180EBC4B1C1FB1D700CCCFE2 /* image.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = image.c; sourceTree = "<group>"; };
-		180EBC4C1C1FB1D700CCCFE2 /* image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = image.h; sourceTree = "<group>"; };
-		180EBC4D1C1FB1D700CCCFE2 /* img_scanner.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = img_scanner.c; sourceTree = "<group>"; };
-		180EBC4E1C1FB1D700CCCFE2 /* img_scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = img_scanner.h; sourceTree = "<group>"; };
-		180EBC4F1C1FB1D700CCCFE2 /* mutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mutex.h; sourceTree = "<group>"; };
-		180EBC511C1FB1D700CCCFE2 /* posix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = posix.h; sourceTree = "<group>"; };
-		180EBC521C1FB1D700CCCFE2 /* processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = processor.h; sourceTree = "<group>"; };
-		180EBC541C1FB1D700CCCFE2 /* bch15_5.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bch15_5.c; sourceTree = "<group>"; };
-		180EBC551C1FB1D700CCCFE2 /* bch15_5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bch15_5.h; sourceTree = "<group>"; };
-		180EBC561C1FB1D700CCCFE2 /* binarize.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = binarize.c; sourceTree = "<group>"; };
-		180EBC571C1FB1D700CCCFE2 /* binarize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binarize.h; sourceTree = "<group>"; };
-		180EBC581C1FB1D700CCCFE2 /* isaac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = isaac.c; sourceTree = "<group>"; };
-		180EBC591C1FB1D700CCCFE2 /* isaac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = isaac.h; sourceTree = "<group>"; };
-		180EBC5A1C1FB1D700CCCFE2 /* qrdec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrdec.c; sourceTree = "<group>"; };
-		180EBC5B1C1FB1D700CCCFE2 /* qrdec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrdec.h; sourceTree = "<group>"; };
-		180EBC5C1C1FB1D700CCCFE2 /* qrdectxt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrdectxt.c; sourceTree = "<group>"; };
-		180EBC5D1C1FB1D700CCCFE2 /* rs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rs.c; sourceTree = "<group>"; };
-		180EBC5E1C1FB1D700CCCFE2 /* rs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rs.h; sourceTree = "<group>"; };
-		180EBC5F1C1FB1D700CCCFE2 /* util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util.c; sourceTree = "<group>"; };
-		180EBC601C1FB1D700CCCFE2 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
-		180EBC611C1FB1D700CCCFE2 /* qrcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrcode.h; sourceTree = "<group>"; };
-		180EBC621C1FB1D700CCCFE2 /* refcnt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = refcnt.c; sourceTree = "<group>"; };
-		180EBC631C1FB1D700CCCFE2 /* refcnt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = refcnt.h; sourceTree = "<group>"; };
-		180EBC641C1FB1D700CCCFE2 /* scanner.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = scanner.c; sourceTree = "<group>"; };
-		180EBC651C1FB1D700CCCFE2 /* svg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svg.h; sourceTree = "<group>"; };
-		180EBC661C1FB1D700CCCFE2 /* symbol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = symbol.c; sourceTree = "<group>"; };
-		180EBC671C1FB1D700CCCFE2 /* symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = symbol.h; sourceTree = "<group>"; };
-		180EBC681C1FB1D700CCCFE2 /* thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thread.h; sourceTree = "<group>"; };
-		180EBC691C1FB1D700CCCFE2 /* timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timer.h; sourceTree = "<group>"; };
-		180EBC6B1C1FB1D700CCCFE2 /* video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = video.h; sourceTree = "<group>"; };
-		180EBC6D1C1FB1D700CCCFE2 /* win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = win.h; sourceTree = "<group>"; };
-		180EBC6E1C1FB1D700CCCFE2 /* x.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x.h; sourceTree = "<group>"; };
-		180EBC6F1C1FB1D700CCCFE2 /* window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = window.h; sourceTree = "<group>"; };
 		180EBCD51C1FB4DE00CCCFE2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		180EBCD81C1FB5F500CCCFE2 /* AboutUSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUSViewController.h; sourceTree = "<group>"; };
 		180EBCD91C1FB5F500CCCFE2 /* AboutUSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUSViewController.m; sourceTree = "<group>"; };
@@ -1127,201 +993,6 @@
 			path = IQKeyBoardManager/Resources;
 			sourceTree = "<group>";
 		};
-		180EBC071C1FB1D700CCCFE2 /* ZBarSDK */ = {
-			isa = PBXGroup;
-			children = (
-				180EBC081C1FB1D700CCCFE2 /* include */,
-				180EBC0B1C1FB1D700CCCFE2 /* iphone */,
-				180EBC2D1C1FB1D700CCCFE2 /* LICENSE */,
-				180EBC2E1C1FB1D700CCCFE2 /* README */,
-				180EBC2F1C1FB1D700CCCFE2 /* README.windows */,
-				180EBC301C1FB1D700CCCFE2 /* zbar */,
-			);
-			path = ZBarSDK;
-			sourceTree = "<group>";
-		};
-		180EBC081C1FB1D700CCCFE2 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				180EBC091C1FB1D700CCCFE2 /* zbar */,
-				180EBC0A1C1FB1D700CCCFE2 /* zbar.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		180EBC091C1FB1D700CCCFE2 /* zbar */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = zbar;
-			sourceTree = "<group>";
-		};
-		180EBC0B1C1FB1D700CCCFE2 /* iphone */ = {
-			isa = PBXGroup;
-			children = (
-				180EBC0C1C1FB1D700CCCFE2 /* debug.h */,
-				180EBC0D1C1FB1D700CCCFE2 /* include */,
-				180EBC1B1C1FB1D700CCCFE2 /* res */,
-				180EBC201C1FB1D700CCCFE2 /* ZBarCameraSimulator.m */,
-				180EBC211C1FB1D700CCCFE2 /* ZBarCaptureReader.m */,
-				180EBC221C1FB1D700CCCFE2 /* ZBarCVImage.h */,
-				180EBC231C1FB1D700CCCFE2 /* ZBarCVImage.m */,
-				180EBC241C1FB1D700CCCFE2 /* ZBarHelpController.m */,
-				180EBC251C1FB1D700CCCFE2 /* ZBarImage.m */,
-				180EBC261C1FB1D700CCCFE2 /* ZBarImageScanner.m */,
-				180EBC271C1FB1D700CCCFE2 /* ZBarReaderController.m */,
-				180EBC281C1FB1D700CCCFE2 /* ZBarReaderView.m */,
-				180EBC291C1FB1D700CCCFE2 /* ZBarReaderViewController.m */,
-				180EBC2A1C1FB1D700CCCFE2 /* ZBarReaderViewImpl_Capture.m */,
-				180EBC2B1C1FB1D700CCCFE2 /* ZBarReaderViewImpl_Simulator.m */,
-				180EBC2C1C1FB1D700CCCFE2 /* ZBarSymbol.m */,
-			);
-			path = iphone;
-			sourceTree = "<group>";
-		};
-		180EBC0D1C1FB1D700CCCFE2 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				180EBC0E1C1FB1D700CCCFE2 /* config.h */,
-				180EBC0F1C1FB1D700CCCFE2 /* prefix.pch */,
-				180EBC101C1FB1D700CCCFE2 /* ZBarSDK */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		180EBC101C1FB1D700CCCFE2 /* ZBarSDK */ = {
-			isa = PBXGroup;
-			children = (
-				180EBC111C1FB1D700CCCFE2 /* ZBarCameraSimulator.h */,
-				180EBC121C1FB1D700CCCFE2 /* ZBarCaptureReader.h */,
-				180EBC131C1FB1D700CCCFE2 /* ZBarHelpController.h */,
-				180EBC141C1FB1D700CCCFE2 /* ZBarImage.h */,
-				180EBC151C1FB1D700CCCFE2 /* ZBarImageScanner.h */,
-				180EBC161C1FB1D700CCCFE2 /* ZBarReaderController.h */,
-				180EBC171C1FB1D700CCCFE2 /* ZBarReaderView.h */,
-				180EBC181C1FB1D700CCCFE2 /* ZBarReaderViewController.h */,
-				180EBC191C1FB1D700CCCFE2 /* ZBarSDK.h */,
-				180EBC1A1C1FB1D700CCCFE2 /* ZBarSymbol.h */,
-			);
-			path = ZBarSDK;
-			sourceTree = "<group>";
-		};
-		180EBC1B1C1FB1D700CCCFE2 /* res */ = {
-			isa = PBXGroup;
-			children = (
-				180EBC1C1C1FB1D700CCCFE2 /* zbar-back.png */,
-				180EBC1D1C1FB1D700CCCFE2 /* zbar-help.html */,
-				180EBC1E1C1FB1D700CCCFE2 /* zbar-helpicons.png */,
-				180EBC1F1C1FB1D700CCCFE2 /* zbar-samples.png */,
-			);
-			path = res;
-			sourceTree = "<group>";
-		};
-		180EBC301C1FB1D700CCCFE2 /* zbar */ = {
-			isa = PBXGroup;
-			children = (
-				180EBC311C1FB1D700CCCFE2 /* config.c */,
-				180EBC321C1FB1D700CCCFE2 /* debug.h */,
-				180EBC331C1FB1D700CCCFE2 /* decoder */,
-				180EBC461C1FB1D700CCCFE2 /* decoder.c */,
-				180EBC471C1FB1D700CCCFE2 /* decoder.h */,
-				180EBC481C1FB1D700CCCFE2 /* error.c */,
-				180EBC491C1FB1D700CCCFE2 /* error.h */,
-				180EBC4A1C1FB1D700CCCFE2 /* event.h */,
-				180EBC4B1C1FB1D700CCCFE2 /* image.c */,
-				180EBC4C1C1FB1D700CCCFE2 /* image.h */,
-				180EBC4D1C1FB1D700CCCFE2 /* img_scanner.c */,
-				180EBC4E1C1FB1D700CCCFE2 /* img_scanner.h */,
-				180EBC4F1C1FB1D700CCCFE2 /* mutex.h */,
-				180EBC501C1FB1D700CCCFE2 /* processor */,
-				180EBC521C1FB1D700CCCFE2 /* processor.h */,
-				180EBC531C1FB1D700CCCFE2 /* qrcode */,
-				180EBC611C1FB1D700CCCFE2 /* qrcode.h */,
-				180EBC621C1FB1D700CCCFE2 /* refcnt.c */,
-				180EBC631C1FB1D700CCCFE2 /* refcnt.h */,
-				180EBC641C1FB1D700CCCFE2 /* scanner.c */,
-				180EBC651C1FB1D700CCCFE2 /* svg.h */,
-				180EBC661C1FB1D700CCCFE2 /* symbol.c */,
-				180EBC671C1FB1D700CCCFE2 /* symbol.h */,
-				180EBC681C1FB1D700CCCFE2 /* thread.h */,
-				180EBC691C1FB1D700CCCFE2 /* timer.h */,
-				180EBC6A1C1FB1D700CCCFE2 /* video */,
-				180EBC6B1C1FB1D700CCCFE2 /* video.h */,
-				180EBC6C1C1FB1D700CCCFE2 /* window */,
-				180EBC6F1C1FB1D700CCCFE2 /* window.h */,
-			);
-			path = zbar;
-			sourceTree = "<group>";
-		};
-		180EBC331C1FB1D700CCCFE2 /* decoder */ = {
-			isa = PBXGroup;
-			children = (
-				180EBC341C1FB1D700CCCFE2 /* codabar.c */,
-				180EBC351C1FB1D700CCCFE2 /* codabar.h */,
-				180EBC361C1FB1D700CCCFE2 /* code128.c */,
-				180EBC371C1FB1D700CCCFE2 /* code128.h */,
-				180EBC381C1FB1D700CCCFE2 /* code39.c */,
-				180EBC391C1FB1D700CCCFE2 /* code39.h */,
-				180EBC3A1C1FB1D700CCCFE2 /* code93.c */,
-				180EBC3B1C1FB1D700CCCFE2 /* code93.h */,
-				180EBC3C1C1FB1D700CCCFE2 /* databar.c */,
-				180EBC3D1C1FB1D700CCCFE2 /* databar.h */,
-				180EBC3E1C1FB1D700CCCFE2 /* ean.c */,
-				180EBC3F1C1FB1D700CCCFE2 /* ean.h */,
-				180EBC401C1FB1D700CCCFE2 /* i25.c */,
-				180EBC411C1FB1D700CCCFE2 /* i25.h */,
-				180EBC421C1FB1D700CCCFE2 /* pdf417.h */,
-				180EBC431C1FB1D700CCCFE2 /* pdf417_hash.h */,
-				180EBC441C1FB1D700CCCFE2 /* qr_finder.c */,
-				180EBC451C1FB1D700CCCFE2 /* qr_finder.h */,
-			);
-			path = decoder;
-			sourceTree = "<group>";
-		};
-		180EBC501C1FB1D700CCCFE2 /* processor */ = {
-			isa = PBXGroup;
-			children = (
-				180EBC511C1FB1D700CCCFE2 /* posix.h */,
-			);
-			path = processor;
-			sourceTree = "<group>";
-		};
-		180EBC531C1FB1D700CCCFE2 /* qrcode */ = {
-			isa = PBXGroup;
-			children = (
-				180EBC541C1FB1D700CCCFE2 /* bch15_5.c */,
-				180EBC551C1FB1D700CCCFE2 /* bch15_5.h */,
-				180EBC561C1FB1D700CCCFE2 /* binarize.c */,
-				180EBC571C1FB1D700CCCFE2 /* binarize.h */,
-				180EBC581C1FB1D700CCCFE2 /* isaac.c */,
-				180EBC591C1FB1D700CCCFE2 /* isaac.h */,
-				180EBC5A1C1FB1D700CCCFE2 /* qrdec.c */,
-				180EBC5B1C1FB1D700CCCFE2 /* qrdec.h */,
-				180EBC5C1C1FB1D700CCCFE2 /* qrdectxt.c */,
-				180EBC5D1C1FB1D700CCCFE2 /* rs.c */,
-				180EBC5E1C1FB1D700CCCFE2 /* rs.h */,
-				180EBC5F1C1FB1D700CCCFE2 /* util.c */,
-				180EBC601C1FB1D700CCCFE2 /* util.h */,
-			);
-			path = qrcode;
-			sourceTree = "<group>";
-		};
-		180EBC6A1C1FB1D700CCCFE2 /* video */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = video;
-			sourceTree = "<group>";
-		};
-		180EBC6C1C1FB1D700CCCFE2 /* window */ = {
-			isa = PBXGroup;
-			children = (
-				180EBC6D1C1FB1D700CCCFE2 /* win.h */,
-				180EBC6E1C1FB1D700CCCFE2 /* x.h */,
-			);
-			path = window;
-			sourceTree = "<group>";
-		};
 		180EBCD71C1FB5F500CCCFE2 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -1957,7 +1628,6 @@
 		58E8505D1AA012AC0095DDC7 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				180EBC071C1FB1D700CCCFE2 /* ZBarSDK */,
 				180EB8B01C1F7BAC00CCCFE2 /* TXSDK */,
 				18D6A5181C1EC7DE00350003 /* UMAnalytics */,
 				583DFE731AC4F77A00BACAA1 /* EChart */,
@@ -2107,7 +1777,6 @@
 				180EBDCF1C1FB5F500CCCFE2 /* RullerViewController.xib in Resources */,
 				180EBD861C1FB5F500CCCFE2 /* BackgroundViewController.xib in Resources */,
 				582BD5C01AB18945008A9B54 /* mapapi.bundle in Resources */,
-				180EBC981C1FB1D700CCCFE2 /* zbar-help.html in Resources */,
 				180EBDDB1C1FB5F500CCCFE2 /* StationCell.xib in Resources */,
 				180EBDAD1C1FB5F500CCCFE2 /* NewsViewController.xib in Resources */,
 				180EBDCB1C1FB5F500CCCFE2 /* PoiSearchViewController.xib in Resources */,
@@ -2118,16 +1787,13 @@
 				180EBDC11C1FB5F500CCCFE2 /* PlaneCell.xib in Resources */,
 				180EBDE31C1FB5F500CCCFE2 /* TulingViewController.xib in Resources */,
 				180EBD8F1C1FB5F500CCCFE2 /* CarVioResultViewController.xib in Resources */,
-				180EBCA71C1FB1D700CCCFE2 /* LICENSE in Resources */,
 				180EBDB51C1FB5F500CCCFE2 /* PackageDetailViewController.xib in Resources */,
-				180EBCA81C1FB1D700CCCFE2 /* README in Resources */,
 				180EBDAB1C1FB5F500CCCFE2 /* MoneyTableViewCell.xib in Resources */,
 				180EBDE51C1FB5F500CCCFE2 /* UnitViewController.xib in Resources */,
 				180EBDC71C1FB5F500CCCFE2 /* PMCitySelectViewController.xib in Resources */,
 				180EBD801C1FB5F500CCCFE2 /* AboutUSViewController.xib in Resources */,
 				180EBE731C1FB71200CCCFE2 /* DailyViewController.xib in Resources */,
 				180EBDBD1C1FB5F500CCCFE2 /* PhoneSearchViewController.xib in Resources */,
-				180EBCA91C1FB1D700CCCFE2 /* README.windows in Resources */,
 				180EBDE11C1FB5F500CCCFE2 /* TrainViewController.xib in Resources */,
 				180EBDB71C1FB5F500CCCFE2 /* PackageSearchViewController.xib in Resources */,
 				180EBDB91C1FB5F500CCCFE2 /* ParkViewController.xib in Resources */,
@@ -2138,11 +1804,8 @@
 				585F17551AC2B40100975468 /* Localizable.strings in Resources */,
 				180EBDC31C1FB5F500CCCFE2 /* PlaneSearchViewController.xib in Resources */,
 				5811392F1AC3E0C800530DED /* MJRefresh.bundle in Resources */,
-				180EBC971C1FB1D700CCCFE2 /* zbar-back.png in Resources */,
-				180EBC9A1C1FB1D700CCCFE2 /* zbar-samples.png in Resources */,
 				5817F1301A9D7BDB00B3A0A1 /* Images.xcassets in Resources */,
 				180EBDB11C1FB5F500CCCFE2 /* OilViewController.xib in Resources */,
-				180EBC991C1FB1D700CCCFE2 /* zbar-helpicons.png in Resources */,
 				180EBBFA1C1FADE500CCCFE2 /* IQKeyboardManager.bundle in Resources */,
 				180EBDA31C1FB5F500CCCFE2 /* LeftContactCell.xib in Resources */,
 				18D937031ABE624300DDAF75 /* StoreList.plist in Resources */,
@@ -2166,22 +1829,14 @@
 			files = (
 				180EBDB61C1FB5F500CCCFE2 /* PackageSearchViewController.m in Sources */,
 				180EBDEC1C1FB5F500CCCFE2 /* WebViewController.m in Sources */,
-				180EBCB21C1FB1D700CCCFE2 /* qr_finder.c in Sources */,
-				180EBCAC1C1FB1D700CCCFE2 /* code128.c in Sources */,
-				180EBC9D1C1FB1D700CCCFE2 /* ZBarCVImage.m in Sources */,
 				583C912D1AAE989600F1D756 /* DMPasscodeInternalNavigationController.m in Sources */,
-				180EBCA41C1FB1D700CCCFE2 /* ZBarReaderViewImpl_Capture.m in Sources */,
 				180EBE4D1C1FB69D00CCCFE2 /* PhoneInfo.m in Sources */,
 				180EBE551C1FB69D00CCCFE2 /* ShopInfo.m in Sources */,
 				180EBDB21C1FB5F500CCCFE2 /* PackageCell.m in Sources */,
 				180EBE501C1FB69D00CCCFE2 /* ProvinceInfo.m in Sources */,
-				180EBCBC1C1FB1D700CCCFE2 /* rs.c in Sources */,
-				180EBCBE1C1FB1D700CCCFE2 /* refcnt.c in Sources */,
 				180EBDBA1C1FB5F500CCCFE2 /* PhonePayViewController.m in Sources */,
-				180EBC9B1C1FB1D700CCCFE2 /* ZBarCameraSimulator.m in Sources */,
 				583DFE8D1AC4F77B00BACAA1 /* EColor.m in Sources */,
 				180EBDE01C1FB5F500CCCFE2 /* TrainViewController.m in Sources */,
-				180EBCB51C1FB1D700CCCFE2 /* image.c in Sources */,
 				180EBE411C1FB69D00CCCFE2 /* AppleInfo.m in Sources */,
 				180EBE521C1FB69D00CCCFE2 /* ScanCityInfo.m in Sources */,
 				180EBDE61C1FB5F500CCCFE2 /* WeatherCell.m in Sources */,
@@ -2189,13 +1844,10 @@
 				583DFEA51AC4F9E900BACAA1 /* EColumnChartViewController.m in Sources */,
 				180EBBF61C1FADE500CCCFE2 /* IQBarButtonItem.m in Sources */,
 				180EB98C1C1FABBC00CCCFE2 /* AFSecurityPolicy.m in Sources */,
-				180EBCB11C1FB1D700CCCFE2 /* i25.c in Sources */,
 				180EBBF01C1FADE500CCCFE2 /* IQUIViewController+Additions.m in Sources */,
 				180EBE601C1FB69D00CCCFE2 /* WeatherCurrentInfo.m in Sources */,
 				5817F12B1A9D7BDB00B3A0A1 /* MainViewController.m in Sources */,
-				180EBCBF1C1FB1D700CCCFE2 /* scanner.c in Sources */,
 				180EBBF21C1FADE500CCCFE2 /* IQKeyboardManager.m in Sources */,
-				180EBCB41C1FB1D700CCCFE2 /* error.c in Sources */,
 				583DFE971AC4F77B00BACAA1 /* EViewSwitcher.m in Sources */,
 				180EB9F81C1FABBC00CCCFE2 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				180EBDD21C1FB5F500CCCFE2 /* ScanViewController.m in Sources */,
@@ -2207,10 +1859,8 @@
 				180EBD921C1FB5F500CCCFE2 /* DreamDetailViewController.m in Sources */,
 				180EBE5E1C1FB69D00CCCFE2 /* UnitInfo.m in Sources */,
 				180EBD8E1C1FB5F500CCCFE2 /* CarVioResultViewController.m in Sources */,
-				180EBCAD1C1FB1D700CCCFE2 /* code39.c in Sources */,
 				180EBC011C1FAEDA00CCCFE2 /* AFHTTPRequestOperation.m in Sources */,
 				180EBDCC1C1FB5F500CCCFE2 /* RightContactCell.m in Sources */,
-				180EBCA21C1FB1D700CCCFE2 /* ZBarReaderView.m in Sources */,
 				180EBDBC1C1FB5F500CCCFE2 /* PhoneSearchViewController.m in Sources */,
 				581139301AC3E0C800530DED /* MJRefreshBaseView.m in Sources */,
 				180EBE421C1FB69D00CCCFE2 /* CalandarInfo.m in Sources */,
@@ -2234,26 +1884,18 @@
 				180EBE591C1FB69D00CCCFE2 /* StarYearInfo.m in Sources */,
 				180EBE531C1FB69D00CCCFE2 /* ScanProviceInfo.m in Sources */,
 				180EBDA81C1FB5F500CCCFE2 /* MoiveViewController.m in Sources */,
-				180EBCAF1C1FB1D700CCCFE2 /* databar.c in Sources */,
 				180EBD901C1FB5F500CCCFE2 /* CarVioSearchViewController.m in Sources */,
-				180EBCA01C1FB1D700CCCFE2 /* ZBarImageScanner.m in Sources */,
 				180EBBF91C1FADE500CCCFE2 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				180EBDAA1C1FB5F500CCCFE2 /* MoneyTableViewCell.m in Sources */,
 				18E4FC3F1AB1D57E001E021E /* NSDate+Calendar.m in Sources */,
-				180EBCA31C1FB1D700CCCFE2 /* ZBarReaderViewController.m in Sources */,
 				583DFE951AC4F77B00BACAA1 /* ELineChartDataModel.m in Sources */,
-				180EBC9C1C1FB1D700CCCFE2 /* ZBarCaptureReader.m in Sources */,
 				180EBE491C1FB69D00CCCFE2 /* IPInfo.m in Sources */,
-				180EBCA61C1FB1D700CCCFE2 /* ZBarSymbol.m in Sources */,
-				180EBCB31C1FB1D700CCCFE2 /* decoder.c in Sources */,
 				180EBDC81C1FB5F500CCCFE2 /* PMViewController.m in Sources */,
 				180EBBF51C1FADE500CCCFE2 /* IQTextView.m in Sources */,
-				180EBCB71C1FB1D700CCCFE2 /* bch15_5.c in Sources */,
 				180EBD961C1FB5F500CCCFE2 /* DreamSearchViewController.m in Sources */,
 				180EBD881C1FB5F500CCCFE2 /* CalculatorViewController.m in Sources */,
 				180EBE4C1C1FB69D00CCCFE2 /* OilInfo.m in Sources */,
 				180EBE571C1FB69D00CCCFE2 /* StarMonthInfo.m in Sources */,
-				180EBCB61C1FB1D700CCCFE2 /* img_scanner.c in Sources */,
 				180EBE631C1FB69D00CCCFE2 /* WZDetailInfo.m in Sources */,
 				180EB9FD1C1FABBC00CCCFE2 /* UIRefreshControl+AFNetworking.m in Sources */,
 				180EBBF41C1FADE500CCCFE2 /* IQSegmentedNextPrevious.m in Sources */,
@@ -2261,20 +1903,16 @@
 				180EBE5D1C1FB69D00CCCFE2 /* TrainInfo.m in Sources */,
 				583DFEA41AC4F9E900BACAA1 /* EChartViewController.m in Sources */,
 				180EBD851C1FB5F500CCCFE2 /* BackgroundViewController.m in Sources */,
-				180EBCB01C1FB1D700CCCFE2 /* ean.c in Sources */,
 				180EBE781C1FB71200CCCFE2 /* StoreViewController.m in Sources */,
 				180EBDA21C1FB5F500CCCFE2 /* LeftContactCell.m in Sources */,
 				583DFE931AC4F77B00BACAA1 /* ELine.m in Sources */,
-				180EBCB91C1FB1D700CCCFE2 /* isaac.c in Sources */,
 				180EBD871C1FB5F500CCCFE2 /* CalandarTitleView.m in Sources */,
 				180EBE561C1FB69D00CCCFE2 /* StarCurrentInfo.m in Sources */,
-				180EBCC01C1FB1D700CCCFE2 /* symbol.c in Sources */,
 				180EBBF81C1FADE500CCCFE2 /* IQToolbar.m in Sources */,
 				180EBE541C1FB69D00CCCFE2 /* ServiceResult.m in Sources */,
 				180EBBEE1C1FADE500CCCFE2 /* IQUITextFieldView+Additions.m in Sources */,
 				180EBD831C1FB5F500CCCFE2 /* AppRecommendViewController.m in Sources */,
 				180EB9FA1C1FABBC00CCCFE2 /* UIButton+AFNetworking.m in Sources */,
-				180EBCAB1C1FB1D700CCCFE2 /* codabar.c in Sources */,
 				180EB98E1C1FABBC00CCCFE2 /* AFURLResponseSerialization.m in Sources */,
 				180EBDD01C1FB5F500CCCFE2 /* ScanCityListViewController.m in Sources */,
 				180EB9FE1C1FABBC00CCCFE2 /* UIWebView+AFNetworking.m in Sources */,
@@ -2290,12 +1928,9 @@
 				180EBDDE1C1FB5F500CCCFE2 /* TrainCell.m in Sources */,
 				583DFE921AC4F77B00BACAA1 /* EFloatBox.m in Sources */,
 				180EBE511C1FB69D00CCCFE2 /* RobotInfo.m in Sources */,
-				180EBC9F1C1FB1D700CCCFE2 /* ZBarImage.m in Sources */,
-				180EBCBD1C1FB1D700CCCFE2 /* util.c in Sources */,
 				180EBDCE1C1FB5F500CCCFE2 /* RullerViewController.m in Sources */,
 				18E4FC3A1AB1D57E001E021E /* JBUnitGridView.m in Sources */,
 				18E4FC391AB1D57E001E021E /* JBEventModel.m in Sources */,
-				180EBCA11C1FB1D700CCCFE2 /* ZBarReaderController.m in Sources */,
 				180EBD7F1C1FB5F500CCCFE2 /* AboutUSViewController.m in Sources */,
 				180EBC031C1FAEDA00CCCFE2 /* AFURLConnectionOperation.m in Sources */,
 				583DFE901AC4F77B00BACAA1 /* EColumnChartLabel.m in Sources */,
@@ -2313,7 +1948,6 @@
 				581139321AC3E0C800530DED /* MJRefreshFooterView.m in Sources */,
 				18E4FC3D1AB1D57E001E021E /* JBWeekdaysBarView.m in Sources */,
 				180EB9F91C1FABBC00CCCFE2 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
-				180EBCB81C1FB1D700CCCFE2 /* binarize.c in Sources */,
 				180EBDF11C1FB63300CCCFE2 /* ServiceRequest.m in Sources */,
 				180EBBEF1C1FADE500CCCFE2 /* IQUIView+Hierarchy.m in Sources */,
 				583C912A1AAE989600F1D756 /* DMPasscode.m in Sources */,
@@ -2329,7 +1963,6 @@
 				180EBD9E1C1FB5F500CCCFE2 /* GamePayViewController.m in Sources */,
 				180EBD981C1FB5F500CCCFE2 /* DreamTypeSecondViewController.m in Sources */,
 				180EBD941C1FB5F500CCCFE2 /* DreamListViewController.m in Sources */,
-				180EBCBB1C1FB1D700CCCFE2 /* qrdectxt.c in Sources */,
 				18E4FC421AB1D57E001E021E /* JBImageFileManager.m in Sources */,
 				180EBE441C1FB69D00CCCFE2 /* CityInfo.m in Sources */,
 				180EBDA61C1FB5F500CCCFE2 /* MirrorViewController.m in Sources */,
@@ -2341,7 +1974,6 @@
 				18E4FC3C1AB1D57E001E021E /* JBUnitView.m in Sources */,
 				5817F1251A9D7BDB00B3A0A1 /* main.m in Sources */,
 				180EBE481C1FB69D00CCCFE2 /* IDCardInfo.m in Sources */,
-				180EBCAE1C1FB1D700CCCFE2 /* code93.c in Sources */,
 				583DFE941AC4F77B00BACAA1 /* ELineChart.m in Sources */,
 				180EBE761C1FB71200CCCFE2 /* ReadingViewController.m in Sources */,
 				180EBD9C1C1FB5F500CCCFE2 /* FlashViewController.m in Sources */,
@@ -2350,15 +1982,12 @@
 				180EBE721C1FB71200CCCFE2 /* DailyViewController.m in Sources */,
 				583DFE961AC4F77B00BACAA1 /* EPieChart.m in Sources */,
 				180EBDC01C1FB5F500CCCFE2 /* PlaneCell.m in Sources */,
-				180EBCBA1C1FB1D700CCCFE2 /* qrdec.c in Sources */,
 				583C91291AAE989600F1D756 /* DMKeychain.m in Sources */,
 				180EBE4F1C1FB69D00CCCFE2 /* PostInfo.m in Sources */,
 				180EBE4B1C1FB69D00CCCFE2 /* MovieInfo.m in Sources */,
 				581139311AC3E0C800530DED /* MJRefreshConst.m in Sources */,
-				180EBC9E1C1FB1D700CCCFE2 /* ZBarHelpController.m in Sources */,
 				180EBC061C1FAEE200CCCFE2 /* UIAlertView+AFNetworking.m in Sources */,
 				180EBE611C1FB69D00CCCFE2 /* WeatherFutureInfo.m in Sources */,
-				180EBCA51C1FB1D700CCCFE2 /* ZBarReaderViewImpl_Simulator.m in Sources */,
 				180EBE4E1C1FB69D00CCCFE2 /* PlaneInfo.m in Sources */,
 				180EBE471C1FB69D00CCCFE2 /* GoodsInfo.m in Sources */,
 				18E4FC3B1AB1D57E001E021E /* JBUnitTileView.m in Sources */,
@@ -2367,7 +1996,6 @@
 				18E4FC3E1AB1D57E001E021E /* LunarCalendar.m in Sources */,
 				180EBC021C1FAEDA00CCCFE2 /* AFHTTPRequestOperationManager.m in Sources */,
 				180EBE641C1FB69D00CCCFE2 /* WZInfo.m in Sources */,
-				180EBCAA1C1FB1D700CCCFE2 /* config.c in Sources */,
 				180EBE741C1FB71200CCCFE2 /* LifeViewController.m in Sources */,
 				180EBDC41C1FB5F500CCCFE2 /* PMCell.m in Sources */,
 			);
