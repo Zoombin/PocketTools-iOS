@@ -256,7 +256,7 @@
 		<key>controlName</key>
 		<string>AboutUSViewController</string>
 		<key>iconName</key>
-		<string>aboutus</string>
+		<string>gr_aboutus</string>
 	</dict>
 </array>
 </plist>

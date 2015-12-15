@@ -52,6 +52,8 @@
     NSNumber *indexNumber = [userDefault objectForKey:BACKGROUND];
     [self saveBkg:indexNumber == nil ? 7 : indexNumber.integerValue];
     // Do any additional setup after loading the view from its nib.
+    
+    _versionLabel.text = [NSString stringWithFormat:@"版本: V%@", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
 }
 
 - (void)didReceiveMemoryWarning {
