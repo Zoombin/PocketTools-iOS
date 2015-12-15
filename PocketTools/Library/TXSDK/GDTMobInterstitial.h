@@ -79,7 +79,7 @@
 /**
  *  委托对象
  */
-@property (nonatomic, assign) id<GDTMobInterstitialDelegate> delegate;
+@property (nonatomic, weak) id<GDTMobInterstitialDelegate> delegate;
 
 /**
  *  构造方法

@@ -114,6 +114,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     stars = @[@"白羊座", @"金牛座", @"双子座", @"巨蟹座", @"狮子座", @"处女座", @"天秤座", @"天蝎座", @"射手座", @"摩羯座", @"水瓶座", @"双鱼座"];
     weatherGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showCityWeather)];
     pmGesture1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPM)];
@@ -143,7 +144,7 @@
     [_starView setFrame:CGRectMake(0 + [UIScreen mainScreen].bounds.size.width, 0, _starView.frame.size.width, _weatherView.frame.size.height)];
     [_scrollView addSubview:_starView];
     
-    pageControl1 = [[UIPageControl alloc] initWithFrame:CGRectMake(0, CGRectGetMinY(menuScrollView.frame) - 15, 320, 20)];
+    pageControl1 = [[UIPageControl alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_scrollView.frame), 320, 20)];
     [pageControl1 setBackgroundColor:[UIColor clearColor]];
     [pageControl1 addTarget:self action:@selector(changePage1:) forControlEvents:UIControlEventValueChanged];
     pageControl1.numberOfPages = 2;
@@ -166,6 +167,52 @@
         [_locationManager requestAlwaysAuthorization];//添加这句
     }
     [_locationManager startUpdatingLocation];
+    
+    [self initAdView];
+}
+
+- (void)initAdView {
+    _splash = [[GDTSplashAd alloc] initWithAppkey:@"1105020888" placementId:@"5040103726503845"];
+    _splash.delegate = self;//设置代理
+    //针对不同设备尺寸设置不同的默认图片，拉取广告等待时间会展示该默认图片。
+    if ([[UIScreen mainScreen] bounds].size.height >= 568.0f) {
+        _splash.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"LaunchImage-568h"]];
+    } else {
+        _splash.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"LaunchImage"]];
+    }
+    
+    UIWindow *fK = [[UIApplication sharedApplication] keyWindow];
+    //设置开屏拉取时长限制，若超时则不再展示广告
+    _splash.fetchDelay = 3;
+    //拉取并展示
+    [_splash loadAdAndShowInWindow:fK];
+}
+
+/**
+ *  开屏广告成功展示
+ */
+-(void)splashAdSuccessPresentScreen:(GDTSplashAd *)splashAd {
+    NSLog(@"开屏广告成功展示");
+}
+
+- (void)splashAdClicked:(GDTSplashAd *)splashAd {
+    NSLog(@"点击了...");
+}
+
+- (void)splashAdClosed:(GDTSplashAd *)splashAd {
+    NSLog(@"取消");
+}
+
+- (void)splashAdApplicationWillEnterBackground:(GDTSplashAd *)splashAd {
+    NSLog(@"跳转到后台");
+}
+
+/**
+ *  开屏广告展示失败
+ */
+-(void)splashAdFailToPresent:(GDTSplashAd *)splashAd withError:(NSError *)error {
+    NSLog(@"开屏广告展示失败");
+    NSLog(@"%@", error);
 }
 
 - (void)showLoading {
@@ -334,8 +381,12 @@
         [label3 setFont:[UIFont systemFontOfSize:14]];
         [label3 setText:[NSString stringWithFormat:@"%@°", info.temp2]];
         [_futureWeatherScrollView addSubview:label3];
+        
+        if (i > 10) {
+            break;
+        }
     }
-    [_futureWeatherScrollView setContentSize:CGSizeMake(width * [weatherArray count], 0)];
+    [_futureWeatherScrollView setContentSize:CGSizeMake(width * 10, 0)];
 }
 
 - (void)showTodayInfo:(WeatherTodayInfo *)tInfo {
@@ -389,7 +440,7 @@
     CGRect frame = menuScrollView.frame;
     frame.origin.x = frame.size.width * page;
     frame.origin.y = 0;
-    [menuScrollView setContentOffset:CGPointMake(frame.size.width * page, -64)];
+    [menuScrollView setContentOffset:CGPointMake(frame.size.width * page, 0)];
 }
 
 - (void)initScrollView {
@@ -403,10 +454,10 @@
     CGFloat buttonWidth = ([UIScreen mainScreen].bounds.size.width) / 4;
     CGFloat buttonHeight = buttonWidth * 0.66;
     
-    NSInteger numberPerLine = 4;
-    if ([UIScreen mainScreen].bounds.size.width > 320) {
-        numberPerLine = 5;
-    }
+    NSInteger numberPerLine = 5;
+//    if ([UIScreen mainScreen].bounds.size.width > 320) {
+//        numberPerLine = 5;
+//    }
     CGFloat width = [UIScreen mainScreen].bounds.size.width / numberPerLine;
     CGFloat height = width;
     [menuScrollView setFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - (height * 2) - buttonHeight - 20, [UIScreen mainScreen].bounds.size.width, height * 2)];
@@ -436,6 +487,7 @@
         if (i == [buttonNames count] - 1) {
             [button setFrame:CGRectMake(button.frame.origin.x, button.frame.origin.y, [UIScreen mainScreen].bounds.size.width - button.frame.origin.x, buttonHeight)];
         }
+        button.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 5, 0);
         [button setImage:[UIImage imageNamed:imageNames[i]] forState:UIControlStateNormal];
         [button setImage:[UIImage imageNamed:imageSel[i]] forState:UIControlStateSelected];
         [self.view addSubview:button];
@@ -445,6 +497,7 @@
         titleLabel.textColor = [UIColor blackColor];
         titleLabel.font = [UIFont systemFontOfSize:8];
         titleLabel.textAlignment = NSTextAlignmentCenter;
+        titleLabel.tag = button.tag + 1000;
         [button addSubview:titleLabel];
         
         [bottomButtons addObject:button];
@@ -455,10 +508,14 @@
     [self allUnSelect];
     UIButton *button = (UIButton *)sender;
     button.selected = YES;
+    
+    UILabel *label = (UILabel *)[button viewWithTag:[button tag] + 1000];
+    [label setTextColor:[UIColor whiteColor]];
+    
     [self initMenuButtons:[sender tag]];
     
     //TODO:不知道为什么初始点是64，好奇怪..
-    [menuScrollView setContentOffset:CGPointMake(0, -64)];
+    [menuScrollView scrollRectToVisible:CGRectMake(0, 0, 0, 0) animated:NO];
 }
 
 - (void)allUnSelect {
@@ -554,10 +611,10 @@
     if ([elements count] == 0) {
         return;
     }
-    NSInteger numberPerLine = 4;
-    if ([UIScreen mainScreen].bounds.size.width > 320) {
-        numberPerLine = 5;
-    }
+    NSInteger numberPerLine = 5;
+//    if ([UIScreen mainScreen].bounds.size.width > 320) {
+//        numberPerLine = 5;
+//    }
     NSInteger numberOfLine = 1;
     NSInteger count = [elements count];
     if (count > numberPerLine) {
@@ -591,7 +648,7 @@
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setBackgroundColor:[UIColor clearColor]];
         [button setImage:[UIImage imageNamed:entity.iconName] forState:UIControlStateNormal];
-        [button setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 5, 0)];
+        [button setImageEdgeInsets:UIEdgeInsetsMake(15, 15, 15, 15)];
         [button.layer setBorderColor:[UIColor whiteColor].CGColor];
         [button addTarget:self action:@selector(menuButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
 //        [button.layer setBorderWidth:.5];

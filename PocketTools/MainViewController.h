@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "GDTSplashAd.h"
 
-@interface MainViewController : PTViewController <UIScrollViewDelegate, UIActionSheetDelegate, CLLocationManagerDelegate>
+@interface MainViewController : PTViewController <UIScrollViewDelegate, UIActionSheetDelegate, CLLocationManagerDelegate, GDTSplashAdDelegate> {
+    GDTSplashAd *_splash;
+}
 
 
 @property (nonatomic, weak) IBOutlet UIView *starView;

@@ -12,8 +12,8 @@
 
 @end
 
-#define  mainH [UIScreen mainScreen].bounds.size.height
-#define  mainW [UIScreen mainScreen].bounds.size.width
+#define  mainH self.view.frame.size.height
+#define  mainW self.view.frame.size.width
 
 @implementation RullerViewController
 
@@ -25,8 +25,8 @@
     _btnImageinch = [UIImage imageNamed:@"btn_ruler_cm"];
     self.btnStatus = YES;
     
-    [_rullerButton setFrame:CGRectMake((mainW / 2) - _rullerButton.frame.size.width / 2, _rullerButton.frame.origin.y, _rullerButton.frame.size.width, _rullerButton.frame.size.height)];
-    [_backButton setFrame:CGRectMake((mainW / 2) - _backButton.frame.size.width / 2, _backButton.frame.origin.y, _backButton.frame.size.width, _backButton.frame.size.height)];
+    [_rullerButton setFrame:CGRectMake((self.view.frame.size.width - _rullerButton.frame.size.width) / 2, mainH / 3, _rullerButton.frame.size.width, _rullerButton.frame.size.height)];
+    [_backButton setFrame:CGRectMake((mainW - _backButton.frame.size.width) / 2, mainH / 1.5, _backButton.frame.size.width, _backButton.frame.size.height)];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
