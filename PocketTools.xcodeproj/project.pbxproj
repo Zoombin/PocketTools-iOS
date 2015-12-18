@@ -1950,6 +1950,7 @@
 				TargetAttributes = {
 					5817F11E1A9D7BDB00B3A0A1 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 2S362SNNP3;
 					};
 					5817F1371A9D7BDB00B3A0A1 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -2392,6 +2393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = PocketTools/PocketTools.pch;
 				INFOPLIST_FILE = PocketTools/Info.plist;
@@ -2422,6 +2424,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = PocketTools/PocketTools.pch;
 				INFOPLIST_FILE = PocketTools/Info.plist;
